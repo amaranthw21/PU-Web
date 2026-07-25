@@ -1,0 +1,28 @@
+const powers = [
+    {
+        id: "",
+        name: "Innate Powers",
+        description: "Information about Innate Powers."
+    },
+
+    {
+        id: "magic-powers",
+        name: "Magic Powers",
+        description: "Information about Magic Powers."
+    },
+
+    {
+        id: "biological-powers",
+        name: "Biological Powers",
+        description: "Information about Biological Powers."
+    },
+
+    {
+        id: "darkEnergy-infection",
+        name: "'Dark Energy' Infection",
+        description: "Information about the Dark Gaia, Inner Leviathan and Null's infections."
+    }
+];
+
+
+export default powers;
