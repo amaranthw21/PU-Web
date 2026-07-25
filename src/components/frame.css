@@ -1,0 +1,103 @@
+.frame-container {
+
+    position: relative;
+
+    width: 90%;
+    margin: 40px auto;
+
+}
+
+
+.frame {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+}
+
+
+/* ESQUINAS */
+
+.tl {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.tr {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.bl {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.br {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+
+/* BORDES HORIZONTALES */
+
+.t {
+    grid-column: 2;
+    grid-row: 1;
+
+    background-image: url("../assets/frame/sector2.svg");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+
+
+.b {
+    grid-column: 2;
+    grid-row: 3;
+
+    background-image: url("../assets/frame/sector8.svg");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+
+
+/* BORDES VERTICALES */
+
+.l {
+    grid-column: 1;
+    grid-row: 2;
+
+    background-image: url("../assets/frame/sector4.svg");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+}
+
+
+.r {
+    grid-column: 3;
+    grid-row: 2;
+
+    background-image: url("../assets/frame/sector6.svg");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+}
+
+
+/* CENTRO VACÍO */
+
+.frame > div:nth-child(5) {
+
+    grid-column: 2;
+    grid-row: 2;
+
+}
