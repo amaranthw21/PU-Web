@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import transformations from "../../../data/lore/enery-powers/transformations";
+import transformations from "../../../data/lore/energy-powers/transformations";
 
 
-export default function EnergyDetail(){
+export default function TransformationDetail(){
 
     const { id } = useParams();
 

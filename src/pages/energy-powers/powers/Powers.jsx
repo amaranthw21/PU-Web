@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import energies from "../../../data/lore/enery-powers/powers";
+import powers from "../../../data/lore/energy-powers/powers";
 
 
-export default function Power(){
+export default function Powers(){
 
     return (
         <div>
@@ -12,11 +12,11 @@ export default function Power(){
             </h1>
 
             {
-                energies.map(power => (
+                powers.map(power => (
 
                     <div key={power.id}>
 
-                        <Link to={`/lore/power/${power.id}`}>
+                        <Link to={`/lore/energy-powers/powers/${power.id}`}>
                             <h2>
                                 {power.name}
                             </h2>

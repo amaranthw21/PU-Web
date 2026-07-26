@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import energies from "../../../data/lore/enery-powers/energy";
+import energies from "../../../data/lore/energy-powers/energy";
 
 
 export default function Energy(){
@@ -16,7 +16,7 @@ export default function Energy(){
 
                     <div key={energy.id}>
 
-                        <Link to={`/lore/energy/${energy.id}`}>
+                        <Link to={`/lore/energy-powers/energy/${energy.id}`}>
                             <h2>
                                 {energy.name}
                             </h2>

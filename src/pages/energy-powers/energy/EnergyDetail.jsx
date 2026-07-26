@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import energies from "../../../data/lore/enery-powers/energy";
+import energies from "../../../data/lore/energy-powers/energy";
 
 
 export default function EnergyDetail(){

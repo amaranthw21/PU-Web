@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import Frame from "./frame";
+import Frame from "./Frame";
 import { Outlet } from "react-router-dom";
 
 

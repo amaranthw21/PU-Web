@@ -1,4 +1,4 @@
-import "./frame.css";
+import "./Frame.css";
 
 import TL from "../assets/frame/sector1.svg";
 import T  from "../assets/frame/sector2.svg";
