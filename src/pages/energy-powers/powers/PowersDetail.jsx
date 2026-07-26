@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import powers from "../../../data/lore/enery-powers/powers";
+import powers from "../../../data/lore/energy-powers/powers";
 
 
-export default function EnergyDetail(){
+export default function PowersDetail(){
 
     const { id } = useParams();
 
@@ -28,12 +28,12 @@ export default function EnergyDetail(){
         <div>
 
             <h1>
-                {powers.name}
+                {power.name}
             </h1>
 
 
             <p>
-                {powers.description}
+                {power.description}
             </p>
 
 

@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import energies from "../../../data/lore/enery-powers/transformations";
-import transformations from "../../../data/lore/enery-powers/transformations";
+import transformations from "../../../data/lore/energy-powers/transformations";
 
 
-export default function Power(){
+export default function Transformation(){
 
     return (
         <div>
@@ -13,18 +12,18 @@ export default function Power(){
             </h1>
 
             {
-                energies.map(transformations => (
+                transformations.map(transformation => (
 
-                    <div key={transformations.id}>
+                    <div key={transformation.id}>
 
-                        <Link to={`/lore/power/${transformations.id}`}>
+                        <Link to={`/lore/energy-powers/transformations/${transformation.id}`}>
                             <h2>
-                                {transformations.name}
+                                {transformation.name}
                             </h2>
                         </Link>
 
                         <p>
-                            {transformations.description}
+                            {transformation.description}
                         </p>
 
                     </div>

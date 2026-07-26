@@ -1,6 +1,6 @@
 const powers = [
     {
-        id: "",
+        id: "innate-powers",
         name: "Innate Powers",
         description: "Information about Innate Powers."
     },
