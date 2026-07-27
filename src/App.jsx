@@ -5,7 +5,9 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Worlds from "./pages/Worlds";
 import Species from "./pages/Species";
+import SpeciesDetail from "./pages/SpeciesDetail";
 import Factions from "./pages/Factions";
+import FactionDetail from "./pages/FactionDetail";
 import Credits from "./pages/Credits";
 
 // Worlds
@@ -69,16 +71,26 @@ function App() {
 
                     <Route
                         path="/species"
-                        element={<Species />} 
+                        element={<Species />}
                     />
 
-                    <Route 
-                        path="/factions" 
-                        element={<Factions />} 
+                    <Route
+                        path="/species/:id"
+                        element={<SpeciesDetail />}
                     />
 
-                    <Route 
-                        path="/credits" 
+                    <Route
+                        path="/factions"
+                        element={<Factions />}
+                    />
+
+                    <Route
+                        path="/factions/:id"
+                        element={<FactionDetail />}
+                    />
+
+                    <Route
+                        path="/credits"
                         element={<Credits />} 
                     />
 

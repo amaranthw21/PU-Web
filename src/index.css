@@ -548,6 +548,14 @@ body {
 
 }
 
+/* Species: círculos más grandes */
+.species-row .world-btn__circle {
+
+    width: 190px;
+    height: 190px;
+
+}
+
 
 /* Página de un mundo (Mobius): presentación + mapa + tarjetas de país */
 .world-presentation {
@@ -667,6 +675,103 @@ body {
 }
 
 .country-card__body h3 {
+
+    margin: 0;
+
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+
+/* Grid de facciones: 4 por fila (máx 260px). Baja a 2 y luego a 1. */
+.faction-grid {
+
+    grid-template-columns: repeat(4, minmax(0, 260px));
+
+    justify-content: center;
+
+}
+
+@media (max-width: 900px) {
+    .faction-grid {
+        grid-template-columns: repeat(2, minmax(0, 260px));
+    }
+}
+
+@media (max-width: 520px) {
+    .faction-grid {
+        grid-template-columns: minmax(0, 320px);
+    }
+}
+
+
+/* Tarjeta de facción: logo transparente centrado (contain) sobre un panel
+   oscuro, con el nombre debajo. */
+.faction-card {
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(31, 41, 55, 0.6);
+    border: 1px solid rgba(192, 75, 216, 0.45);
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+    color: white;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.faction-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 18px rgba(192, 75, 216, 0.4);
+
+}
+
+.faction-card__icon {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    aspect-ratio: 1 / 1;
+
+    padding: 24px;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(192, 75, 216, 0.12),
+        rgba(10, 10, 14, 0.6)
+    );
+
+}
+
+/* El logo se muestra entero (contain), sin recortarse; la transparencia
+   deja ver el panel de fondo de forma intencional. */
+.faction-card__icon img {
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+
+}
+
+.faction-card__body {
+
+    padding: 12px;
+
+    border-top: 1px solid rgba(192, 75, 216, 0.35);
+
+}
+
+.faction-card__body h3 {
 
     margin: 0;
 
