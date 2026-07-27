@@ -18,7 +18,8 @@ const gods = [
         description: "Description of the god.",
         domain: "Example Domain",
         image: "/gods/perfect_chaos.jpg",
-        imagePosition: "30% center"
+        imagePosition: "30% center",
+        color: "#5bc0ff"
     },
     {
         id: "solaris",
@@ -27,6 +28,7 @@ const gods = [
         description: "Description of the god.",
         domain: "Example Domain",
         image: "/gods/solaris.png",
+        color: "#a3e635",
     },
     {
         id: "darkgaia",
@@ -42,7 +44,8 @@ const gods = [
         name: "Light Gaia",
         description: "Description of the god.",
         domain: "Example Domain",
-        image: "/gods/light-gaia.jpg"
+        image: "/gods/light-gaia.jpg",
+        color: "#e45581"
     },
 
 
@@ -55,7 +58,8 @@ const gods = [
         domain: "Example Domain",
         image: "/gods/vajra.png",
         imagePosition: "20% 25% ",
-        imageZoom: 1.5
+        imageZoom: 1.5,
+        color: "#fa6d1c"
     },
     {
         id: "null",
@@ -65,7 +69,7 @@ const gods = [
         domain: "Example Domain",
         image:"/gods/null.png",
         imagePosition: "center",
-
+        color: "#ece8fb"
     },
     {
         id: "emerald-pantheon",
@@ -74,6 +78,7 @@ const gods = [
         description: "Description of the god.",
         domain: "Example Domain",
         image: "/gods/emerald-pantheon.png",
+        color: "#33e6a6",
     },
 
 
@@ -84,7 +89,8 @@ const gods = [
         name: "Astral Leviathan",
         description: "Description of the god.",
         domain: "Example Domain",
-        image: "/gods/astral-leviathan.jpg"
+        image: "/gods/astral-leviathan.jpg",
+        color: "#4d9fff"
     },
     {
         id: "inner-leviathan",
@@ -92,7 +98,8 @@ const gods = [
         name: "Inner Leviathan",
         description: "Description of the god.",
         domain: "Example Domain",
-        image: "/gods/inner-leviathan.png"
+        image: "/gods/inner-leviathan.png",
+        color: "#93e9be"
     },
     {
         id: "min",
@@ -102,6 +109,7 @@ const gods = [
         domain: "Example Domain",
         image: "/gods/min.webp",
         imagePosition: "30% center",
+        color: "#e8a54e",
     },
     {
         id: "mata",
@@ -110,7 +118,8 @@ const gods = [
         description: "Description of the god.",
         domain: "Example Domain",
         image: "/gods/mata.webp",
-        imageZoom: 1.2
+        imageZoom: 1.2,
+        color: "#bfb8a1"
     },
     {
         id: "mawu",
@@ -120,6 +129,7 @@ const gods = [
         domain: "Example Domain",
         image: "/gods/mawu.webp",
         imagePosition: "30% center",
+        color: "#9aa8bd",
     },
     {
         id: "selune",
@@ -127,7 +137,8 @@ const gods = [
         name: "Selune",
         description: "Description of the god.",
         domain: "Example Domain",
-        image: "/gods/selune.webp"
+        image: "/gods/selune.webp",
+        color: "#f5271e"
     },
     {
         id: "god-of-desert",
@@ -135,7 +146,8 @@ const gods = [
         name: "God of the Desert",
         description: "Description of the god.",
         domain: "Example Domain",
-        image: "/gods/god-of-desert.jpeg"
+        image: "/gods/god-of-desert.jpeg",
+        color: "#c17b3c"
     },
 
 
@@ -148,6 +160,7 @@ const gods = [
         domain: "Example Domain",
         image: "/gods/ilumina.webp",
         imagePosition: "70% center",
+        color: "#f8bcd0",
     },
     {
         id: "argus",
@@ -157,7 +170,8 @@ const gods = [
         domain: "Example Domain",
         image: "/gods/argus.webp",
         imagePosition: "center 85%",
-        imageZoom: 1.2
+        imageZoom: 1.2,
+        color: "#c2385a"
     },
     {
         id: "time-eater",
@@ -166,6 +180,7 @@ const gods = [
         description: "Description of the god.",
         domain: "Example Domain",
         image: "/gods/time-eater.jpg",
+        color: "#8be0ff",
     }
 
 ];

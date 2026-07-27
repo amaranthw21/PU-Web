@@ -30,8 +30,7 @@
 
     display: grid;
 
-    /* Medidas fijas: esquinas de 70x90 y el centro (1fr) rellena el resto.
-       Antes era "auto 1fr auto" y las esquinas colapsaban a 0. */
+    /* Medidas fijas: esquinas de 70x90 y el centro (1fr) rellena el resto. */
     grid-template-columns: 70px 1fr 70px;
     grid-template-rows: 90px 1fr 90px;
 
@@ -42,80 +41,106 @@
 }
 
 
-/* Las esquinas (img) rellenan su celda */
+/* Todas las piezas del marco se pintan con el color de acento (--accent),
+   usando el SVG como máscara. Así el color se cambia por CSS. */
+.frame > div {
 
-.frame img {
-    display: block;
-    width: 100%;
-    height: 100%;
+    background-color: var(--accent, #c04bd8);
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
 }
 
 
-/* ESQUINAS */
+/* ESQUINAS (máscara al tamaño de la celda) */
+
+.tl,
+.tr,
+.bl,
+.br {
+
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+
+}
 
 .tl {
     grid-column: 1;
     grid-row: 1;
+    -webkit-mask-image: url("../assets/frame/sector1.svg");
+    mask-image: url("../assets/frame/sector1.svg");
 }
 
 .tr {
     grid-column: 3;
     grid-row: 1;
+    -webkit-mask-image: url("../assets/frame/sector3.svg");
+    mask-image: url("../assets/frame/sector3.svg");
 }
 
 .bl {
     grid-column: 1;
     grid-row: 3;
+    -webkit-mask-image: url("../assets/frame/sector7.svg");
+    mask-image: url("../assets/frame/sector7.svg");
 }
 
 .br {
     grid-column: 3;
     grid-row: 3;
+    -webkit-mask-image: url("../assets/frame/sector9.svg");
+    mask-image: url("../assets/frame/sector9.svg");
 }
 
 
-/* BORDES HORIZONTALES */
+/* BORDES HORIZONTALES (se repiten en X) */
+
+.t,
+.b {
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+    -webkit-mask-size: auto 100%;
+    mask-size: auto 100%;
+}
 
 .t {
     grid-column: 2;
     grid-row: 1;
-
-    background-image: url("../assets/frame/sector2.svg");
-    background-repeat: repeat-x;
-    background-size: auto 100%;
+    -webkit-mask-image: url("../assets/frame/sector2.svg");
+    mask-image: url("../assets/frame/sector2.svg");
 }
-
 
 .b {
     grid-column: 2;
     grid-row: 3;
-
-    background-image: url("../assets/frame/sector8.svg");
-    background-repeat: repeat-x;
-    background-size: auto 100%;
+    -webkit-mask-image: url("../assets/frame/sector8.svg");
+    mask-image: url("../assets/frame/sector8.svg");
 }
 
 
-/* BORDES VERTICALES */
+/* BORDES VERTICALES (se repiten en Y) */
+
+.l,
+.r {
+    -webkit-mask-repeat: repeat-y;
+    mask-repeat: repeat-y;
+    -webkit-mask-size: 100% auto;
+    mask-size: 100% auto;
+}
 
 .l {
     grid-column: 1;
     grid-row: 2;
-
-    background-image: url("../assets/frame/sector4.svg");
-    background-repeat: repeat-y;
-    background-size: 100% auto;
+    -webkit-mask-image: url("../assets/frame/sector4.svg");
+    mask-image: url("../assets/frame/sector4.svg");
 }
-
 
 .r {
     grid-column: 3;
     grid-row: 2;
-
-    background-image: url("../assets/frame/sector6.svg");
-    background-repeat: repeat-y;
-    background-size: 100% auto;
+    -webkit-mask-image: url("../assets/frame/sector6.svg");
+    mask-image: url("../assets/frame/sector6.svg");
 }
 
-/* El centro (columna 2, fila 2) se queda vacío solo: ningún elemento lo
-   ocupa, así que el contenido de debajo se ve a través. NO hace falta regla. */
+/* El centro (columna 2, fila 2) se queda vacío: ningún elemento lo ocupa. */
