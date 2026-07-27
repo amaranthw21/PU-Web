@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import gods from "../../data/lore/gods/gods";
+import asset from "../../lib/asset";
 
 
 export default function GodDetail(){
@@ -27,7 +28,7 @@ export default function GodDetail(){
         const prevAccent = body.style.getPropertyValue("--accent");
 
         if(god.image){
-            body.style.backgroundImage = `url(${god.image})`;
+            body.style.backgroundImage = `url(${asset(god.image)})`;
         }
 
         if(god.color){

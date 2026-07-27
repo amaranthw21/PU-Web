@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import asset from "../lib/asset";
 
 
 export default function CountryCard({ country, link }) {
@@ -11,7 +12,7 @@ export default function CountryCard({ country, link }) {
                 country.flag
                     ? <img
                           className="country-card__img"
-                          src={country.flag}
+                          src={asset(country.flag)}
                           alt={`Flag of ${country.name}`}
                           onError={e => { e.currentTarget.style.display = "none"; }}
                       />

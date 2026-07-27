@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import asset from "../lib/asset";
 
 
 export default function GodCard({ name, domain, image, imagePosition, imageZoom, link }) {
@@ -14,7 +15,7 @@ export default function GodCard({ name, domain, image, imagePosition, imageZoom,
                 image
                     ? <img
                           className="god-card__img"
-                          src={image}
+                          src={asset(image)}
                           alt={name}
                           style={{
                               objectPosition: imagePosition || "center",

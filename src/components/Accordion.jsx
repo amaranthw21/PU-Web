@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import asset from "../lib/asset";
 
 
 export default function Accordion({ title, summary, link, custom, icon, background, backgroundPosition, backgroundZoom }) {
@@ -22,7 +23,7 @@ export default function Accordion({ title, summary, link, custom, icon, backgrou
                         icon && (
                             <img
                                 className="accordion__thumb"
-                                src={icon}
+                                src={asset(icon)}
                                 alt=""
                                 onError={e => { e.currentTarget.style.display = "none"; }}
                             />
@@ -50,7 +51,7 @@ export default function Accordion({ title, summary, link, custom, icon, backgrou
                             <div
                                 className="accordion__bg"
                                 style={{
-                                    backgroundImage: `linear-gradient(rgba(17, 17, 24, 0.6), rgba(17, 17, 24, 0.6)), url(${background})`,
+                                    backgroundImage: `linear-gradient(rgba(17, 17, 24, 0.6), rgba(17, 17, 24, 0.6)), url(${asset(background)})`,
                                     backgroundPosition: backgroundPosition || "center",
                                     transform: backgroundZoom ? `scale(${backgroundZoom})` : undefined,
                                     transformOrigin: backgroundPosition || "center"
