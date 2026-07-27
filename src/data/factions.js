@@ -1,14 +1,15 @@
-// Botones de la página Factions — fila principal (botones grandes).
-export const mainFactions = [
-    { id: "moebius",     name: "Moebius",          image: "/factions/moebius.png", route: "/factions/moebius" },
-    { id: "mobius",      name: "Mobius",           image: "/factions/mobius.png", route: "/factions/mobius" },
-    { id: "sol",         name: "Sol",              image: "/factions/sol.png", route: "/factions/sol" },
-    { id: "future-200",  name: "200 Years Future", image: "/factions/future-200.png", route: "/factions/future-200" }
-];
+// El contenido vive en src/content/factions/*.json (editable desde el CMS).
+// Cada facción trae su `group` ("main" | "side"); aquí cargamos todos los
+// JSON, les añadimos el id (= nombre del archivo) y su ruta, y los ordenamos.
+const modules = import.meta.glob("../content/factions/*.json", { eager: true });
+
+const factions = Object.entries(modules)
+    .map(([path, mod]) => {
+        const id = path.split("/").pop().replace(".json", "");
+        return { id, route: `/factions/${id}`, ...(mod.default ?? mod) };
+    })
+    .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
 
-// Botones de la página Factions — segunda fila (botones pequeños).
-export const sideFactions = [
-    { id: "twilight-cage", name: "Twilight Cage", image: "/factions/twilight-cage.png", route: "/factions/twilight-cage" },
-    { id: "white-space",   name: "White Space",   image: "/factions/white-space.png", route: "/factions/white-space" }
-];
+export const mainFactions = factions.filter(f => f.group === "main");
+export const sideFactions = factions.filter(f => f.group === "side");

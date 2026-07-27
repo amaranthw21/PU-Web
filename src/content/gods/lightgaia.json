@@ -1,0 +1,9 @@
+{
+  "order": 4,
+  "category": "mobius",
+  "name": "Light Gaia",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/light-gaia.jpg",
+  "color": "#e45581"
+}

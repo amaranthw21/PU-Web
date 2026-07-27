@@ -1,0 +1,10 @@
+{
+  "order": 1,
+  "category": "mobius",
+  "name": "Chaos",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/perfect_chaos.jpg",
+  "imagePosition": "30% center",
+  "color": "#5bc0ff"
+}

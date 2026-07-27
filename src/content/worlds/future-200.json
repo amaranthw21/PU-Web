@@ -1,0 +1,23 @@
+{
+  "order": 4,
+  "name": "200 Years Future",
+  "image": "/worlds/200yearsfuture.webp",
+  "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "map": "/worlds/future-200/map.jpg",
+  "countryGroups": [
+    {
+      "id": "safe",
+      "label": "Safe Areas",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "placeholderLabel": "Safe Area",
+      "count": 4
+    },
+    {
+      "id": "missing",
+      "label": "Missing Territories",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "placeholderLabel": "Missing Territory",
+      "count": 3
+    }
+  ]
+}

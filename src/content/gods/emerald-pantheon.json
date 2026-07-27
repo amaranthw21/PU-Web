@@ -1,0 +1,9 @@
+{
+  "order": 7,
+  "category": "sol",
+  "name": "Emerald Pantheon",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/emerald-pantheon.png",
+  "color": "#33e6a6"
+}

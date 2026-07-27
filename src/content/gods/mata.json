@@ -1,0 +1,10 @@
+{
+  "order": 11,
+  "category": "moebius",
+  "name": "Mata",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/mata.webp",
+  "imageZoom": 1.2,
+  "color": "#bfb8a1"
+}

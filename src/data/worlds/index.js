@@ -1,34 +1,63 @@
-import { mobius } from "./mobius";
-import { moebius } from "./moebius";
-import { sol } from "./sol";
-import { future } from "./future";
+// El contenido editable vive en:
+//   - src/content/worlds/*.json       → mundos con página (texto, mapa, grupos)
+//   - src/content/side-worlds/*.json  → dimensiones secundarias (solo botón)
+//
+// Los países de cada mundo son, POR AHORA, placeholders generados a partir de
+// `placeholderLabel` y `count` de cada grupo. Cuando se escriban países reales
+// se sustituirá esto por una colección propia ("Countries") en el CMS.
+const worldModules = import.meta.glob("../../content/worlds/*.json", { eager: true });
+const sideModules = import.meta.glob("../../content/side-worlds/*.json", { eager: true });
+
+
+function buildCountries(worldId, groups) {
+    return groups.flatMap(group =>
+        Array.from({ length: group.count ?? 0 }, (_, i) => {
+            const n = i + 1;
+            return {
+                id: `${group.id}-${n}`,
+                name: `${group.placeholderLabel ?? group.label} ${n}`,
+                flag: `/worlds/${worldId}/flags/${group.id}-${n}.png`,
+                type: group.id
+            };
+        })
+    );
+}
+
+
+const worlds = Object.entries(worldModules)
+    .map(([path, mod]) => {
+        const id = path.split("/").pop().replace(".json", "");
+        const data = mod.default ?? mod;
+        return {
+            id,
+            ...data,
+            countries: buildCountries(id, data.countryGroups ?? [])
+        };
+    })
+    .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
 
 // Mundos con página propia, indexados por su id (para WorldPage / CountryDetail).
-export const worldsById = {
-    [mobius.id]: mobius,
-    [moebius.id]: moebius,
-    [sol.id]: sol,
-    [future.id]: future
-};
+export const worldsById = Object.fromEntries(
+    worlds.map(world => [world.id, world])
+);
 
 
 // Botones de la página Worlds — fila principal (Main Hub).
-export const mainWorlds = [
-    { id: "mobius",      name: "Mobius",           image: "/worlds/mobius.jpg", route: "/worlds/mobius" },
-    { id: "moebius",     name: "Moebius",          image: "/worlds/moebius.jpg", route: "/worlds/moebius" },
-    { id: "sol",         name: "Sol",              image: "/worlds/sol.png", imageZoom: 1.4, route: "/worlds/sol" },
-    { id: "future-200",  name: "200 Years Future", image: "/worlds/200yearsfuture.webp", route: "/worlds/future-200" }
-];
+export const mainWorlds = worlds.map(world => ({
+    id: world.id,
+    name: world.name,
+    image: world.image,
+    imagePosition: world.imagePosition,
+    imageZoom: world.imageZoom,
+    route: `/worlds/${world.id}`
+}));
 
 
 // Botones de la página Worlds — segunda fila (Side Dimensions).
-export const otherWorlds = [
-    { id: "world-1", name: "Maginaryworld",  image: "/worlds/maginaryworld.webp" },
-    { id: "world-2", name: "Twilight Cage",  image: "/worlds/twilightcage.webp" },
-    { id: "world-3", name: "Dreamscape",     image: "/worlds/dreamscape.webp" },
-    { id: "world-4", name: "Null Space",     image: "/worlds/nullspace.jpg" },
-    { id: "world-5", name: "Cyber Space",    image: "/worlds/cyberspace.webp" },
-    { id: "world-6", name: "White Space",    image: "/worlds/whitespace.webp" },
-    { id: "world-7", name: "Book Dimension", image: "/worlds/bookdimension.jpg" }
-];
+export const otherWorlds = Object.entries(sideModules)
+    .map(([path, mod]) => {
+        const id = path.split("/").pop().replace(".json", "");
+        return { id, ...(mod.default ?? mod) };
+    })
+    .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));

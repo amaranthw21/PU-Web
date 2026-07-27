@@ -1,0 +1,10 @@
+{
+  "order": 6,
+  "category": "sol",
+  "name": "Null",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/null.png",
+  "imagePosition": "center",
+  "color": "#ece8fb"
+}
