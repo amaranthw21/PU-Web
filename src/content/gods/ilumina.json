@@ -1,0 +1,10 @@
+{
+  "order": 15,
+  "category": "other",
+  "name": "Ilumina",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/ilumina.webp",
+  "imagePosition": "70% center",
+  "color": "#f8bcd0"
+}

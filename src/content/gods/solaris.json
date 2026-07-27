@@ -1,0 +1,9 @@
+{
+  "order": 2,
+  "category": "mobius",
+  "name": "Solaris",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/solaris.png",
+  "color": "#a3e635"
+}

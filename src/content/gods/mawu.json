@@ -1,0 +1,10 @@
+{
+  "order": 12,
+  "category": "moebius",
+  "name": "Mawu",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/mawu.webp",
+  "imagePosition": "30% center",
+  "color": "#9aa8bd"
+}

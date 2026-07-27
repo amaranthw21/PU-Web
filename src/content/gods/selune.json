@@ -1,0 +1,9 @@
+{
+  "order": 13,
+  "category": "moebius",
+  "name": "Selune",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/selune.webp",
+  "color": "#f5271e"
+}

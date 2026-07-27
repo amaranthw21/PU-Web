@@ -1,0 +1,10 @@
+{
+  "order": 10,
+  "category": "moebius",
+  "name": "Min",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/min.webp",
+  "imagePosition": "30% center",
+  "color": "#e8a54e"
+}

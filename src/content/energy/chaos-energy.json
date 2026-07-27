@@ -1,0 +1,9 @@
+{
+  "order": 1,
+  "name": "Chaos Energy",
+  "icon": "/energy/master-emerald.png",
+  "background": "/energy/bg/chaos.webp",
+  "backgroundPosition": "center 30%",
+  "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+}

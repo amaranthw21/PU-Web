@@ -1,0 +1,11 @@
+{
+  "order": 16,
+  "category": "other",
+  "name": "Argus",
+  "domain": "Example Domain",
+  "description": "Description of the god.",
+  "image": "/gods/argus.webp",
+  "imagePosition": "center 85%",
+  "imageZoom": 1.2,
+  "color": "#c2385a"
+}

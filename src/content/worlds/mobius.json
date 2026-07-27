@@ -1,0 +1,27 @@
+{
+  "order": 1,
+  "name": "Mobius",
+  "image": "/worlds/mobius.jpg",
+  "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "map": "/worlds/mobius/map.jpg",
+  "countryGroups": [
+    {
+      "id": "main",
+      "label": "Main Countries",
+      "placeholderLabel": "Country",
+      "count": 18
+    },
+    {
+      "id": "secondary",
+      "label": "Secondary Countries",
+      "placeholderLabel": "Secondary",
+      "count": 3
+    },
+    {
+      "id": "territory",
+      "label": "Territories",
+      "placeholderLabel": "Territory",
+      "count": 4
+    }
+  ]
+}
