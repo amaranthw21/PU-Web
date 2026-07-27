@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { mainWorlds, otherWorlds } from "../data/worlds";
+import asset from "../lib/asset";
 
 
 function WorldButton({ world }) {
@@ -13,7 +14,7 @@ function WorldButton({ world }) {
                         <span
                             className="world-btn__img"
                             style={{
-                                backgroundImage: `url(${world.image})`,
+                                backgroundImage: `url(${asset(world.image)})`,
                                 backgroundPosition: world.imagePosition || "center",
                                 transform: world.imageZoom ? `scale(${world.imageZoom})` : undefined,
                                 transformOrigin: world.imagePosition || "center"

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import asset from "../lib/asset";
 
 
 export default function FactionCard({ faction }) {
@@ -10,7 +11,7 @@ export default function FactionCard({ faction }) {
                 {
                     faction.image && (
                         <img
-                            src={faction.image}
+                            src={asset(faction.image)}
                             alt={faction.name}
                             onError={e => { e.currentTarget.style.display = "none"; }}
                         />

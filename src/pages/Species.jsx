@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import species from "../data/species";
+import asset from "../lib/asset";
 
 
 export default function Species() {
@@ -31,7 +32,7 @@ export default function Species() {
                                         <span
                                             className="world-btn__img"
                                             style={{
-                                                backgroundImage: `url(${specie.image})`,
+                                                backgroundImage: `url(${asset(specie.image)})`,
                                                 backgroundPosition: specie.imagePosition || "center",
                                                 transform: specie.imageZoom ? `scale(${specie.imageZoom})` : undefined,
                                                 transformOrigin: specie.imagePosition || "center"

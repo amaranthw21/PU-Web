@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { worldsById } from "../../data/worlds";
 import CountryCard from "../../components/CountryCard";
+import asset from "../../lib/asset";
 
 
 export default function WorldPage(){
@@ -39,7 +40,7 @@ export default function WorldPage(){
 
             <img
                 className="world-map"
-                src={world.map}
+                src={asset(world.map)}
                 alt={`Map of ${world.name}`}
             />
 

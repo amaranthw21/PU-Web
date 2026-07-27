@@ -38,11 +38,16 @@ import Transformation from "./pages/energy-powers/transformations/Transformation
 import TransformationDetail from "./pages/energy-powers/transformations/TransformationDetail";
 
 
+// En GitHub Pages el sitio cuelga de "/PU-Web/"; el router necesita ese
+// prefijo como basename (en dev, BASE_URL es "/").
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+
+
 function App() {
 
     return (
 
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
             <Routes>
 
                 <Route element={<Layout />}>
