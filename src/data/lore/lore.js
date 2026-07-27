@@ -18,7 +18,7 @@ const lore = [
 
     {
         id: "energy-powers",
-        title: "Energy & Powers",
+        title: "Mechanics",
         route: "/lore/energy-powers",
         description: "The different energy systems, abilities and transformations that exist in the world."
     },

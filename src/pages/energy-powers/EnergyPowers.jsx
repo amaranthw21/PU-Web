@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Card from "../../components/Card";
 
 
 export default function EnergyPowers(){
@@ -7,42 +8,38 @@ export default function EnergyPowers(){
 
         <div>
 
-            <h1>
-                Energy & Powers
+            <nav className="breadcrumb">
+                <Link to="/lore">Lore</Link>
+                <span className="breadcrumb__sep">/</span>
+                <span className="breadcrumb__current">Mechanics</span>
+            </nav>
+
+            <h1 className="page-title">
+                Mechanics
             </h1>
 
 
-            <Link to="/lore/energy-powers/energy">
-                <h2>
-                    Energy
-                </h2>
-            </Link>
+            <div className="grid">
 
+                <Card
+                    title="Energy"
+                    description="Information about the different energy sources."
+                    link="/lore/energy-powers/energy"
+                />
 
-            <p>
-                Information about the different energy sources.
-            </p>
+                <Card
+                    title="Powers"
+                    description="Information about the different types of powers."
+                    link="/lore/energy-powers/powers"
+                />
 
+                <Card
+                    title="Transformations"
+                    description="Information about transformations."
+                    link="/lore/energy-powers/transformations"
+                />
 
-
-            <Link to="/lore/energy-powers/powers">
-                <h2>
-                    Powers
-                </h2>
-            </Link>
-
-
-            <Link to="/lore/energy-powers/transformations">
-                <h2>
-                    Transfomations
-                </h2>
-            </Link>
-
-
-            <p>
-                Information about transfomations.
-            </p>
-
+            </div>
 
         </div>
 

@@ -8,6 +8,10 @@ import Species from "./pages/Species";
 import Factions from "./pages/Factions";
 import Credits from "./pages/Credits";
 
+// Worlds
+import WorldPage from "./pages/worlds/WorldPage";
+import CountryDetail from "./pages/worlds/CountryDetail";
+
 
 // [LORE SECTION]
 
@@ -18,7 +22,7 @@ import Gods from "./pages/gods/Gods";
 import GodDetail from "./pages/gods/GodDetail";
 
 
-// Energy & Powers & Transformations Page
+// Mechanics & Transformations Page
 
 import EnergyPowers from "./pages/energy-powers/EnergyPowers";
 
@@ -48,13 +52,23 @@ function App() {
                         element={<Home />} 
                     />
 
-                    <Route 
-                        path="/worlds" 
-                        element={<Worlds />} 
+                    <Route
+                        path="/worlds"
+                        element={<Worlds />}
                     />
 
-                    <Route 
-                        path="/species" 
+                    <Route
+                        path="/worlds/:worldId"
+                        element={<WorldPage />}
+                    />
+
+                    <Route
+                        path="/worlds/:worldId/:countryId"
+                        element={<CountryDetail />}
+                    />
+
+                    <Route
+                        path="/species"
                         element={<Species />} 
                     />
 
@@ -90,7 +104,7 @@ function App() {
                     />
 
 
-                    {/* Energy & Powers */}
+                    {/* Mechanics */}
 
                     <Route 
                         path="/lore/energy-powers" 
