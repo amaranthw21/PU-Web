@@ -8,6 +8,7 @@ import Species from "./pages/Species";
 import SpeciesDetail from "./pages/SpeciesDetail";
 import Factions from "./pages/Factions";
 import FactionDetail from "./pages/FactionDetail";
+import FactionSubDetail from "./pages/FactionSubDetail";
 import Credits from "./pages/Credits";
 
 // Worlds
@@ -92,6 +93,11 @@ function App() {
                     <Route
                         path="/factions/:id"
                         element={<FactionDetail />}
+                    />
+
+                    <Route
+                        path="/factions/:id/:factionId"
+                        element={<FactionSubDetail />}
                     />
 
                     <Route

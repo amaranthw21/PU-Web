@@ -1,0 +1,8 @@
+{
+  "order": 5,
+  "group": "companion",
+  "name": "Companion Five",
+  "image": "/species/companion-5.png",
+  "summary": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+}

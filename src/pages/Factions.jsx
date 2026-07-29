@@ -1,5 +1,53 @@
+import { Link } from "react-router-dom";
 import { mainFactions, sideFactions } from "../data/factions";
-import FactionCard from "../components/FactionCard";
+import asset from "../lib/asset";
+
+
+function FactionButton({ faction }) {
+
+    const content = (
+        <>
+            <span className="world-btn__circle">
+
+                {
+                    faction.image && (
+                        <span
+                            className="world-btn__img"
+                            style={{
+                                backgroundImage: `url(${asset(faction.image)})`,
+                                backgroundPosition: faction.imagePosition || "center",
+                                transform: faction.imageZoom ? `scale(${faction.imageZoom})` : undefined,
+                                transformOrigin: faction.imagePosition || "center"
+                            }}
+                        />
+                    )
+                }
+
+            </span>
+
+            <span className="world-btn__label">
+                {faction.name}
+            </span>
+        </>
+    );
+
+
+    // Si la facción ya tiene página, es un enlace; si no, un botón inerte.
+    if(faction.route){
+        return (
+            <Link to={faction.route} className="world-btn">
+                {content}
+            </Link>
+        );
+    }
+
+    return (
+        <button className="world-btn" type="button">
+            {content}
+        </button>
+    );
+
+}
 
 
 export default function Factions() {
@@ -13,45 +61,38 @@ export default function Factions() {
             </h1>
 
 
-            <section className="gods-section">
+            <h2 className="worlds-heading">
+                Main Factions
+            </h2>
 
-                <h2 className="worlds-heading">
-                    Main Factions
-                </h2>
+            <div className="worlds-row worlds-row--main">
 
-                <div className="grid faction-grid">
+                {
+                    mainFactions.map(faction => (
+                        <FactionButton key={faction.id} faction={faction} />
+                    ))
+                }
 
-                    {
-                        mainFactions.map(faction => (
-                            <FactionCard key={faction.id} faction={faction} />
-                        ))
-                    }
-
-                </div>
-
-            </section>
+            </div>
 
 
             <hr className="section-divider" />
 
 
-            <section className="gods-section">
+            <h2 className="worlds-heading">
+                Other Dimensions
+            </h2>
 
-                <h2 className="worlds-heading">
-                    Other Dimensions
-                </h2>
+            <div className="worlds-row worlds-row--side">
 
-                <div className="grid faction-grid">
+                {
+                    sideFactions.map(faction => (
+                        <FactionButton key={faction.id} faction={faction} />
+                    ))
+                }
 
-                    {
-                        sideFactions.map(faction => (
-                            <FactionCard key={faction.id} faction={faction} />
-                        ))
-                    }
+            </div>
 
-                </div>
-
-            </section>
 
         </div>
 

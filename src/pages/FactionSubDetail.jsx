@@ -1,21 +1,21 @@
 import { Link, useParams } from "react-router-dom";
-import { worldsById } from "../../data/worlds";
+import { factionsById } from "../data/factions";
 
 
-export default function CountryDetail(){
+export default function FactionSubDetail(){
 
-    const { worldId, countryId } = useParams();
+    const { id, factionId } = useParams();
 
-    const world = worldsById[worldId];
+    const faction = factionsById[id];
 
-    const country = world?.countries.find(
-        country => country.id === countryId
+    const subFaction = faction?.subFactions.find(
+        sub => sub.id === factionId
     );
 
 
-    if(!country){
+    if(!subFaction){
 
-        return <h1>Country not found</h1>;
+        return <h1>Faction not found</h1>;
 
     }
 
@@ -25,15 +25,15 @@ export default function CountryDetail(){
         <div>
 
             <nav className="breadcrumb">
-                <Link to="/worlds">Worlds</Link>
+                <Link to="/factions">Factions</Link>
                 <span className="breadcrumb__sep">/</span>
-                <Link to={`/worlds/${world.id}`}>{world.name}</Link>
+                <Link to={`/factions/${faction.id}`}>{faction.name}</Link>
                 <span className="breadcrumb__sep">/</span>
-                <span className="breadcrumb__current">{country.name}</span>
+                <span className="breadcrumb__current">{subFaction.name}</span>
             </nav>
 
             <h1 className="page-title">
-                {country.name}
+                {subFaction.name}
             </h1>
 
 
@@ -43,6 +43,7 @@ export default function CountryDetail(){
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
             </p>
+
 
         </div>
 

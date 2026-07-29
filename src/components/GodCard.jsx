@@ -1,22 +1,30 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import asset from "../lib/asset";
 
 
 export default function GodCard({ name, domain, image, imagePosition, imageZoom, link }) {
 
+    // Si la imagen no existe / falla al cargar, caemos al placeholder magenta.
+    const [imgError, setImgError] = useState(false);
+
+    const showImage = image && !imgError;
+
+
     return (
 
         <Link
             to={link}
-            className={image ? "god-card" : "god-card god-card--empty"}
+            className={showImage ? "god-card" : "god-card god-card--empty"}
         >
 
             {
-                image
+                showImage
                     ? <img
                           className="god-card__img"
                           src={asset(image)}
                           alt={name}
+                          onError={() => setImgError(true)}
                           style={{
                               objectPosition: imagePosition || "center",
                               transform: imageZoom ? `scale(${imageZoom})` : undefined,
@@ -35,9 +43,13 @@ export default function GodCard({ name, domain, image, imagePosition, imageZoom,
                     {name}
                 </h3>
 
-                <p>
-                    {domain}
-                </p>
+                {
+                    domain && (
+                        <p>
+                            {domain}
+                        </p>
+                    )
+                }
 
             </div>
 
