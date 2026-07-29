@@ -1,0 +1,230 @@
+# CMS configuration (Sveltia / Decap-compatible).
+# Defines where the data comes from and goes to, and which forms the mods see.
+
+backend:
+  name: github
+  repo: amaranthw21/PU-Web
+  branch: main
+  # OAuth broker (Cloudflare Worker) that handles the "Sign In with GitHub" flow.
+  base_url: https://pu-web-cms-auth.amaranthw21.workers.dev
+
+# Lets you preview the panel locally without GitHub, against the repo files.
+# Requires running the proxy separately:  npx @sveltia/cms-server   (or  npx decap-server)
+local_backend: true
+
+# Admin UI language.
+locale: en
+
+# Default folder where images are uploaded (each collection overrides it
+# with its own subfolder below).
+media_folder: public
+public_folder: /
+
+collections:
+  # ───────────────────────── Species ─────────────────────────
+  - name: species
+    label: Species
+    label_singular: Species
+    folder: src/content/species
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/species
+    public_folder: /species
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int, hint: "Position in the list (number)" }
+      - { name: group, label: Group, widget: string, default: companion }
+      - { name: name, label: Name, widget: string }
+      - { name: image, label: Image, widget: image, required: false }
+      - { name: summary, label: Summary, widget: text, required: false }
+      - { name: description, label: Description, widget: text, required: false }
+
+  # ───────────────────────── Factions ─────────────────────────
+  - name: factions
+    label: Factions
+    label_singular: Faction
+    folder: src/content/factions
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/factions
+    public_folder: /factions
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int }
+      - name: group
+        label: Group
+        widget: select
+        options: [main, side, custom]
+        default: main
+      - { name: name, label: Name, widget: string }
+      - { name: image, label: Main image, widget: image, required: false }
+      - { name: imageFolder, label: "Image folder (optional)", widget: string, required: false }
+      - { name: placeholderImage, label: "Placeholder image (optional)", widget: image, required: false }
+      - name: factionGroups
+        label: Faction subgroups
+        widget: list
+        required: false
+        label_singular: Subgroup
+        summary: "{{fields.label}} ({{fields.count}})"
+        fields:
+          - { name: id, label: ID, widget: string }
+          - { name: label, label: Label, widget: string }
+          - { name: placeholderLabel, label: "Placeholder label", widget: string }
+          - { name: count, label: Count, widget: number, value_type: int }
+
+  # ───────────────────────── Gods ─────────────────────────
+  - name: gods
+    label: Gods
+    label_singular: God
+    folder: src/content/gods
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/gods
+    public_folder: /gods
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int }
+      - name: category
+        label: Category
+        widget: select
+        options: [mobius, moebius, sol, other]
+        default: mobius
+      - { name: name, label: Name, widget: string }
+      - { name: domain, label: Domain, widget: string, required: false }
+      - { name: description, label: Description, widget: text, required: false }
+      - { name: image, label: Image, widget: image, required: false }
+      - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "e.g. '30% center'" }
+      - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
+      - { name: color, label: "Accent color", widget: color, required: false }
+
+  # ───────────────────────── Energies ─────────────────────────
+  - name: energy
+    label: Energies
+    label_singular: Energy
+    folder: src/content/energy
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/energy
+    public_folder: /energy
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int }
+      - { name: name, label: Name, widget: string }
+      - { name: custom, label: "Is this a custom (player-made) energy?", widget: boolean, required: false, default: false }
+      - { name: icon, label: Icon, widget: image, required: false }
+      - { name: background, label: Background, widget: image, required: false }
+      - { name: backgroundPosition, label: "Background position (CSS)", widget: string, required: false, hint: "e.g. 'center 30%'" }
+      - { name: backgroundZoom, label: "Background zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.05" }
+      - { name: summary, label: Summary, widget: text, required: false }
+      - { name: description, label: Description, widget: text, required: false }
+
+  # ───────────────────────── Powers ─────────────────────────
+  - name: powers
+    label: Powers
+    label_singular: Power
+    folder: src/content/powers
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/powers
+    public_folder: /powers
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int }
+      - { name: name, label: Name, widget: string }
+      - { name: icon, label: Icon, widget: image, required: false }
+      - { name: background, label: Background, widget: image, required: false }
+      - { name: summary, label: Summary, widget: text, required: false }
+      - { name: description, label: Description, widget: text, required: false }
+
+  # ───────────────────────── Transformations ─────────────────────────
+  - name: transformations
+    label: Transformations
+    label_singular: Transformation
+    folder: src/content/transformations
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/transformations
+    public_folder: /transformations
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int }
+      - { name: name, label: Name, widget: string }
+      - { name: icon, label: Icon, widget: image, required: false }
+      - { name: background, label: Background, widget: image, required: false }
+      - { name: summary, label: Summary, widget: text, required: false }
+      - { name: description, label: Description, widget: text, required: false }
+
+  # ───────────────────────── Worlds ─────────────────────────
+  - name: worlds
+    label: Worlds
+    label_singular: World
+    folder: src/content/worlds
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/worlds
+    public_folder: /worlds
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int }
+      - { name: name, label: Name, widget: string }
+      - { name: image, label: Image, widget: image, required: false }
+      - { name: presentation, label: Presentation, widget: text, required: false }
+      - { name: map, label: Map, widget: image, required: false }
+      - name: countryGroups
+        label: Country groups
+        widget: list
+        required: false
+        label_singular: Group
+        summary: "{{fields.label}} ({{fields.count}})"
+        fields:
+          - { name: id, label: ID, widget: string }
+          - { name: label, label: Label, widget: string }
+          - { name: placeholderLabel, label: "Placeholder label", widget: string }
+          - { name: count, label: Count, widget: number, value_type: int }
+
+  # ───────────────────────── Side worlds ─────────────────────────
+  - name: side-worlds
+    label: Side worlds
+    label_singular: Side world
+    folder: src/content/side-worlds
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/worlds
+    public_folder: /worlds
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int }
+      - { name: name, label: Name, widget: string }
+      - { name: image, label: Image, widget: image, required: false }
+
+  # ───────────────────────── Lore (section index) ─────────────────────────
+  - name: lore
+    label: Lore (sections)
+    label_singular: Lore section
+    folder: src/content/lore
+    extension: json
+    format: json
+    create: true
+    identifier_field: title
+    summary: "{{fields.order}} · {{fields.title}}"
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int }
+      - { name: title, label: Title, widget: string }
+      - { name: route, label: "Route (optional)", widget: string, required: false, hint: "e.g. /lore/gods. Leave empty if it doesn't link anywhere." }
+      - { name: description, label: Description, widget: text, required: false }
