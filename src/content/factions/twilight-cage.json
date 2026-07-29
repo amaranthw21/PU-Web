@@ -2,5 +2,11 @@
   "order": 1,
   "group": "side",
   "name": "Twilight Cage",
-  "image": "/factions/twilight-cage.png"
+  "image": "/factions/twilight-cage.png",
+  "placeholderImage": "/factions/twilight-cage.png",
+  "factionGroups": [
+    { "id": "main", "label": "Main Factions", "placeholderLabel": "Faction", "count": 0 },
+    { "id": "side", "label": "Side Factions", "placeholderLabel": "Side Faction", "count": 2 },
+    { "id": "custom", "label": "Custom Factions", "placeholderLabel": "Custom Faction", "count": 5 }
+  ]
 }

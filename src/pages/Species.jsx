@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import species from "../data/species";
-import asset from "../lib/asset";
+import { mainSpecies, companionSpecies } from "../data/species";
+import GodCard from "../components/GodCard";
 
 
 export default function Species() {
@@ -9,50 +8,93 @@ export default function Species() {
 
         <div>
 
-            <h1 className="page-title">
+            <h1 className="gods-title">
                 Species
             </h1>
 
+            <p className="gods-intro">
+                These are the species that inhabit the setting. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+            </p>
 
-            <div className="worlds-row species-row">
+
+            <hr className="section-divider" />
+
+
+            <div className="grid gods-grid">
 
                 {
-                    species.map(specie => (
+                    mainSpecies.map(specie => (
 
-                        <Link
+                        <GodCard
+
                             key={specie.id}
-                            to={`/species/${specie.id}`}
-                            className="world-btn"
-                        >
 
-                            <span className="world-btn__circle">
+                            name={specie.name}
 
-                                {
-                                    specie.image && (
-                                        <span
-                                            className="world-btn__img"
-                                            style={{
-                                                backgroundImage: `url(${asset(specie.image)})`,
-                                                backgroundPosition: specie.imagePosition || "center",
-                                                transform: specie.imageZoom ? `scale(${specie.imageZoom})` : undefined,
-                                                transformOrigin: specie.imagePosition || "center"
-                                            }}
-                                        />
-                                    )
-                                }
+                            image={specie.image}
 
-                            </span>
+                            imagePosition={specie.imagePosition}
 
-                            <span className="world-btn__label">
-                                {specie.name}
-                            </span>
+                            imageZoom={specie.imageZoom}
 
-                        </Link>
+                            link={`/species/${specie.id}`}
+
+                        />
 
                     ))
                 }
 
             </div>
+
+
+            {
+                companionSpecies.length > 0 && (
+
+                    <>
+
+                        <hr className="section-divider" />
+
+
+                        <section className="gods-section">
+
+                            <h2 className="worlds-heading">
+                                Companion Only
+                            </h2>
+
+                            <div className="grid gods-grid gods-grid--companion">
+
+                                {
+                                    companionSpecies.map(specie => (
+
+                                        <GodCard
+
+                                            key={specie.id}
+
+                                            name={specie.name}
+
+                                            image={specie.image}
+
+                                            imagePosition={specie.imagePosition}
+
+                                            imageZoom={specie.imageZoom}
+
+                                            link={`/species/${specie.id}`}
+
+                                        />
+
+                                    ))
+                                }
+
+                            </div>
+
+                        </section>
+
+                    </>
+
+                )
+            }
 
         </div>
 

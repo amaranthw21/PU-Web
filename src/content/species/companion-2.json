@@ -1,0 +1,8 @@
+{
+  "order": 2,
+  "group": "companion",
+  "name": "Companion Two",
+  "image": "/species/companion-2.png",
+  "summary": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+}

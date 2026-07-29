@@ -2,5 +2,12 @@
   "order": 3,
   "group": "main",
   "name": "Sol",
-  "image": "/factions/sol.png"
+  "image": "/factions/sol.png",
+  "imageFolder": "sol",
+  "placeholderImage": "/factions/sol/main-1.png",
+  "factionGroups": [
+    { "id": "main", "label": "Main Factions", "placeholderLabel": "Faction", "count": 1 },
+    { "id": "side", "label": "Side Factions", "placeholderLabel": "Side Faction", "count": 2 },
+    { "id": "custom", "label": "Custom Factions", "placeholderLabel": "Custom Faction", "count": 5 }
+  ]
 }

@@ -11,4 +11,10 @@ const species = Object.entries(modules)
     .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
 
+// Especies normales vs. "companion only" (más pequeñas, en su propia sección).
+// Las que no declaran `group` se consideran principales.
+export const mainSpecies = species.filter(s => (s.group ?? "main") === "main");
+export const companionSpecies = species.filter(s => s.group === "companion");
+
+
 export default species;

@@ -101,6 +101,28 @@ body {
 }
 
 
+/* Variante "Companion Only": tarjetas más pequeñas, 5 por fila */
+.gods-grid--companion {
+    grid-template-columns: repeat(5, minmax(0, 190px));
+}
+
+.gods-grid--companion .god-card {
+    height: 220px;
+}
+
+@media (max-width: 900px) {
+    .gods-grid--companion {
+        grid-template-columns: repeat(3, minmax(0, 190px));
+    }
+}
+
+@media (max-width: 520px) {
+    .gods-grid--companion {
+        grid-template-columns: repeat(2, minmax(0, 190px));
+    }
+}
+
+
 /* Card de dios (full-bleed): la imagen llena la tarjeta como fondo (cover)
    y el texto va superpuesto abajo sobre una banda oscura degradada. */
 .god-card {
