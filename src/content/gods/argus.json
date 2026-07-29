@@ -4,7 +4,7 @@
   "name": "Argus",
   "domain": "Example Domain",
   "description": "Description of the god.",
-  "image": "/gods/argus.webp",
+  "image": "/gods/argus.png",
   "imagePosition": "center 85%",
   "imageZoom": 1.2,
   "color": "#c2385a"
