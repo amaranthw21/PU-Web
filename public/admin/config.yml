@@ -8,12 +8,10 @@ backend:
   # OAuth broker (Cloudflare Worker) that handles the "Sign In with GitHub" flow.
   base_url: https://pu-web-cms-auth.amaranthw21.workers.dev
 
-# Lets you preview the panel locally without GitHub, against the repo files.
-# Requires running the proxy separately:  npx @sveltia/cms-server   (or  npx decap-server)
-local_backend: true
-
-# Admin UI language.
-locale: en
+# Nota: `local_backend` y `locale` no existen en Sveltia CMS (los ignora y avisa
+# por consola), así que no se declaran aquí. Para editar en local se usa el botón
+# "Work with Local Repository", que sale solo en localhost. El idioma del panel
+# lo toma del navegador.
 
 # Default folder where images are uploaded (each collection overrides it
 # with its own subfolder below).
