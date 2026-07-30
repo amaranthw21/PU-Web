@@ -22,7 +22,8 @@ through a form-based panel. You never touch code, JSON or Git.
 
 ## How to edit
 
-1. Go to **https://amaranthw21.github.io/PU-Web/admin/**
+1. Click **Admin** in the top navigation bar of the site — or go straight to
+   **https://amaranthw21.github.io/PU-Web/admin/**
 2. Click **Sign In with GitHub** and authorise the app (only the first time).
 3. Pick a collection in the left sidebar (Species, Gods, Worlds…).
 4. Click an existing entry to edit it, or **New <item>** to create one.

@@ -1001,6 +1001,34 @@ body {
 
 }
 
+/* El acceso al panel de edición: se marca aparte para que no se lea como
+   una sección más del lore. */
+.links a.admin-link {
+
+    color: #c4b5fd;
+
+    border: 1px solid rgba(196, 181, 253, 0.4);
+
+    border-radius: 6px;
+
+    padding: 6px 12px;
+
+    font-size: 0.9em;
+
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+
+}
+
+.links a.admin-link:hover {
+
+    color: white;
+
+    border-color: rgba(196, 181, 253, 0.9);
+
+    background-color: rgba(196, 181, 253, 0.12);
+
+}
+
 .logo img {
 
     width: 55px;
