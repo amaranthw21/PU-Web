@@ -194,6 +194,160 @@ collections:
           - { name: placeholderLabel, label: "Placeholder label", widget: string }
           - { name: count, label: Count, widget: number, value_type: int }
 
+  # ───────────────────────── Countries ─────────────────────────
+  - name: countries
+    label: Countries
+    label_singular: Country
+    folder: src/content/countries
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.name}} — {{fields.world}} / {{fields.group}}"
+    media_folder: /public/worlds
+    public_folder: /worlds
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int, hint: "Position within its group" }
+      - name: world
+        label: World
+        widget: select
+        options: [mobius, moebius, sol, future-200]
+        default: mobius
+        hint: "Which world's page this country appears on"
+      - name: group
+        label: Group
+        widget: select
+        options: [main, secondary, territory, safe, missing]
+        default: main
+        hint: "Must be a group that exists in the chosen world (Mobius: main / secondary / territory · Moebius and Sol: main · 200 Years Future: safe / missing). If it doesn't match, the country won't show up."
+      - { name: name, label: Name, widget: string, hint: "Also the heading of the Basic Information box." }
+      - { name: flag, label: Flag, widget: image, required: false, hint: "Shown inside the Basic Information box and on the world page card." }
+      - { name: background, label: Background, widget: image, required: false, hint: "Full-page background for this country's own page." }
+
+      # ── Cita de cabecera, pintada como conversación de chat ──
+      - name: quote
+        label: Quote (chat)
+        widget: list
+        required: false
+        label_singular: Message
+        summary: "{{fields.speaker}}: {{fields.text}}"
+        hint: "Shown at the top of the page as a chat. Each character keeps the same side, in the order they first speak."
+        fields:
+          - { name: speaker, label: Character, widget: string }
+          - { name: avatar, label: Avatar, widget: image, required: false, hint: "Square images look best. Without one, the initial is shown instead." }
+          - { name: text, label: Message, widget: text }
+
+      # ── Basic Information (las 5 filas fijas del infobox) ──
+      # Si se deja vacío, la fila sale como "N/A" en lugar de desaparecer.
+      - { name: continent, label: Continent, widget: string, required: false }
+      - { name: capital, label: Capital, widget: string, required: false }
+      - name: otherCities
+        label: Other Cities
+        widget: list
+        required: false
+        field: { name: city, label: City, widget: string }
+        hint: "One per line. Add notes in brackets if you like, e.g. 'Robotropolis (Eggman Army HQ)'."
+      - name: majorOrganizations
+        label: Major Organizations
+        widget: list
+        required: false
+        field: { name: organization, label: Organization, widget: string }
+      - name: minorOrganizations
+        label: Minor Organizations
+        widget: list
+        required: false
+        field: { name: organization, label: Organization, widget: string }
+
+      # ── Bloques de contenido de la ficha ──
+      - name: blocks
+        label: Content blocks
+        widget: list
+        required: false
+        label_singular: Block
+        summary: "{{fields.title}}"
+        hint: "The sections of the page, in order. Each one gets a divider above it, and the Contents list is built from their titles."
+        fields:
+          - { name: title, label: Title, widget: string, hint: "Also the entry in the Contents list." }
+          - { name: icon, label: Icon, widget: image, required: false, hint: "Shown in the circle next to the title. Square images look best." }
+          # El cuerpo del bloque se compone de partes, y cada una es de un tipo.
+          # Al pulsar "Add" el CMS pregunta qué tipo de parte se quiere añadir.
+          - name: parts
+            label: Content
+            widget: list
+            required: false
+            label_singular: Part
+            hint: "Build the block by adding parts, in order: text, text with an image beside it, or just an image."
+            types:
+              - name: text
+                label: Text
+                widget: object
+                summary: "Text: {{fields.text}}"
+                fields:
+                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+
+              - name: textImage
+                label: Text + image
+                widget: object
+                summary: "Text + image: {{fields.text}}"
+                fields:
+                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: image, label: Image, widget: image }
+                  - { name: caption, label: Caption, widget: string, required: false }
+                  - name: imageSide
+                    label: Image side
+                    widget: select
+                    options: [right, left]
+                    default: right
+                    hint: "Which side of the text the image sits on."
+
+              - name: image
+                label: Image
+                widget: object
+                summary: "Image: {{fields.caption}}"
+                fields:
+                  - { name: image, label: Image, widget: image }
+                  - { name: caption, label: Caption, widget: string, required: false }
+
+              - name: regions
+                label: Regions
+                widget: object
+                summary: "Regions"
+                fields:
+                  - { name: map, label: Map of the country, widget: image, required: false }
+                  - { name: mapCaption, label: Map caption, widget: string, required: false }
+                  - name: regions
+                    label: Regions
+                    widget: list
+                    required: false
+                    label_singular: Region
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: description, label: Description, widget: text, required: false, hint: "Leave a blank line between paragraphs." }
+                      - name: locations
+                        label: Locations
+                        widget: list
+                        required: false
+                        label_singular: Location
+                        summary: "{{fields.name}}"
+                        hint: "Shown as a row of pictures you can scroll. Give a location a description and readers can click it to open it."
+                        fields:
+                          - { name: name, label: Name, widget: string }
+                          - { name: image, label: Image, widget: image, required: false }
+                          - { name: description, label: Description, widget: text, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
+
+      # ── Filas extra, para lo que no cabe en las fijas ──
+      - name: extraInfo
+        label: Extra rows
+        widget: list
+        required: false
+        label_singular: Row
+        summary: "{{fields.label}}: {{fields.value}}"
+        hint: "Extra rows added to the bottom of the Basic Information box, e.g. 'Figure Head'."
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: value, label: Value, widget: text, required: false }
+
   # ───────────────────────── Side worlds ─────────────────────────
   - name: side-worlds
     label: Side worlds

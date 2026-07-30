@@ -48,6 +48,7 @@ That's it. Your change is saved and the live site rebuilds itself in about
 | **Powers** | Power categories |
 | **Transformations** | Transformation categories |
 | **Worlds** | The main worlds, each with its own page and map |
+| **Countries** | Individual countries, each with its own page |
 | **Side worlds** | Secondary dimensions (button only, no page) |
 | **Lore (sections)** | The index of sections on the Lore page |
 
@@ -72,19 +73,122 @@ That's it. Your change is saved and the live site rebuilds itself in about
 - **Group / Category** — which section the entry belongs to. For Gods and
   Factions this is a dropdown, so just pick one.
 
-### Country groups (Worlds only)
+### Countries, and how they mix with placeholders
 
-A world's countries are **not written one by one yet**. Instead each group has a
-**Count**, and the site auto-generates that many placeholder countries
-(`Country 1`, `Country 2`…). So:
+Countries are being written one at a time, so a world's list is part real and
+part placeholder. It works like this:
 
-- Changing **Count** from `3` to `5` adds two more placeholder countries.
-- The **Placeholder label** is the word used for them (`Country`, `Territory`…).
+- Each group in **Worlds → Country groups** has a **Count**: how many countries
+  that group has **in total**.
+- The site fills that number with the **Countries** you've actually written
+  first, and pads the rest with placeholders (`Country 1`, `Country 2`…).
+- So writing a new country **does not** require changing Count. If Main
+  Countries is `18` and you write one real country, you get 1 real + 17
+  placeholders — still 18.
+
+When adding a country in the **Countries** collection:
+
+- **World** — whose page it appears on.
+- **Group** — must be a group that exists in that world (Mobius has
+  `main`/`secondary`/`territory`; Moebius and Sol only `main`; 200 Years Future
+  has `safe`/`missing`). **If it doesn't match, the country silently won't
+  show up.**
+- **Flag** — shown inside the Basic Information box and on the world-page card.
+  Without one, the card shows the country's first letter instead.
+- **Background** — the full-page background of that country's own page.
+
+### The quote (chat)
+
+The top of a country's page can open with a short exchange between characters,
+shown as a chat. Under **Quote (chat)** add one entry per message:
+
+- **Character** — who's speaking.
+- **Avatar** — their picture, shown as a small circle. Square images look best;
+  without one, the character's initial is shown instead.
+- **Message** — what they say.
+
+Each character always stays on the same side of the chat, decided by the order
+they first speak: the first one goes left, the second right, and so on. Leave
+the whole thing empty and no chat box appears.
+
+### Content blocks
+
+The body of a country's page is a list of **Content blocks**, shown in the order
+you add them and separated by a divider line. Each one has:
+
+- **Title** — shown in a bordered bar with a circle on its left. It's also the
+  entry in the Contents list.
+- **Icon** — the image inside that circle. Square images look best; leave it
+  empty and the circle stays blank.
+- **Content** — the body, built out of **parts** (see below).
+
+#### Building a block out of parts
+
+A block's body isn't one big text field: you add **parts** one after another, and
+each part has a type. When you click *Add* under **Content**, the CMS asks which
+kind you want:
+
+| Part type | What it gives you |
+| --- | --- |
+| **Text** | Just text. Leave a blank line between paragraphs. |
+| **Text + image** | Text with an image beside it. **Image side** picks whether the image sits on the right (default) or the left. |
+| **Image** | Just an image, filling the width. |
+| **Regions** | A map of the country plus a set of regions, each with its own locations. |
+
+**Text + image** and **Image** both take an optional **Caption**, shown under the
+picture. On phones, a **Text + image** part stacks: text first, image underneath.
+
+Parts appear in the order you add them, and you can mix as many as you like — a
+block can be text, then text with a picture on the right, then a full-width
+image, and so on. A **Text + image** part with no image just renders as text.
+
+#### The Regions part
+
+Use this for a country's regions. It holds:
+
+- **Map of the country** and an optional **Map caption** — shown at the top.
+- **Regions** — add one per region, each with a **Title**, a **Description**, and
+  a list of **Locations**.
+- Each **Location** has a **Name**, an **Image**, and an optional
+  **Description**.
+
+The locations show up as a row of pictures under the region's description. If
+there are more than fit, the row scrolls sideways on its own — the page never
+scrolls sideways with it.
+
+**Give a location a Description and readers can click its picture to open it**,
+showing the name and text underneath. Clicking another location switches to it;
+clicking the open one again closes it. A location with no description isn't
+clickable, so readers are never offered a click that does nothing. Each region
+opens and closes independently.
+
+The **Contents** list at the top is built automatically from the block titles,
+so there's nothing to keep in sync: rename a block and the list follows. Blocks
+with no title are skipped, and if two share a title the links still work.
+
+### The Basic Information box
+
+The box on the right of a country's page. It always shows the same five rows —
+**Continent**, **Capital**, **Other Cities**, **Major Organizations**,
+**Minor Organizations** — in that order, with the country's name as the heading
+and the flag underneath.
+
+- **Leave a row empty and it shows "N/A"** rather than disappearing, so the box
+  looks the same on every country.
+- **Other Cities** and the two **Organizations** rows are lists: click *Add* for
+  each entry and it gets its own line.
+- **Extra rows** lets you add anything the five fixed rows don't cover
+  (*Figure Head*, *Population*, *Language*…). Each one needs a **Label** and a
+  **Value**, and they appear at the bottom of the box in the order you add them.
+  A row with no label is skipped.
+
+Other fields in **Country groups** (Worlds):
+
+- **Placeholder label** is the word used for the padding (`Country`,
+  `Territory`…).
 - **Label** is the heading shown above the group on the page.
 - **ID** is used internally for links and image filenames — **don't change it**
   on existing groups, or you'll break links.
-
-Real, individually written countries will get their own collection later.
 
 ## Good habits
 
@@ -110,6 +214,12 @@ npm run dev
 Other scripts: `npm run build`, `npm run preview`, `npm run lint`.
 
 ## How content works
+
+Countries are the one collection that isn't rendered straight from its files:
+`src/data/worlds/index.js` merges `src/content/countries/*.json` into each
+world by `world` + `group`, and pads each group with generated placeholders up
+to its `count`, so written countries consume placeholder slots rather than
+adding to them.
 
 Content lives as **one JSON file per entry** under `src/content/<collection>/`.
 The modules in `src/data/` pick them up with `import.meta.glob` and sort them by

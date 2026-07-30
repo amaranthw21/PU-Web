@@ -1,17 +1,36 @@
 // El contenido editable vive en:
 //   - src/content/worlds/*.json       → mundos con página (texto, mapa, grupos)
 //   - src/content/side-worlds/*.json  → dimensiones secundarias (solo botón)
-//
-// Los países de cada mundo son, POR AHORA, placeholders generados a partir de
-// `placeholderLabel` y `count` de cada grupo. Cuando se escriban países reales
-// se sustituirá esto por una colección propia ("Countries") en el CMS.
+//   - src/content/countries/*.json    → países escritos de verdad
 const worldModules = import.meta.glob("../../content/worlds/*.json", { eager: true });
 const sideModules = import.meta.glob("../../content/side-worlds/*.json", { eager: true });
+const countryModules = import.meta.glob("../../content/countries/*.json", { eager: true });
 
 
+// Países escritos de verdad. Cada uno declara a qué mundo (`world`) y a qué
+// grupo (`group`) pertenece; el id es el nombre del archivo.
+const writtenCountries = Object.entries(countryModules)
+    .map(([path, mod]) => {
+        const id = path.split("/").pop().replace(".json", "");
+        return { id, ...(mod.default ?? mod) };
+    })
+    .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+
+
+// La lista de países de un grupo = los escritos de verdad primero, y detrás
+// placeholders hasta llegar a `count`. Es decir, los países reales OCUPAN plaza:
+// `count` sigue siendo "cuántos países tiene este grupo en total", así que al
+// escribir uno nuevo no hay que tocar el número.
 function buildCountries(worldId, groups) {
-    return groups.flatMap(group =>
-        Array.from({ length: group.count ?? 0 }, (_, i) => {
+    return groups.flatMap(group => {
+
+        const written = writtenCountries
+            .filter(country => country.world === worldId && country.group === group.id)
+            .map(country => ({ ...country, type: group.id }));
+
+        const remaining = Math.max(0, (group.count ?? 0) - written.length);
+
+        const placeholders = Array.from({ length: remaining }, (_, i) => {
             const n = i + 1;
             return {
                 id: `${group.id}-${n}`,
@@ -19,8 +38,11 @@ function buildCountries(worldId, groups) {
                 flag: `/worlds/${worldId}/flags/${group.id}-${n}.png`,
                 type: group.id
             };
-        })
-    );
+        });
+
+        return [...written, ...placeholders];
+
+    });
 }
 
 
