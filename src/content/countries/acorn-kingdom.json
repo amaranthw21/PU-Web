@@ -45,6 +45,13 @@
         {
           "type": "text",
           "text": "In the southeast, the Freedom Fighters, led by Princess Sally Acorn, continue to defend what remains of the Kingdom from their base in Knothole Village. Protecting scattered settlements and refugees while launching resistance operations deep into enemy territory. And while the country’s ruler, King Maximillian Acorn, still holds authority in name. Both sides are locked in a tense stalemate—each waiting for the moment that will tip the balance and decide the fate of the Kingdom once and for all again."
+        },
+        {
+          "type": "textImage",
+          "text": "An imagen and some text for an example",
+          "image": "/worlds/column_01_03.jpg",
+          "caption": "I'm a caption",
+          "imageSide": "right"
         }
       ]
     },
