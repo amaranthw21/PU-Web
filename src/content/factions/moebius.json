@@ -1,13 +1,28 @@
 {
-  "order": 1,
+  "order": 2,
   "group": "main",
   "name": "Moebius",
   "image": "/factions/moebius.png",
   "imageFolder": "moebius",
   "placeholderImage": "/factions/moebius/main-1.png",
   "factionGroups": [
-    { "id": "main", "label": "Main Factions", "placeholderLabel": "Faction", "count": 3 },
-    { "id": "side", "label": "Side Factions", "placeholderLabel": "Side Faction", "count": 2 },
-    { "id": "custom", "label": "Custom Factions", "placeholderLabel": "Custom Faction", "count": 5 }
+    {
+      "id": "main",
+      "label": "Main Factions",
+      "placeholderLabel": "Faction",
+      "count": 3
+    },
+    {
+      "id": "side",
+      "label": "Side Factions",
+      "placeholderLabel": "Side Faction",
+      "count": 2
+    },
+    {
+      "id": "custom",
+      "label": "Custom Factions",
+      "placeholderLabel": "Custom Faction",
+      "count": 5
+    }
   ]
 }
