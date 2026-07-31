@@ -2,9 +2,10 @@
   "order": 6,
   "category": "sol",
   "name": "Null",
-  "domain": "Example Domain",
+  "domain": "God of nothingness",
   "description": "Description of the god.",
   "image": "/gods/null.png",
   "imagePosition": "center",
+  "imageZoom": null,
   "color": "#ece8fb"
 }
