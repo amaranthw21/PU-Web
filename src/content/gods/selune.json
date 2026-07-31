@@ -2,8 +2,10 @@
   "order": 13,
   "category": "moebius",
   "name": "Selune",
-  "domain": "Example Domain",
+  "domain": "The goddess of the moon",
   "description": "Description of the god.",
   "image": "/gods/selune.webp",
+  "imagePosition": "",
+  "imageZoom": null,
   "color": "#f5271e"
 }
