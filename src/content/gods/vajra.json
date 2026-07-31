@@ -3,9 +3,9 @@
   "category": "sol",
   "name": "Vajra",
   "domain": "Example Domain",
-  "description": "Description of the god.",
+  "description": "God of fire",
   "image": "/gods/vajra.png",
-  "imagePosition": "20% 25% ",
+  "imagePosition": "20% 25%",
   "imageZoom": 1.5,
   "color": "#fa6d1c"
 }
