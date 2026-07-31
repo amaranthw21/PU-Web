@@ -2,8 +2,10 @@
   "order": 7,
   "category": "sol",
   "name": "Emerald Pantheon",
-  "domain": "Example Domain",
+  "domain": "The fictitious pantheon of Enlil Sanctum",
   "description": "Description of the god.",
   "image": "/gods/emerald-pantheon.png",
+  "imagePosition": "",
+  "imageZoom": null,
   "color": "#33e6a6"
 }
