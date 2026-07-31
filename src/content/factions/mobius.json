@@ -1,13 +1,28 @@
 {
-  "order": 2,
+  "order": 1,
   "group": "main",
   "name": "Mobius",
   "image": "/factions/mobius.png",
   "imageFolder": "mobius",
   "placeholderImage": "/factions/mobius/main-1.png",
   "factionGroups": [
-    { "id": "main", "label": "Main Factions", "placeholderLabel": "Faction", "count": 24 },
-    { "id": "side", "label": "Side Factions", "placeholderLabel": "Side Faction", "count": 2 },
-    { "id": "custom", "label": "Custom Factions", "placeholderLabel": "Custom Faction", "count": 5 }
+    {
+      "id": "main",
+      "label": "Main Factions",
+      "placeholderLabel": "Faction",
+      "count": 24
+    },
+    {
+      "id": "side",
+      "label": "Side Factions",
+      "placeholderLabel": "Side Faction",
+      "count": 2
+    },
+    {
+      "id": "custom",
+      "label": "Custom Factions",
+      "placeholderLabel": "Custom Faction",
+      "count": 5
+    }
   ]
 }
