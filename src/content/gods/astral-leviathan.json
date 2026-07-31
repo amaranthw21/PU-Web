@@ -2,8 +2,10 @@
   "order": 8,
   "category": "moebius",
   "name": "Astral Leviathan",
-  "domain": "Example Domain",
+  "domain": "The god of destiny, stagnation, and equilibrium",
   "description": "Description of the god.",
   "image": "/gods/astral-leviathan.jpg",
+  "imagePosition": "",
+  "imageZoom": null,
   "color": "#4d9fff"
 }
