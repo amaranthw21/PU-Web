@@ -2,7 +2,10 @@
   "order": 3,
   "category": "mobius",
   "name": "Dark Gaia",
-  "domain": "Example Domain",
+  "domain": "The god of darkness, night, and destruction",
   "description": "Description of the god.",
-  "image": "/gods/dark-gaia.png"
+  "image": "/gods/dark-gaia.png",
+  "imagePosition": "",
+  "imageZoom": null,
+  "color": ""
 }
