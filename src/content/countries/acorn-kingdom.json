@@ -3,23 +3,23 @@
   "world": "mobius",
   "group": "main",
   "name": "Acorn Kingdom",
-  "flag": "",
-  "background": "",
+  "flag": "/worlds/mobius/flags/main-1.png",
+  "background": "/worlds/column_01_03.jpg",
   "quote": [
     {
-      "speaker": "Sonic",
+      "speaker": "Walpurgis",
       "avatar": "",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "text": "\"I've heard that out in the western wastelands, they have a cure for every disease.\""
     },
     {
-      "speaker": "Sally",
+      "speaker": "Unknown",
       "avatar": "",
-      "text": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "text": "\"Really? I thought the pleasant part of the country was in the east.\""
     },
     {
-      "speaker": "Sonic",
+      "speaker": "Walpurgis",
       "avatar": "",
-      "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+      "text": "\"Oh, it is. The west just has a very... permanent treatment. Becoming a Robian seems to eliminate every illness. And they do it for free in exchange for your freedom.\""
     }
   ],
   "continent": "Northamer",
@@ -33,34 +33,14 @@
     "Eggman Army (Northamer)"
   ],
   "minorOrganizations": [],
-  "extraInfo": [
-    {
-      "label": "Figure Head",
-      "value": "King Maximilian Acorn"
-    }
-  ],
   "blocks": [
     {
       "title": "Acorn Kingdom Scenario",
-      "icon": "",
+      "icon": "/worlds/theatre.png",
       "parts": [
         {
           "type": "text",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        },
-        {
-          "type": "textImage",
-          "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "image": "",
-          "caption": "",
-          "imageSide": "right"
-        },
-        {
-          "type": "textImage",
-          "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "image": "",
-          "caption": "",
-          "imageSide": "left"
         }
       ]
     },
@@ -76,38 +56,17 @@
             {
               "title": "Great Forest",
               "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-              "locations": [
-                {
-                  "name": "Knothole Village",
-                  "image": "",
-                  "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                },
-                {
-                  "name": "Great Forest",
-                  "image": "",
-                  "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco."
-                },
-                {
-                  "name": "Windmill Village",
-                  "image": "",
-                  "description": ""
-                }
-              ]
-            },
-            {
-              "title": "Royal Hills",
-              "description": "Duis aute irure dolor in reprehenderit in voluptate velit.",
-              "locations": [
-                {
-                  "name": "New Mobotropolis",
-                  "image": "",
-                  "description": "Excepteur sint occaecat cupidatat non proident."
-                }
-              ]
+              "locations": []
             }
           ]
         }
       ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Figure Head",
+      "value": "King Maximilian Acorn"
     }
   ]
 }
