@@ -2,8 +2,10 @@
   "order": 9,
   "category": "moebius",
   "name": "Inner Leviathan",
-  "domain": "Example Domain",
+  "domain": "The god of will, progress, and imbalance",
   "description": "Description of the god.",
   "image": "/gods/inner-leviathan.png",
+  "imagePosition": "",
+  "imageZoom": null,
   "color": "#93e9be"
 }
