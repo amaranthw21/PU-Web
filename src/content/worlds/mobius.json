@@ -2,7 +2,7 @@
   "order": 1,
   "name": "Mobius",
   "image": "/worlds/mobius.jpg",
-  "presentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "presentation": "This server is set on Mobius, the planet inhabited by Sonic and his friends. The name Mobius is used here for clarity and consistency. Across the Sonic series, the planet has been referred to inconsistently, sometimes as Earth, sometimes left unnamed. So this setting adopts Mobius as the name of the planet. \n\nOther worlds and dimensions do exist and may be referenced, however, these locations are secondary to the main setting. \n\nIt is important to clarify that the main countries will appear on the server, the ones with a presence and playable locations. This does not mean that other countries do not exist; they simply will not have active roles in the server content. Secondary Countries will only have their names and a brief description provided.",
   "map": "/worlds/mobius/map.jpg",
   "countryGroups": [
     {
