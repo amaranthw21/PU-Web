@@ -2,9 +2,10 @@
   "order": 1,
   "category": "mobius",
   "name": "Chaos",
-  "domain": "Example Domain",
+  "domain": "The god of water",
   "description": "Description of the god.",
   "image": "/gods/perfect_chaos.jpg",
   "imagePosition": "30% center",
+  "imageZoom": null,
   "color": "#5bc0ff"
 }
