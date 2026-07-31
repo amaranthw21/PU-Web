@@ -2,8 +2,10 @@
   "order": 4,
   "category": "mobius",
   "name": "Light Gaia",
-  "domain": "Example Domain",
+  "domain": "The god of light, day, and rebirth",
   "description": "Description of the god.",
   "image": "/gods/light-gaia.jpg",
+  "imagePosition": "",
+  "imageZoom": null,
   "color": "#e45581"
 }
