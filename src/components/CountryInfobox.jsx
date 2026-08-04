@@ -1,3 +1,4 @@
+import InfoboxValue from "./InfoboxValue";
 import asset from "../lib/asset";
 
 
@@ -11,31 +12,6 @@ const FIXED_ROWS = [
     { key: "majorOrganizations", label: "Major Organizations" },
     { key: "minorOrganizations", label: "Minor Organizations" }
 ];
-
-
-// Un campo puede ser un texto suelto o una lista (Other Cities y las
-// organizaciones son listas). Se normaliza a array para pintar una línea por
-// valor, y si no queda nada se muestra "N/A".
-function InfoboxValue({ value }){
-
-    const items = (Array.isArray(value) ? value : [value])
-        .filter(item => typeof item === "string" && item.trim() !== "");
-
-    if(items.length === 0){
-
-        return <span className="infobox__na">N/A</span>;
-
-    }
-
-    return items.map((item, i) => (
-
-        <span key={i} className="infobox__line">
-            {item}
-        </span>
-
-    ));
-
-}
 
 
 export default function CountryInfobox({ country }){

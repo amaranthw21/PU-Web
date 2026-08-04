@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import asset from "../lib/asset";
+import Paragraphs from "./Paragraphs";
 
 
 export default function Accordion({ title, summary, link, custom, icon, background, backgroundPosition, backgroundZoom }) {
@@ -44,35 +45,38 @@ export default function Accordion({ title, summary, link, custom, icon, backgrou
 
             <div className={open ? "accordion__body is-open" : "accordion__body"}>
 
-                <div className="accordion__inner">
+                <div className="accordion__wrap">
 
-                    {
-                        background && (
-                            <div
-                                className="accordion__bg"
-                                style={{
-                                    backgroundImage: `linear-gradient(rgba(17, 17, 24, 0.6), rgba(17, 17, 24, 0.6)), url(${asset(background)})`,
-                                    backgroundPosition: backgroundPosition || "center",
-                                    transform: backgroundZoom ? `scale(${backgroundZoom})` : undefined,
-                                    transformOrigin: backgroundPosition || "center"
-                                }}
-                            />
-                        )
-                    }
-
-                    <div className="accordion__content">
-
-                        <p>
-                            {summary}
-                        </p>
+                    <div className="accordion__inner">
 
                         {
-                            link && (
-                                <Link to={link} className="accordion__more">
-                                    Read more →
-                                </Link>
+                            background && (
+                                <div
+                                    className="accordion__bg"
+                                    style={{
+                                        backgroundImage: `linear-gradient(rgba(17, 17, 24, 0.6), rgba(17, 17, 24, 0.6)), url(${asset(background)})`,
+                                        backgroundPosition: backgroundPosition || "center",
+                                        transform: backgroundZoom ? `scale(${backgroundZoom})` : undefined,
+                                        transformOrigin: backgroundPosition || "center"
+                                    }}
+                                />
                             )
                         }
+
+                        <div className="accordion__content">
+
+                            {/* El summary del CMS se parte en párrafos por línea en blanco. */}
+                            <Paragraphs text={summary} />
+
+                            {
+                                link && (
+                                    <Link to={link} className="accordion__more">
+                                        Read more →
+                                    </Link>
+                                )
+                            }
+
+                        </div>
 
                     </div>
 

@@ -5,6 +5,10 @@ import powers from "../../../data/lore/energy-powers/powers";
 
 export default function Powers(){
 
+    const canonPowers = powers.filter(power => !power.custom);
+    const customPowers = powers.filter(power => power.custom);
+
+
     return (
 
         <div>
@@ -25,7 +29,7 @@ export default function Powers(){
             <div className="accordion-list">
 
                 {
-                    powers.map(power => (
+                    canonPowers.map(power => (
 
                         <Accordion
                             key={power.id}
@@ -42,6 +46,36 @@ export default function Powers(){
                 }
 
             </div>
+
+
+            {/* Los poderes de jugador van aparte, debajo de los canon. */}
+            {
+                customPowers.length > 0 && (
+
+                    <div className="accordion-list accordion-list--custom">
+
+                        {
+                            customPowers.map(power => (
+
+                                <Accordion
+                                    key={power.id}
+                                    title={power.name}
+                                    summary={power.summary}
+                                    icon={power.icon}
+                                    background={power.background}
+                                    backgroundPosition={power.backgroundPosition}
+                                    backgroundZoom={power.backgroundZoom}
+                                    link={`/lore/energy-powers/powers/${power.id}`}
+                                    custom
+                                />
+
+                            ))
+                        }
+
+                    </div>
+
+                )
+            }
 
 
             <section className="faq">

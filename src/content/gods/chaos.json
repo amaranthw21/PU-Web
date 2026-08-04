@@ -3,9 +3,96 @@
   "category": "mobius",
   "name": "Chaos",
   "domain": "The god of water",
-  "description": "Description of the god.",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   "image": "/gods/perfect_chaos.jpg",
   "imagePosition": "30% center",
   "imageZoom": null,
-  "color": "#5bc0ff"
+  "color": "#5bc0ff",
+  "harbingers": [
+    {
+      "name": "Lorem",
+      "image": "/gods/null.png",
+      "imagePosition": "center",
+      "imageZoom": null
+    },
+    {
+      "name": "Ipsum",
+      "image": "/gods/vajra.png",
+      "imagePosition": "center 25%",
+      "imageZoom": 1.2
+    },
+    {
+      "name": "Dolor Sit",
+      "image": "/gods/mata.webp",
+      "imagePosition": "center",
+      "imageZoom": null
+    },
+    {
+      "name": "Amet",
+      "image": "/gods/selune.webp",
+      "imagePosition": "center",
+      "imageZoom": null
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Lorem",
+      "value": "Ipsum dolor sit amet"
+    },
+    {
+      "label": "Consectetur",
+      "value": "Adipiscing elit"
+    }
+  ],
+  "quote": [
+    {
+      "speaker": "Lorem",
+      "avatar": "",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit?\""
+    },
+    {
+      "speaker": "Ipsum",
+      "avatar": "",
+      "text": "\"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\""
+    },
+    {
+      "speaker": "Lorem",
+      "avatar": "",
+      "text": "\"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.\""
+    }
+  ],
+  "blocks": [
+    {
+      "title": "Lorem Ipsum",
+      "icon": "/gods/null.png",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "type": "textImage",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+          "image": "/gods/perfect_chaos.jpg",
+          "caption": "Lorem ipsum dolor sit amet",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Dolor Sit Amet",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.\n\nNeque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+        },
+        {
+          "type": "image",
+          "image": "/gods/perfect_chaos.jpg",
+          "caption": "Consectetur adipiscing elit"
+        }
+      ]
+    }
+  ]
 }

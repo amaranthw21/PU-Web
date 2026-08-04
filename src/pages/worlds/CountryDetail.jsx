@@ -3,10 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import { worldsById } from "../../data/worlds";
 import CountryInfobox from "../../components/CountryInfobox";
 import CountryQuote from "../../components/CountryQuote";
-import CountryToc from "../../components/CountryToc";
-import CountryBlock from "../../components/CountryBlock";
+import ContentToc from "../../components/ContentToc";
+import ContentBlock from "../../components/ContentBlock";
 import asset from "../../lib/asset";
-import slug from "../../lib/slug";
+import withBlockIds from "../../lib/blocks";
 
 
 export default function CountryDetail(){
@@ -20,51 +20,43 @@ export default function CountryDetail(){
     );
 
 
-    // Los bloques se identifican por su título. Se descartan los que no tienen
-    // título (fila a medio rellenar en el CMS) y, si dos coinciden, al segundo
-    // se le añade un sufijo para que las anclas sigan siendo únicas.
-    const usedIds = [];
-
-    const blocks = (country?.blocks ?? [])
-        .filter(block => block?.title?.trim())
-        .map(block => {
-
-            const base = slug(block.title);
-            let id = base;
-            let n = 2;
-
-            while(usedIds.includes(id)){
-                id = `${base}-${n}`;
-                n += 1;
-            }
-
-            usedIds.push(id);
-
-            return { ...block, id };
-
-        });
+    const blocks = withBlockIds(country?.blocks);
 
 
-    // Mientras estás en la ficha del país, el fondo de la página es su imagen.
-    // Al salir (o cambiar de país) se restaura el anterior. Los países que
-    // todavía son placeholders no tienen `background`, así que se quedan con
-    // el fondo por defecto.
+    // Mientras estás en la ficha del país, el fondo de la página es su imagen
+    // y el color de acento (marco, título, infobox...) pasa a ser el suyo.
+    // Al salir (o cambiar de país) se restaura todo. Los países que todavía son
+    // placeholders no tienen ni `background` ni `color`, así que se quedan con
+    // el fondo y el acento por defecto.
     useEffect(() => {
 
-        if(!country?.background){
+        if(!country?.background && !country?.color){
             return;
         }
 
         const body = document.body;
         const prevBg = body.style.backgroundImage;
+        const prevAccent = body.style.getPropertyValue("--accent");
 
-        body.style.backgroundImage = `url(${asset(country.background)})`;
+        if(country.background){
+            body.style.backgroundImage = `url(${asset(country.background)})`;
+        }
+
+        if(country.color){
+            body.style.setProperty("--accent", country.color);
+        }
 
         return () => {
             body.style.backgroundImage = prevBg;
+
+            if(prevAccent){
+                body.style.setProperty("--accent", prevAccent);
+            } else {
+                body.style.removeProperty("--accent");
+            }
         };
 
-    }, [country?.background]);
+    }, [country?.background, country?.color]);
 
 
     if(!country){
@@ -108,7 +100,7 @@ export default function CountryDetail(){
                       La tabla de contenidos se genera a partir de los propios
                       bloques, así que no hay que mantenerla a mano.
                     */}
-                    <CountryToc sections={blocks} />
+                    <ContentToc sections={blocks} />
 
                 </div>
 
@@ -126,7 +118,7 @@ export default function CountryDetail(){
 
                             {i > 0 && <hr className="section-divider" />}
 
-                            <CountryBlock block={block} />
+                            <ContentBlock block={block} />
 
                         </div>
 
