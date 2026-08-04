@@ -1,3 +1,4 @@
+import InfoboxValue from "./InfoboxValue";
 import asset from "../lib/asset";
 
 
@@ -85,11 +86,7 @@ export default function GodInfobox({ god }){
                         </th>
 
                         <td>
-                            {
-                                god.domain?.trim()
-                                    ? god.domain
-                                    : <span className="infobox__na">N/A</span>
-                            }
+                            <InfoboxValue value={god.domain} />
                         </td>
 
                     </tr>
@@ -104,11 +101,7 @@ export default function GodInfobox({ god }){
                                 </th>
 
                                 <td>
-                                    {
-                                        row.value?.trim()
-                                            ? row.value
-                                            : <span className="infobox__na">N/A</span>
-                                    }
+                                    <InfoboxValue value={row.value} />
                                 </td>
 
                             </tr>

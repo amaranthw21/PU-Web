@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import species from "../data/species";
+import Paragraphs from "../components/Paragraphs";
 import asset from "../lib/asset";
 
 
@@ -74,9 +75,7 @@ export default function SpeciesDetail(){
                 {specie.name}
             </h1>
 
-            <p>
-                {specie.description}
-            </p>
+            <Paragraphs text={specie.description} />
 
         </div>
 

@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { worldsById } from "../../data/worlds";
 import CountryCard from "../../components/CountryCard";
+import Paragraphs from "../../components/Paragraphs";
 import asset from "../../lib/asset";
 
 
@@ -33,9 +34,10 @@ export default function WorldPage(){
             </h1>
 
 
-            <p className="world-presentation">
-                {world.presentation}
-            </p>
+            {/* El recuadro es uno solo; dentro van los párrafos. */}
+            <div className="world-presentation">
+                <Paragraphs text={world.presentation} />
+            </div>
 
 
             <img
@@ -70,9 +72,7 @@ export default function WorldPage(){
 
                             {
                                 group.description && (
-                                    <p className="world-group-desc">
-                                        {group.description}
-                                    </p>
+                                    <Paragraphs text={group.description} className="world-group-desc" />
                                 )
                             }
 

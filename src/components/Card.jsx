@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Paragraphs from "./Paragraphs";
 
 
 export default function Card({ title, description, link }) {
@@ -12,9 +13,7 @@ export default function Card({ title, description, link }) {
             </h2>
 
 
-            <p>
-                {description}
-            </p>
+            <Paragraphs text={description} />
 
 
             {

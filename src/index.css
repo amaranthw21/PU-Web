@@ -626,11 +626,25 @@ body {
     padding: 20px 28px;
 
     background: rgba(31, 41, 55, 0.6);
-    border: 1px solid rgba(192, 75, 216, 0.45);
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
     border-radius: 12px;
 
     color: #cbd5e1;
     line-height: 1.7;
+
+}
+
+/* El recuadro puede llevar varios párrafos dentro: el margen va entre ellos,
+   no por fuera, para que la caja no crezca por arriba y por abajo. */
+.world-presentation p {
+
+    margin: 0 0 14px;
+
+}
+
+.world-presentation p:last-child {
+
+    margin-bottom: 0;
 
 }
 

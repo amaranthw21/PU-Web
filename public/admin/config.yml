@@ -37,7 +37,7 @@ collections:
       - { name: name, label: Name, widget: string }
       - { name: image, label: Image, widget: image, required: false }
       - { name: summary, label: Summary, widget: text, required: false }
-      - { name: description, label: Description, widget: text, required: false }
+      - { name: description, label: Description, widget: text, required: false, hint: "Shown on this species' own page. Leave a blank line between paragraphs." }
 
   # ───────────────────────── Factions ─────────────────────────
   - name: factions
@@ -286,7 +286,7 @@ collections:
       - { name: order, label: Order, widget: number, value_type: int }
       - { name: name, label: Name, widget: string }
       - { name: image, label: Image, widget: image, required: false }
-      - { name: presentation, label: Presentation, widget: text, required: false }
+      - { name: presentation, label: Presentation, widget: text, required: false, hint: "Intro at the top of this world's page. Leave a blank line between paragraphs." }
       - { name: map, label: Map, widget: image, required: false }
       - name: countryGroups
         label: Country groups
@@ -477,4 +477,4 @@ collections:
       - { name: order, label: Order, widget: number, value_type: int }
       - { name: title, label: Title, widget: string }
       - { name: route, label: "Route (optional)", widget: string, required: false, hint: "e.g. /lore/gods. Leave empty if it doesn't link anywhere." }
-      - { name: description, label: Description, widget: text, required: false }
+      - { name: description, label: Description, widget: text, required: false, hint: "Shown inside the card on the Lore page. Leave a blank line between paragraphs." }
