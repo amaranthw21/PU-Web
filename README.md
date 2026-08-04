@@ -45,8 +45,8 @@ That's it. Your change is saved and the live site rebuilds itself in about
 | **Factions** | Faction hubs, one per world |
 | **Gods** | Deities, grouped by category (mobius / moebius / sol / other) |
 | **Energies** | Energy types, including player-made ones |
-| **Powers** | Power categories |
-| **Transformations** | Transformation categories |
+| **Powers** | Power categories, including player-made ones |
+| **Transformations** | Transformation categories, including player-made ones |
 | **Worlds** | The main worlds, each with its own page and map |
 | **Countries** | Individual countries, each with its own page |
 | **Side worlds** | Secondary dimensions (button only, no page) |
@@ -59,8 +59,10 @@ That's it. Your change is saved and the live site rebuilds itself in about
   bump the ones after it.
 - **Name / Title** — the display name. Also used to name the file, so avoid
   renaming things you don't have to.
-- **Summary** — the short text shown on cards and previews.
-- **Description** — the long text on the detail page.
+- **Summary** — the short text shown on cards, previews and inside the
+  accordions.
+- **Description** — the long text on the entry's own page, shown as the intro
+  above the sections.
 - **Image / Icon / Background / Map** — click the field, then drag a file in or
   pick one already uploaded. Each collection puts its images in the right
   folder automatically.
@@ -69,11 +71,37 @@ That's it. Your change is saved and the live site rebuilds itself in about
   vertical. Leave it empty for centred.
 - **Image zoom / Background zoom** — a multiplier such as `1.2` to crop in a
   little. Leave empty for none.
-- **Accent color** — a colour picker, used for that entry's highlight colour.
+- **Accent color** — a colour picker (**Gods** and **Countries**). It tints that
+  entry's page: the frame, the title and the Basic Information box. Leave it
+  empty and the page keeps the site's magenta.
 - **Group / Category** — which section the entry belongs to. For Gods and
   Factions this is a dropdown, so just pick one.
 
-### Countries, and how they mix with placeholders
+> **Paragraphs:** any long text box splits into paragraphs wherever you leave a
+> **blank line** between them. This works everywhere — summaries, descriptions,
+> the text inside blocks, region descriptions, world presentations and the rows
+> of the Basic Information box. Single line breaks are ignored, so leave an
+> empty line to start a new paragraph.
+
+## How an entry's page is built
+
+Countries, Gods, Energies, Powers and Transformations all build their own page
+the same way, so learning it once is enough:
+
+1. an optional **Quote (chat)** at the top,
+2. the **Description** as the intro,
+3. a **Contents** list, built automatically,
+4. the **Content blocks**, one after another.
+
+**Countries and Gods** also get a **Basic Information** box on the right.
+Energies, Powers and Transformations don't — their sections run the full width.
+Countries are the one exception to step 2: they have no Description field, so
+their page opens straight into the quote and the blocks.
+
+Everything here is optional. Leave the quote empty and no chat appears; add no
+blocks and the Contents list stays hidden.
+
+## Countries, and how they mix with placeholders
 
 Countries are being written one at a time, so a world's list is part real and
 part placeholder. It works like this:
@@ -97,9 +125,17 @@ When adding a country in the **Countries** collection:
   Without one, the card shows the country's first letter instead.
 - **Background** — the full-page background of that country's own page.
 
-### The quote (chat)
+The other fields of a group, in **Worlds → Country groups**:
 
-The top of a country's page can open with a short exchange between characters,
+- **Placeholder label** is the word used for the padding (`Country`,
+  `Territory`…).
+- **Label** is the heading shown above the group on the page.
+- **ID** is used internally for links and image filenames — **don't change it**
+  on existing groups, or you'll break links.
+
+## The quote (chat)
+
+The top of an entry's page can open with a short exchange between characters,
 shown as a chat. Under **Quote (chat)** add one entry per message:
 
 - **Character** — who's speaking.
@@ -111,9 +147,9 @@ Each character always stays on the same side of the chat, decided by the order
 they first speak: the first one goes left, the second right, and so on. Leave
 the whole thing empty and no chat box appears.
 
-### Content blocks
+## Content blocks
 
-The body of a country's page is a list of **Content blocks**, shown in the order
+The body of an entry's page is a list of **Content blocks**, shown in the order
 you add them and separated by a divider line. Each one has:
 
 - **Title** — shown in a bordered bar with a circle on its left. It's also the
@@ -122,7 +158,7 @@ you add them and separated by a divider line. Each one has:
   empty and the circle stays blank.
 - **Content** — the body, built out of **parts** (see below).
 
-#### Building a block out of parts
+### Building a block out of parts
 
 A block's body isn't one big text field: you add **parts** one after another, and
 each part has a type. When you click *Add* under **Content**, the CMS asks which
@@ -133,7 +169,7 @@ kind you want:
 | **Text** | Just text. Leave a blank line between paragraphs. |
 | **Text + image** | Text with an image beside it. **Image side** picks whether the image sits on the right (default) or the left. |
 | **Image** | Just an image, filling the width. |
-| **Regions** | A map of the country plus a set of regions, each with its own locations. |
+| **Regions** | A map of the country plus a set of regions, each with its own locations. **Countries only.** |
 
 **Text + image** and **Image** both take an optional **Caption**, shown under the
 picture. On phones, a **Text + image** part stacks: text first, image underneath.
@@ -142,7 +178,7 @@ Parts appear in the order you add them, and you can mix as many as you like — 
 block can be text, then text with a picture on the right, then a full-width
 image, and so on. A **Text + image** part with no image just renders as text.
 
-#### The Regions part
+### The Regions part
 
 Use this for a country's regions. It holds:
 
@@ -166,29 +202,61 @@ The **Contents** list at the top is built automatically from the block titles,
 so there's nothing to keep in sync: rename a block and the list follows. Blocks
 with no title are skipped, and if two share a title the links still work.
 
-### The Basic Information box
+## The Basic Information box
 
-The box on the right of a country's page. It always shows the same five rows —
-**Continent**, **Capital**, **Other Cities**, **Major Organizations**,
-**Minor Organizations** — in that order, with the country's name as the heading
-and the flag underneath.
+The box on the right of a country's or a god's page.
+
+**On a country** it always shows the same five rows — **Continent**,
+**Capital**, **Other Cities**, **Major Organizations**, **Minor
+Organizations** — in that order, with the country's name as the heading and the
+flag underneath.
+
+**On a god** the only fixed row is **Domain**, with the god's name as the
+heading.
+
+Both boxes then share:
 
 - **Leave a row empty and it shows "N/A"** rather than disappearing, so the box
-  looks the same on every country.
+  looks the same on every entry.
 - **Other Cities** and the two **Organizations** rows are lists: click *Add* for
   each entry and it gets its own line.
-- **Extra rows** lets you add anything the five fixed rows don't cover
-  (*Figure Head*, *Population*, *Language*…). Each one needs a **Label** and a
-  **Value**, and they appear at the bottom of the box in the order you add them.
-  A row with no label is skipped.
+- **Extra rows** lets you add anything the fixed rows don't cover (*Figure
+  Head*, *Population*, *Language*…). Each one needs a **Label** and a **Value**,
+  and they appear at the bottom of the box in the order you add them. A row with
+  no label is skipped.
 
-Other fields in **Country groups** (Worlds):
+### Harbingers (Gods only)
 
-- **Placeholder label** is the word used for the padding (`Country`,
-  `Territory`…).
-- **Label** is the heading shown above the group on the page.
-- **ID** is used internally for links and image filenames — **don't change it**
-  on existing groups, or you'll break links.
+The beings who speak for a god. They go at the bottom of the Basic Information
+box, as pictures **two per row** with the name underneath. Under **Harbingers**
+add one entry each:
+
+- **Name** — shown under the picture.
+- **Image** — cropped to a square. Leave it empty and the frame stays blank.
+- **Image position** and **Image zoom** — to reframe the picture inside its
+  square, same as everywhere else. `center 20%` with a zoom of `1.2` is a good
+  starting point for showing a face.
+
+An entry with no name is skipped, and with no harbingers at all the section
+doesn't appear.
+
+## Energies, Powers and Transformations
+
+These three work identically to each other. On the list page each entry is an
+**accordion**: click the title and it opens to show the **Summary** over the
+entry's background image, plus a *Read more* link to its own page.
+
+- **Summary** — what the accordion shows. It can be several paragraphs; the
+  accordion grows to fit whatever you write.
+- **Background / Background position / Background zoom** — the picture behind
+  the open accordion, and how it's framed.
+- **Icon** — the little image next to the title.
+- **Is this a custom (player-made) …?** — tick it and the entry moves to a
+  separate list under the canon ones, marked with a dashed border. Leave it
+  unticked for canon entries.
+
+The rest — Description, Quote, Content blocks — builds its own page exactly as
+described above.
 
 ## Good habits
 
@@ -232,11 +300,50 @@ Images live in `public/<collection>/` and are referenced by absolute path
 those paths are prefixed at runtime by the `asset()` helper in
 `src/lib/asset.js` — use it for any new content-driven image.
 
+## Shared pieces
+
+Countries, Gods, Energies, Powers and Transformations render the same page
+shape, so the parts are shared rather than copied:
+
+| Piece | What it does |
+| --- | --- |
+| `components/ContentBlock.jsx` | One content block: title, icon and its parts (text / text+image / image / regions) |
+| `components/ContentToc.jsx` | The Contents list, derived from the blocks it's handed |
+| `components/CountryQuote.jsx` | The chat quote |
+| `components/InfoboxValue.jsx` | One value in a Basic Information row, used by both infoboxes |
+| `components/Paragraphs.jsx` | Splits a CMS text on blank lines into `<p>`s |
+| `components/LoreDetail.jsx` | The whole full-width page (Energies, Powers, Transformations) |
+| `lib/blocks.js` | `withBlockIds()` — drops untitled blocks and gives each one a unique anchor |
+
+`CountryDetail` and `GodDetail` compose those parts themselves because they also
+carry an infobox and their own page background / accent effect. Any text that
+comes from the CMS should go through `Paragraphs` (or `InfoboxValue`) so blank
+lines keep working.
+
+The accent colour is the CSS variable `--accent`, set on `document.body` by
+`CountryDetail` and `GodDetail` from the entry's `color` and restored on unmount.
+Anything on a detail page that should follow it uses
+`color-mix(in srgb, var(--accent) N%, transparent)` rather than a literal
+magenta. Site chrome outside the fichas (navbar, list cards, FAQ boxes) is still
+hardcoded on purpose.
+
 ## The editing panel
 
 `public/admin/` holds the [Sveltia CMS](https://github.com/sveltia/sveltia-cms)
 panel: `index.html` loads it from a CDN, and `config.yml` defines the GitHub
 backend plus one collection per content type.
+
+Because several collections share fields, `config.yml` uses YAML anchors: the
+**Gods** collection defines `&quote`, `&blocks` and `&extra_info`, and the later
+collections pull them in with `- *quote`, `- *blocks` and `- *extra_info`. An
+anchor has to appear before the aliases that use it, which is why the shared
+definitions live in the first collection that needs them. **Countries** keeps
+its own `quote` and `blocks` — its blocks are the only ones that offer the
+*Regions* part type.
+
+Fields the pages read must be declared here, even the optional ones: an
+undeclared field is invisible in the panel, and editing that entry through the
+CMS is liable to drop it from the JSON.
 
 Login goes through a **Cloudflare Worker** running
 [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth), which holds the
