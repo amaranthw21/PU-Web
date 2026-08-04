@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import transformations from "../../../data/lore/energy-powers/transformations";
+import LoreDetail from "../../../components/LoreDetail";
 
 
 export default function TransformationDetail(){
@@ -12,32 +13,13 @@ export default function TransformationDetail(){
     );
 
 
-    if(!transformation){
-
-        return (
-            <h1>
-                Transformation type not found
-            </h1>
-        );
-
-    }
-
-
     return (
 
-        <div>
-
-            <h1>
-                {transformation.name}
-            </h1>
-
-
-            <p>
-                {transformation.description}
-            </p>
-
-
-        </div>
+        <LoreDetail
+            item={transformation}
+            section={{ label: "Transformations", to: "/lore/energy-powers/transformations" }}
+            notFound="Transformation type not found"
+        />
 
     );
 

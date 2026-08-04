@@ -1,7 +1,7 @@
-// Tabla de contenidos de la ficha del país. No se escribe a mano: recibe las
-// secciones que la propia página va a pintar (los bloques de contenido), así
-// que se mantiene sola. Mientras el país no tenga bloques, no se muestra.
-export default function CountryToc({ sections }){
+// Tabla de contenidos de una ficha. No se escribe a mano: recibe las secciones
+// que la propia página va a pintar (los bloques de contenido), así que se
+// mantiene sola. Mientras no haya bloques, no se muestra.
+export default function ContentToc({ sections }){
 
     const entries = (sections ?? []).filter(
         section => section?.id && section?.title

@@ -94,12 +94,109 @@ collections:
         options: [mobius, moebius, sol, other]
         default: mobius
       - { name: name, label: Name, widget: string }
-      - { name: domain, label: Domain, widget: string, required: false }
-      - { name: description, label: Description, widget: text, required: false }
+      - { name: domain, label: Domain, widget: string, required: false, hint: "First row of the Basic Information box." }
+      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
       - { name: image, label: Image, widget: image, required: false }
       - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "e.g. '30% center'" }
       - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
-      - { name: color, label: "Accent color", widget: color, required: false }
+      - { name: color, label: "Accent color", widget: color, required: false, hint: "Tints the frame, the name and the Basic Information box on this god's own page. Empty keeps the site's magenta." }
+
+      # ── Heraldos: los seres que hablan por el dios ──
+      # Se pintan dentro del Basic Information, de dos en dos por fila.
+      - name: harbingers
+        label: Harbingers
+        widget: list
+        required: false
+        label_singular: Harbinger
+        summary: "{{fields.name}}"
+        hint: "The beings who speak for this god. Shown at the bottom of the Basic Information box, two per row."
+        fields:
+          - { name: name, label: Name, widget: string, hint: "Shown under the picture." }
+          - { name: image, label: Image, widget: image, required: false }
+          - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "Moves the picture inside its frame, e.g. 'center 20%' to show the head." }
+          - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
+
+      # ── Filas extra del Basic Information ──
+      # Gods y Countries comparten este campo: se define aquí y Countries lo
+      # reutiliza con *extra_info.
+      - &extra_info
+        name: extraInfo
+        label: Extra rows
+        widget: list
+        required: false
+        label_singular: Row
+        summary: "{{fields.label}}: {{fields.value}}"
+        hint: "Extra rows added to the bottom of the Basic Information box, e.g. 'Figure Head'."
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: value, label: Value, widget: text, required: false }
+
+      # ── Cita de cabecera, pintada como conversación de chat ──
+      # Gods, Energies, Powers y Transformations comparten esta ficha, así que
+      # el campo se define aquí una vez y las demás lo reutilizan con *quote.
+      - &quote
+        name: quote
+        label: Quote (chat)
+        widget: list
+        required: false
+        label_singular: Message
+        summary: "{{fields.speaker}}: {{fields.text}}"
+        hint: "Shown at the top of this entry's own page as a chat. Each character keeps the same side, in the order they first speak."
+        fields:
+          - { name: speaker, label: Character, widget: string }
+          - { name: avatar, label: Avatar, widget: image, required: false, hint: "Square images look best. Without one, the initial is shown instead." }
+          - { name: text, label: Message, widget: text }
+
+      # ── Bloques de contenido de la ficha (mismos tipos que en Countries) ──
+      # Igual que la cita: se define aquí y Energies, Powers y Transformations
+      # lo reutilizan con *blocks.
+      - &blocks
+        name: blocks
+        label: Content blocks
+        widget: list
+        required: false
+        label_singular: Block
+        summary: "{{fields.title}}"
+        hint: "The sections of this entry's own page, in order. Each one gets a divider above it, and the Contents list is built from their titles."
+        fields:
+          - { name: title, label: Title, widget: string, hint: "Also the entry in the Contents list." }
+          - { name: icon, label: Icon, widget: image, required: false, hint: "Shown in the circle next to the title. Square images look best." }
+          - name: parts
+            label: Content
+            widget: list
+            required: false
+            label_singular: Part
+            hint: "Build the block by adding parts, in order: text, text with an image beside it, or just an image."
+            types:
+              - name: text
+                label: Text
+                widget: object
+                summary: "Text: {{fields.text}}"
+                fields:
+                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+
+              - name: textImage
+                label: Text + image
+                widget: object
+                summary: "Text + image: {{fields.text}}"
+                fields:
+                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: image, label: Image, widget: image }
+                  - { name: caption, label: Caption, widget: string, required: false }
+                  - name: imageSide
+                    label: Image side
+                    widget: select
+                    options: [right, left]
+                    default: right
+                    hint: "Which side of the text the image sits on."
+
+              - name: image
+                label: Image
+                widget: object
+                summary: "Image: {{fields.caption}}"
+                fields:
+                  - { name: image, label: Image, widget: image }
+                  - { name: caption, label: Caption, widget: string, required: false }
 
   # ───────────────────────── Energies ─────────────────────────
   - name: energy
@@ -121,8 +218,11 @@ collections:
       - { name: background, label: Background, widget: image, required: false }
       - { name: backgroundPosition, label: "Background position (CSS)", widget: string, required: false, hint: "e.g. 'center 30%'" }
       - { name: backgroundZoom, label: "Background zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.05" }
-      - { name: summary, label: Summary, widget: text, required: false }
-      - { name: description, label: Description, widget: text, required: false }
+      - { name: summary, label: Summary, widget: text, required: false, hint: "Shown inside the accordion. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
+
+      - *quote
+      - *blocks
 
   # ───────────────────────── Powers ─────────────────────────
   - name: powers
@@ -139,10 +239,13 @@ collections:
     fields:
       - { name: order, label: Order, widget: number, value_type: int }
       - { name: name, label: Name, widget: string }
+      - { name: custom, label: "Is this a custom (player-made) power?", widget: boolean, required: false, default: false, hint: "Custom ones are listed apart, under the canon ones." }
       - { name: icon, label: Icon, widget: image, required: false }
       - { name: background, label: Background, widget: image, required: false }
-      - { name: summary, label: Summary, widget: text, required: false }
-      - { name: description, label: Description, widget: text, required: false }
+      - { name: summary, label: Summary, widget: text, required: false, hint: "Shown inside the accordion. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
+      - *quote
+      - *blocks
 
   # ───────────────────────── Transformations ─────────────────────────
   - name: transformations
@@ -159,10 +262,13 @@ collections:
     fields:
       - { name: order, label: Order, widget: number, value_type: int }
       - { name: name, label: Name, widget: string }
+      - { name: custom, label: "Is this a custom (player-made) transformation?", widget: boolean, required: false, default: false, hint: "Custom ones are listed apart, under the canon ones." }
       - { name: icon, label: Icon, widget: image, required: false }
       - { name: background, label: Background, widget: image, required: false }
-      - { name: summary, label: Summary, widget: text, required: false }
-      - { name: description, label: Description, widget: text, required: false }
+      - { name: summary, label: Summary, widget: text, required: false, hint: "Shown inside the accordion. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
+      - *quote
+      - *blocks
 
   # ───────────────────────── Worlds ─────────────────────────
   - name: worlds
@@ -223,6 +329,7 @@ collections:
       - { name: name, label: Name, widget: string, hint: "Also the heading of the Basic Information box." }
       - { name: flag, label: Flag, widget: image, required: false, hint: "Shown inside the Basic Information box and on the world page card." }
       - { name: background, label: Background, widget: image, required: false, hint: "Full-page background for this country's own page." }
+      - { name: color, label: "Accent color", widget: color, required: false, hint: "Tints the frame, the title and the Basic Information box on this country's own page. Empty keeps the site's magenta." }
 
       # ── Cita de cabecera, pintada como conversación de chat ──
       - name: quote
@@ -337,16 +444,7 @@ collections:
                           - { name: description, label: Description, widget: text, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
 
       # ── Filas extra, para lo que no cabe en las fijas ──
-      - name: extraInfo
-        label: Extra rows
-        widget: list
-        required: false
-        label_singular: Row
-        summary: "{{fields.label}}: {{fields.value}}"
-        hint: "Extra rows added to the bottom of the Basic Information box, e.g. 'Figure Head'."
-        fields:
-          - { name: label, label: Label, widget: string }
-          - { name: value, label: Value, widget: text, required: false }
+      - *extra_info
 
   # ───────────────────────── Side worlds ─────────────────────────
   - name: side-worlds

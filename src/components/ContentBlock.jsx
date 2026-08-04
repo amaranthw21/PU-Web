@@ -99,7 +99,9 @@ function BlockPart({ part }){
 }
 
 
-export default function CountryBlock({ block }){
+// Un bloque de contenido: título con icono y una lista de partes. Lo usan tanto
+// las fichas de país como las de energía.
+export default function ContentBlock({ block }){
 
     const parts = block.parts ?? [];
 

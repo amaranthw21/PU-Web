@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import powers from "../../../data/lore/energy-powers/powers";
+import LoreDetail from "../../../components/LoreDetail";
 
 
 export default function PowersDetail(){
@@ -12,32 +13,13 @@ export default function PowersDetail(){
     );
 
 
-    if(!power){
-
-        return (
-            <h1>
-                Power type not found
-            </h1>
-        );
-
-    }
-
-
     return (
 
-        <div>
-
-            <h1>
-                {power.name}
-            </h1>
-
-
-            <p>
-                {power.description}
-            </p>
-
-
-        </div>
+        <LoreDetail
+            item={power}
+            section={{ label: "Powers", to: "/lore/energy-powers/powers" }}
+            notFound="Power type not found"
+        />
 
     );
 

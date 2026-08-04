@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import energies from "../../../data/lore/energy-powers/energy";
+import LoreDetail from "../../../components/LoreDetail";
 
 
 export default function EnergyDetail(){
@@ -12,32 +13,13 @@ export default function EnergyDetail(){
     );
 
 
-    if(!energy){
-
-        return (
-            <h1>
-                Energy source not found
-            </h1>
-        );
-
-    }
-
-
     return (
 
-        <div>
-
-            <h1>
-                {energy.name}
-            </h1>
-
-
-            <p>
-                {energy.description}
-            </p>
-
-
-        </div>
+        <LoreDetail
+            item={energy}
+            section={{ label: "Energy", to: "/lore/energy-powers/energy" }}
+            notFound="Energy source not found"
+        />
 
     );
 
