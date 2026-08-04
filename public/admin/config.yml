@@ -242,6 +242,8 @@ collections:
       - { name: custom, label: "Is this a custom (player-made) power?", widget: boolean, required: false, default: false, hint: "Custom ones are listed apart, under the canon ones." }
       - { name: icon, label: Icon, widget: image, required: false }
       - { name: background, label: Background, widget: image, required: false }
+      - { name: backgroundPosition, label: "Background position (CSS)", widget: string, required: false, hint: "e.g. 'center 30%'" }
+      - { name: backgroundZoom, label: "Background zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.05" }
       - { name: summary, label: Summary, widget: text, required: false, hint: "Shown inside the accordion. Leave a blank line between paragraphs." }
       - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
       - *quote
@@ -265,6 +267,8 @@ collections:
       - { name: custom, label: "Is this a custom (player-made) transformation?", widget: boolean, required: false, default: false, hint: "Custom ones are listed apart, under the canon ones." }
       - { name: icon, label: Icon, widget: image, required: false }
       - { name: background, label: Background, widget: image, required: false }
+      - { name: backgroundPosition, label: "Background position (CSS)", widget: string, required: false, hint: "e.g. 'center 30%'" }
+      - { name: backgroundZoom, label: "Background zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.05" }
       - { name: summary, label: Summary, widget: text, required: false, hint: "Shown inside the accordion. Leave a blank line between paragraphs." }
       - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
       - *quote
