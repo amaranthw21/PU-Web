@@ -39,10 +39,12 @@ collections:
       - { name: summary, label: Summary, widget: text, required: false }
       - { name: description, label: Description, widget: text, required: false, hint: "Shown on this species' own page. Leave a blank line between paragraphs." }
 
-  # ───────────────────────── Factions ─────────────────────────
+  # ───────────────────── Faction hubs (dimensions) ─────────────────────
+  # El contenedor de las facciones, el equivalente de Worlds: un botón en la
+  # página Factions y sus grupos. Las facciones en sí van en "Factions".
   - name: factions
-    label: Factions
-    label_singular: Faction
+    label: Faction hubs
+    label_singular: Faction hub
     folder: src/content/factions
     extension: json
     format: json
@@ -60,6 +62,7 @@ collections:
         default: main
       - { name: name, label: Name, widget: string }
       - { name: image, label: Main image, widget: image, required: false }
+      - { name: presentation, label: Presentation, widget: text, required: false, hint: "Intro at the top of this hub's page. Leave a blank line between paragraphs. Empty and no intro box appears." }
       - { name: imageFolder, label: "Image folder (optional)", widget: string, required: false }
       - { name: placeholderImage, label: "Placeholder image (optional)", widget: image, required: false }
       - name: factionGroups
@@ -473,6 +476,145 @@ collections:
                         label_singular: Location
                         summary: "{{fields.name}}"
                         hint: "Shown as a row of pictures you can scroll. Give a location a description and readers can click it to open it."
+                        fields:
+                          - { name: name, label: Name, widget: string }
+                          - { name: image, label: Image, widget: image, required: false }
+                          - { name: description, label: Description, widget: text, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
+
+      # ── Filas extra, para lo que no cabe en las fijas ──
+      - *extra_info
+
+  # ───────────────────────── Factions ─────────────────────────
+  # Las facciones escritas de verdad, con ficha propia. Misma ficha que un país:
+  # cita, Basic Information y bloques de contenido. La única diferencia es que su
+  # último apartado lista personajes en lugar de lugares.
+  - name: faction-entries
+    label: Factions
+    label_singular: Faction
+    folder: src/content/faction-entries
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.name}} — {{fields.faction}} / {{fields.group}}"
+    media_folder: /public/factions
+    public_folder: /factions
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int, hint: "Position within its group" }
+      - name: faction
+        label: Faction hub
+        widget: select
+        options: [mobius, moebius, sol, future-200, twilight-cage, white-space]
+        default: mobius
+        hint: "Which hub's page this faction appears on"
+      - name: group
+        label: Group
+        widget: select
+        options: [main, side, custom]
+        default: main
+        hint: "Must be a subgroup that exists in the chosen hub. If it doesn't match, the faction won't show up."
+      - { name: name, label: Name, widget: string, hint: "Also the heading of the Basic Information box." }
+      - { name: image, label: "Emblem / logo", widget: image, required: false, hint: "Shown inside the Basic Information box and on the hub-page card." }
+      - { name: background, label: Background, widget: image, required: false, hint: "Full-page background for this faction's own page." }
+      - { name: color, label: "Accent color", widget: color, required: false, hint: "Tints the frame, the title and the Basic Information box on this faction's own page. Empty keeps the site's magenta." }
+
+      - *quote
+
+      # ── Basic Information (las 5 filas fijas del infobox) ──
+      # Si se deja vacío, la fila sale como "N/A" en lugar de desaparecer.
+      - { name: leader, label: Leader, widget: string, required: false }
+      - { name: headquarters, label: Headquarters, widget: string, required: false }
+      - name: bases
+        label: "Territory / Bases"
+        widget: list
+        required: false
+        field: { name: base, label: Base, widget: string }
+        hint: "One per line. Add notes in brackets if you like, e.g. 'Robotropolis (main stronghold)'."
+      - name: allies
+        label: Allies
+        widget: list
+        required: false
+        field: { name: ally, label: Ally, widget: string }
+      - name: enemies
+        label: Enemies
+        widget: list
+        required: false
+        field: { name: enemy, label: Enemy, widget: string }
+
+      # ── Bloques de contenido de la ficha ──
+      # Iguales que los de un país, salvo que la parte "Regions" se cambia por
+      # "Characters": mismos grupos y mismo carrusel, pero de personajes.
+      - name: blocks
+        label: Content blocks
+        widget: list
+        required: false
+        label_singular: Block
+        summary: "{{fields.title}}"
+        hint: "The sections of the page, in order. Each one gets a divider above it, and the Contents list is built from their titles."
+        fields:
+          - { name: title, label: Title, widget: string, hint: "Also the entry in the Contents list." }
+          - { name: icon, label: Icon, widget: image, required: false, hint: "Shown in the circle next to the title. Square images look best." }
+          - name: parts
+            label: Content
+            widget: list
+            required: false
+            label_singular: Part
+            hint: "Build the block by adding parts, in order: text, text with an image beside it, just an image, or the characters of the faction."
+            types:
+              - name: text
+                label: Text
+                widget: object
+                summary: "Text: {{fields.text}}"
+                fields:
+                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+
+              - name: textImage
+                label: Text + image
+                widget: object
+                summary: "Text + image: {{fields.text}}"
+                fields:
+                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: image, label: Image, widget: image }
+                  - { name: caption, label: Caption, widget: string, required: false }
+                  - name: imageSide
+                    label: Image side
+                    widget: select
+                    options: [right, left]
+                    default: right
+                    hint: "Which side of the text the image sits on."
+
+              - name: image
+                label: Image
+                widget: object
+                summary: "Image: {{fields.caption}}"
+                fields:
+                  - { name: image, label: Image, widget: image }
+                  - { name: caption, label: Caption, widget: string, required: false }
+
+              - name: characters
+                label: Characters
+                widget: object
+                summary: "Characters"
+                fields:
+                  - { name: image, label: "Group picture (optional)", widget: image, required: false, hint: "Shown at the top of the section, like the map on a country's page." }
+                  - { name: caption, label: Caption, widget: string, required: false }
+                  - name: groups
+                    label: "Character groups"
+                    widget: list
+                    required: false
+                    label_singular: Group
+                    summary: "{{fields.title}}"
+                    hint: "Add one per group of characters, e.g. 'Leaders' or 'Members'."
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: description, label: Description, widget: text, required: false, hint: "Leave a blank line between paragraphs." }
+                      - name: characters
+                        label: Characters
+                        widget: list
+                        required: false
+                        label_singular: Character
+                        summary: "{{fields.name}}"
+                        hint: "Shown as a row of pictures you can scroll. Give a character a description and readers can click them to open it."
                         fields:
                           - { name: name, label: Name, widget: string }
                           - { name: image, label: Image, widget: image, required: false }

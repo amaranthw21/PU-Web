@@ -141,6 +141,9 @@ function Region({ region }){
 }
 
 
+// Una imagen de cabecera opcional (el mapa del país) y debajo los bloques con
+// su carrusel. Las facciones reutilizan esto para su apartado de personajes:
+// ContentBlock traduce grupos/personajes a regiones/zonas antes de llegar aquí.
 export default function CountryRegions({ part }){
 
     const regions = (part.regions ?? []).filter(

@@ -67,6 +67,29 @@ function BlockPart({ part }){
     }
 
 
+    // El último apartado de una facción es el equivalente del de regiones de un
+    // país, pero con grupos de personajes en lugar de zonas con lugares. Se
+    // pinta igual (carrusel + panel que se abre), así que se traduce la forma y
+    // se reutiliza el mismo componente.
+    if(part.type === "characters"){
+
+        return (
+            <CountryRegions
+                part={{
+                    map: part.image,
+                    mapCaption: part.caption,
+                    regions: (part.groups ?? []).map(group => ({
+                        title: group.title,
+                        description: group.description,
+                        locations: group.characters
+                    }))
+                }}
+            />
+        );
+
+    }
+
+
     if(part.type === "textImage"){
 
         // Sin imagen se comporta como una parte de solo texto, para que una

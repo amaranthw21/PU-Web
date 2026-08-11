@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { factionsById } from "../data/factions";
 import FactionCard from "../components/FactionCard";
+import Paragraphs from "../components/Paragraphs";
 
 
 export default function FactionDetail(){
@@ -36,10 +37,20 @@ export default function FactionDetail(){
             </h1>
 
 
-            <p className="world-presentation">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            {/*
+              La entradilla la escriben los mods desde el CMS, igual que la de un
+              mundo. Si está vacía no se pinta el recuadro, para no dejar un
+              hueco en los hubs que todavía no la tienen.
+            */}
+            {
+                faction.presentation?.trim() && (
+
+                    <div className="world-presentation">
+                        <Paragraphs text={faction.presentation} />
+                    </div>
+
+                )
+            }
 
 
             <hr className="section-divider" />
