@@ -1,24 +1,50 @@
-// El contenido vive en src/content/factions/*.json (editable desde el CMS).
-// Cada facción trae su `group` ("main" | "side"); aquí cargamos todos los
-// JSON, les añadimos el id (= nombre del archivo) y su ruta, y los ordenamos.
+// El contenido vive en:
+//   - src/content/factions/*.json        → hubs (una dimensión, solo el botón y sus grupos)
+//   - src/content/faction-entries/*.json → facciones escritas de verdad, con ficha propia
 //
-// Cada dimensión tiene además `factionGroups` (Main / Side / Custom) con un
-// `count` de placeholders — igual que los `countryGroups` de los mundos. Las
-// entradas "main" usan sus imágenes reales (main-1..main-N de la carpeta de la
-// dimensión); las de "side"/"custom" son placeholders que reutilizan
-// `placeholderImage` POR AHORA, hasta que se escriba contenido real.
+// Cada hub trae su `group` ("main" | "side"); aquí cargamos todos los JSON, les
+// añadimos el id (= nombre del archivo) y su ruta, y los ordenamos.
+//
+// Cada hub tiene además `factionGroups` (Main / Side / Custom) con un `count`
+// de facciones — igual que los `countryGroups` de los mundos.
 const modules = import.meta.glob("../content/factions/*.json", { eager: true });
+const entryModules = import.meta.glob("../content/faction-entries/*.json", { eager: true });
 
 
+// Facciones escritas de verdad. Cada una declara a qué hub (`faction`) y a qué
+// grupo (`group`) pertenece; el id es el nombre del archivo.
+const writtenFactions = Object.entries(entryModules)
+    .map(([path, mod]) => {
+        const id = path.split("/").pop().replace(".json", "");
+        return { id, ...(mod.default ?? mod) };
+    })
+    .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+
+
+// La lista de facciones de un grupo = las escritas de verdad primero, y detrás
+// placeholders hasta llegar a `count`, igual que los países de un mundo: las
+// facciones reales OCUPAN plaza, así que al escribir una nueva no hay que tocar
+// el número. Las "main" reutilizan las imágenes main-1..main-N de la carpeta del
+// hub; las de "side"/"custom" usan `placeholderImage`.
 function buildSubFactions(factionId, faction) {
     const folder = faction.imageFolder;
 
-    return (faction.factionGroups ?? []).flatMap(group =>
-        Array.from({ length: group.count ?? 0 }, (_, i) => {
+    return (faction.factionGroups ?? []).flatMap(group => {
+
+        const written = writtenFactions
+            .filter(entry => entry.faction === factionId && entry.group === group.id)
+            .map(entry => ({
+                ...entry,
+                type: group.id,
+                route: `/factions/${factionId}/${entry.id}`
+            }));
+
+        const remaining = Math.max(0, (group.count ?? 0) - written.length);
+
+        const placeholders = Array.from({ length: remaining }, (_, i) => {
             const n = i + 1;
             const id = `${group.id}-${n}`;
 
-            // Las "main" tienen imagen propia; el resto son placeholders.
             const image = group.id === "main" && folder
                 ? `/factions/${folder}/main-${n}.png`
                 : faction.placeholderImage;
@@ -30,8 +56,11 @@ function buildSubFactions(factionId, faction) {
                 type: group.id,
                 route: `/factions/${factionId}/${id}`
             };
-        })
-    );
+        });
+
+        return [...written, ...placeholders];
+
+    });
 }
 
 

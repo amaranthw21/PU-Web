@@ -42,7 +42,8 @@ That's it. Your change is saved and the live site rebuilds itself in about
 | Collection | What it holds |
 | --- | --- |
 | **Species** | The playable/known species |
-| **Factions** | Faction hubs, one per world |
+| **Faction hubs** | The faction hubs, one per world (button, intro and groups) |
+| **Factions** | Individual factions, each with its own page |
 | **Gods** | Deities, grouped by category (mobius / moebius / sol / other) |
 | **Energies** | Energy types, including player-made ones |
 | **Powers** | Power categories, including player-made ones |
@@ -71,11 +72,11 @@ That's it. Your change is saved and the live site rebuilds itself in about
   vertical. Leave it empty for centred.
 - **Image zoom / Background zoom** — a multiplier such as `1.2` to crop in a
   little. Leave empty for none.
-- **Accent color** — a colour picker (**Gods** and **Countries**). It tints that
-  entry's page: the frame, the title and the Basic Information box. Leave it
-  empty and the page keeps the site's magenta.
-- **Group / Category** — which section the entry belongs to. For Gods and
-  Factions this is a dropdown, so just pick one.
+- **Accent color** — a colour picker (**Gods**, **Countries** and **Factions**).
+  It tints that entry's page: the frame, the title and the Basic Information box.
+  Leave it empty and the page keeps the site's magenta.
+- **Group / Category** — which section the entry belongs to. For Gods, Countries
+  and Factions this is a dropdown, so just pick one.
 
 > **Paragraphs:** any long text box splits into paragraphs wherever you leave a
 > **blank line** between them. This works everywhere — summaries, descriptions,
@@ -85,18 +86,18 @@ That's it. Your change is saved and the live site rebuilds itself in about
 
 ## How an entry's page is built
 
-Countries, Gods, Energies, Powers and Transformations all build their own page
-the same way, so learning it once is enough:
+Countries, Factions, Gods, Energies, Powers and Transformations all build their
+own page the same way, so learning it once is enough:
 
 1. an optional **Quote (chat)** at the top,
 2. the **Description** as the intro,
 3. a **Contents** list, built automatically,
 4. the **Content blocks**, one after another.
 
-**Countries and Gods** also get a **Basic Information** box on the right.
-Energies, Powers and Transformations don't — their sections run the full width.
-Countries are the one exception to step 2: they have no Description field, so
-their page opens straight into the quote and the blocks.
+**Countries, Factions and Gods** also get a **Basic Information** box on the
+right. Energies, Powers and Transformations don't — their sections run the full
+width. Countries and Factions are the exception to step 2: they have no
+Description field, so their page opens straight into the quote and the blocks.
 
 Everything here is optional. Leave the quote empty and no chat appears; add no
 blocks and the Contents list stays hidden.
@@ -132,6 +133,31 @@ The other fields of a group, in **Worlds → Country groups**:
 - **Label** is the heading shown above the group on the page.
 - **ID** is used internally for links and image filenames — **don't change it**
   on existing groups, or you'll break links.
+
+## Factions
+
+Factions work exactly like countries, one level down: **Faction hubs** are the
+containers (the buttons on the Factions page, each with its **Presentation**,
+its **Faction subgroups** and their **Count**), and the **Factions** collection
+holds the ones written for real, each with its own page.
+
+A hub's **Presentation** is the intro at the top of its page, same as a world's.
+Leave it empty and no intro box appears at all.
+
+- **Faction hub** — whose page it appears on.
+- **Group** — must be a subgroup that exists in that hub (`main`, `side` or
+  `custom`). **If it doesn't match, the faction silently won't show up.**
+- **Emblem / logo** — shown inside the Basic Information box and on the
+  hub-page card.
+- **Background** — the full-page background of that faction's own page.
+
+The padding works the same as with countries: written factions consume
+placeholder slots, so a `Count` of 24 with one real faction gives 1 real + 23
+placeholders.
+
+A faction's page is built exactly like a country's — quote, Basic Information,
+content blocks — with one difference: **its last section lists characters
+instead of locations** (see *The Characters part* below).
 
 ## The quote (chat)
 
@@ -170,6 +196,7 @@ kind you want:
 | **Text + image** | Text with an image beside it. **Image side** picks whether the image sits on the right (default) or the left. |
 | **Image** | Just an image, filling the width. |
 | **Regions** | A map of the country plus a set of regions, each with its own locations. **Countries only.** |
+| **Characters** | The same thing for a faction: groups of characters instead of regions of locations. **Factions only.** |
 
 **Text + image** and **Image** both take an optional **Caption**, shown under the
 picture. On phones, a **Text + image** part stacks: text first, image underneath.
@@ -198,28 +225,47 @@ clicking the open one again closes it. A location with no description isn't
 clickable, so readers are never offered a click that does nothing. Each region
 opens and closes independently.
 
+### The Characters part
+
+The faction equivalent of *Regions*, and it behaves identically — same rows of
+pictures, same click-to-open panel. Only the names change:
+
+- **Group picture** and an optional **Caption** — shown at the top of the
+  section, where a country's map goes. Leave it empty and nothing appears.
+- **Character groups** — add one per group, e.g. *Leaders* or *Members*, each
+  with a **Title**, a **Description** and a list of **Characters**.
+- Each **Character** has a **Name**, an **Image**, and an optional
+  **Description** that opens when the picture is clicked.
+
+A group with no title and no characters is skipped.
+
 The **Contents** list at the top is built automatically from the block titles,
 so there's nothing to keep in sync: rename a block and the list follows. Blocks
 with no title are skipped, and if two share a title the links still work.
 
 ## The Basic Information box
 
-The box on the right of a country's or a god's page.
+The box on the right of a country's, a faction's or a god's page.
 
 **On a country** it always shows the same five rows — **Continent**,
 **Capital**, **Other Cities**, **Major Organizations**, **Minor
 Organizations** — in that order, with the country's name as the heading and the
 flag underneath.
 
+**On a faction** the five rows are the faction equivalents — **Leader**,
+**Headquarters**, **Territory / Bases**, **Allies**, **Enemies** — with the
+faction's name as the heading and its emblem underneath.
+
 **On a god** the only fixed row is **Domain**, with the god's name as the
 heading.
 
-Both boxes then share:
+All three boxes then share:
 
 - **Leave a row empty and it shows "N/A"** rather than disappearing, so the box
   looks the same on every entry.
-- **Other Cities** and the two **Organizations** rows are lists: click *Add* for
-  each entry and it gets its own line.
+- Some rows are lists — **Other Cities** and the **Organizations** on a country,
+  **Territory / Bases**, **Allies** and **Enemies** on a faction: click *Add*
+  for each entry and it gets its own line.
 - **Extra rows** lets you add anything the fixed rows don't cover (*Figure
   Head*, *Population*, *Language*…). Each one needs a **Label** and a **Value**,
   and they appear at the bottom of the box in the order you add them. A row with
@@ -283,11 +329,13 @@ Other scripts: `npm run build`, `npm run preview`, `npm run lint`.
 
 ## How content works
 
-Countries are the one collection that isn't rendered straight from its files:
-`src/data/worlds/index.js` merges `src/content/countries/*.json` into each
-world by `world` + `group`, and pads each group with generated placeholders up
-to its `count`, so written countries consume placeholder slots rather than
-adding to them.
+Countries and factions are the two collections that aren't rendered straight
+from their files. `src/data/worlds/index.js` merges
+`src/content/countries/*.json` into each world by `world` + `group`, and
+`src/data/factions.js` does the same with `src/content/faction-entries/*.json`
+into each hub by `faction` + `group`. Both pad each group with generated
+placeholders up to its `count`, so written entries consume placeholder slots
+rather than adding to them.
 
 Content lives as **one JSON file per entry** under `src/content/<collection>/`.
 The modules in `src/data/` pick them up with `import.meta.glob` and sort them by
@@ -302,12 +350,13 @@ those paths are prefixed at runtime by the `asset()` helper in
 
 ## Shared pieces
 
-Countries, Gods, Energies, Powers and Transformations render the same page
-shape, so the parts are shared rather than copied:
+Countries, Factions, Gods, Energies, Powers and Transformations render the same
+page shape, so the parts are shared rather than copied:
 
 | Piece | What it does |
 | --- | --- |
-| `components/ContentBlock.jsx` | One content block: title, icon and its parts (text / text+image / image / regions) |
+| `components/ContentBlock.jsx` | One content block: title, icon and its parts (text / text+image / image / regions / characters) |
+| `components/CountryRegions.jsx` | The regions part, reused for a faction's characters part |
 | `components/ContentToc.jsx` | The Contents list, derived from the blocks it's handed |
 | `components/CountryQuote.jsx` | The chat quote |
 | `components/InfoboxValue.jsx` | One value in a Basic Information row, used by both infoboxes |
@@ -315,13 +364,18 @@ shape, so the parts are shared rather than copied:
 | `components/LoreDetail.jsx` | The whole full-width page (Energies, Powers, Transformations) |
 | `lib/blocks.js` | `withBlockIds()` — drops untitled blocks and gives each one a unique anchor |
 
-`CountryDetail` and `GodDetail` compose those parts themselves because they also
-carry an infobox and their own page background / accent effect. Any text that
+A faction's characters part is the regions part with different field names, so
+`ContentBlock` translates `groups`/`characters` into `regions`/`locations` and
+hands it to the same component instead of duplicating the carousel.
+
+`CountryDetail`, `FactionSubDetail` and `GodDetail` compose those parts
+themselves because they also carry an infobox and their own page background /
+accent effect. Any text that
 comes from the CMS should go through `Paragraphs` (or `InfoboxValue`) so blank
 lines keep working.
 
 The accent colour is the CSS variable `--accent`, set on `document.body` by
-`CountryDetail` and `GodDetail` from the entry's `color` and restored on unmount.
+those detail pages from the entry's `color` and restored on unmount.
 Anything on a detail page that should follow it uses
 `color-mix(in srgb, var(--accent) N%, transparent)` rather than a literal
 magenta. Site chrome outside the fichas (navbar, list cards, FAQ boxes) is still
@@ -337,9 +391,10 @@ Because several collections share fields, `config.yml` uses YAML anchors: the
 **Gods** collection defines `&quote`, `&blocks` and `&extra_info`, and the later
 collections pull them in with `- *quote`, `- *blocks` and `- *extra_info`. An
 anchor has to appear before the aliases that use it, which is why the shared
-definitions live in the first collection that needs them. **Countries** keeps
-its own `quote` and `blocks` — its blocks are the only ones that offer the
-*Regions* part type.
+definitions live in the first collection that needs them. **Countries** keeps its
+own `quote` and `blocks`, and **Factions** (`faction-entries`) keeps its own
+`blocks` — those two are the only ones whose blocks offer the *Regions* and
+*Characters* part types respectively, so they can't share the generic `&blocks`.
 
 Fields the pages read must be declared here, even the optional ones: an
 undeclared field is invisible in the panel, and editing that entry through the

@@ -1,0 +1,74 @@
+{
+  "order": 1,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Freedom Fighters",
+  "image": "/factions/mobius/main-1.png",
+  "background": "/worlds/column_01_03.jpg",
+  "quote": [
+    {
+      "speaker": "Walpurgis",
+      "avatar": "",
+      "text": "\"So the Kingdom still has an army?\""
+    },
+    {
+      "speaker": "Unknown",
+      "avatar": "",
+      "text": "\"Not an army. A village that refuses to stop fighting. It's not the same thing, but Eggman keeps losing to it anyway.\""
+    }
+  ],
+  "leader": "Princess Sally Acorn",
+  "headquarters": "Knothole Village",
+  "bases": [
+    "Great Forest (hidden outposts)",
+    "Knothole Village (main base)"
+  ],
+  "allies": [
+    "Acorn Kingdom"
+  ],
+  "enemies": [
+    "Eggman Army (Northamer)"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Ficha de ejemplo, para ver cómo queda una facción escrita de verdad entre los placeholders. Bórrala o reescríbela desde el panel cuando quieras.\n\nThe resistance movement of the Acorn Kingdom. Born during Eggman's first occupation and never disbanded, the Freedom Fighters operate out of Knothole Village, protecting the scattered settlements of the southeast and raiding deep into the territory held by the Northern Eggman Army."
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Leaders",
+              "description": "The ones who decide where the next raid goes.",
+              "characters": [
+                {
+                  "name": "Sally Acorn",
+                  "image": "",
+                  "description": "Princess of the Acorn Kingdom and the one who holds the movement together."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "During Eggman's first occupation"
+    }
+  ]
+}

@@ -1,7 +1,18 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { factionsById } from "../data/factions";
+import FactionInfobox from "../components/FactionInfobox";
+import CountryQuote from "../components/CountryQuote";
+import ContentToc from "../components/ContentToc";
+import ContentBlock from "../components/ContentBlock";
+import asset from "../lib/asset";
+import withBlockIds from "../lib/blocks";
 
 
+// Ficha de una facción. Misma estructura que la de un país (CountryDetail): la
+// cita y la tabla de contenidos arriba a la izquierda, el Basic Information a la
+// derecha y los bloques debajo a ancho completo. La única diferencia de fondo es
+// que su último apartado lista personajes en vez de lugares.
 export default function FactionSubDetail(){
 
     const { id, factionId } = useParams();
@@ -11,6 +22,45 @@ export default function FactionSubDetail(){
     const subFaction = faction?.subFactions.find(
         sub => sub.id === factionId
     );
+
+
+    const blocks = withBlockIds(subFaction?.blocks);
+
+
+    // Mientras estás en la ficha de la facción, el fondo de la página es su
+    // imagen y el color de acento (marco, título, infobox...) pasa a ser el
+    // suyo. Al salir (o cambiar de facción) se restaura todo. Las facciones que
+    // todavía son placeholders no tienen ni `background` ni `color`, así que se
+    // quedan con el fondo y el acento por defecto.
+    useEffect(() => {
+
+        if(!subFaction?.background && !subFaction?.color){
+            return;
+        }
+
+        const body = document.body;
+        const prevBg = body.style.backgroundImage;
+        const prevAccent = body.style.getPropertyValue("--accent");
+
+        if(subFaction.background){
+            body.style.backgroundImage = `url(${asset(subFaction.background)})`;
+        }
+
+        if(subFaction.color){
+            body.style.setProperty("--accent", subFaction.color);
+        }
+
+        return () => {
+            body.style.backgroundImage = prevBg;
+
+            if(prevAccent){
+                body.style.setProperty("--accent", prevAccent);
+            } else {
+                body.style.removeProperty("--accent");
+            }
+        };
+
+    }, [subFaction?.background, subFaction?.color]);
 
 
     if(!subFaction){
@@ -37,13 +87,42 @@ export default function FactionSubDetail(){
             </h1>
 
 
-            <p className="world-presentation">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <div className="country-layout">
 
+                <div className="country-layout__top">
+
+                    <CountryQuote messages={subFaction.quote} />
+
+                    {/*
+                      La tabla de contenidos se genera a partir de los propios
+                      bloques, así que no hay que mantenerla a mano.
+                    */}
+                    <ContentToc sections={blocks} />
+
+                </div>
+
+                <FactionInfobox faction={subFaction} />
+
+            </div>
+
+
+            <div className="country-body">
+
+                {
+                    blocks.map((block, i) => (
+
+                        <div key={block.id}>
+
+                            {i > 0 && <hr className="section-divider" />}
+
+                            <ContentBlock block={block} />
+
+                        </div>
+
+                    ))
+                }
+
+            </div>
 
         </div>
 
