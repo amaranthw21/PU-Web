@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import gods from "../../data/lore/gods/gods";
-import GodInfobox from "../../components/GodInfobox";
+import items from "../../data/lore/items/items";
+import ItemInfobox from "../../components/ItemInfobox";
 import CountryQuote from "../../components/CountryQuote";
 import ContentToc from "../../components/ContentToc";
 import ContentBlock from "../../components/ContentBlock";
@@ -10,25 +10,25 @@ import asset from "../../lib/asset";
 import withBlockIds from "../../lib/blocks";
 
 
-export default function GodDetail(){
+export default function ItemDetail(){
 
     const { id } = useParams();
 
 
-    const god = gods.find(
-        god => god.id === id
+    const item = items.find(
+        item => item.id === id
     );
 
 
-    const blocks = withBlockIds(god?.blocks);
+    const blocks = withBlockIds(item?.blocks);
 
 
-    // Mientras estás en la ficha del dios, el fondo de la página es su imagen
-    // y el color de acento (marco, nombre...) pasa a ser el suyo.
-    // Al salir (o cambiar de dios) se restaura todo.
+    // Mientras estás en la ficha del item, el fondo de la página es su imagen
+    // y el color de acento (marco, nombre, infobox...) pasa a ser el suyo.
+    // Al salir (o cambiar de item) se restaura todo.
     useEffect(() => {
 
-        if(!god){
+        if(!item){
             return;
         }
 
@@ -36,12 +36,12 @@ export default function GodDetail(){
         const prevBg = body.style.backgroundImage;
         const prevAccent = body.style.getPropertyValue("--accent");
 
-        if(god.image){
-            body.style.backgroundImage = `url(${asset(god.image)})`;
+        if(item.image){
+            body.style.backgroundImage = `url(${asset(item.image)})`;
         }
 
-        if(god.color){
-            body.style.setProperty("--accent", god.color);
+        if(item.color){
+            body.style.setProperty("--accent", item.color);
         }
 
         return () => {
@@ -54,12 +54,12 @@ export default function GodDetail(){
             }
         };
 
-    }, [god?.image, god?.color]);
+    }, [item?.image, item?.color]);
 
 
-    if(!god){
+    if(!item){
 
-        return <h1>God not found</h1>
+        return <h1>Item not found</h1>;
 
     }
 
@@ -71,34 +71,32 @@ export default function GodDetail(){
             <nav className="breadcrumb">
                 <Link to="/lore">Lore</Link>
                 <span className="breadcrumb__sep">/</span>
-                <Link to="/lore/gods">Gods</Link>
+                <Link to="/lore/items">Important Items</Link>
                 <span className="breadcrumb__sep">/</span>
-                <span className="breadcrumb__current">
-                    {god.name}
-                </span>
+                <span className="breadcrumb__current">{item.name}</span>
             </nav>
 
             <h1 className="entry-detail__name">
-                {god.name}
+                {item.name}
             </h1>
 
 
             {/*
-              Misma estructura que la ficha de país: arriba, la cita y la tabla
-              de contenidos a la izquierda y el infobox a la derecha; debajo,
-              los bloques a ancho completo.
+              Misma estructura que la ficha de dios: arriba, la cita, la
+              entradilla y la tabla de contenidos a la izquierda y el infobox a
+              la derecha; debajo, los bloques a ancho completo.
             */}
             <div className="country-layout">
 
                 <div className="country-layout__top">
 
-                    <CountryQuote messages={god.quote} />
+                    <CountryQuote messages={item.quote} />
 
                     {
-                        god.description?.trim() && (
+                        item.description?.trim() && (
 
                             <div className="detail-intro">
-                                <Paragraphs text={god.description} className="country-block__text" />
+                                <Paragraphs text={item.description} className="country-block__text" />
                             </div>
 
                         )
@@ -108,7 +106,7 @@ export default function GodDetail(){
 
                 </div>
 
-                <GodInfobox god={god} />
+                <ItemInfobox item={item} />
 
             </div>
 
@@ -133,6 +131,6 @@ export default function GodDetail(){
 
         </div>
 
-    )
+    );
 
 }

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import ContentToc from "./ContentToc";
 import ContentBlock from "./ContentBlock";
@@ -6,14 +7,15 @@ import Paragraphs from "./Paragraphs";
 import withBlockIds from "../lib/blocks";
 
 
-// Ficha de una entrada de Mechanics (energías, poderes y transformaciones).
+// Ficha de una entrada de Lore (energías, poderes, transformaciones e items).
 // Misma estructura que la ficha de país, pero a ancho completo: aquí no hay
 // Basic Information a la derecha. Primero la cita, la entradilla y la tabla de
 // contenidos, y debajo los bloques con su separador.
 //
-// `section` es el nivel de la miga de pan al que pertenece la entrada, p. ej.
-// { label: "Powers", to: "/lore/energy-powers/powers" }.
-export default function LoreDetail({ item, section, notFound }){
+// `trail` son los niveles de la miga de pan que van entre "Lore" y el nombre de
+// la entrada, p. ej. [{ label: "Mechanics", to: "/lore/energy-powers" },
+// { label: "Powers", to: "/lore/energy-powers/powers" }].
+export default function LoreDetail({ item, trail, notFound }){
 
     const blocks = withBlockIds(item?.blocks);
 
@@ -34,13 +36,31 @@ export default function LoreDetail({ item, section, notFound }){
         <div>
 
             <nav className="breadcrumb">
+
                 <Link to="/lore">Lore</Link>
+
+                {
+                    (trail ?? []).map(level => (
+
+                        <Fragment key={level.to}>
+
+                            <span className="breadcrumb__sep">/</span>
+
+                            <Link to={level.to}>
+                                {level.label}
+                            </Link>
+
+                        </Fragment>
+
+                    ))
+                }
+
                 <span className="breadcrumb__sep">/</span>
-                <Link to="/lore/energy-powers">Mechanics</Link>
-                <span className="breadcrumb__sep">/</span>
-                <Link to={section.to}>{section.label}</Link>
-                <span className="breadcrumb__sep">/</span>
-                <span className="breadcrumb__current">{item.name}</span>
+
+                <span className="breadcrumb__current">
+                    {item.name}
+                </span>
+
             </nav>
 
             <h1 className="page-title">

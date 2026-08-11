@@ -39,6 +39,12 @@ import Transformation from "./pages/energy-powers/transformations/Transformation
 import TransformationDetail from "./pages/energy-powers/transformations/TransformationDetail";
 
 
+// Items Page
+
+import Items from "./pages/items/Items";
+import ItemDetail from "./pages/items/ItemDetail";
+
+
 // En GitHub Pages el sitio cuelga de "/PU-Web/"; el router necesita ese
 // prefijo como basename (en dev, BASE_URL es "/").
 const basename = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
@@ -168,9 +174,22 @@ function App() {
                         element={<Transformation />} 
                     />
 
-                    <Route 
-                        path="/lore/energy-powers/transformations/:id" 
-                        element={<TransformationDetail />} 
+                    <Route
+                        path="/lore/energy-powers/transformations/:id"
+                        element={<TransformationDetail />}
+                    />
+
+
+                    {/* Items */}
+
+                    <Route
+                        path="/lore/items"
+                        element={<Items />}
+                    />
+
+                    <Route
+                        path="/lore/items/:id"
+                        element={<ItemDetail />}
                     />
 
                 </Route>

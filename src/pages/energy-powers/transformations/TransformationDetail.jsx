@@ -17,7 +17,10 @@ export default function TransformationDetail(){
 
         <LoreDetail
             item={transformation}
-            section={{ label: "Transformations", to: "/lore/energy-powers/transformations" }}
+            trail={[
+                { label: "Mechanics", to: "/lore/energy-powers" },
+                { label: "Transformations", to: "/lore/energy-powers/transformations" }
+            ]}
             notFound="Transformation type not found"
         />
 

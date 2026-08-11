@@ -17,7 +17,10 @@ export default function PowersDetail(){
 
         <LoreDetail
             item={power}
-            section={{ label: "Powers", to: "/lore/energy-powers/powers" }}
+            trail={[
+                { label: "Mechanics", to: "/lore/energy-powers" },
+                { label: "Powers", to: "/lore/energy-powers/powers" }
+            ]}
             notFound="Power type not found"
         />
 

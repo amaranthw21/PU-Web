@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import GodCard from "../../components/GodCard";
+import EntryCard from "../../components/EntryCard";
 import gods, { godCategories } from "../../data/lore/gods/gods";
 
 
@@ -15,11 +15,11 @@ export default function Gods(){
                 <span className="breadcrumb__current">Gods</span>
             </nav>
 
-            <h1 className="gods-title">
+            <h1 className="page-title">
                 Gods
             </h1>
 
-            <p className="gods-intro">
+            <p className="page-intro">
                 These are the gods or deities that are considered active within
                 the server. In other words, they are the only gods that are
                 confirmed to truly exist in the setting.
@@ -44,25 +44,25 @@ export default function Gods(){
 
                     return (
 
-                        <section key={category.id} className="gods-section">
+                        <section key={category.id} className="category-section">
 
                             <h2>
                                 {category.label}
                             </h2>
 
 
-                            <div className="grid gods-grid">
+                            <div className="grid card-grid">
 
                                 {
                                     godsInCategory.map(god => (
 
-                                        <GodCard
+                                        <EntryCard
 
                                             key={god.id}
 
                                             name={god.name}
 
-                                            domain={god.domain}
+                                            subtitle={god.domain}
 
                                             image={god.image}
 
@@ -90,7 +90,7 @@ export default function Gods(){
             <hr className="section-divider" />
 
 
-            <section className="gods-faq">
+            <section className="faq faq--after-divider">
 
                 <h2>
                     FAQ
