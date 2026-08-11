@@ -64,7 +64,7 @@ export default function WorldPage(){
 
                     return (
 
-                        <section key={group.id} className="gods-section">
+                        <section key={group.id} className="category-section">
 
                             <h2 className="worlds-heading">
                                 {group.label}
@@ -79,7 +79,7 @@ export default function WorldPage(){
                             {
                                 groupCountries.length > 0 && (
 
-                                    <div className="grid gods-grid">
+                                    <div className="grid card-grid">
 
                                         {
                                             groupCountries.map(country => (

@@ -274,6 +274,37 @@ collections:
       - *quote
       - *blocks
 
+  # ───────────────────────── Items ─────────────────────────
+  - name: items
+    label: Important Items
+    label_singular: Item
+    folder: src/content/items
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/items
+    public_folder: /items
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int, hint: "Position within its category" }
+      - name: category
+        label: Category
+        widget: select
+        options: [legendary-sets, gems, magical-artifacts, technology, custom]
+        default: legendary-sets
+        hint: "Which box on the Items page it goes in. Use 'custom' for player-made items. If it doesn't match one of these, the item won't show up."
+      - { name: name, label: Name, widget: string }
+      - { name: summary, label: Summary, widget: string, required: false, hint: "One line under the name on the card." }
+      - { name: image, label: Image, widget: image, required: false, hint: "Fills the card, sits in the Basic Information box and becomes the background of the item's own page. Without one, the card shows the item's first letter." }
+      - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "e.g. '30% center'" }
+      - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
+      - { name: color, label: "Accent color", widget: color, required: false, hint: "Tints the frame, the name and the Basic Information box on this item's own page. Empty keeps the site's magenta." }
+      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
+      - *quote
+      - *extra_info
+      - *blocks
+
   # ───────────────────────── Worlds ─────────────────────────
   - name: worlds
     label: Worlds

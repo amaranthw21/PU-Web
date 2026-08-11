@@ -1,0 +1,66 @@
+{
+  "order": 1,
+  "category": "gems",
+  "name": "Lorem Gem",
+  "summary": "Lorem ipsum dolor sit amet.",
+  "image": "/gods/emerald-pantheon.png",
+  "imagePosition": "",
+  "imageZoom": null,
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "color": "#33e6a6",
+  "extraInfo": [
+    {
+      "label": "Lorem",
+      "value": "Ipsum dolor sit amet"
+    },
+    {
+      "label": "Consectetur",
+      "value": "Adipiscing elit"
+    },
+    {
+      "label": "Tempor",
+      "value": "Incididunt ut labore"
+    }
+  ],
+  "quote": [
+    {
+      "speaker": "Lorem",
+      "avatar": "",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit?\""
+    },
+    {
+      "speaker": "Ipsum",
+      "avatar": "",
+      "text": "\"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\""
+    }
+  ],
+  "blocks": [
+    {
+      "title": "Lorem Ipsum",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        {
+          "type": "textImage",
+          "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+          "image": "/gods/emerald-pantheon.png",
+          "caption": "Lorem ipsum dolor sit amet",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Dolor Sit Amet",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos."
+        }
+      ]
+    }
+  ]
+}

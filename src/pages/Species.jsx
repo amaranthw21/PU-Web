@@ -1,5 +1,5 @@
 import { mainSpecies, companionSpecies } from "../data/species";
-import GodCard from "../components/GodCard";
+import EntryCard from "../components/EntryCard";
 
 
 export default function Species() {
@@ -8,11 +8,11 @@ export default function Species() {
 
         <div>
 
-            <h1 className="gods-title">
+            <h1 className="page-title">
                 Species
             </h1>
 
-            <p className="gods-intro">
+            <p className="page-intro">
                 These are the species that inhabit the setting. Lorem ipsum
                 dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua.
@@ -22,12 +22,12 @@ export default function Species() {
             <hr className="section-divider" />
 
 
-            <div className="grid gods-grid">
+            <div className="grid card-grid">
 
                 {
                     mainSpecies.map(specie => (
 
-                        <GodCard
+                        <EntryCard
 
                             key={specie.id}
 
@@ -57,18 +57,18 @@ export default function Species() {
                         <hr className="section-divider" />
 
 
-                        <section className="gods-section">
+                        <section className="category-section">
 
                             <h2 className="worlds-heading">
                                 Companion Only
                             </h2>
 
-                            <div className="grid gods-grid gods-grid--companion">
+                            <div className="grid card-grid card-grid--small">
 
                                 {
                                     companionSpecies.map(specie => (
 
-                                        <GodCard
+                                        <EntryCard
 
                                             key={specie.id}
 

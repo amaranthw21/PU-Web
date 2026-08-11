@@ -59,7 +59,7 @@ export default function FactionDetail(){
 
                     return (
 
-                        <section key={group.id} className="gods-section">
+                        <section key={group.id} className="category-section">
 
                             <h2 className="worlds-heading">
                                 {group.label}

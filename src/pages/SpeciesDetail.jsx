@@ -61,7 +61,7 @@ export default function SpeciesDetail(){
 
     return (
 
-        <div className="god-detail">
+        <div className="entry-detail">
 
             <nav className="breadcrumb">
                 <Link to="/species">Species</Link>
@@ -71,7 +71,7 @@ export default function SpeciesDetail(){
                 </span>
             </nav>
 
-            <h1 className="god-detail__name">
+            <h1 className="entry-detail__name">
                 {specie.name}
             </h1>
 

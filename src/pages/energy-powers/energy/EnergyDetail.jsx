@@ -17,7 +17,10 @@ export default function EnergyDetail(){
 
         <LoreDetail
             item={energy}
-            section={{ label: "Energy", to: "/lore/energy-powers/energy" }}
+            trail={[
+                { label: "Mechanics", to: "/lore/energy-powers" },
+                { label: "Energy", to: "/lore/energy-powers/energy" }
+            ]}
             notFound="Energy source not found"
         />
 
