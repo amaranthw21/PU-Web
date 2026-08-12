@@ -10,6 +10,7 @@ import Factions from "./pages/Factions";
 import FactionDetail from "./pages/FactionDetail";
 import FactionSubDetail from "./pages/FactionSubDetail";
 import Credits from "./pages/Credits";
+import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
 
 // Worlds
@@ -109,7 +110,12 @@ function App() {
 
                     <Route
                         path="/credits"
-                        element={<Credits />} 
+                        element={<Credits />}
+                    />
+
+                    <Route
+                        path="/search"
+                        element={<Search />}
                     />
 
 

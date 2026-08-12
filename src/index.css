@@ -1026,6 +1026,232 @@ body::before {
 }
 
 
+/* ─────────────── Buscador ─────────────── */
+
+/* La lupa de la barra. El icono se dibuja con `stroke`, así hereda el color del
+   enlace y se tiñe igual que el resto al pasar por encima. */
+.search-link__icon {
+
+    width: 18px;
+    height: 18px;
+
+    flex: 0 0 auto;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+
+}
+
+.links a.search-link {
+
+    gap: 12px;
+
+}
+
+/* En escritorio solo queda la lupa: la fila de enlaces no tiene ancho de sobra
+   para una palabra más. El nombre accesible lo pone el aria-label del enlace. */
+@media (min-width: 1040px) {
+
+    .links a.search-link span {
+
+        display: none;
+
+    }
+
+    .links a.search-link {
+
+        padding: 8px 6px;
+
+    }
+
+}
+
+
+.search-form {
+
+    margin-bottom: 24px;
+
+}
+
+/* La etiqueta existe para los lectores de pantalla; el placeholder ya dice lo
+   mismo a la vista, así que no se pinta dos veces. */
+.search-form__label {
+
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    margin: -1px;
+    padding: 0;
+
+    overflow: hidden;
+
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+
+}
+
+.search-form__input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 18px;
+
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    border-radius: 12px;
+
+    color: white;
+    font: inherit;
+    font-size: 1.05rem;
+
+}
+
+.search-form__input::placeholder {
+
+    color: #8b95a5;
+
+}
+
+.search-form__input:focus {
+
+    outline: none;
+
+    border-color: var(--accent);
+
+    box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 45%, transparent);
+
+}
+
+
+.search-empty,
+.search-count {
+
+    margin: 0 0 18px;
+
+    color: #9aa4b2;
+    line-height: 1.6;
+
+}
+
+
+.search-results {
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+}
+
+.search-result__link {
+
+    display: block;
+
+    padding: 14px 18px;
+
+    background: rgba(31, 41, 55, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+
+    color: #cbd5e1;
+    text-decoration: none;
+
+    transition: border-color 0.2s, background-color 0.2s;
+
+}
+
+@media (hover: hover) {
+
+    .search-result__link:hover {
+
+        border-color: color-mix(in srgb, var(--accent) 70%, transparent);
+
+        background: rgba(31, 41, 55, 0.85);
+
+    }
+
+}
+
+.search-result__head {
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+
+}
+
+.search-result__title {
+
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    color: white;
+
+}
+
+/* La colección a la que pertenece el resultado. */
+.search-result__type {
+
+    flex: 0 0 auto;
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    color: var(--accent);
+
+}
+
+/* Solo aparece cuando lo buscado estaba dentro de un bloque: entonces el enlace
+   no va al principio de la ficha, sino a esa sección. */
+.search-result__section {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 0.85rem;
+    font-style: italic;
+
+    color: #9aa4b2;
+
+}
+
+.search-result__snippet {
+
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+
+}
+
+.search-hit {
+
+    padding: 0 2px;
+
+    background: color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: 3px;
+
+    color: white;
+
+}
+
+
 /* Vuelta al inicio desde la página de "no encontrado". */
 .not-found__back {
 
@@ -1344,12 +1570,13 @@ body::before {
 
 /* Se recupera la fila de enlaces y desaparece la hamburguesa.
 
-   El corte está en 1000px y no en los 900px del resto del CSS a propósito: los
-   siete enlaces ocupan 557px fijos y el logo completo otros 327px, así que por
-   debajo de ~976px no caben los dos y el título acababa recortado con puntos
-   suspensivos. El menú tiene su propio límite porque tiene su propia
-   restricción. */
-@media (min-width: 1000px) {
+   El corte está en 1040px y no en los 900px del resto del CSS a propósito: los
+   enlaces ocupan 612px fijos (los siete, más la lupa del buscador) y el logo
+   completo otros 327px, así que por debajo de ~1031px no caben los dos y el
+   título acaba recortado con puntos suspensivos. El menú tiene su propio límite
+   porque tiene su propia restricción: si algún día se añade otro enlace, hay
+   que volver a medir y subir este número. */
+@media (min-width: 1040px) {
 
     .nav-toggle {
 
@@ -2219,7 +2446,7 @@ button.region-loc {
 /* La forma de botón solo tiene sentido en la fila de escritorio: dentro del
    panel móvil los enlaces son filas de 48px y el recuadro rompería la
    alineación, así que allí basta el color distinto. Mismo corte que el menú. */
-@media (min-width: 1000px) {
+@media (min-width: 1040px) {
 
     .links a.admin-link {
 
