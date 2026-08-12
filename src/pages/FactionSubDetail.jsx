@@ -39,11 +39,11 @@ export default function FactionSubDetail(){
         }
 
         const body = document.body;
-        const prevBg = body.style.backgroundImage;
+        const prevBg = body.style.getPropertyValue("--page-bg");
         const prevAccent = body.style.getPropertyValue("--accent");
 
         if(subFaction.background){
-            body.style.backgroundImage = `url(${asset(subFaction.background)})`;
+            body.style.setProperty("--page-bg", `url(${asset(subFaction.background)})`);
         }
 
         if(subFaction.color){
@@ -51,7 +51,11 @@ export default function FactionSubDetail(){
         }
 
         return () => {
-            body.style.backgroundImage = prevBg;
+            if(prevBg){
+                body.style.setProperty("--page-bg", prevBg);
+            } else {
+                body.style.removeProperty("--page-bg");
+            }
 
             if(prevAccent){
                 body.style.setProperty("--accent", prevAccent);

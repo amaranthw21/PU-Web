@@ -24,11 +24,11 @@ export default function SpeciesDetail(){
         }
 
         const body = document.body;
-        const prevBg = body.style.backgroundImage;
+        const prevBg = body.style.getPropertyValue("--page-bg");
         const prevAccent = body.style.getPropertyValue("--accent");
 
         if(specie.image){
-            body.style.backgroundImage = `url(${asset(specie.image)})`;
+            body.style.setProperty("--page-bg", `url(${asset(specie.image)})`);
         }
 
         if(specie.color){
@@ -36,7 +36,11 @@ export default function SpeciesDetail(){
         }
 
         return () => {
-            body.style.backgroundImage = prevBg;
+            if(prevBg){
+                body.style.setProperty("--page-bg", prevBg);
+            } else {
+                body.style.removeProperty("--page-bg");
+            }
 
             if(prevAccent){
                 body.style.setProperty("--accent", prevAccent);
