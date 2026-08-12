@@ -33,11 +33,149 @@ collections:
     public_folder: /species
     fields:
       - { name: order, label: Order, widget: number, value_type: int, hint: "Position in the list (number)" }
-      - { name: group, label: Group, widget: string, default: companion }
+      - name: group
+        label: Group
+        widget: select
+        options: [main, companion]
+        default: main
+        hint: "'Companion' species go in their own smaller section at the bottom of the Species page."
       - { name: name, label: Name, widget: string }
-      - { name: image, label: Image, widget: image, required: false }
+      - { name: image, label: Image, widget: image, required: false, hint: "Shown on the Species page card and inside the Basic Information box." }
+      - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "Moves the picture inside its card, e.g. 'center 20%' to show the head." }
+      - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
+      - { name: background, label: Background, widget: image, required: false, hint: "Full-page background for this species' own page." }
+      - { name: color, label: "Accent color", widget: color, required: false, hint: "Tints the frame, the title and the Basic Information box on this species' own page. Empty keeps the site's magenta." }
       - { name: summary, label: Summary, widget: text, required: false }
-      - { name: description, label: Description, widget: text, required: false, hint: "Shown on this species' own page. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: text, required: false, hint: "Intro paragraph, shown above the Contents list. Leave a blank line between paragraphs." }
+
+      # ── Cita de cabecera, pintada como conversación de chat ──
+      # Species es la primera colección que la usa, así que el campo se define
+      # aquí una vez y Gods, Energies, Powers y las demás lo reutilizan con
+      # *quote. Ojo: en YAML el ancla tiene que declararse antes de usarse, así
+      # que esta definición debe quedarse en la primera colección del archivo.
+      - &quote
+        name: quote
+        label: Quote (chat)
+        widget: list
+        required: false
+        label_singular: Message
+        summary: "{{fields.speaker}}: {{fields.text}}"
+        hint: "Shown at the top of this entry's own page as a chat. Each character keeps the same side, in the order they first speak."
+        fields:
+          - { name: speaker, label: Character, widget: string }
+          - { name: avatar, label: Avatar, widget: image, required: false, hint: "Square images look best. Without one, the initial is shown instead." }
+          - { name: text, label: Message, widget: text }
+
+      # ── Basic Information (las 5 filas fijas del infobox) ──
+      # Si se deja vacío, la fila sale como "N/A" en lugar de desaparecer.
+      - { name: origin, label: Origin, widget: string, required: false, hint: "Where the species comes from, e.g. 'Mobius' or 'Twilight Cage'." }
+      - { name: habitat, label: Habitat, widget: string, required: false }
+      - { name: lifespan, label: Lifespan, widget: string, required: false }
+      - name: traits
+        label: "Notable traits"
+        widget: list
+        required: false
+        field: { name: trait, label: Trait, widget: string }
+        hint: "One per line."
+      - name: abilities
+        label: Abilities
+        widget: list
+        required: false
+        field: { name: ability, label: Ability, widget: string }
+
+      # ── Bloques de contenido de la ficha ──
+      # Los mismos que los de una facción: la parte "Characters" sirve aquí para
+      # listar ejemplos conocidos de la especie.
+      - name: blocks
+        label: Content blocks
+        widget: list
+        required: false
+        label_singular: Block
+        summary: "{{fields.title}}"
+        hint: "The sections of the page, in order. Each one gets a divider above it, and the Contents list is built from their titles."
+        fields:
+          - { name: title, label: Title, widget: string, hint: "Also the entry in the Contents list." }
+          - { name: icon, label: Icon, widget: image, required: false, hint: "Shown in the circle next to the title. Square images look best." }
+          - name: parts
+            label: Content
+            widget: list
+            required: false
+            label_singular: Part
+            hint: "Build the block by adding parts, in order: text, text with an image beside it, just an image, or known members of the species."
+            types:
+              - name: text
+                label: Text
+                widget: object
+                summary: "Text: {{fields.text}}"
+                fields:
+                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+
+              - name: textImage
+                label: Text + image
+                widget: object
+                summary: "Text + image: {{fields.text}}"
+                fields:
+                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: image, label: Image, widget: image }
+                  - { name: caption, label: Caption, widget: string, required: false }
+                  - name: imageSide
+                    label: Image side
+                    widget: select
+                    options: [right, left]
+                    default: right
+                    hint: "Which side of the text the image sits on."
+
+              - name: image
+                label: Image
+                widget: object
+                summary: "Image: {{fields.caption}}"
+                fields:
+                  - { name: image, label: Image, widget: image }
+                  - { name: caption, label: Caption, widget: string, required: false }
+
+              - name: characters
+                label: Characters
+                widget: object
+                summary: "Characters"
+                fields:
+                  - { name: image, label: "Group picture (optional)", widget: image, required: false, hint: "Shown at the top of the section, like the map on a country's page." }
+                  - { name: caption, label: Caption, widget: string, required: false }
+                  - name: groups
+                    label: "Character groups"
+                    widget: list
+                    required: false
+                    label_singular: Group
+                    summary: "{{fields.title}}"
+                    hint: "Add one per group, e.g. 'Known members' or 'Notable individuals'."
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: description, label: Description, widget: text, required: false, hint: "Leave a blank line between paragraphs." }
+                      - name: characters
+                        label: Characters
+                        widget: list
+                        required: false
+                        label_singular: Character
+                        summary: "{{fields.name}}"
+                        hint: "Shown as a row of pictures you can scroll. Give a character a description and readers can click them to open it."
+                        fields:
+                          - { name: name, label: Name, widget: string }
+                          - { name: image, label: Image, widget: image, required: false }
+                          - { name: description, label: Description, widget: text, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
+
+      # ── Filas extra, para lo que no cabe en las fijas ──
+      # Igual que la cita: Species es la primera colección que lo usa, así que se
+      # define aquí y Gods, Items y Countries lo reutilizan con *extra_info.
+      - &extra_info
+        name: extraInfo
+        label: Extra rows
+        widget: list
+        required: false
+        label_singular: Row
+        summary: "{{fields.label}}: {{fields.value}}"
+        hint: "Extra rows added to the bottom of the Basic Information box, e.g. 'Figure Head'."
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: value, label: Value, widget: text, required: false }
 
   # ───────────────────── Faction hubs (dimensions) ─────────────────────
   # El contenedor de las facciones, el equivalente de Worlds: un botón en la
@@ -120,35 +258,12 @@ collections:
           - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
 
       # ── Filas extra del Basic Information ──
-      # Gods y Countries comparten este campo: se define aquí y Countries lo
-      # reutiliza con *extra_info.
-      - &extra_info
-        name: extraInfo
-        label: Extra rows
-        widget: list
-        required: false
-        label_singular: Row
-        summary: "{{fields.label}}: {{fields.value}}"
-        hint: "Extra rows added to the bottom of the Basic Information box, e.g. 'Figure Head'."
-        fields:
-          - { name: label, label: Label, widget: string }
-          - { name: value, label: Value, widget: text, required: false }
+      # Definido en Species, la primera colección que lo usa.
+      - *extra_info
 
       # ── Cita de cabecera, pintada como conversación de chat ──
-      # Gods, Energies, Powers y Transformations comparten esta ficha, así que
-      # el campo se define aquí una vez y las demás lo reutilizan con *quote.
-      - &quote
-        name: quote
-        label: Quote (chat)
-        widget: list
-        required: false
-        label_singular: Message
-        summary: "{{fields.speaker}}: {{fields.text}}"
-        hint: "Shown at the top of this entry's own page as a chat. Each character keeps the same side, in the order they first speak."
-        fields:
-          - { name: speaker, label: Character, widget: string }
-          - { name: avatar, label: Avatar, widget: image, required: false, hint: "Square images look best. Without one, the initial is shown instead." }
-          - { name: text, label: Message, widget: text }
+      # Definida en Species, la primera colección que la usa.
+      - *quote
 
       # ── Bloques de contenido de la ficha (mismos tipos que en Countries) ──
       # Igual que la cita: se define aquí y Energies, Powers y Transformations
