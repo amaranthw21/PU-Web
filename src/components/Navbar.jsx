@@ -130,6 +130,30 @@ export default function Navbar(){
                 </Link>
 
                 {/*
+                  En el panel móvil es una fila más, con su icono y su texto. En
+                  escritorio la fila de enlaces va justa de ancho, así que el CSS
+                  esconde el texto y deja solo la lupa; de ahí el aria-label, que
+                  es lo que oirá quien use un lector de pantalla.
+                */}
+                <Link to="/search" className="search-link" aria-label="Search">
+
+                    <svg
+                        className="search-link__icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
+                        <circle cx="11" cy="11" r="7" />
+                        <line x1="16.5" y1="16.5" x2="21" y2="21" />
+                    </svg>
+
+                    <span>
+                        Search
+                    </span>
+
+                </Link>
+
+                {/*
                   El panel del CMS es un archivo estático en public/admin/, no una
                   ruta de React, así que va con <a> (navegación completa) y con
                   asset() para respetar el base path de GitHub Pages.
