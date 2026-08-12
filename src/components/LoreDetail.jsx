@@ -4,6 +4,7 @@ import ContentToc from "./ContentToc";
 import ContentBlock from "./ContentBlock";
 import CountryQuote from "./CountryQuote";
 import Paragraphs from "./Paragraphs";
+import NotFound from "../pages/NotFound";
 import withBlockIds from "../lib/blocks";
 
 
@@ -22,11 +23,7 @@ export default function LoreDetail({ item, trail, notFound }){
 
     if(!item){
 
-        return (
-            <h1>
-                {notFound}
-            </h1>
-        );
+        return <NotFound title={notFound} />;
 
     }
 

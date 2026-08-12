@@ -8,6 +8,7 @@ import ContentBlock from "../../components/ContentBlock";
 import Paragraphs from "../../components/Paragraphs";
 import asset from "../../lib/asset";
 import withBlockIds from "../../lib/blocks";
+import NotFound from "../NotFound";
 
 
 export default function GodDetail(){
@@ -63,7 +64,7 @@ export default function GodDetail(){
 
     if(!god){
 
-        return <h1>God not found</h1>
+        return <NotFound title="God not found" />;
 
     }
 

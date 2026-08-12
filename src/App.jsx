@@ -10,6 +10,7 @@ import Factions from "./pages/Factions";
 import FactionDetail from "./pages/FactionDetail";
 import FactionSubDetail from "./pages/FactionSubDetail";
 import Credits from "./pages/Credits";
+import NotFound from "./pages/NotFound";
 
 // Worlds
 import WorldPage from "./pages/worlds/WorldPage";
@@ -190,6 +191,15 @@ function App() {
                     <Route
                         path="/lore/items/:id"
                         element={<ItemDetail />}
+                    />
+
+
+                    {/* Cualquier otra dirección. Va la última: solo entra si no
+                        ha coincidido ninguna de arriba. Dentro del Layout, para
+                        que conserve la barra y el marco. */}
+                    <Route
+                        path="*"
+                        element={<NotFound />}
                     />
 
                 </Route>

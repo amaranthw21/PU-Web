@@ -7,6 +7,7 @@ import ContentToc from "../components/ContentToc";
 import ContentBlock from "../components/ContentBlock";
 import asset from "../lib/asset";
 import withBlockIds from "../lib/blocks";
+import NotFound from "./NotFound";
 
 
 // Ficha de una facción. Misma estructura que la de un país (CountryDetail): la
@@ -69,7 +70,7 @@ export default function FactionSubDetail(){
 
     if(!subFaction){
 
-        return <h1>Faction not found</h1>;
+        return <NotFound title="Faction not found" />;
 
     }
 

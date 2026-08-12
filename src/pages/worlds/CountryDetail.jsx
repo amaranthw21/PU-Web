@@ -7,6 +7,7 @@ import ContentToc from "../../components/ContentToc";
 import ContentBlock from "../../components/ContentBlock";
 import asset from "../../lib/asset";
 import withBlockIds from "../../lib/blocks";
+import NotFound from "../NotFound";
 
 
 export default function CountryDetail(){
@@ -65,7 +66,7 @@ export default function CountryDetail(){
 
     if(!country){
 
-        return <h1>Country not found</h1>;
+        return <NotFound title="Country not found" />;
 
     }
 

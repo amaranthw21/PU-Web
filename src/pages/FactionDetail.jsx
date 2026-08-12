@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { factionsById } from "../data/factions";
 import FactionCard from "../components/FactionCard";
 import Paragraphs from "../components/Paragraphs";
+import NotFound from "./NotFound";
 
 
 export default function FactionDetail(){
@@ -13,11 +14,7 @@ export default function FactionDetail(){
 
     if(!faction){
 
-        return (
-            <h1>
-                Faction not found
-            </h1>
-        );
+        return <NotFound title="Faction not found" />;
 
     }
 
