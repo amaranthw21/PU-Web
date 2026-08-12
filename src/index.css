@@ -5,11 +5,46 @@
     /* Color de acento global (marco, nombres...). Se sobreescribe por dios. */
     --accent: #c04bd8;
 
+    /* Altura de la barra: la usan el panel móvil y el scroll-margin de los
+       anclas de la tabla de contenidos, para que el título no quede tapado. */
+    --navbar-h: 56px;
+
 }
+
+@media (min-width: 900px) {
+
+    :root {
+
+        --navbar-h: 70px;
+
+    }
+
+}
+
+
+html {
+
+    /* Safari en iOS agranda el texto al girar el móvil si no se le dice que no. */
+    -webkit-text-size-adjust: 100%;
+
+    /* Suelo oscuro bajo la capa del fondo. Sin esto el lienzo es blanco y se ve
+       en los dos huecos que deja una imagen de fondo: mientras se descarga (en
+       móvil, con datos, es un fogonazo blanco de varios cientos de ms) y al
+       rebotar el scroll por encima o por debajo de la página en iOS. */
+    background-color: #14101c;
+
+}
+
+:target {
+
+    scroll-margin-top: calc(var(--navbar-h) + 16px);
+
+}
+
 
 .navbar {
 
-    height: 70px;
+    height: var(--navbar-h);
 
     display: flex;
 
@@ -17,7 +52,9 @@
 
     justify-content: space-between;
 
-    padding: 0 40px;
+    gap: 12px;
+
+    padding: 0 16px;
 
     background: rgba(10, 5, 20, 0.9);
 
@@ -30,23 +67,68 @@
 
 }
 
+@media (min-width: 900px) {
+
+    .navbar {
+
+        padding: 0 40px;
+
+    }
+
+}
+
 body {
 
     margin: 0;
 
     min-height: 100vh;
 
-    background-image: url("./assets/background-page-N.png");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-attachment: fixed;
+    /* dvh sigue a la barra de direcciones del móvil (100vh se queda corto
+       cuando se retrae). Se deja 100vh como respaldo para navegadores viejos. */
+    min-height: 100dvh;
 
     color: white;
 
     font-family: Arial, sans-serif;
+
+}
+
+
+/* El fondo va en una capa fija propia en vez de en `body` con
+   background-attachment: fixed, que Safari en iOS no respeta (lo trata como
+   scroll y estira la imagen a lo largo de toda la página).
+
+   Las fichas (dioses, especies, items, países, subfacciones) cambian el fondo
+   por el arte de su entrada: lo hacen poniendo --page-bg en el <body>, y no
+   background-image directamente, para que su imagen entre por esta misma capa
+   y herede el cover, el centrado y el resto del comportamiento. */
+body::before {
+
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    z-index: -1;
+
+    /* Sin ficha que lo sobreescriba, la variante ligera: el móvil no se
+       descarga los 11 MB del PNG original. */
+    background-image: var(--page-bg, url("./assets/background-page-N-mobile.jpg"));
+
+    background-size: cover;
+    background-position: center;
+
+}
+
+@media (min-width: 900px) {
+
+    body::before {
+
+        /* El mismo --page-bg manda también aquí: solo cambia el fondo por
+           defecto, no el de las fichas. */
+        background-image: var(--page-bg, url("./assets/background-page-N-desktop.jpg"));
+
+    }
 
 }
 .background-overlay {
@@ -58,21 +140,16 @@ body {
     border-radius: 20px;
 
     /* Aire entre el marco y el contenido. Algo más a los lados que arriba y
-       abajo, para que los textos largos no lleguen a rozar el marco. */
-    padding: 48px 64px;
+       abajo, para que los textos largos no lleguen a rozar el marco.
+
+       Se calcula a partir del grosor del marco (--frame-side / --frame-cap, que
+       define .frame-container y encoge en móvil) en lugar de fijarlo por
+       breakpoints: así el texto conserva en cualquier pantalla la misma holgura
+       relativa que en escritorio, donde son 64px sobre un marco de 70px. */
+    padding: calc(var(--frame-cap, 90px) * 0.53)
+             calc(var(--frame-side, 70px) * 0.91);
 
     box-sizing: border-box;
-
-}
-
-
-@media (max-width: 860px) {
-
-    .background-overlay {
-
-        padding: 32px 24px;
-
-    }
 
 }
 
@@ -81,9 +158,11 @@ body {
 
     display: grid;
 
+    /* El `min()` evita que la columna mínima de 250px desborde en pantallas
+       donde el contenido disponible es más estrecho que eso. */
     grid-template-columns: repeat(
         auto-fit,
-        minmax(250px, 1fr)
+        minmax(min(250px, 100%), 1fr)
     );
 
     gap: 20px;
@@ -161,8 +240,15 @@ body {
 
 }
 
-.entry-card:hover {
-    transform: translateY(-5px);
+/* Los efectos de hover se limitan a punteros de verdad: en una pantalla táctil
+   el navegador los deja activados después de tocar, y la tarjeta se queda
+   levantada hasta que tocas en otro sitio. */
+@media (hover: hover) {
+
+    .entry-card:hover {
+        transform: translateY(-5px);
+    }
+
 }
 
 /* La imagen rellena la card (cover). El zoom se aplica con transform: scale */
@@ -293,9 +379,13 @@ body {
 
 }
 
-.accordion__header:hover {
+@media (hover: hover) {
 
-    background: rgba(192, 75, 216, 0.12);
+    .accordion__header:hover {
+
+        background: rgba(192, 75, 216, 0.12);
+
+    }
 
 }
 
@@ -459,18 +549,25 @@ body {
 }
 
 
-/* Título de página: mayúsculas + espaciado + brillo magenta */
+/* Título de página: mayúsculas + espaciado + brillo magenta.
+
+   El tamaño y el espaciado entre letras son fluidos: a 2.6rem con 4px de
+   separación, un título como "TRANSFORMATIONS" se sale de una pantalla de
+   móvil. */
 .page-title {
 
-    font-size: 2.6rem;
+    font-size: clamp(1.5rem, 6.4vw, 2.6rem);
 
     font-weight: 800;
 
     text-transform: uppercase;
 
-    letter-spacing: 4px;
+    letter-spacing: clamp(1px, 0.6vw, 4px);
 
     margin: 0 0 20px;
+
+    /* Los nombres largos de una sola palabra parten en vez de desbordar. */
+    overflow-wrap: break-word;
 
     text-shadow: 0 0 20px color-mix(in srgb, var(--accent) 55%, transparent);
 
@@ -481,15 +578,17 @@ body {
    de acento de la página (--accent) */
 .entry-detail__name {
 
-    font-size: 2.6rem;
+    font-size: clamp(1.5rem, 6.4vw, 2.6rem);
 
     font-weight: 800;
 
     text-transform: uppercase;
 
-    letter-spacing: 4px;
+    letter-spacing: clamp(1px, 0.6vw, 4px);
 
     margin: 0 0 16px;
+
+    overflow-wrap: break-word;
 
     color: var(--accent);
 
@@ -501,11 +600,17 @@ body {
 /* Página Worlds: filas de botones redondos con etiqueta debajo */
 .worlds-row {
 
+    /* Diámetro del círculo. Vive aquí, en la fila, porque lo necesitan tanto el
+       círculo como el ancho máximo del botón (ver .world-btn). Cada variante lo
+       sobreescribe más abajo. */
+    --circle: clamp(88px, 26vw, 120px);
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-    gap: 36px;
+    /* 36px fijos dejaban un solo círculo por fila en móvil. */
+    gap: clamp(14px, 4vw, 36px);
 
     margin: 32px 0;
 
@@ -518,6 +623,11 @@ body {
     align-items: center;
 
     gap: 12px;
+
+    /* El botón no puede ser más ancho que su círculo: si no, una etiqueta larga
+       ("200 Years Future") lo ensancha, y en móvil eso basta para que solo entre
+       un mundo por fila. Atado al diámetro, la etiqueta parte en dos líneas. */
+    max-width: var(--circle);
 
     background: none;
     border: none;
@@ -534,8 +644,12 @@ body {
     position: relative;
     overflow: hidden;
 
-    width: 120px;
-    height: 120px;
+    /* Fluido (--circle) para que en móvil sigan entrando dos por fila en vez de
+       apilarse de uno en uno. */
+    width: var(--circle);
+    height: var(--circle);
+
+    flex: 0 0 auto;
 
     border-radius: 50%;
 
@@ -558,11 +672,15 @@ body {
 
 }
 
-.world-btn:hover .world-btn__circle {
+@media (hover: hover) {
 
-    transform: translateY(-6px);
+    .world-btn:hover .world-btn__circle {
 
-    box-shadow: 0 0 22px color-mix(in srgb, var(--accent) 50%, transparent);
+        transform: translateY(-6px);
+
+        box-shadow: 0 0 22px color-mix(in srgb, var(--accent) 50%, transparent);
+
+    }
 
 }
 
@@ -593,25 +711,25 @@ body {
 }
 
 /* Main worlds: círculos grandes. Side dimensions: más pequeños. */
-.worlds-row--main .world-btn__circle {
+/* Los porcentajes de vw están elegidos para que entren dos círculos por fila en
+   móvil: el contenido útil es ~76vw (el resto se lo llevan el marco y su
+   padding), así que cada círculo tiene que quedar por debajo de (76vw - gap)/2. */
+.worlds-row--main {
 
-    width: 200px;
-    height: 200px;
+    --circle: clamp(104px, 34vw, 200px);
 
 }
 
-.worlds-row--side .world-btn__circle {
+.worlds-row--side {
 
-    width: 130px;
-    height: 130px;
+    --circle: clamp(96px, 28vw, 130px);
 
 }
 
 /* Species: círculos más grandes */
-.species-row .world-btn__circle {
+.species-row {
 
-    width: 190px;
-    height: 190px;
+    --circle: clamp(104px, 33vw, 190px);
 
 }
 
@@ -695,11 +813,15 @@ body {
 
 }
 
-.country-card:hover {
+@media (hover: hover) {
 
-    transform: translateY(-5px);
+    .country-card:hover {
 
-    box-shadow: 0 0 18px rgba(192, 75, 216, 0.4);
+        transform: translateY(-5px);
+
+        box-shadow: 0 0 18px rgba(192, 75, 216, 0.4);
+
+    }
 
 }
 
@@ -799,11 +921,15 @@ body {
 
 }
 
-.faction-card:hover {
+@media (hover: hover) {
 
-    transform: translateY(-5px);
+    .faction-card:hover {
 
-    box-shadow: 0 0 18px rgba(192, 75, 216, 0.4);
+        transform: translateY(-5px);
+
+        box-shadow: 0 0 18px rgba(192, 75, 216, 0.4);
+
+    }
 
 }
 
@@ -1004,9 +1130,13 @@ body {
 }
 
 
-.card:hover {
+@media (hover: hover) {
 
-    transform: translateY(-5px);
+    .card:hover {
+
+        transform: translateY(-5px);
+
+    }
 
 }
 
@@ -1014,14 +1144,6 @@ body {
 .card h2 {
 
     margin-top: 0;
-
-}
-
-.links {
-
-    display: flex;
-
-    gap: 25px;
 
 }
 
@@ -1033,7 +1155,59 @@ body {
 
 }
 
+
+/* ─────────────── Menú de navegación ─────────────── */
+
+/* Móvil (por defecto): los enlaces viven en un panel que cae por debajo de la
+   barra. Cerrado se oculta con `visibility`, no solo con opacidad, para que no
+   siga siendo tabulable ni lo lean los lectores de pantalla. */
+.links {
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    /* En horizontal la pantalla es baja: el panel scrollea en vez de salirse. */
+    max-height: calc(100dvh - var(--navbar-h));
+    overflow-y: auto;
+
+    /* Opaco y sin backdrop-filter propio: el panel cuelga de .navbar, que ya
+       tiene uno, y los backdrop-filter anidados se pintan mal (el fondo del
+       hijo se compone contra el desenfoque del padre y el menú acaba
+       traslúcido, con el contenido de la página leyéndose por debajo). */
+    background: #0b0614;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+
+}
+
+.links--open {
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+}
+
 .links a {
+
+    /* 48px de alto: objetivo de toque cómodo con el pulgar. */
+    display: flex;
+    align-items: center;
+
+    min-height: 48px;
+
+    padding: 0 20px;
 
     color: #cbd5e1;
 
@@ -1041,15 +1215,165 @@ body {
 
     font-weight: 500;
 
-    padding: 8px 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
 
-    transition: color 0.2s;
+    transition: color 0.2s, background-color 0.2s;
 
 }
 
-.links a:hover {
+.links a:active {
+
+    background: rgba(192, 75, 216, 0.16);
 
     color: white;
+
+}
+
+
+/* Botón hamburguesa: solo en móvil. */
+.nav-toggle {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+/* Las tres rayas: la del medio es el propio span, las otras dos sus
+   pseudo-elementos. Al abrir, se cruzan en una X. */
+.nav-toggle__bars,
+.nav-toggle__bars::before,
+.nav-toggle__bars::after {
+
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background: #e2e8f0;
+
+    border-radius: 2px;
+
+    transition: transform 0.25s ease, opacity 0.2s ease;
+
+}
+
+.nav-toggle__bars {
+
+    position: relative;
+
+}
+
+.nav-toggle__bars::before,
+.nav-toggle__bars::after {
+
+    content: "";
+
+    position: absolute;
+    left: 0;
+
+}
+
+.nav-toggle__bars::before {
+
+    top: -6px;
+
+}
+
+.nav-toggle__bars::after {
+
+    top: 6px;
+
+}
+
+.navbar--open .nav-toggle__bars {
+
+    /* La raya del medio desaparece; las otras dos giran sobre ella. */
+    background: transparent;
+
+}
+
+.navbar--open .nav-toggle__bars::before {
+
+    transform: translateY(6px) rotate(45deg);
+
+}
+
+.navbar--open .nav-toggle__bars::after {
+
+    transform: translateY(-6px) rotate(-45deg);
+
+}
+
+
+/* Se recupera la fila de enlaces y desaparece la hamburguesa.
+
+   El corte está en 1000px y no en los 900px del resto del CSS a propósito: los
+   siete enlaces ocupan 557px fijos y el logo completo otros 327px, así que por
+   debajo de ~976px no caben los dos y el título acababa recortado con puntos
+   suspensivos. El menú tiene su propio límite porque tiene su propia
+   restricción. */
+@media (min-width: 1000px) {
+
+    .nav-toggle {
+
+        display: none;
+
+    }
+
+    .links {
+
+        position: static;
+
+        flex-direction: row;
+        align-items: center;
+
+        gap: 25px;
+
+        max-height: none;
+        overflow: visible;
+
+        background: none;
+        border-bottom: none;
+
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+
+    }
+
+    .links a {
+
+        min-height: 0;
+
+        padding: 8px 4px;
+
+        border-top: none;
+
+    }
+
+}
+
+@media (hover: hover) {
+
+    .links a:hover {
+
+        color: white;
+
+    }
 
 }
 
@@ -1434,11 +1758,15 @@ button.region-loc {
 
 }
 
-button.region-loc:hover .region-loc__img {
+@media (hover: hover) {
 
-    border-color: color-mix(in srgb, var(--accent) 90%, transparent);
+    button.region-loc:hover .region-loc__img {
 
-    transform: translateY(-2px);
+        border-color: color-mix(in srgb, var(--accent) 90%, transparent);
+
+        transform: translateY(-2px);
+
+    }
 
 }
 
@@ -1840,6 +2168,18 @@ button.region-loc:hover .region-loc__img {
 
     }
 
+    /* La tabla del infobox es la parte más frágil en estrecho: valores largos
+       sin espacios (nombres propios, URLs) ensanchaban la celda y con ella toda
+       la página. */
+    .infobox__table th,
+    .infobox__table td {
+
+        padding: 9px 10px;
+
+        overflow-wrap: anywhere;
+
+    }
+
 }
 
 
@@ -1849,37 +2189,57 @@ button.region-loc:hover .region-loc__img {
 
     color: #c4b5fd;
 
-    border: 1px solid rgba(196, 181, 253, 0.4);
-
-    border-radius: 6px;
-
-    padding: 6px 12px;
-
-    font-size: 0.9em;
-
     transition: color 0.2s, border-color 0.2s, background-color 0.2s;
 
 }
 
-.links a.admin-link:hover {
+/* La forma de botón solo tiene sentido en la fila de escritorio: dentro del
+   panel móvil los enlaces son filas de 48px y el recuadro rompería la
+   alineación, así que allí basta el color distinto. Mismo corte que el menú. */
+@media (min-width: 1000px) {
 
-    color: white;
+    .links a.admin-link {
 
-    border-color: rgba(196, 181, 253, 0.9);
+        border: 1px solid rgba(196, 181, 253, 0.4);
 
-    background-color: rgba(196, 181, 253, 0.12);
+        border-radius: 6px;
+
+        padding: 6px 12px;
+
+        font-size: 0.9em;
+
+    }
+
+}
+
+@media (hover: hover) {
+
+    .links a.admin-link:hover {
+
+        color: white;
+
+        border-color: rgba(196, 181, 253, 0.9);
+
+        background-color: rgba(196, 181, 253, 0.12);
+
+    }
 
 }
 
 .logo img {
 
-    width: 55px;
+    /* Escala con el ancho: 38px en móvil, 55px a partir de tableta. */
+    width: clamp(38px, 9vw, 55px);
 
-    height: 55px;
+    height: clamp(38px, 9vw, 55px);
+
+    flex: 0 0 auto;
 
     border-radius: 10%;
 
     object-fit: cover;
+
+    transition: transform 0.2s;
 
 }
 
@@ -1889,11 +2249,15 @@ button.region-loc:hover .region-loc__img {
 
     align-items: center;
 
-    gap: 25px;
+    /* El hueco de 25px se come el ancho en móvil. */
+    gap: clamp(10px, 3vw, 25px);
+
+    /* Sin esto el título empuja a la hamburguesa fuera de la barra. */
+    min-width: 0;
 
     color: white;
 
-    font-size: 32px;
+    font-size: clamp(1.05rem, 4.5vw, 32px);
 
     font-weight: bold;
 
@@ -1901,12 +2265,24 @@ button.region-loc:hover .region-loc__img {
 
 }
 
-.logo img {
-    transition: transform 0.2s;
+/* El título nunca parte en varias líneas: la barra tiene altura fija y el
+   texto se saldría por arriba y por abajo. Si no cabe, se recorta. */
+.logo span {
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
 }
 
-.logo:hover img {
-    transform: rotate(5deg) scale(1.05);
+@media (hover: hover) {
+
+    .logo:hover img {
+        transform: rotate(5deg) scale(1.05);
+    }
+
 }
 
 

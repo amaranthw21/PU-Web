@@ -35,11 +35,11 @@ export default function CountryDetail(){
         }
 
         const body = document.body;
-        const prevBg = body.style.backgroundImage;
+        const prevBg = body.style.getPropertyValue("--page-bg");
         const prevAccent = body.style.getPropertyValue("--accent");
 
         if(country.background){
-            body.style.backgroundImage = `url(${asset(country.background)})`;
+            body.style.setProperty("--page-bg", `url(${asset(country.background)})`);
         }
 
         if(country.color){
@@ -47,7 +47,11 @@ export default function CountryDetail(){
         }
 
         return () => {
-            body.style.backgroundImage = prevBg;
+            if(prevBg){
+                body.style.setProperty("--page-bg", prevBg);
+            } else {
+                body.style.removeProperty("--page-bg");
+            }
 
             if(prevAccent){
                 body.style.setProperty("--accent", prevAccent);

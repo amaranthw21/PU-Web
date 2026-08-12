@@ -33,11 +33,11 @@ export default function ItemDetail(){
         }
 
         const body = document.body;
-        const prevBg = body.style.backgroundImage;
+        const prevBg = body.style.getPropertyValue("--page-bg");
         const prevAccent = body.style.getPropertyValue("--accent");
 
         if(item.image){
-            body.style.backgroundImage = `url(${asset(item.image)})`;
+            body.style.setProperty("--page-bg", `url(${asset(item.image)})`);
         }
 
         if(item.color){
@@ -45,7 +45,11 @@ export default function ItemDetail(){
         }
 
         return () => {
-            body.style.backgroundImage = prevBg;
+            if(prevBg){
+                body.style.setProperty("--page-bg", prevBg);
+            } else {
+                body.style.removeProperty("--page-bg");
+            }
 
             if(prevAccent){
                 body.style.setProperty("--accent", prevAccent);
