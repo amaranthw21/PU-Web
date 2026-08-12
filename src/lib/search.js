@@ -87,6 +87,47 @@ const COLLECTIONS = [
 // las señalara no llevaría a ninguna parte.
 
 
+// Las páginas del propio sitio. No son contenido editable —son componentes—, así
+// que no salen de ningún glob y hay que enumerarlas aquí: sin esto, buscar
+// "worlds" encontraba las entradas que mencionan la palabra, pero no la página
+// Worlds.
+//
+// Las tres tarjetas de Lore (Gods, Important Items, Mechanics) NO van en esta
+// lista: esas sí son contenido, viven en src/content/lore y ya entran por el
+// glob de arriba. Duplicarlas aquí las sacaría dos veces.
+//
+// La descripción dice para qué sirve la página, no qué contiene: lo que contiene
+// cambia con el tiempo y además ya está indexado por su cuenta.
+const PAGES = [
+    { route: "/",  title: "Home",
+      text: "The front page of the archive." },
+
+    { route: "/lore", title: "Lore",
+      text: "General information about the universe." },
+
+    { route: "/worlds", title: "Worlds",
+      text: "Every world and side dimension in the setting." },
+
+    { route: "/species", title: "Species",
+      text: "The species that inhabit the setting, including companion-only species." },
+
+    { route: "/factions", title: "Factions",
+      text: "The factions of every dimension." },
+
+    { route: "/lore/energy-powers/energy", title: "Energy",
+      text: "The kinds of energy in the setting and where they come from." },
+
+    { route: "/lore/energy-powers/powers", title: "Powers",
+      text: "The kinds of powers a character can have." },
+
+    { route: "/lore/energy-powers/transformations", title: "Transformations",
+      text: "Superforms, awakenings and the other ways a character can transform." },
+
+    { route: "/credits", title: "Credits",
+      text: "Who made the art and the archive." }
+];
+
+
 // Claves que no son texto que nadie vaya a buscar: rutas de imagen, colores,
 // números de orden y campos de maquetación. Se saltan al recoger el texto.
 // (Los números y booleanos se ignoran solos: collectText solo recoge cadenas.)
@@ -207,6 +248,26 @@ export function buildIndex(){
     }
 
     const entries = [];
+
+    // Primero las páginas del sitio. El orden aquí da igual para el resultado
+    // final (manda la puntuación), pero van delante porque son la puerta de
+    // entrada a todo lo demás.
+    PAGES.forEach(page => {
+
+        entries.push({
+            id: `page:${page.route}`,
+            title: page.title,
+            type: "page",
+            typeLabel: "Pages",
+            route: page.route,
+            image: null,
+            text: page.text,
+            normalizedTitle: normalize(page.title),
+            haystack: normalize(`${page.title} ${page.text}`),
+            sections: []
+        });
+
+    });
 
     COLLECTIONS.forEach(collection => {
 
@@ -330,7 +391,13 @@ export default function search(rawQuery, limit = 40){
 
         })
         .filter(Boolean)
-        .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
+        .sort((a, b) =>
+            b.score - a.score
+            // A igualdad de puntos, el título más corto es la coincidencia más
+            // ajustada: buscando "god" interesa antes "Gods" que "God of the
+            // Desert", porque sobra menos título alrededor de lo que buscabas.
+            || a.title.length - b.title.length
+            || a.title.localeCompare(b.title))
         .slice(0, limit);
 
 }
