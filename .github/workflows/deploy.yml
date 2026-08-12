@@ -36,6 +36,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Reduce y recomprime las imágenes de dist/ antes de subirlas. Trabaja
+      # sobre la copia construida, nunca sobre public/: el repo conserva los
+      # originales y cada deploy comprime desde ellos, así que no hay pérdida
+      # acumulada. Tampoco renombra, así que ninguna ruta puede romperse.
+      - name: Optimize images
+        run: npm run optimize:images
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
