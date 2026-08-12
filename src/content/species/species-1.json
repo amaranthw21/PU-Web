@@ -1,7 +1,102 @@
 {
   "order": 1,
+  "group": "main",
   "name": "Species One",
   "image": "/species/species-1.png",
+  "background": "/worlds/column_01_03.jpg",
+  "color": "#4fb286",
   "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  "description": "Ficha de ejemplo, para ver cómo queda una especie con todos sus apartados rellenos. El resto de especies siguen siendo placeholders.\n\nEsta entradilla es el campo Description: va antes del índice, igual que en las fichas de dioses e items.",
+  "quote": [
+    {
+      "speaker": "Walpurgis",
+      "avatar": "",
+      "text": "\"And these ones? Where do they come from?\""
+    },
+    {
+      "speaker": "Argus",
+      "avatar": "",
+      "text": "\"Further back than anyone still alive can tell you.\""
+    }
+  ],
+  "origin": "Mobius",
+  "habitat": "Great Forest and the northern plains",
+  "lifespan": "Around 90 years",
+  "traits": [
+    "Lorem ipsum dolor sit amet",
+    "Consectetur adipiscing elit"
+  ],
+  "abilities": [
+    "Sed do eiusmod tempor",
+    "Ut labore et dolore magna"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+          "type": "textImage",
+          "text": "Una parte de tipo \"Text + image\": la imagen se pone a un lado del texto y el mod elige de qué lado cae.",
+          "image": "/worlds/mobius.jpg",
+          "caption": "Pie de foto de ejemplo",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Biology",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+        }
+      ]
+    },
+    {
+      "title": "Known members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Notable individuals",
+              "description": "El apartado \"Characters\" es el mismo que usan las facciones: un carrusel de retratos que se abren al pulsarlos.",
+              "characters": [
+                {
+                  "name": "Argus",
+                  "image": "/gods/argus.png",
+                  "description": "Los personajes con descripción se pueden pulsar y abren este panel debajo. Los que no la tienen, no."
+                },
+                {
+                  "name": "Ilumina",
+                  "image": "/gods/ilumina.webp",
+                  "description": "Otro ejemplo, para ver cómo queda el carrusel con más de uno."
+                },
+                {
+                  "name": "Sin retrato",
+                  "image": "",
+                  "description": "Sin imagen se pinta el hueco vacío con el color de acento."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "First recorded",
+      "value": "Ejemplo de fila extra del Basic Information"
+    }
+  ]
 }
