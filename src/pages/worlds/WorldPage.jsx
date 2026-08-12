@@ -3,6 +3,7 @@ import { worldsById } from "../../data/worlds";
 import CountryCard from "../../components/CountryCard";
 import Paragraphs from "../../components/Paragraphs";
 import asset from "../../lib/asset";
+import NotFound from "../NotFound";
 
 
 export default function WorldPage(){
@@ -14,7 +15,7 @@ export default function WorldPage(){
 
     if(!world){
 
-        return <h1>World not found</h1>;
+        return <NotFound title="World not found" />;
 
     }
 

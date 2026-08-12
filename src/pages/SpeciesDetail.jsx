@@ -8,6 +8,7 @@ import ContentBlock from "../components/ContentBlock";
 import Paragraphs from "../components/Paragraphs";
 import asset from "../lib/asset";
 import withBlockIds from "../lib/blocks";
+import NotFound from "./NotFound";
 
 
 // Ficha de una especie. Misma estructura que la de una facción
@@ -70,7 +71,7 @@ export default function SpeciesDetail(){
 
     if(!specie){
 
-        return <h1>Species not found</h1>;
+        return <NotFound title="Species not found" />;
 
     }
 

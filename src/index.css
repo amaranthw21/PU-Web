@@ -1026,6 +1026,29 @@ body::before {
 }
 
 
+/* Vuelta al inicio desde la página de "no encontrado". */
+.not-found__back {
+
+    margin: 20px 0 0;
+
+}
+
+.not-found__back a {
+
+    color: #e08bf0;
+
+    text-decoration: none;
+    font-weight: 500;
+
+}
+
+.not-found__back a:hover {
+
+    text-decoration: underline;
+
+}
+
+
 /* Línea separadora entre secciones (se desvanece en los bordes) */
 .section-divider {
 
