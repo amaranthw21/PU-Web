@@ -10,6 +10,8 @@ import Factions from "./pages/Factions";
 import FactionDetail from "./pages/FactionDetail";
 import FactionSubDetail from "./pages/FactionSubDetail";
 import Credits from "./pages/Credits";
+import Rulesbook from "./pages/rulesbook/Rulesbook";
+import RuleChapter from "./pages/rulesbook/RuleChapter";
 import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
 
@@ -106,6 +108,16 @@ function App() {
                     <Route
                         path="/factions/:id/:factionId"
                         element={<FactionSubDetail />}
+                    />
+
+                    <Route
+                        path="/rulesbook"
+                        element={<Rulesbook />}
+                    />
+
+                    <Route
+                        path="/rulesbook/:id"
+                        element={<RuleChapter />}
                     />
 
                     <Route

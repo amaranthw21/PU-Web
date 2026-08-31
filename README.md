@@ -25,7 +25,7 @@ through a form-based panel. You never touch code, JSON or Git.
 1. Click **Admin** in the top navigation bar of the site — or go straight to
    **https://amaranthw21.github.io/PU-Web/admin/**
 2. Click **Sign In with GitHub** and authorise the app (only the first time).
-3. Pick a collection in the left sidebar (Species, Gods, Worlds…).
+3. Pick a collection in the panel's own left sidebar (Species, Gods, Worlds…).
 4. Click an existing entry to edit it, or **New <item>** to create one.
 5. Fill in the fields, then click **Publish**.
 
@@ -52,6 +52,7 @@ That's it. Your change is saved and the live site rebuilds itself in about
 | **Countries** | Individual countries, each with its own page |
 | **Side worlds** | Secondary dimensions (button only, no page) |
 | **Lore (sections)** | The index of sections on the Lore page |
+| **Rulesbook** | The server rules, one chapter per entry |
 
 ## Fields you'll see, in plain terms
 
@@ -304,6 +305,26 @@ entry's background image, plus a *Read more* link to its own page.
 The rest — Description, Quote, Content blocks — builds its own page exactly as
 described above.
 
+## The Rulesbook
+
+The **Rulesbook** collection holds the server rules. Each entry is a *chapter*:
+it shows up as a card on the Rulesbook page and gets its own page underneath it.
+
+A chapter has four fields — **Order**, **Name**, **Summary** (the line on the
+card) and **Description** (the intro above the rules) — plus the usual
+**Content blocks**. Each block is one rule or one group of related rules: its
+**Title** is what appears in the Contents list, and the parts underneath hold
+the text.
+
+Every block title becomes a link of its own, so you can point at a single rule
+instead of the whole page. Open the chapter, click the rule in the Contents
+list, and copy the address from the browser — it will look like
+`.../rulesbook/general-conduct#respect`. That is the link to paste in Discord.
+
+Renaming a block changes its link, so old links to it stop working. Renaming a
+whole chapter is fine — the address comes from the file name, not the name you
+type — but the site owner has to rename the file for the address to follow.
+
 ## Good habits
 
 - **Publish one entry at a time.** Each publish is a separate save.
@@ -368,6 +389,11 @@ A faction's characters part is the regions part with different field names, so
 `ContentBlock` translates `groups`/`characters` into `regions`/`locations` and
 hands it to the same component instead of duplicating the carousel.
 
+The Rulesbook works the same way with fewer pieces: `pages/rulesbook/Rulesbook.jsx`
+lists `src/content/rules/*.json` as cards and `pages/rulesbook/RuleChapter.jsx`
+renders one chapter with `ContentToc` + `ContentBlock`, without infobox, quote or
+page background.
+
 `CountryDetail`, `FactionSubDetail` and `GodDetail` compose those parts
 themselves because they also carry an infobox and their own page background /
 accent effect. Any text that
@@ -380,6 +406,35 @@ Anything on a detail page that should follow it uses
 `color-mix(in srgb, var(--accent) N%, transparent)` rather than a literal
 magenta. Site chrome outside the fichas (navbar, list cards, FAQ boxes) is still
 hardcoded on purpose.
+
+## The navigation
+
+The sections live in `components/Sidebar.jsx`, not in the top bar: on desktop it
+is a rail of icons pinned to the left edge that widens on hover or on
+`:focus-within` (so keyboard and mouse behave the same), and the button at the
+bottom pins it open. Below 900px there is no rail — the same component is the
+panel the hamburger opens, already expanded.
+
+The submenus are not written by hand: each section maps over the same data the
+pages use (`data/rules`, `data/lore/lore`, `data/species`, `mainWorlds`,
+`mainFactions` + `sideFactions`), so publishing a world or a rule chapter adds it
+to the navigation on its own. Entries without a route are left out — the Lore
+section *Timeline* has no page yet, and side dimensions are only a button on the
+Worlds page.
+
+The open/closed state of a submenu follows the current route, with the user's
+last click winning while they stay on the same page (same trick as the mobile
+panel: what's stored is the path the choice was made on, so it expires on
+navigation instead of needing an effect to resync).
+
+`Layout.jsx` owns two pieces of state because they are shared: the mobile panel
+(the top bar has the button, the sidebar is the panel) and the desktop pin (the
+content has to move aside, which is the `.with-rail` wrapper's job). The icons
+are hand-drawn SVGs in `components/NavIcons.jsx` — stroke and `currentColor`, so
+they inherit the link colour and the active tint.
+
+The rail's widths are the CSS variables `--rail-w` / `--rail-w-open`. Hovering
+overlays the content (no reflow under the pointer); pinning shifts it.
 
 ## The editing panel
 

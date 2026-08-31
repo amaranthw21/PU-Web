@@ -5,9 +5,15 @@
     /* Color de acento global (marco, nombres...). Se sobreescribe por dios. */
     --accent: #c04bd8;
 
-    /* Altura de la barra: la usan el panel móvil y el scroll-margin de los
+    /* Altura de la barra: la usan la barra lateral y el scroll-margin de los
        anclas de la tabla de contenidos, para que el título no quede tapado. */
     --navbar-h: 56px;
+
+    /* Barra lateral de secciones: plegada (solo la columna de iconos) y abierta.
+       El plegado sale de 20px de padding + 24 de icono + 20: así el icono queda
+       centrado en el rail y no se mueve al ensancharse. */
+    --rail-w: 64px;
+    --rail-w-open: 240px;
 
 }
 
@@ -54,7 +60,9 @@ html {
 
     gap: 12px;
 
-    padding: 0 16px;
+    /* Justo en móvil: con la lupa, Admin y la hamburguesa al otro lado, cada
+       píxel que se ahorre aquí es título que se lee entero. */
+    padding: 0 12px;
 
     background: rgba(10, 5, 20, 0.9);
 
@@ -1044,27 +1052,26 @@ body::before {
 
 }
 
-.links a.search-link {
+/* Solo el icono, a cualquier ancho: el nombre accesible lo pone el aria-label
+   del enlace. */
+.search-link {
 
-    gap: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-}
+    flex: 0 0 auto;
 
-/* En escritorio solo queda la lupa: la fila de enlaces no tiene ancho de sobra
-   para una palabra más. El nombre accesible lo pone el aria-label del enlace. */
-@media (min-width: 1040px) {
+    width: 40px;
+    height: 40px;
 
-    .links a.search-link span {
+    color: #cbd5e1;
 
-        display: none;
+    border-radius: 8px;
 
-    }
+    text-decoration: none;
 
-    .links a.search-link {
-
-        padding: 8px 6px;
-
-    }
+    transition: color 0.2s, background-color 0.2s;
 
 }
 
@@ -1405,81 +1412,34 @@ body::before {
 }
 
 
-/* ─────────────── Menú de navegación ─────────────── */
+/* ─────────────── Barra superior: acciones ─────────────── */
 
-/* Móvil (por defecto): los enlaces viven en un panel que cae por debajo de la
-   barra. Cerrado se oculta con `visibility`, no solo con opacidad, para que no
-   siga siendo tabulable ni lo lean los lectores de pantalla. */
-.links {
+/* Lo que queda en la barra: la lupa y el panel de edición, más la hamburguesa
+   en móvil. Las secciones del sitio están en la barra lateral. */
+.navbar__actions {
 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-
-    display: flex;
-    flex-direction: column;
-
-    /* En horizontal la pantalla es baja: el panel scrollea en vez de salirse. */
-    max-height: calc(100dvh - var(--navbar-h));
-    overflow-y: auto;
-
-    /* Opaco y sin backdrop-filter propio: el panel cuelga de .navbar, que ya
-       tiene uno, y los backdrop-filter anidados se pintan mal (el fondo del
-       hijo se compone contra el desenfoque del padre y el menú acaba
-       traslúcido, con el contenido de la página leyéndose por debajo). */
-    background: #0b0614;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-8px);
-
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-
-}
-
-.links--open {
-
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-
-}
-
-.links a {
-
-    /* 48px de alto: objetivo de toque cómodo con el pulgar. */
     display: flex;
     align-items: center;
 
-    min-height: 48px;
+    gap: 6px;
 
-    padding: 0 20px;
-
-    color: #cbd5e1;
-
-    text-decoration: none;
-
-    font-weight: 500;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-
-    transition: color 0.2s, background-color 0.2s;
+    flex: 0 0 auto;
 
 }
 
-.links a:active {
+@media (min-width: 900px) {
 
-    background: rgba(192, 75, 216, 0.16);
+    .navbar__actions {
 
-    color: white;
+        gap: 10px;
+
+    }
 
 }
 
 
-/* Botón hamburguesa: solo en móvil. */
+/* Botón hamburguesa: solo en móvil. En escritorio el rail está siempre a la
+   vista, así que no hay nada que abrir. */
 .nav-toggle {
 
     display: flex;
@@ -1567,16 +1527,7 @@ body::before {
 
 }
 
-
-/* Se recupera la fila de enlaces y desaparece la hamburguesa.
-
-   El corte está en 1040px y no en los 900px del resto del CSS a propósito: los
-   enlaces ocupan 612px fijos (los siete, más la lupa del buscador) y el logo
-   completo otros 327px, así que por debajo de ~1031px no caben los dos y el
-   título acaba recortado con puntos suspensivos. El menú tiene su propio límite
-   porque tiene su propia restricción: si algún día se añade otro enlace, hay
-   que volver a medir y subir este número. */
-@media (min-width: 1040px) {
+@media (min-width: 900px) {
 
     .nav-toggle {
 
@@ -1584,48 +1535,433 @@ body::before {
 
     }
 
-    .links {
+}
 
-        position: static;
 
-        flex-direction: row;
-        align-items: center;
+/* ─────────────── Barra lateral de secciones ─────────────── */
 
-        gap: 25px;
+/* Móvil (por defecto): no hay rail. La barra lateral es el panel que abre la
+   hamburguesa —ya desplegado, con iconos y nombres— y se cierra al elegir un
+   destino o al tocar fuera.
 
-        max-height: none;
-        overflow: visible;
+   Cerrado se oculta con `visibility` además de con el desplazamiento, para que
+   no siga siendo tabulable ni lo lean los lectores de pantalla. */
+.rail {
 
-        background: none;
-        border-bottom: none;
+    position: fixed;
+    top: var(--navbar-h);
+    bottom: 0;
+    left: 0;
 
-        opacity: 1;
-        visibility: visible;
-        transform: none;
+    z-index: 90;
 
-    }
+    width: min(280px, 82vw);
 
-    .links a {
+    display: flex;
+    flex-direction: column;
 
-        min-height: 0;
+    /* Los submenús largos (las catorce especies) no caben de una vez; el rail
+       scrollea por dentro. En horizontal no: los nombres se recortan. */
+    overflow: hidden auto;
+    overscroll-behavior: contain;
 
-        padding: 8px 4px;
+    /* Opaco a propósito: por debajo pasa el contenido de la página. */
+    background: #0b0614;
 
-        border-top: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 
-    }
+    transform: translateX(-100%);
+    visibility: hidden;
+
+    transition: transform 0.25s ease, visibility 0.25s, width 0.2s ease;
+
+}
+
+.rail--open {
+
+    transform: none;
+    visibility: visible;
+
+}
+
+/* Cubre la página mientras el panel está abierto: tocar aquí lo cierra. */
+.rail-backdrop {
+
+    position: fixed;
+    inset: var(--navbar-h) 0 0 0;
+
+    z-index: 80;
+
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.rail__list {
+
+    flex: 1 1 auto;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Cada sección son dos controles, no uno: el enlace lleva a su página y la
+   flecha despliega lo que hay dentro. Separarlos evita el clásico "he pulsado
+   la sección y me ha llevado a otro sitio en vez de abrirla". */
+.rail__row {
+
+    display: flex;
+    align-items: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+}
+
+.rail__link {
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    flex: 1 1 auto;
+    min-width: 0;
+
+    /* 48px de alto: objetivo de toque cómodo con el pulgar. */
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: color 0.2s, background-color 0.2s;
+
+}
+
+.rail__icon {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Ancho fijo: es la columna que queda a la vista con el rail plegado, así
+       que los iconos no se mueven al ensancharse. */
+    flex: 0 0 auto;
+
+    width: 24px;
+    height: 24px;
+
+}
+
+.rail__icon svg {
+
+    width: 22px;
+    height: 22px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+}
+
+.rail__label {
+
+    /* Sin envolver: al plegarse el rail el nombre se recorta en seco, en vez de
+       repartirse en dos líneas y descolocar la fila. */
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    transition: opacity 0.15s ease;
+
+}
+
+/* La página en la que estás, marcada. La clase la pone NavLink, que además
+   añade aria-current para quien no ve el color. */
+.rail__link.active,
+.rail__sublink.active {
+
+    color: white;
+
+    background: color-mix(in srgb, var(--accent) 22%, transparent);
+
+}
+
+.rail__chevron {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 40px;
+    height: 48px;
+
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    color: #94a3b8;
+
+    cursor: pointer;
+
+    transition: color 0.2s, background-color 0.2s;
+
+}
+
+.rail__chevron svg {
+
+    width: 16px;
+    height: 16px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition: transform 0.2s ease;
+
+}
+
+/* Desplegado, la flecha mira hacia abajo. */
+.rail__chevron--open svg {
+
+    transform: rotate(90deg);
+
+}
+
+.rail__sub {
+
+    list-style: none;
+
+    margin: 0;
+    padding: 4px 0;
+
+    background: rgba(255, 255, 255, 0.03);
+
+}
+
+/* `hidden` en el <ul> es lo que cierra el submenú, así que la regla que le da
+   display tiene que respetarlo. */
+.rail__sub:not([hidden]) {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rail__sublink {
+
+    display: flex;
+    align-items: center;
+
+    min-height: 40px;
+
+    /* Sangrado hasta la altura del texto de su sección: 20 de padding + 24 de
+       icono + 14 de hueco. */
+    padding: 0 20px 0 58px;
+
+    color: #94a3b8;
+
+    text-decoration: none;
+
+    font-size: 0.9em;
+
+    transition: color 0.2s, background-color 0.2s;
+
+}
+
+/* Anclar no tiene sentido en el panel de móvil, que ya va desplegado. */
+.rail__pin {
+
+    display: none;
 
 }
 
 @media (hover: hover) {
 
-    .links a:hover {
+    .rail__link:hover,
+    .rail__sublink:hover,
+    .rail__chevron:hover,
+    .rail__pin:hover {
 
         color: white;
+
+        background-color: rgba(255, 255, 255, 0.06);
 
     }
 
 }
+
+
+/* Escritorio: el rail se queda fijo a la izquierda, plegado a su columna de
+   iconos, y se ensancha al pasar el ratón o al tabular dentro (:focus-within,
+   para que con teclado se vea lo mismo que con ratón). El botón de abajo lo
+   deja anclado.
+
+   Plegado no hay sitio para los nombres ni para los submenús, así que se
+   esconden. De ahí el selector largo: es "ni ratón, ni foco, ni anclado". La
+   flecha se va con `display` y no con `opacity` porque ocupa 40px de la fila y
+   dejaría al icono sin su columna. */
+@media (min-width: 900px) {
+
+    .rail {
+
+        width: var(--rail-w);
+
+        transform: none;
+        visibility: visible;
+
+    }
+
+    .rail:hover,
+    .rail:focus-within,
+    .rail--pinned {
+
+        width: var(--rail-w-open);
+
+    }
+
+    /* La sombra solo cuando el rail tapa contenido: anclado no hace falta,
+       porque el contenido se aparta. */
+    .rail:hover:not(.rail--pinned),
+    .rail:focus-within:not(.rail--pinned) {
+
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .rail:not(:hover):not(:focus-within):not(.rail--pinned) .rail__label {
+
+        opacity: 0;
+
+    }
+
+    .rail:not(:hover):not(:focus-within):not(.rail--pinned) .rail__chevron {
+
+        display: none;
+
+    }
+
+    .rail:not(:hover):not(:focus-within):not(.rail--pinned) .rail__sub {
+
+        display: none;
+
+    }
+
+    .rail-backdrop {
+
+        display: none;
+
+    }
+
+    .rail__pin {
+
+        display: flex;
+        align-items: center;
+
+        gap: 14px;
+
+        width: 100%;
+
+        min-height: 48px;
+
+        padding: 0 20px;
+
+        /* Pegado al fondo del rail: con un submenú largo desplegado (las
+           especies) el rail scrollea, y el botón se iría de la vista. Opaco,
+           porque las filas le pasan por debajo. */
+        position: sticky;
+        bottom: 0;
+
+        background: #0b0614;
+
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+        color: #94a3b8;
+
+        font: inherit;
+        text-align: left;
+
+        cursor: pointer;
+
+        transition: color 0.2s, background-color 0.2s;
+
+    }
+
+    .rail__pin-icon {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: 0 0 auto;
+
+        width: 24px;
+        height: 24px;
+
+    }
+
+    .rail__pin-icon svg {
+
+        width: 16px;
+        height: 16px;
+
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+
+        transition: transform 0.2s ease;
+
+    }
+
+    /* Anclado, la flecha apunta al revés: pulsar pliega. */
+    .rail--pinned .rail__pin-icon svg {
+
+        transform: rotate(180deg);
+
+    }
+
+}
+
+
+/* El contenido se aparta para dejarle sitio al rail. Solo el ancho plegado: al
+   ensancharse con el ratón el rail se pinta por encima, sin recolocar la página
+   (mover el contenido bajo el puntero es peor que taparlo un momento). Anclado
+   sí, porque entonces se queda. */
+@media (min-width: 900px) {
+
+    .with-rail {
+
+        padding-left: var(--rail-w);
+
+        transition: padding-left 0.2s ease;
+
+    }
+
+    .with-rail--open {
+
+        padding-left: var(--rail-w-open);
+
+    }
+
+}
+
 
 /* ─────────────── Ficha de país: contenido + infobox ─────────────── */
 
@@ -2435,28 +2771,33 @@ button.region-loc {
 
 /* El acceso al panel de edición: se marca aparte para que no se lea como
    una sección más del lore. */
-.links a.admin-link {
+.admin-link {
+
+    display: flex;
+    align-items: center;
+
+    flex: 0 0 auto;
+
+    padding: 6px 10px;
 
     color: #c4b5fd;
+
+    border: 1px solid rgba(196, 181, 253, 0.4);
+    border-radius: 6px;
+
+    font-size: 0.9em;
+
+    text-decoration: none;
 
     transition: color 0.2s, border-color 0.2s, background-color 0.2s;
 
 }
 
-/* La forma de botón solo tiene sentido en la fila de escritorio: dentro del
-   panel móvil los enlaces son filas de 48px y el recuadro rompería la
-   alineación, así que allí basta el color distinto. Mismo corte que el menú. */
-@media (min-width: 1040px) {
+@media (min-width: 900px) {
 
-    .links a.admin-link {
-
-        border: 1px solid rgba(196, 181, 253, 0.4);
-
-        border-radius: 6px;
+    .admin-link {
 
         padding: 6px 12px;
-
-        font-size: 0.9em;
 
     }
 
@@ -2464,13 +2805,21 @@ button.region-loc {
 
 @media (hover: hover) {
 
-    .links a.admin-link:hover {
+    .admin-link:hover {
 
         color: white;
 
         border-color: rgba(196, 181, 253, 0.9);
 
         background-color: rgba(196, 181, 253, 0.12);
+
+    }
+
+    .search-link:hover {
+
+        color: white;
+
+        background-color: rgba(255, 255, 255, 0.08);
 
     }
 

@@ -1,0 +1,35 @@
+{
+  "order": 1,
+  "name": "General Conduct",
+  "summary": "How everyone is expected to behave in the server, in and out of character.",
+  "description": "These rules apply everywhere in the server: channels, voice, DMs between members and anything posted under the server's name.\n\nThey are the baseline. Every other chapter of the rulesbook assumes you are already following these.",
+  "blocks": [
+    {
+      "title": "Respect",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Treat everyone with respect, including people you are in conflict with in character. Insults, harassment, slurs and hate speech of any kind are not tolerated.\n\nA disagreement between characters is never a reason to attack the person behind them. If you cannot separate the two, step away from the scene and talk to a moderator."
+        }
+      ]
+    },
+    {
+      "title": "Channels and spam",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Use each channel for what it is meant for. Roleplay goes in roleplay channels, out-of-character chatter in the off-topic ones.\n\nDo not spam, flood or ping people repeatedly. @everyone and role pings are for staff only."
+        }
+      ]
+    },
+    {
+      "title": "Content limits",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Explicit sexual content, gore and shock content are not allowed anywhere in the server.\n\nHeavy themes (violence, death, abuse) can appear in roleplay if the scene calls for it, but they must be tagged beforehand and everyone in the scene has to agree."
+        }
+      ]
+    }
+  ]
+}

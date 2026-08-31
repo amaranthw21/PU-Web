@@ -74,6 +74,12 @@ const COLLECTIONS = [
         route: (id) => `/lore/energy-powers/transformations/${id}`
     },
     {
+        type: "rules",
+        label: "Rules",
+        modules: import.meta.glob("../content/rules/*.json", { eager: true }),
+        route: (id) => `/rulesbook/${id}`
+    },
+    {
         type: "section",
         label: "Sections",
         modules: import.meta.glob("../content/lore/*.json", { eager: true }),
@@ -101,6 +107,9 @@ const COLLECTIONS = [
 const PAGES = [
     { route: "/",  title: "Home",
       text: "The front page of the archive." },
+
+    { route: "/rulesbook", title: "Rulesbook",
+      text: "The rules of the server: conduct, roleplay, combat and moderation." },
 
     { route: "/lore", title: "Lore",
       text: "General information about the universe." },
