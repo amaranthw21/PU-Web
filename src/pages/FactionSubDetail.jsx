@@ -7,6 +7,7 @@ import ContentBlock from "../components/ContentBlock";
 import withBlockIds from "../lib/blocks";
 import NotFound from "./NotFound";
 import usePageAccent from "../lib/usePageAccent";
+import useDocumentTitle from "../lib/useDocumentTitle";
 
 
 // Ficha de una facción. Misma estructura que la de un país (CountryDetail): la
@@ -30,9 +31,14 @@ export default function FactionSubDetail(){
     usePageAccent(subFaction?.background, subFaction?.color);
 
 
+    const pageTitle = subFaction?.name ?? "Faction not found";
+
+    useDocumentTitle(pageTitle);
+
+
     if(!subFaction){
 
-        return <NotFound title="Faction not found" />;
+        return <NotFound title={pageTitle} />;
 
     }
 

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { mainFactions, sideFactions } from "../data/factions";
 import asset from "../lib/asset";
+import useDocumentTitle from "../lib/useDocumentTitle";
 
 
 function FactionButton({ faction }) {
@@ -51,6 +52,9 @@ function FactionButton({ faction }) {
 
 
 export default function Factions() {
+
+    useDocumentTitle("Factions");
+
 
     return (
 

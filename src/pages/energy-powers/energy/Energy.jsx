@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import Accordion from "../../../components/Accordion";
 import energies from "../../../data/lore/energy-powers/energy";
+import useDocumentTitle from "../../../lib/useDocumentTitle";
 
 
 export default function Energy(){
+
+    useDocumentTitle("Energy");
+
 
     const canonEnergies = energies.filter(energy => !energy.custom);
     const customEnergies = energies.filter(energy => energy.custom);

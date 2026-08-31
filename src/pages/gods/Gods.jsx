@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import EntryCard from "../../components/EntryCard";
 import gods, { godCategories } from "../../data/lore/gods/gods";
+import useDocumentTitle from "../../lib/useDocumentTitle";
 
 
 export default function Gods(){
+
+    useDocumentTitle("Gods");
+
 
     return (
 

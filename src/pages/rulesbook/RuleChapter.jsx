@@ -5,6 +5,7 @@ import ContentBlock from "../../components/ContentBlock";
 import Paragraphs from "../../components/Paragraphs";
 import withBlockIds from "../../lib/blocks";
 import NotFound from "../NotFound";
+import useDocumentTitle from "../../lib/useDocumentTitle";
 
 
 // Un capítulo del rulesbook. Misma estructura que una ficha de Lore (miga de
@@ -24,9 +25,14 @@ export default function RuleChapter(){
     const blocks = withBlockIds(chapter?.blocks);
 
 
+    const pageTitle = chapter?.name ?? "Rule chapter not found";
+
+    useDocumentTitle(pageTitle);
+
+
     if(!chapter){
 
-        return <NotFound title="Rule chapter not found" />;
+        return <NotFound title={pageTitle} />;
 
     }
 

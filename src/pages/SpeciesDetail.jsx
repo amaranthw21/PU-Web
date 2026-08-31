@@ -8,6 +8,7 @@ import Paragraphs from "../components/Paragraphs";
 import withBlockIds from "../lib/blocks";
 import NotFound from "./NotFound";
 import usePageAccent from "../lib/usePageAccent";
+import useDocumentTitle from "../lib/useDocumentTitle";
 
 
 // Ficha de una especie. Misma estructura que la de una facción
@@ -31,9 +32,14 @@ export default function SpeciesDetail(){
     usePageAccent(specie?.background, specie?.color);
 
 
+    const pageTitle = specie?.name ?? "Species not found";
+
+    useDocumentTitle(pageTitle);
+
+
     if(!specie){
 
-        return <NotFound title="Species not found" />;
+        return <NotFound title={pageTitle} />;
 
     }
 

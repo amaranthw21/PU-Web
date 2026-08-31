@@ -1,5 +1,6 @@
 import { Link, useSearchParams } from "react-router-dom";
 import search, { normalize, snippetFor } from "../lib/search";
+import useDocumentTitle from "../lib/useDocumentTitle";
 
 
 // Parte el texto en trozos y marca los que coinciden con lo buscado, para que se
@@ -47,6 +48,9 @@ function Highlight({ text, query }){
 
 
 export default function Search(){
+
+    useDocumentTitle("Search");
+
 
     // La consulta vive en la URL (?q=), no en el estado del componente: así el
     // resultado de una búsqueda se puede compartir o guardar, y atrás y adelante

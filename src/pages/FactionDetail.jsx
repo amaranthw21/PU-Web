@@ -3,6 +3,7 @@ import { factionsById } from "../data/factions";
 import FactionCard from "../components/FactionCard";
 import Paragraphs from "../components/Paragraphs";
 import NotFound from "./NotFound";
+import useDocumentTitle from "../lib/useDocumentTitle";
 
 
 export default function FactionDetail(){
@@ -12,9 +13,14 @@ export default function FactionDetail(){
     const faction = factionsById[id];
 
 
+    const pageTitle = faction?.name ?? "Faction not found";
+
+    useDocumentTitle(pageTitle);
+
+
     if(!faction){
 
-        return <NotFound title="Faction not found" />;
+        return <NotFound title={pageTitle} />;
 
     }
 

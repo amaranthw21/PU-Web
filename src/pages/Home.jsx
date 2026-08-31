@@ -1,4 +1,10 @@
+import useDocumentTitle from "../lib/useDocumentTitle";
+
+
 export default function Home() {
+
+  useDocumentTitle();
+
   return (
     <div>
       <h1>Lore</h1>

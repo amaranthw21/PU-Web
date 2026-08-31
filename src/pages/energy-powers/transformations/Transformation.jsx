@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import Accordion from "../../../components/Accordion";
 import transformations from "../../../data/lore/energy-powers/transformations";
+import useDocumentTitle from "../../../lib/useDocumentTitle";
 
 
 export default function Transformation(){
+
+    useDocumentTitle("Transformations");
+
 
     const canonTransformations = transformations.filter(t => !t.custom);
     const customTransformations = transformations.filter(t => t.custom);

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import useDocumentTitle from "../lib/useDocumentTitle";
 
 
 // Lo que se ve cuando la dirección no lleva a ninguna parte. Cubre dos casos:
@@ -7,6 +8,8 @@ import { Link } from "react-router-dom";
 // mientras alguien tenía el enlace guardado). En ese segundo caso las páginas
 // pasan su propio `title`, p. ej. "God not found".
 export default function NotFound({ title = "Page not found", children }){
+
+    useDocumentTitle(title);
 
     return (
 
