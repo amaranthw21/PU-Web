@@ -465,6 +465,31 @@ Note that Sveltia ignores the Decap-only `local_backend` and `locale` options.
 To edit locally, open `/admin/` on localhost and use **Work with Local
 Repository**, which only appears there.
 
+## The page background
+
+The default background is served in three formats, listed best-first in an
+`image-set()` in `src/index.css`: AVIF, WebP and — as the fallback for browsers
+that don't understand `image-set()` — the original JPEG, in a plain declaration
+before it. **The JPEGs have to stay**: they are that fallback.
+
+Measured on the built site, the browser fetches only the format it picked:
+
+| | JPEG (what the deploy serves today) | AVIF |
+| --- | --- | --- |
+| Desktop | 280 kB | **178 kB** |
+| Mobile | 174 kB | **70 kB** |
+
+Those JPEG figures are the *deployed* ones: the files in `src/assets` are 937 kB
+and 330 kB, and `optimize:images` re-compresses them on every deploy. That script
+does not touch AVIF (the format isn't in its list), so the committed AVIFs are
+already final; it does re-compress the WebPs.
+
+To regenerate them after changing the artwork:
+
+```bash
+node -e "const s=require('sharp');for(const n of ['desktop','mobile']){const f='src/assets/background-page-N-'+n;s(f+'.jpg').avif({quality:50,effort:6}).toFile(f+'.avif');s(f+'.jpg').webp({quality:75}).toFile(f+'.webp')}"
+```
+
 ## Deployment
 
 `.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every
