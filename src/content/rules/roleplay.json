@@ -1,0 +1,35 @@
+{
+  "order": 2,
+  "name": "Roleplay Rules",
+  "summary": "What is allowed inside a scene: powers, combat and how conflicts are resolved.",
+  "description": "These rules keep scenes fair. They exist so that no single player can decide the outcome of a scene on their own.",
+  "blocks": [
+    {
+      "title": "Powerplaying and metagaming",
+      "parts": [
+        {
+          "type": "text",
+          "text": "You control your character and nothing else. You cannot decide that your attack lands, that another character is hurt, or how someone else reacts.\n\nYour character only knows what they have learned inside a scene. Information you read in another channel, in someone's profile or on this site does not exist for them."
+        }
+      ]
+    },
+    {
+      "title": "Combat",
+      "parts": [
+        {
+          "type": "text",
+          "text": "Agree on the kind of fight before you start: friendly spar, plot fight, or anything with lasting consequences.\n\nA character's abilities must match what is written on their sheet. Anything not on the sheet does not exist until a moderator approves it."
+        }
+      ]
+    },
+    {
+      "title": "Death and permanent consequences",
+      "parts": [
+        {
+          "type": "text",
+          "text": "No character dies, loses a limb or is permanently changed without their player agreeing to it beforehand.\n\nThis also works the other way around: you cannot force a permanent consequence on someone else's character, no matter how the scene went."
+        }
+      ]
+    }
+  ]
+}
