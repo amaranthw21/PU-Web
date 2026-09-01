@@ -370,6 +370,11 @@ so `chaos` for `/lore/gods/chaos`. The card shows them as chips with the entry's
 real name, looked up at build time. If that entry is later renamed or deleted,
 the chip simply stops appearing: no broken links.
 
+The era shown in the bar is also the way to move between eras: it opens into a
+list of all of them, and each one is a link to that stretch of the line. They are
+links rather than buttons on purpose — they can be copied, opened in a new tab,
+and the back button undoes the jump.
+
 Every event also gets its own anchor, so a moderator can link one event rather
 than the whole page. Hover a card and a `#` appears next to its title.
 
