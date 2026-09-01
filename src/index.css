@@ -120,8 +120,18 @@ body::before {
     z-index: -1;
 
     /* Sin ficha que lo sobreescriba, la variante ligera: el móvil no se
-       descarga los 11 MB del PNG original. */
+       descarga los 11 MB del PNG original.
+
+       Las dos declaraciones son a propósito. La primera es el respaldo: quien no
+       entienda image-set() ignora la segunda y se queda con el JPEG (por eso el
+       JPEG tiene que seguir existiendo). La segunda deja que el navegador elija
+       el formato, y el orden importa: se queda con el primero que sepa leer. */
     background-image: var(--page-bg, url("./assets/background-page-N-mobile.jpg"));
+    background-image: var(--page-bg, image-set(
+        url("./assets/background-page-N-mobile.avif") type("image/avif"),
+        url("./assets/background-page-N-mobile.webp") type("image/webp"),
+        url("./assets/background-page-N-mobile.jpg") type("image/jpeg")
+    ));
 
     background-size: cover;
     background-position: center;
@@ -133,8 +143,13 @@ body::before {
     body::before {
 
         /* El mismo --page-bg manda también aquí: solo cambia el fondo por
-           defecto, no el de las fichas. */
+           defecto, no el de las fichas. Mismo par de declaraciones que arriba. */
         background-image: var(--page-bg, url("./assets/background-page-N-desktop.jpg"));
+        background-image: var(--page-bg, image-set(
+            url("./assets/background-page-N-desktop.avif") type("image/avif"),
+            url("./assets/background-page-N-desktop.webp") type("image/webp"),
+            url("./assets/background-page-N-desktop.jpg") type("image/jpeg")
+        ));
 
     }
 
