@@ -477,6 +477,12 @@ push to `main` — including the commits the CMS makes. Vite's `base` is
 `/PU-Web/` in builds only; `public/404.html` plus the decoder in `index.html`
 handle SPA routing on Pages.
 
+`.github/workflows/ci.yml` is the other half: on every pull request it runs the
+linter and the build. It is deliberately *not* wired into the deploy — saves from
+the CMS panel land straight on `main` and publish, and a lint warning about the
+code should never keep a content fix off the site. Checks belong on the pull
+request; the deploy still only depends on the build working.
+
 Because each build renames the hashed asset bundles and drops the old ones, a
 browser holding a stale `index.html` will request a deleted JS file and get a
 404 until it reloads. That's the cause of the blank page mentioned above, and a
