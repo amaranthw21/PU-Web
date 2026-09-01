@@ -1017,7 +1017,12 @@ body::before {
 
     max-width: 1200px;
 
-    margin: 0 auto;
+    /* Con margen inferior: sin él, lo que venga detrás se le pega —en el
+       Rulesbook, las tarjetas salían tocando la caja. Donde el siguiente
+       elemento ya trae su propio margen (el separador de Gods, la barra de
+       líneas de la cronología) los dos se funden en uno, así que esto no
+       duplica huecos. */
+    margin: 0 auto 24px;
 
     padding: 20px 28px;
 
