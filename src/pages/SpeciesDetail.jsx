@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import species from "../data/species";
 import SpeciesInfobox from "../components/SpeciesInfobox";
@@ -6,9 +5,9 @@ import CountryQuote from "../components/CountryQuote";
 import ContentToc from "../components/ContentToc";
 import ContentBlock from "../components/ContentBlock";
 import Paragraphs from "../components/Paragraphs";
-import asset from "../lib/asset";
 import withBlockIds from "../lib/blocks";
 import NotFound from "./NotFound";
+import usePageAccent from "../lib/usePageAccent";
 
 
 // Ficha de una especie. Misma estructura que la de una facción
@@ -29,44 +28,7 @@ export default function SpeciesDetail(){
     const blocks = withBlockIds(specie?.blocks);
 
 
-    // Mientras estás en la ficha de la especie, el fondo de la página es su
-    // imagen de fondo y el color de acento (marco, título, infobox...) pasa a
-    // ser el suyo. Al salir (o cambiar de especie) se restaura todo. Las
-    // especies que todavía son placeholders no tienen ni `background` ni
-    // `color`, así que se quedan con el fondo y el acento por defecto.
-    useEffect(() => {
-
-        if(!specie?.background && !specie?.color){
-            return;
-        }
-
-        const body = document.body;
-        const prevBg = body.style.getPropertyValue("--page-bg");
-        const prevAccent = body.style.getPropertyValue("--accent");
-
-        if(specie.background){
-            body.style.setProperty("--page-bg", `url(${asset(specie.background)})`);
-        }
-
-        if(specie.color){
-            body.style.setProperty("--accent", specie.color);
-        }
-
-        return () => {
-            if(prevBg){
-                body.style.setProperty("--page-bg", prevBg);
-            } else {
-                body.style.removeProperty("--page-bg");
-            }
-
-            if(prevAccent){
-                body.style.setProperty("--accent", prevAccent);
-            } else {
-                body.style.removeProperty("--accent");
-            }
-        };
-
-    }, [specie?.background, specie?.color]);
+    usePageAccent(specie?.background, specie?.color);
 
 
     if(!specie){

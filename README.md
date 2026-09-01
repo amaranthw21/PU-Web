@@ -384,6 +384,7 @@ page shape, so the parts are shared rather than copied:
 | `components/Paragraphs.jsx` | Splits a CMS text on blank lines into `<p>`s |
 | `components/LoreDetail.jsx` | The whole full-width page (Energies, Powers, Transformations) |
 | `lib/blocks.js` | `withBlockIds()` — drops untitled blocks and gives each one a unique anchor |
+| `lib/usePageAccent.js` | Swaps the page background and `--accent` for the entry's own, and puts back what was there on the way out |
 
 A faction's characters part is the regions part with different field names, so
 `ContentBlock` translates `groups`/`characters` into `regions`/`locations` and
@@ -400,8 +401,12 @@ accent effect. Any text that
 comes from the CMS should go through `Paragraphs` (or `InfoboxValue`) so blank
 lines keep working.
 
-The accent colour is the CSS variable `--accent`, set on `document.body` by
-those detail pages from the entry's `color` and restored on unmount.
+The accent colour is the CSS variable `--accent`, set on `document.body` from
+the entry's `color` and restored on unmount — that, and the page background, is
+what `usePageAccent` does. The five pages that have their own look (species,
+gods, items, countries and factions) each carried an identical copy of that
+effect; they now pass it the two values, which is the only thing that differed
+between them (some entries keep the art in `image`, others in `background`).
 Anything on a detail page that should follow it uses
 `color-mix(in srgb, var(--accent) N%, transparent)` rather than a literal
 magenta. Site chrome outside the fichas (navbar, list cards, FAQ boxes) is still

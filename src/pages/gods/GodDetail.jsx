@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import gods from "../../data/lore/gods/gods";
 import GodInfobox from "../../components/GodInfobox";
@@ -6,9 +5,9 @@ import CountryQuote from "../../components/CountryQuote";
 import ContentToc from "../../components/ContentToc";
 import ContentBlock from "../../components/ContentBlock";
 import Paragraphs from "../../components/Paragraphs";
-import asset from "../../lib/asset";
 import withBlockIds from "../../lib/blocks";
 import NotFound from "../NotFound";
+import usePageAccent from "../../lib/usePageAccent";
 
 
 export default function GodDetail(){
@@ -24,42 +23,7 @@ export default function GodDetail(){
     const blocks = withBlockIds(god?.blocks);
 
 
-    // Mientras estás en la ficha del dios, el fondo de la página es su imagen
-    // y el color de acento (marco, nombre...) pasa a ser el suyo.
-    // Al salir (o cambiar de dios) se restaura todo.
-    useEffect(() => {
-
-        if(!god){
-            return;
-        }
-
-        const body = document.body;
-        const prevBg = body.style.getPropertyValue("--page-bg");
-        const prevAccent = body.style.getPropertyValue("--accent");
-
-        if(god.image){
-            body.style.setProperty("--page-bg", `url(${asset(god.image)})`);
-        }
-
-        if(god.color){
-            body.style.setProperty("--accent", god.color);
-        }
-
-        return () => {
-            if(prevBg){
-                body.style.setProperty("--page-bg", prevBg);
-            } else {
-                body.style.removeProperty("--page-bg");
-            }
-
-            if(prevAccent){
-                body.style.setProperty("--accent", prevAccent);
-            } else {
-                body.style.removeProperty("--accent");
-            }
-        };
-
-    }, [god?.image, god?.color]);
+    usePageAccent(god?.image, god?.color);
 
 
     if(!god){

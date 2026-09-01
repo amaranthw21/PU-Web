@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import items from "../../data/lore/items/items";
 import ItemInfobox from "../../components/ItemInfobox";
@@ -6,9 +5,9 @@ import CountryQuote from "../../components/CountryQuote";
 import ContentToc from "../../components/ContentToc";
 import ContentBlock from "../../components/ContentBlock";
 import Paragraphs from "../../components/Paragraphs";
-import asset from "../../lib/asset";
 import withBlockIds from "../../lib/blocks";
 import NotFound from "../NotFound";
+import usePageAccent from "../../lib/usePageAccent";
 
 
 export default function ItemDetail(){
@@ -24,42 +23,7 @@ export default function ItemDetail(){
     const blocks = withBlockIds(item?.blocks);
 
 
-    // Mientras estás en la ficha del item, el fondo de la página es su imagen
-    // y el color de acento (marco, nombre, infobox...) pasa a ser el suyo.
-    // Al salir (o cambiar de item) se restaura todo.
-    useEffect(() => {
-
-        if(!item){
-            return;
-        }
-
-        const body = document.body;
-        const prevBg = body.style.getPropertyValue("--page-bg");
-        const prevAccent = body.style.getPropertyValue("--accent");
-
-        if(item.image){
-            body.style.setProperty("--page-bg", `url(${asset(item.image)})`);
-        }
-
-        if(item.color){
-            body.style.setProperty("--accent", item.color);
-        }
-
-        return () => {
-            if(prevBg){
-                body.style.setProperty("--page-bg", prevBg);
-            } else {
-                body.style.removeProperty("--page-bg");
-            }
-
-            if(prevAccent){
-                body.style.setProperty("--accent", prevAccent);
-            } else {
-                body.style.removeProperty("--accent");
-            }
-        };
-
-    }, [item?.image, item?.color]);
+    usePageAccent(item?.image, item?.color);
 
 
     if(!item){
