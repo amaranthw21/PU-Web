@@ -22,7 +22,8 @@ through a form-based panel. You never touch code, JSON or Git.
 
 ## How to edit
 
-1. Click **Admin** in the top navigation bar of the site — or go straight to
+1. Click **Admin** — top right on a computer, at the bottom of the ☰ menu on a
+   phone — or go straight to
    **https://amaranthw21.github.io/PU-Web/admin/**
 2. Click **Sign In with GitHub** and authorise the app (only the first time).
 3. Pick a collection in the panel's own left sidebar (Species, Gods, Worlds…).
@@ -445,6 +446,11 @@ because the detail pages are the only ones that know the entry's name. Pages tha
 can fail to find their entry pass the *same* string to the hook and to
 `<NotFound>`: React runs a child's effects before its parent's, so the parent has
 the last word on the title and both have to agree.
+
+On a phone the **Admin** link lives at the bottom of the sidebar panel rather
+than in the top bar. It used to sit six pixels from the ☰ button, and people
+reaching for the menu kept landing in the editing panel — which, asking them to
+sign in with GitHub, looked like the CMS opening on its own.
 
 The Timeline is its own layout rather than a shared one. `TimelineEra` renders an
 era as a list of three-column rows — card, line, date — and the line is a

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import asset from "../lib/asset";
 
 import rules from "../data/rules/rules";
 import lore from "../data/lore/lore";
@@ -15,6 +16,7 @@ import {
     SpeciesIcon,
     FactionsIcon,
     CreditsIcon,
+    AdminIcon,
     ChevronIcon
 } from "./NavIcons";
 
@@ -253,6 +255,31 @@ export default function Sidebar({ menuOpen, onNavigate, pinned, onTogglePin }){
                 }
 
             </ul>
+
+
+            {/*
+              El acceso al panel de edición, solo en el menú de móvil: en
+              escritorio vive en la barra de arriba, donde hay sitio y se pulsa
+              con precisión de ratón.
+
+              Aquí porque arriba quedaba pegado a la hamburguesa —seis píxeles— y
+              la gente que iba a abrir el menú aterrizaba en el CMS.
+            */}
+            <a
+                className="rail__admin"
+                href={asset("/admin/index.html")}
+                onClick={onNavigate}
+            >
+
+                <span className="rail__icon">
+                    <AdminIcon />
+                </span>
+
+                <span className="rail__label">
+                    Admin
+                </span>
+
+            </a>
 
 
             {/*
