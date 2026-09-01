@@ -1,0 +1,17 @@
+{
+  "order": 2,
+  "name": "War Times",
+  "namePosition": "right",
+  "direction": "rtl",
+  "items": [
+    { "type": "event", "side": "above", "title": "Ark was constructed as an underground Colony" },
+    { "type": "event", "side": "below", "title": "Ark is launched into space" },
+    { "type": "note", "text": "50 yrs ago" },
+    { "type": "event", "side": "above", "title": "The massacre of the Ark happens // Maria dies" },
+    { "type": "event", "side": "below", "title": "Eggman conquers what would be later known as the Eggpire" },
+    { "type": "event", "side": "above", "title": "The Great War Starts [World War]" },
+    { "type": "event", "side": "below", "title": "Acorn Kingdom becomes a puppet state under Eggman" },
+    { "type": "event", "side": "above", "title": "Nations unite against Eggman" },
+    { "type": "event", "side": "below", "title": "Eggman is defeated by the nations // End of the Great War." }
+  ]
+}

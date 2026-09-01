@@ -2887,3 +2887,404 @@ button.region-loc {
 
 /* El marco (.frame-container, .container, .frame, .frame img) vive ahora
    en components/frame.css, junto al componente Frame. */
+
+/* ─────────────── Cronología ─────────────── */
+
+/* Cada era es una banda con su arte de fondo y una línea horizontal de la que
+   cuelgan los eventos, arriba y abajo. La versión dibujada a mano se hacía en
+   Canva y se exportaba a PNG; esto es la misma anatomía, montada desde el CMS.
+
+   La banda se recorre de lado cuando no cabe, y el scroll es suyo, no de la
+   página: cada era se arrastra por su cuenta. */
+.tl-era {
+
+    position: relative;
+
+    margin: 28px 0;
+
+    border-radius: 14px;
+
+    /* El arte va dentro; sin esto se sale por las esquinas. */
+    overflow: hidden;
+
+    /* Suelo por si una era todavía no tiene arte, y capa bajo el arte para que
+       el texto blanco se lea siempre. */
+    background: linear-gradient(135deg, #241436, #3a1c4a 60%, #1d1329);
+
+}
+
+.tl-era__art {
+
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+
+    /* Apagado a propósito: es un fondo, y por encima van cajas blancas con
+       texto pequeño. */
+    opacity: 0.5;
+
+}
+
+.tl-era__head {
+
+    position: relative;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 16px 20px 0;
+
+}
+
+/* El rótulo de la era cambia de lado según la banda, como en el original. */
+.tl-era--name-right .tl-era__head {
+
+    flex-direction: row-reverse;
+
+}
+
+.tl-era__name {
+
+    margin: 0;
+
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+
+    letter-spacing: 0.04em;
+
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+
+}
+
+.tl-era__credit {
+
+    margin: 0;
+
+    font-size: 0.78rem;
+
+    color: #e2e8f0;
+
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+
+}
+
+.tl-era__credit a {
+
+    color: inherit;
+
+}
+
+.tl-era__track {
+
+    position: relative;
+
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+
+    padding: 18px 20px 22px;
+
+    /* Los extremos se difuminan: da a entender que la línea sigue más allá del
+       borde y que la banda se puede arrastrar, sin añadir ningún adorno. */
+    mask-image: linear-gradient(
+        to right,
+        transparent 0,
+        #000 22px,
+        #000 calc(100% - 22px),
+        transparent 100%
+    );
+
+}
+
+/* Las bandas que van al revés empiezan mostrando su lado derecho, que es por
+   donde entra la línea de la era anterior. El sentido va aquí, en el contenedor
+   con scroll, y no en la rejilla: es lo que mueve también el punto de partida
+   del arrastre. */
+.tl-era__track--rtl {
+
+    direction: rtl;
+
+}
+
+.tl-era__track--rtl .tl-slot {
+
+    direction: ltr;
+
+}
+
+/* La línea y todo lo que cuelga de ella.
+
+   Tres filas: lo que va por encima, la línea, y lo que va por debajo. Cada
+   elemento crea su propia columna (grid-auto-flow: column), así que el orden del
+   CMS es el orden de la línea y no hay que calcular posiciones. */
+.tl-rail {
+
+    --tl-spine-h: 42px;
+
+    position: relative;
+
+    display: grid;
+    grid-auto-flow: column;
+
+    /* Las columnas se declaran explícitamente —una por elemento, y el número lo
+       pone el componente— en vez de dejarlas implícitas. Es lo que permite que
+       la línea de abajo abarque de la primera a la última con `1 / -1`: contra
+       una rejilla implícita, -1 se queda en la primera columna y la línea sale
+       partida. */
+    grid-template-columns: repeat(var(--tl-cols, 1), minmax(120px, max-content));
+    grid-template-rows: minmax(92px, auto) var(--tl-spine-h) minmax(92px, auto);
+
+    justify-content: start;
+
+    /* Para que la línea llegue de lado a lado aunque haya pocos eventos. */
+    min-width: 100%;
+    width: max-content;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+}
+
+/* La línea. Va como pseudo-elemento colocado a mano en la fila del medio, así
+   que no entra en el reparto de columnas. */
+.tl-rail::before {
+
+    content: "";
+
+    grid-row: 2;
+    grid-column: 1 / -1;
+
+    align-self: center;
+
+    height: 3px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 2px;
+
+}
+
+.tl-slot {
+
+    position: relative;
+
+    display: flex;
+
+    padding: 0 8px;
+
+}
+
+.tl-slot--above {
+
+    grid-row: 1;
+
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.tl-slot--below {
+
+    grid-row: 3;
+
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.tl-slot--spine {
+
+    grid-row: 2;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* El tallo que une cada evento con la línea. Mide media fila del medio, que es
+   justo lo que hay desde el borde del evento hasta la línea. */
+.tl-slot--above::after,
+.tl-slot--below::after {
+
+    content: "";
+
+    position: absolute;
+    left: 50%;
+
+    width: 2px;
+    height: calc(var(--tl-spine-h) / 2);
+
+    background: rgba(255, 255, 255, 0.9);
+
+}
+
+.tl-slot--above::after {
+
+    top: 100%;
+
+}
+
+.tl-slot--below::after {
+
+    bottom: 100%;
+
+}
+
+.tl-item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+
+}
+
+/* Debajo va la caja o la portada, así que los retratos se montan encima de
+   ellas, como en el original. */
+.tl-portraits {
+
+    display: flex;
+
+    margin-bottom: -18px;
+
+    z-index: 1;
+
+}
+
+.tl-portraits__img {
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+    border: 3px solid #fff;
+
+    object-fit: cover;
+
+    background: #241436;
+
+}
+
+.tl-portraits__img + .tl-portraits__img {
+
+    margin-left: -14px;
+
+}
+
+.tl-item__cover {
+
+    width: 96px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+}
+
+.tl-card {
+
+    max-width: 190px;
+
+    padding: 7px 11px;
+
+    background: #fff;
+    color: #14101c;
+
+    border: 2px solid #14101c;
+    border-radius: 12px;
+
+    text-align: center;
+
+}
+
+.tl-card__title {
+
+    margin: 0;
+
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.25;
+
+}
+
+.tl-card__text {
+
+    margin: 4px 0 0;
+
+    font-size: 0.75rem;
+
+}
+
+/* Lo que se apoya en la línea, sin colgar de ella. Los tres llevan fondo opaco
+   porque la línea les pasa por detrás. */
+.tl-spine {
+
+    background: #fff;
+    color: #14101c;
+
+    border-radius: 4px;
+
+    white-space: nowrap;
+
+}
+
+.tl-spine--year {
+
+    padding: 2px 9px;
+
+    color: #1d4ed8;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+}
+
+.tl-spine--note {
+
+    padding: 2px 7px;
+
+    font-size: 0.72rem;
+
+}
+
+.tl-spine--label {
+
+    padding: 7px 16px;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+}
+
+@media (max-width: 899px) {
+
+    .tl-rail {
+
+        --tl-spine-h: 34px;
+
+        grid-template-columns: repeat(var(--tl-cols, 1), minmax(104px, max-content));
+        grid-template-rows: minmax(90px, auto) var(--tl-spine-h) minmax(90px, auto);
+
+    }
+
+    .tl-card {
+
+        max-width: 150px;
+
+        font-size: 0.78rem;
+
+    }
+
+    .tl-portraits__img {
+
+        width: 42px;
+        height: 42px;
+
+    }
+
+}

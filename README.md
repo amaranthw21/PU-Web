@@ -325,6 +325,35 @@ Renaming a block changes its link, so old links to it stop working. Renaming a
 whole chapter is fine — the address comes from the file name, not the name you
 type — but the site owner has to rename the file for the address to follow.
 
+## The Timeline
+
+The Timeline page is built from the **Timeline (eras)** collection: one entry per
+band. A band has its own artwork, the artist's credit, the corner its name sits
+in, and — the important one — everything that goes **on its line**, in order.
+
+Four kinds of thing can go on the line:
+
+| Kind | What it is |
+| --- | --- |
+| **Event** | A box hanging above or below the line. Can carry a picture (a game cover) and round character portraits on top of it. |
+| **Year marker** | The blue label sitting on the line, e.g. `year 14`. |
+| **Time gap** | The small grey label between two events, e.g. `4000 yrs ago`. |
+| **Wide label** | The band across the line, e.g. `Archie Comics // Pre-Genesis Wave`. |
+
+The order you give them is the order along the line — there is nothing to
+position by hand, and adding an event in the middle pushes the rest along.
+
+**Reading direction** is what lets the timeline snake: set an era to `rtl` and its
+line runs right to left, so it can pick up where the band above it ended. That
+band also opens showing its right-hand side, which is where its first event is.
+
+A band scrolls sideways on its own when it doesn't fit, so a long era is fine on
+a phone — it behaves like dragging the old picture, except the text is readable.
+
+Two things the old Canva version had that this one doesn't: portraits placed by
+hand into overlapping clusters, and the decorative sparkles. Portraits here are
+laid out in a row, overlapping each other evenly.
+
 ## Good habits
 
 - **Publish one entry at a time.** Each publish is a separate save.
@@ -384,6 +413,13 @@ page shape, so the parts are shared rather than copied:
 | `components/Paragraphs.jsx` | Splits a CMS text on blank lines into `<p>`s |
 | `components/LoreDetail.jsx` | The whole full-width page (Energies, Powers, Transformations) |
 | `lib/blocks.js` | `withBlockIds()` — drops untitled blocks and gives each one a unique anchor |
+
+The Timeline is its own layout rather than a shared one: `TimelineEra` puts every
+item of an era into a CSS grid of three rows — above the line, the line, below it
+— giving each item its own column, and the line itself is a pseudo-element
+spanning `1 / -1`. That is why the number of columns is declared explicitly from
+the component (`--tl-cols`): against an implicit grid, `-1` stops at the first
+column and the line comes out cut short.
 
 A faction's characters part is the regions part with different field names, so
 `ContentBlock` translates `groups`/`characters` into `regions`/`locations` and

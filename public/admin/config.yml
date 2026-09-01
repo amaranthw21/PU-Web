@@ -792,3 +792,89 @@ collections:
       - { name: summary, label: Summary, widget: text, required: false, hint: "Shown inside the card on the Rulesbook page." }
       - { name: description, label: Description, widget: text, required: false, hint: "Intro of this chapter's own page, above the Contents list. Leave a blank line between paragraphs." }
       - *blocks
+
+  # ───────────────────────── Timeline ─────────────────────────
+  # Cada entrada es una era: una banda de la cronología. Dentro, `items` es todo
+  # lo que va en su línea, en orden: eventos que cuelgan por arriba o por abajo,
+  # y las etiquetas que se apoyan en la propia línea.
+  - name: timeline
+    label: Timeline (eras)
+    label_singular: Era
+    folder: src/content/timeline
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/timeline
+    public_folder: /timeline
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int, hint: "Position on the Timeline page. Lower numbers come first." }
+      - { name: name, label: Name, widget: string, hint: "e.g. 'Ancient Times', 'Classic Era'." }
+      - name: namePosition
+        label: "Name corner"
+        widget: select
+        options: [left, right]
+        default: left
+        hint: "Which side of the band the era's name sits on."
+      - name: direction
+        label: "Reading direction"
+        widget: select
+        options: [ltr, rtl]
+        default: ltr
+        hint: "'rtl' runs the line right to left, so a band can continue where the one above it ended. It also makes the band open showing its right-hand side."
+      - { name: background, label: "Band artwork", widget: image, required: false, hint: "Fills the whole band, behind the line." }
+      - { name: artist, label: "Art by", widget: string, required: false, hint: "Credit shown in the band's corner." }
+      - { name: artistUrl, label: "Artist link", widget: string, required: false, hint: "Optional. Turns the credit into a link." }
+      - name: items
+        label: "On the line"
+        widget: list
+        required: false
+        label_singular: Item
+        hint: "Everything on this era's line, in order. Add events, and the labels that sit on the line itself."
+        types:
+          - name: event
+            label: Event
+            widget: object
+            summary: "{{fields.side}}: {{fields.title}}"
+            fields:
+              - name: side
+                label: Side
+                widget: select
+                options: [above, below]
+                default: above
+                hint: "Whether it hangs above or below the line."
+              - { name: title, label: Title, widget: string, hint: "The text inside the box." }
+              - { name: text, label: "Extra text", widget: text, required: false, hint: "Optional, under the title. Leave a blank line between paragraphs." }
+              - { name: image, label: "Picture", widget: image, required: false, hint: "A game cover or an illustration, shown above the box." }
+              - name: portraits
+                label: Characters
+                widget: list
+                required: false
+                label_singular: Character
+                summary: "{{fields.name}}"
+                hint: "Round portraits that sit on top of the event, overlapping each other."
+                fields:
+                  - { name: name, label: Name, widget: string, required: false, hint: "Only shown when hovering the portrait." }
+                  - { name: image, label: Portrait, widget: image }
+
+          - name: year
+            label: "Year marker"
+            widget: object
+            summary: "Year: {{fields.text}}"
+            fields:
+              - { name: text, label: Text, widget: string, hint: "e.g. 'year 14', 'Year 0'. Sits on the line, in blue." }
+
+          - name: note
+            label: "Time gap"
+            widget: object
+            summary: "Gap: {{fields.text}}"
+            fields:
+              - { name: text, label: Text, widget: string, hint: "e.g. '4000 yrs ago'. A small label on the line, between two events." }
+
+          - name: label
+            label: "Wide label"
+            widget: object
+            summary: "Label: {{fields.text}}"
+            fields:
+              - { name: text, label: Text, widget: string, hint: "e.g. 'Archie Comics // Pre-Genesis Wave'. A wide band across the line." }

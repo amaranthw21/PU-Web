@@ -1,0 +1,16 @@
+{
+  "order": 1,
+  "name": "Ancient Times",
+  "namePosition": "left",
+  "artist": "HGBD-WolfBeliever5",
+  "items": [
+    { "type": "event", "side": "above", "title": "Dark Gaia Awakens" },
+    { "type": "event", "side": "below", "title": "Ancients arrival // destruction" },
+    { "type": "note", "text": "4000 yrs ago" },
+    { "type": "event", "side": "below", "title": "Nocturnus // Dark Legion are banished to the Twilight Cage" },
+    { "type": "event", "side": "above", "title": "Chaos Awakens // Tikal Dies" },
+    { "type": "note", "text": "3000 yrs ago" },
+    { "type": "event", "side": "below", "title": "Angel Island takes to the skies" },
+    { "type": "event", "side": "above", "title": "The Black Arms pay a visit" }
+  ]
+}
