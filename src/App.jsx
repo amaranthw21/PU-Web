@@ -23,6 +23,7 @@ import CountryDetail from "./pages/worlds/CountryDetail";
 // [LORE SECTION]
 
 import Lore from "./pages/Lore";
+import Timeline from "./pages/Timeline";
 
 // Gods Page
 import Gods from "./pages/gods/Gods";
@@ -136,6 +137,17 @@ function App() {
                     <Route 
                         path="/lore" 
                         element={<Lore />} 
+                    />
+
+
+                    <Route
+                        path="/lore/timeline"
+                        element={<Timeline />}
+                    />
+
+                    <Route
+                        path="/lore/timeline/:world"
+                        element={<Timeline />}
                     />
 
 

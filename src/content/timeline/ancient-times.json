@@ -1,0 +1,58 @@
+{
+  "order": 1,
+  "name": "Ancient Times",
+  "world": "mobius",
+  "color": "#6d3fd4",
+  "artist": "HGBD-WolfBeliever5",
+  "items": [
+    {
+      "type": "event",
+      "date": "In the beginning",
+      "title": "The Ancients arrive, and are destroyed"
+    },
+    {
+      "type": "event",
+      "title": "Dark Gaia awakens",
+      "related": [
+        {
+          "section": "gods",
+          "id": "darkgaia"
+        }
+      ]
+    },
+    {
+      "type": "gap",
+      "text": "roughly a thousand years"
+    },
+    {
+      "type": "event",
+      "date": "4000 yrs ago",
+      "title": "Nocturnus and the Dark Legion are banished to the Twilight Cage",
+      "related": [
+        {
+          "section": "factions",
+          "id": "twilight-cage"
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "date": "3000 yrs ago",
+      "title": "Chaos awakens, Tikal dies",
+      "related": [
+        {
+          "section": "gods",
+          "id": "chaos"
+        }
+      ]
+    },
+    {
+      "type": "event",
+      "title": "Angel Island takes to the skies"
+    },
+    {
+      "type": "event",
+      "title": "The Black Arms pay a visit"
+    }
+  ]
+}

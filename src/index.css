@@ -2887,3 +2887,769 @@ button.region-loc {
 
 /* El marco (.frame-container, .container, .frame, .frame img) vive ahora
    en components/frame.css, junto al componente Frame. */
+
+/* ─────────────── Cronología ─────────────── */
+
+/* Una sola línea vertical para toda la cronología: las eras son tramos suyos,
+   no cuadros sueltos. Se recorre bajando, que es el gesto que ya hace todo el
+   mundo, así que no hay nada que arrastrar y en móvil se lee igual.
+   El arte y el color de cada era los aplica la página al fondo según pasas por
+   ella, con el mismo --page-bg que usan las fichas. */
+
+.tl-board {
+
+    /* Cada era pinta el suyo encima; este es el de reserva. */
+    --era: var(--accent);
+
+}
+
+/* La barra que se queda arriba: en qué era estás y los dos interruptores.
+   Debajo de la barra de navegación, que también es pegajosa. */
+.tl-bar {
+
+    position: sticky;
+    top: var(--navbar-h);
+
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    margin: 18px 0 8px;
+    padding: 10px 14px;
+
+    background: rgba(11, 6, 20, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+}
+
+/* Qué línea se está leyendo: Mobius, Moebius o Sol. Barra propia y arriba del
+   todo, porque es la decisión que manda sobre el resto de la página. */
+.tl-worlds {
+
+    display: flex;
+    gap: 6px;
+
+    margin: 18px 0 10px;
+    padding: 5px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+
+}
+
+.tl-world {
+
+    flex: 1;
+
+    padding: 10px 14px;
+
+    color: #cbd5e1;
+    text-decoration: none;
+    text-align: center;
+
+    border-radius: 9px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    transition: color 0.2s, background-color 0.2s;
+
+}
+
+.tl-world--on {
+
+    color: white;
+
+    background: color-mix(in srgb, var(--accent) 45%, transparent);
+
+}
+
+@media (hover: hover) {
+
+    .tl-world:hover {
+
+        color: white;
+
+        background: rgba(255, 255, 255, 0.07);
+
+    }
+
+    .tl-world--on:hover {
+
+        background: color-mix(in srgb, var(--accent) 52%, transparent);
+
+    }
+
+}
+
+.tl-empty {
+
+    margin: 40px 0 20px;
+
+    color: #94a3b8;
+
+    text-align: center;
+
+}
+
+.tl-bar__where {
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin: 0 auto 0 0;
+
+    font-weight: 600;
+
+}
+
+.tl-bar__dot {
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 30%, transparent);
+
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+
+}
+
+.tl-switch {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 6px 12px 6px 9px;
+
+    background: none;
+    color: #cbd5e1;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+
+    font: inherit;
+    font-size: 0.86rem;
+
+    cursor: pointer;
+
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+
+}
+
+.tl-switch__box {
+
+    width: 13px;
+    height: 13px;
+
+    border: 1px solid currentColor;
+    border-radius: 3px;
+
+}
+
+.tl-switch[aria-pressed="true"] {
+
+    color: white;
+
+    border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+    background: color-mix(in srgb, var(--accent) 16%, transparent);
+
+}
+
+.tl-switch[aria-pressed="true"] .tl-switch__box {
+
+    background: var(--accent);
+    border-color: var(--accent);
+
+}
+
+@media (hover: hover) {
+
+    .tl-switch:hover {
+
+        color: white;
+        border-color: rgba(255, 255, 255, 0.4);
+
+    }
+
+}
+
+
+/* ── Una era ── */
+
+.tl-era {
+
+    padding-top: 38px;
+
+}
+
+.tl-era__head {
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    padding-bottom: 14px;
+
+}
+
+.tl-era__name {
+
+    margin: 0;
+
+    font-size: clamp(1.3rem, 4vw, 1.9rem);
+
+    letter-spacing: 0.03em;
+
+    color: color-mix(in srgb, var(--era) 40%, white);
+
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+
+}
+
+.tl-era__credit {
+
+    margin: 0;
+
+    font-size: 0.82rem;
+    color: #cbd5e1;
+
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+
+}
+
+.tl-era__credit a {
+
+    color: inherit;
+
+}
+
+
+/* ── La línea ── */
+
+.tl-line {
+
+    position: relative;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.tl-line::before {
+
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 2px;
+    margin-left: -1px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+}
+
+/* Un evento: la tarjeta a un lado, la fecha al otro y el punto en la línea.
+   El lado lo decide la página, alternando, para que no haya que colocarlo. */
+.tl-row {
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 54px minmax(0, 1fr);
+    align-items: center;
+
+    padding: 9px 0;
+
+}
+
+.tl-node {
+
+    grid-column: 2;
+    justify-self: center;
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: #14101c;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+
+}
+
+.tl-card {
+
+    grid-column: 1;
+
+    padding: 13px 16px;
+
+    background: rgba(31, 41, 55, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--era);
+    border-radius: 10px;
+
+}
+
+.tl-row--right .tl-card {
+
+    grid-column: 3;
+
+}
+
+.tl-card__title {
+
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.3;
+
+}
+
+/* El enlace a este evento suelto. Discreto hasta que lo buscas. */
+.tl-card__anchor {
+
+    margin-left: 6px;
+
+    color: color-mix(in srgb, var(--era) 40%, white);
+    text-decoration: none;
+
+    opacity: 0;
+
+    transition: opacity 0.2s;
+
+}
+
+.tl-card:hover .tl-card__anchor,
+.tl-card__anchor:focus-visible {
+
+    opacity: 1;
+
+}
+
+.tl-card__text {
+
+    margin: 7px 0 0;
+
+    font-size: 0.88rem;
+    color: #cbd5e1;
+
+}
+
+.tl-card__cover {
+
+    display: block;
+
+    width: 92px;
+
+    margin-bottom: 9px;
+
+    border-radius: 4px;
+
+}
+
+.tl-portraits {
+
+    display: flex;
+
+    margin-bottom: 9px;
+
+}
+
+.tl-portraits__img {
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    border: 2px solid #fff;
+
+    object-fit: cover;
+
+    background: #241436;
+
+}
+
+.tl-portraits__img + .tl-portraits__img {
+
+    margin-left: -12px;
+
+}
+
+/* Las fichas con las que tiene que ver el evento: lo que un PNG no puede dar. */
+.tl-chips {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    margin-top: 10px;
+
+}
+
+.tl-chip {
+
+    padding: 2px 9px;
+
+    font-size: 0.76rem;
+
+    color: color-mix(in srgb, var(--era) 30%, white);
+    text-decoration: none;
+
+    border: 1px solid color-mix(in srgb, var(--era) 45%, transparent);
+    border-radius: 999px;
+
+    transition: background-color 0.2s;
+
+}
+
+@media (hover: hover) {
+
+    .tl-chip:hover {
+
+        background: color-mix(in srgb, var(--era) 20%, transparent);
+
+    }
+
+}
+
+/* La fecha va al otro lado de la línea, mirándola. */
+.tl-when {
+
+    grid-column: 3;
+
+    padding-left: 6px;
+
+    font-size: 0.84rem;
+    color: #94a3b8;
+
+}
+
+.tl-row--right .tl-when {
+
+    grid-column: 1;
+
+    padding: 0 6px 0 0;
+
+    text-align: right;
+
+}
+
+.tl-when--year {
+
+    color: #7fb0ff;
+    font-weight: 700;
+
+}
+
+/* Los lanzamientos de juegos y cómics son la otra cronología: van en voz más
+   baja, y se pueden apagar entera. */
+.tl-row--release .tl-card {
+
+    padding: 8px 13px;
+
+    background: rgba(20, 16, 28, 0.7);
+
+    border: 1px dashed rgba(255, 255, 255, 0.22);
+
+}
+
+.tl-row--release .tl-card__title {
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #cbd5e1;
+
+}
+
+.tl-row--release .tl-node {
+
+    width: 9px;
+    height: 9px;
+
+    border-color: #94a3b8;
+
+}
+
+.tl-board--no-releases .tl-row--release {
+
+    display: none;
+
+}
+
+/* El salto de tiempo. Aquí la distancia significa algo: el hueco es largo de
+   verdad, así que se ve lo que se tarda en cruzarlo. */
+.tl-gap {
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    height: 128px;
+
+}
+
+/* Tapa la línea continua y la sustituye por el trazo discontinuo. */
+.tl-gap::before {
+
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 3px;
+    margin-left: -1.5px;
+
+    background: #14101c;
+
+}
+
+.tl-gap::after {
+
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    border-left: 2px dashed rgba(255, 255, 255, 0.45);
+
+}
+
+.tl-gap__label {
+
+    position: relative;
+
+    padding: 4px 12px;
+
+    background: #14101c;
+
+    border-radius: 999px;
+
+    font-size: 0.8rem;
+    color: #94a3b8;
+
+}
+
+/* El rótulo ancho que parte la línea, tipo "Pre-Genesis Wave". */
+.tl-band {
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    padding: 14px 0;
+
+}
+
+.tl-band__label {
+
+    position: relative;
+
+    padding: 6px 18px;
+
+    background: #241c33;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+
+}
+
+/* Un año marcado en la línea, sin evento propio. */
+.tl-mark {
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    padding: 6px 0;
+
+}
+
+.tl-mark__label {
+
+    position: relative;
+
+    padding: 3px 11px;
+
+    background: #14101c;
+
+    border: 1px solid rgba(127, 176, 255, 0.5);
+    border-radius: 999px;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #7fb0ff;
+
+}
+
+/* ── Modo compacto: toda la historia de un vistazo ── */
+
+.tl-board--compact .tl-card {
+
+    padding: 5px 12px;
+
+    border-left-width: 2px;
+
+}
+
+.tl-board--compact .tl-card__text,
+.tl-board--compact .tl-chips,
+.tl-board--compact .tl-card__cover,
+.tl-board--compact .tl-portraits {
+
+    display: none;
+
+}
+
+.tl-board--compact .tl-card__title {
+
+    font-size: 0.9rem;
+
+}
+
+.tl-board--compact .tl-row {
+
+    padding: 2px 0;
+
+}
+
+.tl-board--compact .tl-gap {
+
+    height: 52px;
+
+}
+
+.tl-board--compact .tl-era {
+
+    padding-top: 22px;
+
+}
+
+
+/* ── Móvil: la misma maquetación, apilada a un lado ── */
+
+@media (max-width: 899px) {
+
+    .tl-bar {
+
+        gap: 7px;
+
+        padding: 8px 10px;
+
+    }
+
+    .tl-bar__where {
+
+        /* Sin el margen automático: al repartir el hueco sobrante empujaba los
+           interruptores a una fila para ellos solos. */
+        margin-right: 0;
+
+        font-size: 0.88rem;
+
+    }
+
+    .tl-world {
+
+        padding: 9px 8px;
+
+        font-size: 0.86rem;
+
+    }
+
+    .tl-switch {
+
+        padding: 4px 10px 4px 8px;
+
+        font-size: 0.78rem;
+
+    }
+
+    .tl-line::before,
+    .tl-gap::before,
+    .tl-gap::after {
+
+        left: 15px;
+
+    }
+
+    .tl-row {
+
+        grid-template-columns: 32px minmax(0, 1fr);
+        align-items: start;
+
+    }
+
+    .tl-node {
+
+        grid-column: 1;
+        justify-self: start;
+
+        margin-top: 14px;
+
+    }
+
+    .tl-card,
+    .tl-row--right .tl-card {
+
+        grid-column: 2;
+
+    }
+
+    .tl-when,
+    .tl-row--right .tl-when {
+
+        grid-column: 2;
+        grid-row: 2;
+
+        padding: 4px 0 0;
+
+        text-align: left;
+
+    }
+
+    .tl-gap,
+    .tl-band,
+    .tl-mark {
+
+        place-items: start;
+
+        padding-left: 38px;
+
+    }
+
+    .tl-gap {
+
+        height: 96px;
+
+    }
+
+}
