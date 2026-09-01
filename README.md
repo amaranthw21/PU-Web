@@ -432,6 +432,7 @@ page shape, so the parts are shared rather than copied:
 | `components/Paragraphs.jsx` | Splits a CMS text on blank lines into `<p>`s |
 | `components/LoreDetail.jsx` | The whole full-width page (Energies, Powers, Transformations) |
 | `lib/blocks.js` | `withBlockIds()` — drops untitled blocks and gives each one a unique anchor |
+| `lib/usePageAccent.js` | Swaps the page background and `--accent` for the entry's own, and puts back what was there on the way out |
 
 The Timeline is its own layout rather than a shared one. `TimelineEra` renders an
 era as a list of three-column rows — card, line, date — and the line is a
@@ -460,8 +461,12 @@ accent effect. Any text that
 comes from the CMS should go through `Paragraphs` (or `InfoboxValue`) so blank
 lines keep working.
 
-The accent colour is the CSS variable `--accent`, set on `document.body` by
-those detail pages from the entry's `color` and restored on unmount.
+The accent colour is the CSS variable `--accent`, set on `document.body` from
+the entry's `color` and restored on unmount — that, and the page background, is
+what `usePageAccent` does. The five pages that have their own look (species,
+gods, items, countries and factions) each carried an identical copy of that
+effect; they now pass it the two values, which is the only thing that differed
+between them (some entries keep the art in `image`, others in `background`).
 Anything on a detail page that should follow it uses
 `color-mix(in srgb, var(--accent) N%, transparent)` rather than a literal
 magenta. Site chrome outside the fichas (navbar, list cards, FAQ boxes) is still
@@ -531,6 +536,12 @@ Repository**, which only appears there.
 push to `main` — including the commits the CMS makes. Vite's `base` is
 `/PU-Web/` in builds only; `public/404.html` plus the decoder in `index.html`
 handle SPA routing on Pages.
+
+`.github/workflows/ci.yml` is the other half: on every pull request it runs the
+linter and the build. It is deliberately *not* wired into the deploy — saves from
+the CMS panel land straight on `main` and publish, and a lint warning about the
+code should never keep a content fix off the site. Checks belong on the pull
+request; the deploy still only depends on the build working.
 
 Because each build renames the hashed asset bundles and drops the old ones, a
 browser holding a stale `index.html` will request a deleted JS file and get a

@@ -23,6 +23,7 @@ export default function EntryCard({ name, subtitle, image, imagePosition, imageZ
                     ? <img
                           className="entry-card__img"
                           src={asset(image)}
+                          loading="lazy"
                           alt={name}
                           onError={() => setImgError(true)}
                           style={{

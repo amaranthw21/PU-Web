@@ -19,6 +19,7 @@ function BlockImage({ image, caption }){
 
             <img
                 src={asset(image)}
+                loading="lazy"
                 alt={caption ?? ""}
                 onError={e => { e.currentTarget.closest("figure").style.display = "none"; }}
             />
