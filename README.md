@@ -547,3 +547,19 @@ Because each build renames the hashed asset bundles and drops the old ones, a
 browser holding a stale `index.html` will request a deleted JS file and get a
 404 until it reloads. That's the cause of the blank page mentioned above, and a
 hard reload is the fix.
+
+## Link previews
+
+`index.html` and `public/404.html` carry the Open Graph tags that turn a pasted
+link into a card in Discord, plus `public/og-image.jpg` (1200×630, the card
+picture). They are duplicated on purpose: Pages serves `404.html` for every deep
+link, which is exactly the kind of link people paste.
+
+The image URL in those tags is absolute and hardcoded — crawlers don't resolve
+relative paths, and Vite's `%BASE_URL%` covers the path but not the domain. **If
+the site ever moves to another address, both files have to be updated.**
+
+Two limits worth knowing. The crawler doesn't run React, so every link shows the
+same card — a per-page card would mean generating one HTML file per route at
+build time. And Pages answers deep links with a real HTTP 404, which some
+crawlers refuse to build a preview from.

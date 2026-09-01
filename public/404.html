@@ -3,6 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <title>RP Lore Archive</title>
+
+    <!--
+      Las mismas etiquetas que index.html, y por un motivo concreto: GitHub Pages
+      sirve ESTE archivo para cualquier enlace profundo (/PU-Web/rulesbook,
+      /PU-Web/lore/gods/chaos...), que son justo los que se pegan en Discord. Sin
+      ellas, esos enlaces no mostrarían tarjeta.
+
+      Aviso: Pages responde con un 404 de verdad aquí, y algunos rastreadores no
+      montan la vista previa de una respuesta 404. La forma robusta de arreglarlo
+      es generar un HTML por ruta en el build; esto es lo que se puede hacer sin
+      eso.
+    -->
+
+    <meta
+      name="description"
+      content="The lore archive of our RP setting: worlds, gods, energies, species, factions and the rules of the server."
+    />
+
+    <!--
+      Tarjeta de vista previa (Open Graph): es lo que se ve al pegar un enlace del
+      archivo en Discord, que es por donde se comparte casi todo. Sin esto solo
+      salía la URL pelada.
+
+      La dirección de la imagen va absoluta y escrita a mano a propósito: los
+      rastreadores no resuelven rutas relativas, y %BASE_URL% cubre la ruta pero
+      no el dominio. Si el sitio se muda, hay que cambiarla aquí Y en 404.html.
+
+      Ojo con el alcance: el rastreador no ejecuta React, así que lee este mismo
+      HTML para cualquier ruta. Todos los enlaces muestran esta tarjeta; una por
+      página necesitaría generar un HTML por ruta en el build.
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RP Lore Archive" />
+    <meta property="og:title" content="RP Lore Archive" />
+    <meta
+      property="og:description"
+      content="The lore archive of our RP setting: worlds, gods, energies, species, factions and the rules of the server."
+    />
+    <meta property="og:url" content="https://amaranthw21.github.io/PU-Web/" />
+    <meta
+      property="og:image"
+      content="https://amaranthw21.github.io/PU-Web/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="A many-eyed creature facing a glowing golden hedgehog."
+    />
+
+    <!-- Sin esto, algunos clientes muestran la imagen en miniatura. -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Discord tiñe con esto la franja lateral de la tarjeta. -->
+    <meta name="theme-color" content="#c04bd8" />
+
     <!--
       GitHub Pages no reescribe rutas del lado del servidor, así que cualquier
       enlace profundo (p. ej. /PU-Web/factions/mobius) cae aquí. Este script
