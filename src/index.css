@@ -2890,60 +2890,147 @@ button.region-loc {
 
 /* ─────────────── Cronología ─────────────── */
 
-/* Cada era es una banda con su arte de fondo y una línea horizontal de la que
-   cuelgan los eventos, arriba y abajo. La versión dibujada a mano se hacía en
-   Canva y se exportaba a PNG; esto es la misma anatomía, montada desde el CMS.
+/* Una sola línea vertical para toda la cronología: las eras son tramos suyos,
+   no cuadros sueltos. Se recorre bajando, que es el gesto que ya hace todo el
+   mundo, así que no hay nada que arrastrar y en móvil se lee igual.
+   El arte y el color de cada era los aplica la página al fondo según pasas por
+   ella, con el mismo --page-bg que usan las fichas. */
 
-   La banda se recorre de lado cuando no cabe, y el scroll es suyo, no de la
-   página: cada era se arrastra por su cuenta. */
-.tl-era {
+.tl-board {
 
-    position: relative;
-
-    margin: 28px 0;
-
-    border-radius: 14px;
-
-    /* El arte va dentro; sin esto se sale por las esquinas. */
-    overflow: hidden;
-
-    /* Suelo por si una era todavía no tiene arte, y capa bajo el arte para que
-       el texto blanco se lea siempre. */
-    background: linear-gradient(135deg, #241436, #3a1c4a 60%, #1d1329);
+    /* Cada era pinta el suyo encima; este es el de reserva. */
+    --era: var(--accent);
 
 }
 
-.tl-era__art {
+/* La barra que se queda arriba: en qué era estás y los dos interruptores.
+   Debajo de la barra de navegación, que también es pegajosa. */
+.tl-bar {
 
-    position: absolute;
-    inset: 0;
+    position: sticky;
+    top: var(--navbar-h);
 
-    background-size: cover;
-    background-position: center;
+    z-index: 5;
 
-    /* Apagado a propósito: es un fondo, y por encima van cajas blancas con
-       texto pequeño. */
-    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    margin: 18px 0 8px;
+    padding: 10px 14px;
+
+    background: rgba(11, 6, 20, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+}
+
+.tl-bar__where {
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin: 0 auto 0 0;
+
+    font-weight: 600;
+
+}
+
+.tl-bar__dot {
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 30%, transparent);
+
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+
+}
+
+.tl-switch {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 6px 12px 6px 9px;
+
+    background: none;
+    color: #cbd5e1;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+
+    font: inherit;
+    font-size: 0.86rem;
+
+    cursor: pointer;
+
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+
+}
+
+.tl-switch__box {
+
+    width: 13px;
+    height: 13px;
+
+    border: 1px solid currentColor;
+    border-radius: 3px;
+
+}
+
+.tl-switch[aria-pressed="true"] {
+
+    color: white;
+
+    border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+    background: color-mix(in srgb, var(--accent) 16%, transparent);
+
+}
+
+.tl-switch[aria-pressed="true"] .tl-switch__box {
+
+    background: var(--accent);
+    border-color: var(--accent);
+
+}
+
+@media (hover: hover) {
+
+    .tl-switch:hover {
+
+        color: white;
+        border-color: rgba(255, 255, 255, 0.4);
+
+    }
+
+}
+
+
+/* ── Una era ── */
+
+.tl-era {
+
+    padding-top: 38px;
 
 }
 
 .tl-era__head {
 
-    position: relative;
-
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 16px;
+    flex-wrap: wrap;
 
-    padding: 16px 20px 0;
-
-}
-
-/* El rótulo de la era cambia de lado según la banda, como en el original. */
-.tl-era--name-right .tl-era__head {
-
-    flex-direction: row-reverse;
+    padding-bottom: 14px;
 
 }
 
@@ -2951,11 +3038,13 @@ button.region-loc {
 
     margin: 0;
 
-    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    font-size: clamp(1.3rem, 4vw, 1.9rem);
 
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
 
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    color: color-mix(in srgb, var(--era) 40%, white);
+
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 
 }
 
@@ -2963,11 +3052,10 @@ button.region-loc {
 
     margin: 0;
 
-    font-size: 0.78rem;
+    font-size: 0.82rem;
+    color: #cbd5e1;
 
-    color: #e2e8f0;
-
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
 
 }
 
@@ -2977,192 +3065,151 @@ button.region-loc {
 
 }
 
-.tl-era__track {
+
+/* ── La línea ── */
+
+.tl-line {
 
     position: relative;
 
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-
-    padding: 18px 20px 22px;
-
-    /* Los extremos se difuminan: da a entender que la línea sigue más allá del
-       borde y que la banda se puede arrastrar, sin añadir ningún adorno. */
-    mask-image: linear-gradient(
-        to right,
-        transparent 0,
-        #000 22px,
-        #000 calc(100% - 22px),
-        transparent 100%
-    );
-
-}
-
-/* Las bandas que van al revés empiezan mostrando su lado derecho, que es por
-   donde entra la línea de la era anterior. El sentido va aquí, en el contenedor
-   con scroll, y no en la rejilla: es lo que mueve también el punto de partida
-   del arrastre. */
-.tl-era__track--rtl {
-
-    direction: rtl;
-
-}
-
-.tl-era__track--rtl .tl-slot {
-
-    direction: ltr;
-
-}
-
-/* La línea y todo lo que cuelga de ella.
-
-   Tres filas: lo que va por encima, la línea, y lo que va por debajo. Cada
-   elemento crea su propia columna (grid-auto-flow: column), así que el orden del
-   CMS es el orden de la línea y no hay que calcular posiciones. */
-.tl-rail {
-
-    --tl-spine-h: 42px;
-
-    position: relative;
-
-    display: grid;
-    grid-auto-flow: column;
-
-    /* Las columnas se declaran explícitamente —una por elemento, y el número lo
-       pone el componente— en vez de dejarlas implícitas. Es lo que permite que
-       la línea de abajo abarque de la primera a la última con `1 / -1`: contra
-       una rejilla implícita, -1 se queda en la primera columna y la línea sale
-       partida. */
-    grid-template-columns: repeat(var(--tl-cols, 1), minmax(120px, max-content));
-    grid-template-rows: minmax(92px, auto) var(--tl-spine-h) minmax(92px, auto);
-
-    justify-content: start;
-
-    /* Para que la línea llegue de lado a lado aunque haya pocos eventos. */
-    min-width: 100%;
-    width: max-content;
+    list-style: none;
 
     margin: 0;
     padding: 0;
 
-    list-style: none;
-
 }
 
-/* La línea. Va como pseudo-elemento colocado a mano en la fila del medio, así
-   que no entra en el reparto de columnas. */
-.tl-rail::before {
-
-    content: "";
-
-    grid-row: 2;
-    grid-column: 1 / -1;
-
-    align-self: center;
-
-    height: 3px;
-
-    background: rgba(255, 255, 255, 0.9);
-
-    border-radius: 2px;
-
-}
-
-.tl-slot {
-
-    position: relative;
-
-    display: flex;
-
-    padding: 0 8px;
-
-}
-
-.tl-slot--above {
-
-    grid-row: 1;
-
-    align-items: flex-end;
-    justify-content: center;
-
-}
-
-.tl-slot--below {
-
-    grid-row: 3;
-
-    align-items: flex-start;
-    justify-content: center;
-
-}
-
-.tl-slot--spine {
-
-    grid-row: 2;
-
-    align-items: center;
-    justify-content: center;
-
-}
-
-/* El tallo que une cada evento con la línea. Mide media fila del medio, que es
-   justo lo que hay desde el borde del evento hasta la línea. */
-.tl-slot--above::after,
-.tl-slot--below::after {
+.tl-line::before {
 
     content: "";
 
     position: absolute;
+    top: 0;
+    bottom: 0;
     left: 50%;
 
     width: 2px;
-    height: calc(var(--tl-spine-h) / 2);
+    margin-left: -1px;
 
-    background: rgba(255, 255, 255, 0.9);
-
-}
-
-.tl-slot--above::after {
-
-    top: 100%;
+    background: rgba(255, 255, 255, 0.8);
 
 }
 
-.tl-slot--below::after {
+/* Un evento: la tarjeta a un lado, la fecha al otro y el punto en la línea.
+   El lado lo decide la página, alternando, para que no haya que colocarlo. */
+.tl-row {
 
-    bottom: 100%;
+    position: relative;
 
-}
-
-.tl-item {
-
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 54px minmax(0, 1fr);
     align-items: center;
 
-    gap: 6px;
+    padding: 9px 0;
 
 }
 
-/* Debajo va la caja o la portada, así que los retratos se montan encima de
-   ellas, como en el original. */
+.tl-node {
+
+    grid-column: 2;
+    justify-self: center;
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: #14101c;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+
+}
+
+.tl-card {
+
+    grid-column: 1;
+
+    padding: 13px 16px;
+
+    background: rgba(31, 41, 55, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 3px solid var(--era);
+    border-radius: 10px;
+
+}
+
+.tl-row--right .tl-card {
+
+    grid-column: 3;
+
+}
+
+.tl-card__title {
+
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.3;
+
+}
+
+/* El enlace a este evento suelto. Discreto hasta que lo buscas. */
+.tl-card__anchor {
+
+    margin-left: 6px;
+
+    color: color-mix(in srgb, var(--era) 40%, white);
+    text-decoration: none;
+
+    opacity: 0;
+
+    transition: opacity 0.2s;
+
+}
+
+.tl-card:hover .tl-card__anchor,
+.tl-card__anchor:focus-visible {
+
+    opacity: 1;
+
+}
+
+.tl-card__text {
+
+    margin: 7px 0 0;
+
+    font-size: 0.88rem;
+    color: #cbd5e1;
+
+}
+
+.tl-card__cover {
+
+    display: block;
+
+    width: 92px;
+
+    margin-bottom: 9px;
+
+    border-radius: 4px;
+
+}
+
 .tl-portraits {
 
     display: flex;
 
-    margin-bottom: -18px;
-
-    z-index: 1;
+    margin-bottom: 9px;
 
 }
 
 .tl-portraits__img {
 
-    width: 52px;
-    height: 52px;
+    width: 42px;
+    height: 42px;
 
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
 
     object-fit: cover;
 
@@ -3172,118 +3219,330 @@ button.region-loc {
 
 .tl-portraits__img + .tl-portraits__img {
 
-    margin-left: -14px;
+    margin-left: -12px;
 
 }
 
-.tl-item__cover {
+/* Las fichas con las que tiene que ver el evento: lo que un PNG no puede dar. */
+.tl-chips {
 
-    width: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 
-    border-radius: 4px;
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-
-}
-
-.tl-card {
-
-    max-width: 190px;
-
-    padding: 7px 11px;
-
-    background: #fff;
-    color: #14101c;
-
-    border: 2px solid #14101c;
-    border-radius: 12px;
-
-    text-align: center;
+    margin-top: 10px;
 
 }
 
-.tl-card__title {
-
-    margin: 0;
-
-    font-size: 0.82rem;
-    font-weight: 700;
-    line-height: 1.25;
-
-}
-
-.tl-card__text {
-
-    margin: 4px 0 0;
-
-    font-size: 0.75rem;
-
-}
-
-/* Lo que se apoya en la línea, sin colgar de ella. Los tres llevan fondo opaco
-   porque la línea les pasa por detrás. */
-.tl-spine {
-
-    background: #fff;
-    color: #14101c;
-
-    border-radius: 4px;
-
-    white-space: nowrap;
-
-}
-
-.tl-spine--year {
+.tl-chip {
 
     padding: 2px 9px;
 
-    color: #1d4ed8;
+    font-size: 0.76rem;
 
-    font-size: 0.78rem;
+    color: color-mix(in srgb, var(--era) 30%, white);
+    text-decoration: none;
+
+    border: 1px solid color-mix(in srgb, var(--era) 45%, transparent);
+    border-radius: 999px;
+
+    transition: background-color 0.2s;
+
+}
+
+@media (hover: hover) {
+
+    .tl-chip:hover {
+
+        background: color-mix(in srgb, var(--era) 20%, transparent);
+
+    }
+
+}
+
+/* La fecha va al otro lado de la línea, mirándola. */
+.tl-when {
+
+    grid-column: 3;
+
+    padding-left: 6px;
+
+    font-size: 0.84rem;
+    color: #94a3b8;
+
+}
+
+.tl-row--right .tl-when {
+
+    grid-column: 1;
+
+    padding: 0 6px 0 0;
+
+    text-align: right;
+
+}
+
+.tl-when--year {
+
+    color: #7fb0ff;
     font-weight: 700;
 
 }
 
-.tl-spine--note {
+/* Los lanzamientos de juegos y cómics son la otra cronología: van en voz más
+   baja, y se pueden apagar entera. */
+.tl-row--release .tl-card {
 
-    padding: 2px 7px;
+    padding: 8px 13px;
 
-    font-size: 0.72rem;
+    background: rgba(20, 16, 28, 0.7);
+
+    border: 1px dashed rgba(255, 255, 255, 0.22);
 
 }
 
-.tl-spine--label {
+.tl-row--release .tl-card__title {
 
-    padding: 7px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #cbd5e1;
 
-    font-size: 0.85rem;
+}
+
+.tl-row--release .tl-node {
+
+    width: 9px;
+    height: 9px;
+
+    border-color: #94a3b8;
+
+}
+
+.tl-board--no-releases .tl-row--release {
+
+    display: none;
+
+}
+
+/* El salto de tiempo. Aquí la distancia significa algo: el hueco es largo de
+   verdad, así que se ve lo que se tarda en cruzarlo. */
+.tl-gap {
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    height: 128px;
+
+}
+
+/* Tapa la línea continua y la sustituye por el trazo discontinuo. */
+.tl-gap::before {
+
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 3px;
+    margin-left: -1.5px;
+
+    background: #14101c;
+
+}
+
+.tl-gap::after {
+
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    border-left: 2px dashed rgba(255, 255, 255, 0.45);
+
+}
+
+.tl-gap__label {
+
+    position: relative;
+
+    padding: 4px 12px;
+
+    background: #14101c;
+
+    border-radius: 999px;
+
+    font-size: 0.8rem;
+    color: #94a3b8;
+
+}
+
+/* El rótulo ancho que parte la línea, tipo "Pre-Genesis Wave". */
+.tl-band {
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    padding: 14px 0;
+
+}
+
+.tl-band__label {
+
+    position: relative;
+
+    padding: 6px 18px;
+
+    background: #241c33;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+
+}
+
+/* Un año marcado en la línea, sin evento propio. */
+.tl-mark {
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    padding: 6px 0;
+
+}
+
+.tl-mark__label {
+
+    position: relative;
+
+    padding: 3px 11px;
+
+    background: #14101c;
+
+    border: 1px solid rgba(127, 176, 255, 0.5);
+    border-radius: 999px;
+
+    font-size: 0.8rem;
     font-weight: 700;
+    color: #7fb0ff;
 
 }
+
+/* ── Modo compacto: toda la historia de un vistazo ── */
+
+.tl-board--compact .tl-card {
+
+    padding: 5px 12px;
+
+    border-left-width: 2px;
+
+}
+
+.tl-board--compact .tl-card__text,
+.tl-board--compact .tl-chips,
+.tl-board--compact .tl-card__cover,
+.tl-board--compact .tl-portraits {
+
+    display: none;
+
+}
+
+.tl-board--compact .tl-card__title {
+
+    font-size: 0.9rem;
+
+}
+
+.tl-board--compact .tl-row {
+
+    padding: 2px 0;
+
+}
+
+.tl-board--compact .tl-gap {
+
+    height: 52px;
+
+}
+
+.tl-board--compact .tl-era {
+
+    padding-top: 22px;
+
+}
+
+
+/* ── Móvil: la misma maquetación, apilada a un lado ── */
 
 @media (max-width: 899px) {
 
-    .tl-rail {
+    .tl-line::before,
+    .tl-gap::before,
+    .tl-gap::after {
 
-        --tl-spine-h: 34px;
-
-        grid-template-columns: repeat(var(--tl-cols, 1), minmax(104px, max-content));
-        grid-template-rows: minmax(90px, auto) var(--tl-spine-h) minmax(90px, auto);
-
-    }
-
-    .tl-card {
-
-        max-width: 150px;
-
-        font-size: 0.78rem;
+        left: 15px;
 
     }
 
-    .tl-portraits__img {
+    .tl-row {
 
-        width: 42px;
-        height: 42px;
+        grid-template-columns: 32px minmax(0, 1fr);
+        align-items: start;
+
+    }
+
+    .tl-node {
+
+        grid-column: 1;
+        justify-self: start;
+
+        margin-top: 14px;
+
+    }
+
+    .tl-card,
+    .tl-row--right .tl-card {
+
+        grid-column: 2;
+
+    }
+
+    .tl-when,
+    .tl-row--right .tl-when {
+
+        grid-column: 2;
+        grid-row: 2;
+
+        padding: 4px 0 0;
+
+        text-align: left;
+
+    }
+
+    .tl-gap,
+    .tl-band,
+    .tl-mark {
+
+        place-items: start;
+
+        padding-left: 38px;
+
+    }
+
+    .tl-gap {
+
+        height: 96px;
 
     }
 

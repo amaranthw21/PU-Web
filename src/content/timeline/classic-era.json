@@ -1,20 +1,19 @@
 {
   "order": 3,
   "name": "Classic Era",
-  "namePosition": "left",
+  "color": "#d1743a",
   "items": [
     { "type": "year", "text": "Year 0" },
-    { "type": "event", "side": "below", "title": "Sonic is born" },
-    { "type": "event", "side": "above", "title": "Sonic the Hedgehog" },
-    { "type": "event", "side": "below", "title": "Sonic CD" },
-    { "type": "event", "side": "above", "title": "Sonic the Hedgehog 2" },
-    { "type": "year", "text": "year 11" },
-    { "type": "event", "side": "below", "title": "Sonic the Hedgehog 3" },
-    { "type": "event", "side": "above", "title": "Sonic & Knuckles" },
+    { "type": "event", "title": "Sonic is born" },
     { "type": "label", "text": "Archie Comics // Pre-Genesis Wave" },
-    { "type": "event", "side": "below", "title": "Knuckles' Chaotix" },
-    { "type": "event", "side": "above", "title": "Sonic Mania" },
-    { "type": "event", "side": "above", "title": "Sonic Superstars" },
+    { "type": "event", "layer": "release", "title": "Sonic the Hedgehog" },
+    { "type": "event", "layer": "release", "title": "Sonic CD" },
+    { "type": "event", "layer": "release", "title": "Sonic the Hedgehog 2" },
+    { "type": "year", "text": "year 11" },
+    { "type": "event", "layer": "release", "title": "Sonic the Hedgehog 3 & Knuckles" },
+    { "type": "event", "layer": "release", "title": "Knuckles' Chaotix" },
+    { "type": "event", "layer": "release", "title": "Sonic Mania" },
+    { "type": "event", "layer": "release", "title": "Sonic Superstars" },
     { "type": "year", "text": "year 13" }
   ]
 }

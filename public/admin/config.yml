@@ -794,9 +794,9 @@ collections:
       - *blocks
 
   # ───────────────────────── Timeline ─────────────────────────
-  # Cada entrada es una era: una banda de la cronología. Dentro, `items` es todo
-  # lo que va en su línea, en orden: eventos que cuelgan por arriba o por abajo,
-  # y las etiquetas que se apoyan en la propia línea.
+  # Cada entrada es una era: un tramo con nombre de la línea de la cronología.
+  # Dentro, `items` es todo lo que va en ese tramo, en orden. El lado en el que
+  # cae cada tarjeta no se elige: la página las alterna sola.
   - name: timeline
     label: Timeline (eras)
     label_singular: Era
@@ -811,70 +811,74 @@ collections:
     fields:
       - { name: order, label: Order, widget: number, value_type: int, hint: "Position on the Timeline page. Lower numbers come first." }
       - { name: name, label: Name, widget: string, hint: "e.g. 'Ancient Times', 'Classic Era'." }
-      - name: namePosition
-        label: "Name corner"
-        widget: select
-        options: [left, right]
-        default: left
-        hint: "Which side of the band the era's name sits on."
-      - name: direction
-        label: "Reading direction"
-        widget: select
-        options: [ltr, rtl]
-        default: ltr
-        hint: "'rtl' runs the line right to left, so a band can continue where the one above it ended. It also makes the band open showing its right-hand side."
-      - { name: background, label: "Band artwork", widget: image, required: false, hint: "Fills the whole band, behind the line." }
-      - { name: artist, label: "Art by", widget: string, required: false, hint: "Credit shown in the band's corner." }
+      - { name: color, label: "Era colour", widget: color, required: false, hint: "Tints the era's name, its event cards and the page frame while the reader is inside this era. Empty keeps the site's magenta." }
+      - { name: background, label: "Era artwork", widget: image, required: false, hint: "Becomes the page background while the reader is inside this era." }
+      - { name: artist, label: "Art by", widget: string, required: false, hint: "Credit shown beside the era's name." }
       - { name: artistUrl, label: "Artist link", widget: string, required: false, hint: "Optional. Turns the credit into a link." }
       - name: items
         label: "On the line"
         widget: list
         required: false
         label_singular: Item
-        hint: "Everything on this era's line, in order. Add events, and the labels that sit on the line itself."
+        hint: "Everything in this era, in order: the events, and the labels that sit on the line itself."
         types:
           - name: event
             label: Event
             widget: object
-            summary: "{{fields.side}}: {{fields.title}}"
+            summary: "{{fields.title}}"
             fields:
-              - name: side
-                label: Side
+              - { name: title, label: Title, widget: string }
+              - { name: date, label: When, widget: string, required: false, hint: "Shown across the line from the card, e.g. '4000 yrs ago' or 'year 14'. Leave empty if the position on the line says enough." }
+              - { name: year, label: "Show the date as a year", widget: boolean, default: false, required: false, hint: "Paints the date blue, like the year markers." }
+              - name: layer
+                label: Layer
                 widget: select
-                options: [above, below]
-                default: above
-                hint: "Whether it hangs above or below the line."
-              - { name: title, label: Title, widget: string, hint: "The text inside the box." }
+                options: [world, release]
+                default: world
+                hint: "'World' is history. 'Release' is a game or comic coming out — those are a separate layer readers can switch off."
               - { name: text, label: "Extra text", widget: text, required: false, hint: "Optional, under the title. Leave a blank line between paragraphs." }
-              - { name: image, label: "Picture", widget: image, required: false, hint: "A game cover or an illustration, shown above the box." }
+              - { name: image, label: "Picture", widget: image, required: false, hint: "A game cover or an illustration, inside the card." }
               - name: portraits
                 label: Characters
                 widget: list
                 required: false
                 label_singular: Character
                 summary: "{{fields.name}}"
-                hint: "Round portraits that sit on top of the event, overlapping each other."
+                hint: "Round portraits at the top of the card."
                 fields:
                   - { name: name, label: Name, widget: string, required: false, hint: "Only shown when hovering the portrait." }
                   - { name: image, label: Portrait, widget: image }
+              - name: related
+                label: "Related entries"
+                widget: list
+                required: false
+                label_singular: Entry
+                summary: "{{fields.section}} / {{fields.id}}"
+                hint: "Links to the rest of the archive, shown as chips on the card. If an entry is renamed or removed, its chip just stops appearing."
+                fields:
+                  - name: section
+                    label: Section
+                    widget: select
+                    options: [gods, items, species, energy, powers, transformations, worlds, factions, countries]
+                  - { name: id, label: "Entry ID", widget: string, hint: "The last part of that entry's address. For https://…/lore/gods/chaos it is 'chaos'." }
 
           - name: year
             label: "Year marker"
             widget: object
             summary: "Year: {{fields.text}}"
             fields:
-              - { name: text, label: Text, widget: string, hint: "e.g. 'year 14', 'Year 0'. Sits on the line, in blue." }
+              - { name: text, label: Text, widget: string, hint: "e.g. 'year 14', 'Year 0'. A point on the line with no event of its own." }
 
-          - name: note
+          - name: gap
             label: "Time gap"
             widget: object
             summary: "Gap: {{fields.text}}"
             fields:
-              - { name: text, label: Text, widget: string, hint: "e.g. '4000 yrs ago'. A small label on the line, between two events." }
+              - { name: text, label: Text, widget: string, hint: "e.g. 'roughly a thousand years'. Stretches the line so the jump is as long as it feels." }
 
           - name: label
             label: "Wide label"
             widget: object
             summary: "Label: {{fields.text}}"
             fields:
-              - { name: text, label: Text, widget: string, hint: "e.g. 'Archie Comics // Pre-Genesis Wave'. A wide band across the line." }
+              - { name: text, label: Text, widget: string, hint: "e.g. 'Archie Comics // Pre-Genesis Wave'. Cuts across the line." }

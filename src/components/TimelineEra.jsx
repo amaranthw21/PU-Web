@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import asset from "../lib/asset";
+import entryLink from "../lib/entryLink";
 import Paragraphs from "./Paragraphs";
 
 
-// Retratos circulares encima de un evento: los personajes que aparecen en él.
-// Se solapan un poco, como en la versión dibujada a mano.
+// Los personajes que salen en un evento, en fila y solapados.
 function Portraits({ portraits }){
 
     if(!portraits?.length){
@@ -40,49 +41,34 @@ function Portraits({ portraits }){
 }
 
 
-// Un evento: la caja de texto o la portada, sus retratos y el tallo que lo une
-// a la línea. `side` decide si cuelga por arriba o por abajo; el tallo lo pinta
-// el CSS, que es quien sabe dónde está la línea.
-function Event({ item }){
+// Enlaces a las fichas que tienen que ver con el evento. Los que no se resuelven
+// (una entrada borrada o renombrada) no se pintan: un enlace roto es peor que
+// ninguno.
+function Related({ related }){
+
+    const links = (related ?? [])
+        .map(item => entryLink(item.section, item.id))
+        .filter(Boolean);
+
+    if(links.length === 0){
+
+        return null;
+
+    }
+
 
     return (
 
-        <div className={`tl-item tl-item--${item.side === "below" ? "below" : "above"}`}>
-
-            <Portraits portraits={item.portraits} />
+        <div className="tl-chips">
 
             {
-                item.image?.trim() && (
+                links.map(link => (
 
-                    <img
-                        className="tl-item__cover"
-                        src={asset(item.image)}
-                        alt={item.title ?? ""}
-                        loading="lazy"
-                        onError={e => { e.currentTarget.style.display = "none"; }}
-                    />
+                    <Link key={link.route} className="tl-chip" to={link.route}>
+                        {link.name}
+                    </Link>
 
-                )
-            }
-
-            {
-                item.title?.trim() && (
-
-                    <div className="tl-card" id={item.id}>
-
-                        <h3 className="tl-card__title">
-                            {item.title}
-                        </h3>
-
-                        {
-                            item.text?.trim() && (
-                                <Paragraphs text={item.text} className="tl-card__text" />
-                            )
-                        }
-
-                    </div>
-
-                )
+                ))
             }
 
         </div>
@@ -92,68 +78,98 @@ function Event({ item }){
 }
 
 
-// Lo que va sobre la propia línea, sin colgar de ella: el año en azul, el hueco
-// de tiempo entre dos eventos y el rótulo ancho que separa continuidades.
-function SpineItem({ item }){
+function Event({ item }){
 
-    if(item.type === "year"){
+    const classes = ["tl-row"];
 
-        return (
-            <span className="tl-spine tl-spine--year">
-                {item.text}
-            </span>
-        );
+    classes.push(item.flip ? "tl-row--right" : "tl-row--left");
 
+    if(item.layer === "release"){
+        classes.push("tl-row--release");
     }
 
-    if(item.type === "label"){
-
-        return (
-            <span className="tl-spine tl-spine--label">
-                {item.text}
-            </span>
-        );
-
-    }
 
     return (
-        <span className="tl-spine tl-spine--note">
-            {item.text}
-        </span>
+
+        <li className={classes.join(" ")}>
+
+            <span className="tl-node" aria-hidden="true" />
+
+            <article className="tl-card" id={item.id}>
+
+                <Portraits portraits={item.portraits} />
+
+                {
+                    item.image?.trim() && (
+
+                        <img
+                            className="tl-card__cover"
+                            src={asset(item.image)}
+                            alt=""
+                            loading="lazy"
+                            onError={e => { e.currentTarget.style.display = "none"; }}
+                        />
+
+                    )
+                }
+
+                <h3 className="tl-card__title">
+
+                    {item.title}
+
+                    {/*
+                      Enlace a este evento concreto, para pegarlo en el Discord.
+                      Solo se ve al pasar por encima o al llegar con el teclado.
+                    */}
+                    <a
+                        className="tl-card__anchor"
+                        href={`#${item.id}`}
+                        aria-label={`Link to “${item.title}”`}
+                    >
+                        #
+                    </a>
+
+                </h3>
+
+                {
+                    item.text?.trim() && (
+                        <Paragraphs text={item.text} className="tl-card__text" />
+                    )
+                }
+
+                <Related related={item.related} />
+
+            </article>
+
+            {
+                item.date?.trim() && (
+
+                    <span className={item.year ? "tl-when tl-when--year" : "tl-when"}>
+                        {item.date}
+                    </span>
+
+                )
+            }
+
+        </li>
+
     );
 
 }
 
 
-// Una era: su banda, con el arte de fondo, el rótulo, el crédito del artista y
-// la línea con todo lo que cuelga de ella.
-//
-// `direction: "rtl"` invierte el recorrido, como en la versión dibujada: las
-// bandas alternan de sentido y la siguiente empieza donde acabó la anterior.
+// Una era: un tramo con nombre de la línea, no un cuadro aparte. El color y el
+// arte de la era los aplica la página al fondo según vas bajando.
 export default function TimelineEra({ era }){
-
-    const items = era.items ?? [];
-
-    const classes = [
-        "tl-era",
-        `tl-era--name-${era.namePosition === "right" ? "right" : "left"}`
-    ];
-
 
     return (
 
-        <section className={classes.join(" ")} id={era.id}>
-
-            {
-                era.background?.trim() && (
-
-                    <div
-                        className="tl-era__art"
-                        style={{ backgroundImage: `url(${asset(era.background)})` }}
-                    />
-
-                )
-            }
+        <section
+            className="tl-era"
+            id={era.id}
+            data-era={era.id}
+            style={era.color ? { "--era": era.color } : undefined}
+        >
 
             <header className="tl-era__head">
 
@@ -166,7 +182,7 @@ export default function TimelineEra({ era }){
 
                         <p className="tl-era__credit">
 
-                            Art By:{" "}
+                            Art by{" "}
 
                             {
                                 era.artistUrl?.trim()
@@ -182,49 +198,47 @@ export default function TimelineEra({ era }){
             </header>
 
 
-            {/*
-              La banda se recorre de lado cuando no cabe. Es scroll propio, no de
-              la página: cada era se mueve por su cuenta, igual que la imagen que
-              había que arrastrar.
-            */}
-            <div className={era.direction === "rtl" ? "tl-era__track tl-era__track--rtl" : "tl-era__track"}>
+            <ol className="tl-line">
 
-                <ol
-                    className="tl-rail"
-                    style={{ "--tl-cols": items.length }}
-                >
+                {
+                    (era.items ?? []).map((item, i) => {
 
-                    {
-                        items.map((item, i) => (
+                        if(item.type === "gap"){
 
-                            <li
-                                key={i}
-                                /* Su columna, explícita. Dejar que la rejilla
-                                   las reparta sola no vale: con flujo por
-                                   columnas apila arriba, línea y abajo en la
-                                   misma, y el orden del CMS se pierde. */
-                                style={{ gridColumn: i + 1 }}
-                                className={
-                                    item.type === "event" || !item.type
-                                        ? `tl-slot tl-slot--${item.side === "below" ? "below" : "above"}`
-                                        : "tl-slot tl-slot--spine"
-                                }
-                            >
+                            return (
+                                <li key={i} className="tl-gap">
+                                    <span className="tl-gap__label">{item.text}</span>
+                                </li>
+                            );
 
-                                {
-                                    item.type === "event" || !item.type
-                                        ? <Event item={item} />
-                                        : <SpineItem item={item} />
-                                }
+                        }
 
-                            </li>
+                        if(item.type === "label"){
 
-                        ))
-                    }
+                            return (
+                                <li key={i} className="tl-band">
+                                    <span className="tl-band__label">{item.text}</span>
+                                </li>
+                            );
 
-                </ol>
+                        }
 
-            </div>
+                        if(item.type === "year"){
+
+                            return (
+                                <li key={i} className="tl-mark">
+                                    <span className="tl-mark__label">{item.text}</span>
+                                </li>
+                            );
+
+                        }
+
+                        return <Event key={i} item={item} />;
+
+                    })
+                }
+
+            </ol>
 
         </section>
 

@@ -327,32 +327,40 @@ type — but the site owner has to rename the file for the address to follow.
 
 ## The Timeline
 
-The Timeline page is built from the **Timeline (eras)** collection: one entry per
-band. A band has its own artwork, the artist's credit, the corner its name sits
-in, and — the important one — everything that goes **on its line**, in order.
+The Timeline is **one line running down the page**, and the eras are stretches of
+it rather than separate pictures. Scrolling is how you travel it, so it works the
+same on a phone as on a desktop. Each entry in the **Timeline (eras)** collection
+is one of those stretches.
 
-Four kinds of thing can go on the line:
+An era has a colour and a piece of artwork: while the reader is inside it, the
+artwork becomes the page background and the colour tints the frame, the era's
+name and its cards — the same trick the species and god pages use, but following
+the scroll.
+
+Then there is `items`: everything in that era, in order. Four kinds:
 
 | Kind | What it is |
 | --- | --- |
-| **Event** | A box hanging above or below the line. Can carry a picture (a game cover) and round character portraits on top of it. |
-| **Year marker** | The blue label sitting on the line, e.g. `year 14`. |
-| **Time gap** | The small grey label between two events, e.g. `4000 yrs ago`. |
-| **Wide label** | The band across the line, e.g. `Archie Comics // Pre-Genesis Wave`. |
+| **Event** | A card on the line. Which side it lands on is not a choice — the page alternates them. |
+| **Year marker** | A point on the line with no event of its own, e.g. `year 14`. |
+| **Time gap** | Stretches the line, e.g. `roughly a thousand years`. The distance is the point: a big jump *looks* big. |
+| **Wide label** | Cuts across the line, e.g. `Archie Comics // Pre-Genesis Wave`. |
 
-The order you give them is the order along the line — there is nothing to
-position by hand, and adding an event in the middle pushes the rest along.
+Two things worth knowing when filling it in:
 
-**Reading direction** is what lets the timeline snake: set an era to `rtl` and its
-line runs right to left, so it can pick up where the band above it ended. That
-band also opens showing its right-hand side, which is where its first event is.
+**Layers.** An event is either *world* history or a *release* (a game or a comic
+coming out). Those are two different timelines, and mixing them is what made the
+old picture busy — so readers get a switch that hides the releases. Tag them
+correctly and both read well.
 
-A band scrolls sideways on its own when it doesn't fit, so a long era is fine on
-a phone — it behaves like dragging the old picture, except the text is readable.
+**Related entries.** An event can point at anything else in the archive (a god, a
+world, a faction…) by section plus the entry's ID — the last part of its address,
+so `chaos` for `/lore/gods/chaos`. The card shows them as chips with the entry's
+real name, looked up at build time. If that entry is later renamed or deleted,
+the chip simply stops appearing: no broken links.
 
-Two things the old Canva version had that this one doesn't: portraits placed by
-hand into overlapping clusters, and the decorative sparkles. Portraits here are
-laid out in a row, overlapping each other evenly.
+Every event also gets its own anchor, so a moderator can link one event rather
+than the whole page. Hover a card and a `#` appears next to its title.
 
 ## Good habits
 
@@ -414,12 +422,14 @@ page shape, so the parts are shared rather than copied:
 | `components/LoreDetail.jsx` | The whole full-width page (Energies, Powers, Transformations) |
 | `lib/blocks.js` | `withBlockIds()` — drops untitled blocks and gives each one a unique anchor |
 
-The Timeline is its own layout rather than a shared one: `TimelineEra` puts every
-item of an era into a CSS grid of three rows — above the line, the line, below it
-— giving each item its own column, and the line itself is a pseudo-element
-spanning `1 / -1`. That is why the number of columns is declared explicitly from
-the component (`--tl-cols`): against an implicit grid, `-1` stops at the first
-column and the line comes out cut short.
+The Timeline is its own layout rather than a shared one. `TimelineEra` renders an
+era as a list of three-column rows — card, line, date — and the line is a
+pseudo-element down the middle of the list; on narrow screens the same rows
+restack with the line moved to the left margin, so there is no second layout to
+keep in sync. `pages/Timeline.jsx` does the rest: it hands each event its anchor
+and its side (alternating, counting only events, so a gap or a label doesn't
+break the rhythm), and an IntersectionObserver over the era sections drives both
+the sticky "you are here" bar and the page background.
 
 A faction's characters part is the regions part with different field names, so
 `ContentBlock` translates `groups`/`characters` into `regions`/`locations` and
