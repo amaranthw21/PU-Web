@@ -106,6 +106,7 @@ export default function Timeline(){
     const [current, setCurrent] = useState(eras[0]?.id ?? null);
 
     const boardRef = useRef(null);
+    const menuRef = useRef(null);
 
 
     // El fondo y el color de acento van siguiendo a la era por la que vas
@@ -268,13 +269,59 @@ export default function Timeline(){
 
             <div className="tl-bar">
 
-                <p className="tl-bar__where">
+                {/*
+                  En qué era estás y, a la vez, la manera de saltar a otra. Es
+                  un <details> con enlaces dentro: cada era ya tiene su ancla,
+                  así que saltar es seguir un enlace —se puede copiar, abrir en
+                  otra pestaña y el atrás funciona— en vez de mover el scroll a
+                  mano.
+                */}
+                <details className="tl-eras" ref={menuRef}>
 
-                    <span className="tl-bar__dot" aria-hidden="true" />
+                    <summary className="tl-eras__current">
 
-                    {currentEra?.name ?? ""}
+                        <span className="tl-bar__dot" aria-hidden="true" />
 
-                </p>
+                        {currentEra?.name ?? "Eras"}
+
+                        <svg
+                            className="tl-eras__arrow"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <path d="M6 9.5l6 6 6-6" />
+                        </svg>
+
+                    </summary>
+
+                    <ul className="tl-eras__list">
+
+                        {
+                            eras.map(era => (
+
+                                <li key={era.id}>
+
+                                    <a
+                                        className={
+                                            era.id === current
+                                                ? "tl-eras__item tl-eras__item--on"
+                                                : "tl-eras__item"
+                                        }
+                                        href={`#${era.id}`}
+                                        onClick={() => { menuRef.current.open = false; }}
+                                    >
+                                        {era.name}
+                                    </a>
+
+                                </li>
+
+                            ))
+                        }
+
+                    </ul>
+
+                </details>
 
                 <button
                     type="button"
