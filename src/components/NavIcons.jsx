@@ -105,6 +105,19 @@ export function CreditsIcon(){
 }
 
 
+// El acceso al panel de edición, en el menú de móvil: un lápiz.
+export function AdminIcon(){
+
+    return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 20h4L19.5 8.5a2.1 2.1 0 0 0-3-3L5 17v3z" />
+            <path d="M14.5 6.5l3 3" />
+        </svg>
+    );
+
+}
+
+
 // La flecha de los desplegables y del botón de anclar. Siempre apunta a la
 // derecha; girarla es cosa del CSS, según el estado.
 export function ChevronIcon(){

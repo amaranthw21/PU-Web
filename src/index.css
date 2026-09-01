@@ -60,9 +60,7 @@ html {
 
     gap: 12px;
 
-    /* Justo en móvil: con la lupa, Admin y la hamburguesa al otro lado, cada
-       píxel que se ahorre aquí es título que se lee entero. */
-    padding: 0 12px;
+    padding: 0 16px;
 
     background: rgba(10, 5, 20, 0.9);
 
@@ -1441,19 +1439,12 @@ body::before {
     display: flex;
     align-items: center;
 
-    gap: 6px;
+    /* Con Admin fuera de aquí en móvil sobra sitio, así que la lupa y la
+       hamburguesa no tienen por qué ir pegadas: seis píxeles entre dos objetivos
+       de dedo es justo lo que provocaba los toques equivocados. */
+    gap: 10px;
 
     flex: 0 0 auto;
-
-}
-
-@media (min-width: 900px) {
-
-    .navbar__actions {
-
-        gap: 10px;
-
-    }
 
 }
 
@@ -1803,6 +1794,29 @@ body::before {
 
 }
 
+/* El acceso al panel de edición, al fondo del menú y separado del resto: es una
+   herramienta de los mods, no una sección más del archivo. */
+.rail__admin {
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    color: #c4b5fd;
+
+    text-decoration: none;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+    transition: color 0.2s, background-color 0.2s;
+
+}
+
 /* Anclar no tiene sentido en el panel de móvil, que ya va desplegado. */
 .rail__pin {
 
@@ -1811,6 +1825,14 @@ body::before {
 }
 
 @media (hover: hover) {
+
+    .rail__admin:hover {
+
+        color: white;
+
+        background-color: rgba(196, 181, 253, 0.14);
+
+    }
 
     .rail__link:hover,
     .rail__sublink:hover,
@@ -1881,7 +1903,8 @@ body::before {
 
     }
 
-    .rail-backdrop {
+    .rail-backdrop,
+    .rail__admin {
 
         display: none;
 
@@ -2791,9 +2814,13 @@ button.region-loc {
 
 /* El acceso al panel de edición: se marca aparte para que no se lea como
    una sección más del lore. */
+/* En móvil este acceso NO va aquí: quedaba a seis píxeles de la hamburguesa y
+   quien iba a abrir el menú acababa en el panel de edición. Allí vive dentro del
+   propio menú, con su fila entera. */
 .admin-link {
 
-    display: flex;
+    display: none;
+
     align-items: center;
 
     flex: 0 0 auto;
@@ -2816,6 +2843,8 @@ button.region-loc {
 @media (min-width: 900px) {
 
     .admin-link {
+
+        display: flex;
 
         padding: 6px 12px;
 
