@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import Card from "../../components/Card";
+import useDocumentTitle from "../../lib/useDocumentTitle";
 
 
 export default function EnergyPowers(){
+
+    useDocumentTitle("Mechanics");
+
 
     return (
 

@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import Accordion from "../../../components/Accordion";
 import powers from "../../../data/lore/energy-powers/powers";
+import useDocumentTitle from "../../../lib/useDocumentTitle";
 
 
 export default function Powers(){
+
+    useDocumentTitle("Powers");
+
 
     const canonPowers = powers.filter(power => !power.custom);
     const customPowers = powers.filter(power => power.custom);

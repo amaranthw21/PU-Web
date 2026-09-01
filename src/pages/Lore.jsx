@@ -1,8 +1,12 @@
 import Card from "../components/Card";
 import lore from "../data/lore/lore";
+import useDocumentTitle from "../lib/useDocumentTitle";
 
 
 export default function Lore(){
+
+    useDocumentTitle("Lore");
+
 
 
     return (

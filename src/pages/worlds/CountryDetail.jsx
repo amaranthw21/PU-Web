@@ -7,6 +7,7 @@ import ContentBlock from "../../components/ContentBlock";
 import withBlockIds from "../../lib/blocks";
 import NotFound from "../NotFound";
 import usePageAccent from "../../lib/usePageAccent";
+import useDocumentTitle from "../../lib/useDocumentTitle";
 
 
 export default function CountryDetail(){
@@ -26,9 +27,14 @@ export default function CountryDetail(){
     usePageAccent(country?.background, country?.color);
 
 
+    const pageTitle = country?.name ?? "Country not found";
+
+    useDocumentTitle(pageTitle);
+
+
     if(!country){
 
-        return <NotFound title="Country not found" />;
+        return <NotFound title={pageTitle} />;
 
     }
 

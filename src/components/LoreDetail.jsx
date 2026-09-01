@@ -6,6 +6,7 @@ import CountryQuote from "./CountryQuote";
 import Paragraphs from "./Paragraphs";
 import NotFound from "../pages/NotFound";
 import withBlockIds from "../lib/blocks";
+import useDocumentTitle from "../lib/useDocumentTitle";
 
 
 // Ficha de una entrada de Lore (energías, poderes, transformaciones e items).
@@ -19,6 +20,8 @@ import withBlockIds from "../lib/blocks";
 export default function LoreDetail({ item, trail, notFound }){
 
     const blocks = withBlockIds(item?.blocks);
+
+    useDocumentTitle(item?.name ?? notFound);
 
 
     if(!item){

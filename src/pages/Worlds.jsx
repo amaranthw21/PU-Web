@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { mainWorlds, otherWorlds } from "../data/worlds";
 import asset from "../lib/asset";
+import useDocumentTitle from "../lib/useDocumentTitle";
 
 
 function WorldButton({ world }) {
@@ -61,6 +62,9 @@ function chunk(items, size) {
 
 
 export default function Worlds() {
+
+    useDocumentTitle("Worlds");
+
 
     return (
 

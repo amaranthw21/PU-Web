@@ -1,8 +1,12 @@
 import { mainSpecies, companionSpecies } from "../data/species";
 import EntryCard from "../components/EntryCard";
+import useDocumentTitle from "../lib/useDocumentTitle";
 
 
 export default function Species() {
+
+    useDocumentTitle("Species");
+
 
     return (
 

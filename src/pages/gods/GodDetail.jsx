@@ -8,6 +8,7 @@ import Paragraphs from "../../components/Paragraphs";
 import withBlockIds from "../../lib/blocks";
 import NotFound from "../NotFound";
 import usePageAccent from "../../lib/usePageAccent";
+import useDocumentTitle from "../../lib/useDocumentTitle";
 
 
 export default function GodDetail(){
@@ -26,9 +27,14 @@ export default function GodDetail(){
     usePageAccent(god?.image, god?.color);
 
 
+    const pageTitle = god?.name ?? "God not found";
+
+    useDocumentTitle(pageTitle);
+
+
     if(!god){
 
-        return <NotFound title="God not found" />;
+        return <NotFound title={pageTitle} />;
 
     }
 

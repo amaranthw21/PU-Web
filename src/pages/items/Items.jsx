@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import EntryCard from "../../components/EntryCard";
 import items, { itemCategories } from "../../data/lore/items/items";
+import useDocumentTitle from "../../lib/useDocumentTitle";
 
 
 export default function Items(){
+
+    useDocumentTitle("Important Items");
+
 
     return (
 

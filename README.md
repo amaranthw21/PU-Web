@@ -433,6 +433,13 @@ page shape, so the parts are shared rather than copied:
 | `components/LoreDetail.jsx` | The whole full-width page (Energies, Powers, Transformations) |
 | `lib/blocks.js` | `withBlockIds()` — drops untitled blocks and gives each one a unique anchor |
 | `lib/usePageAccent.js` | Swaps the page background and `--accent` for the entry's own, and puts back what was there on the way out |
+| `lib/useDocumentTitle.js` | Sets the browser tab's title: this page's name, then the site's |
+
+Every page calls `useDocumentTitle` — there is no central route-to-title table,
+because the detail pages are the only ones that know the entry's name. Pages that
+can fail to find their entry pass the *same* string to the hook and to
+`<NotFound>`: React runs a child's effects before its parent's, so the parent has
+the last word on the title and both have to agree.
 
 The Timeline is its own layout rather than a shared one. `TimelineEra` renders an
 era as a list of three-column rows — card, line, date — and the line is a

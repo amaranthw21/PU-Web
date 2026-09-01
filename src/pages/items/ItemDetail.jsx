@@ -8,6 +8,7 @@ import Paragraphs from "../../components/Paragraphs";
 import withBlockIds from "../../lib/blocks";
 import NotFound from "../NotFound";
 import usePageAccent from "../../lib/usePageAccent";
+import useDocumentTitle from "../../lib/useDocumentTitle";
 
 
 export default function ItemDetail(){
@@ -26,9 +27,14 @@ export default function ItemDetail(){
     usePageAccent(item?.image, item?.color);
 
 
+    const pageTitle = item?.name ?? "Item not found";
+
+    useDocumentTitle(pageTitle);
+
+
     if(!item){
 
-        return <NotFound title="Item not found" />;
+        return <NotFound title={pageTitle} />;
 
     }
 

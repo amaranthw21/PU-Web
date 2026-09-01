@@ -4,6 +4,7 @@ import timeline from "../data/lore/timeline";
 import { mainWorlds } from "../data/worlds/index";
 import TimelineEra from "../components/TimelineEra";
 import NotFound from "./NotFound";
+import useDocumentTitle from "../lib/useDocumentTitle";
 import asset from "../lib/asset";
 import slug from "../lib/slug";
 
@@ -92,6 +93,18 @@ export default function Timeline(){
     const known = timelines.some(item => item.id === currentWorld);
 
     const eras = prepare(timeline.filter(era => era.world === currentWorld));
+
+    // Cada línea tiene su propio título de pestaña: con tres, "Timeline" a
+    // secas no distingue una de otra en el historial ni en un favorito.
+    //
+    // El mismo texto va al hook y a <NotFound> más abajo: React ejecuta los
+    // efectos del hijo antes que los del padre, así que si no coincidieran el
+    // padre pisaría el título que pone NotFound.
+    const pageTitle = known
+        ? `${timelines.find(item => item.id === currentWorld).name} timeline`
+        : "Timeline not found";
+
+    useDocumentTitle(pageTitle);
 
     // Los lanzamientos de juegos y cómics son otra cronología metida en la
     // misma: se pueden apagar para leer solo la historia del mundo.
@@ -189,7 +202,7 @@ export default function Timeline(){
     // orden que React necesita.
     if(!known){
 
-        return <NotFound title="Timeline not found" />;
+        return <NotFound title={pageTitle} />;
 
     }
 

@@ -4,6 +4,7 @@ import CountryCard from "../../components/CountryCard";
 import Paragraphs from "../../components/Paragraphs";
 import asset from "../../lib/asset";
 import NotFound from "../NotFound";
+import useDocumentTitle from "../../lib/useDocumentTitle";
 
 
 export default function WorldPage(){
@@ -13,9 +14,14 @@ export default function WorldPage(){
     const world = worldsById[worldId];
 
 
+    const pageTitle = world?.name ?? "World not found";
+
+    useDocumentTitle(pageTitle);
+
+
     if(!world){
 
-        return <NotFound title="World not found" />;
+        return <NotFound title={pageTitle} />;
 
     }
 
