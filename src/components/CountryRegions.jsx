@@ -18,6 +18,7 @@ function Location({ location, isOpen, onToggle }){
                     ? <img
                           className="region-loc__img"
                           src={asset(location.image)}
+                          loading="lazy"
                           alt={location.name ?? ""}
                           onError={e => { e.currentTarget.style.visibility = "hidden"; }}
                       />
@@ -162,6 +163,7 @@ export default function CountryRegions({ part }){
 
                         <img
                             src={asset(part.map)}
+                            loading="lazy"
                             alt={part.mapCaption ?? "Map"}
                             onError={e => { e.currentTarget.closest("figure").style.display = "none"; }}
                         />

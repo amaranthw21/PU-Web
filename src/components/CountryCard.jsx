@@ -13,6 +13,7 @@ export default function CountryCard({ country, link }) {
                     ? <img
                           className="country-card__img"
                           src={asset(country.flag)}
+                          loading="lazy"
                           alt={`Flag of ${country.name}`}
                           onError={e => { e.currentTarget.style.display = "none"; }}
                       />

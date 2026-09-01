@@ -12,6 +12,7 @@ export default function FactionCard({ faction }) {
                     faction.image && (
                         <img
                             src={asset(faction.image)}
+                            loading="lazy"
                             alt={faction.name}
                             onError={e => { e.currentTarget.style.display = "none"; }}
                         />
