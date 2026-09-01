@@ -327,8 +327,11 @@ type — but the site owner has to rename the file for the address to follow.
 
 ## The Timeline
 
-**There is one timeline per dimension** — Mobius, Moebius, Sol — and the tabs at
-the top of the page switch between them. Which one an era belongs to is its
+**There is one timeline per dimension** — Mobius, Moebius, Sol — and a bar of its
+own at the top of the page switches between them. It sits apart from the reading
+controls, and doesn't follow you down the page: picking a timeline is a decision
+you make once on arrival, while the era indicator and the two switches are used
+while reading, so those are the ones that stay stuck to the top. Which one an era belongs to is its
 **Timeline** field, and a dimension only gets a tab once it has at least one era,
 so creating the first era of a new world makes its tab appear on its own.
 

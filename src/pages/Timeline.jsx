@@ -238,30 +238,35 @@ export default function Timeline(){
               que un póster te da de un vistazo y una página larga pierde— y
               lleva los dos interruptores.
             */}
+            {/*
+              Qué línea estás leyendo va en su propia barra y arriba del todo:
+              es una decisión de página, no un control de lectura, y se toma una
+              vez al entrar. Por eso tampoco se queda pegada al bajar.
+
+              Son enlaces, no botones: el mundo va en la dirección, así que se
+              puede enlazar un evento de una línea concreta y el botón de atrás
+              funciona.
+            */}
+            <nav className="tl-worlds" aria-label="Timelines">
+
+                {
+                    timelines.map(item => (
+
+                        <NavLink
+                            key={item.id}
+                            to={`/lore/timeline/${item.id}`}
+                            className={item.id === currentWorld ? "tl-world tl-world--on" : "tl-world"}
+                        >
+                            {item.name}
+                        </NavLink>
+
+                    ))
+                }
+
+            </nav>
+
+
             <div className="tl-bar">
-
-                {/*
-                  Cada dimensión tiene su línea. Son enlaces, no botones: el
-                  mundo va en la dirección, así que se puede enlazar un evento
-                  concreto de una línea concreta, y el botón de atrás funciona.
-                */}
-                <nav className="tl-tabs" aria-label="Timelines">
-
-                    {
-                        timelines.map(item => (
-
-                            <NavLink
-                                key={item.id}
-                                to={`/lore/timeline/${item.id}`}
-                                className={item.id === currentWorld ? "tl-tab tl-tab--on" : "tl-tab"}
-                            >
-                                {item.name}
-                            </NavLink>
-
-                        ))
-                    }
-
-                </nav>
 
                 <p className="tl-bar__where">
 

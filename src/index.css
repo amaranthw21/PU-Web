@@ -2927,37 +2927,43 @@ button.region-loc {
 
 }
 
-/* Las tres líneas: Mobius, Moebius y Sol. Van las primeras porque elegir línea
-   manda sobre todo lo demás de la barra. */
-.tl-tabs {
+/* Qué línea se está leyendo: Mobius, Moebius o Sol. Barra propia y arriba del
+   todo, porque es la decisión que manda sobre el resto de la página. */
+.tl-worlds {
 
     display: flex;
+    gap: 6px;
 
-    padding: 3px;
+    margin: 18px 0 10px;
+    padding: 5px;
 
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.05);
 
-    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
 
 }
 
-.tl-tab {
+.tl-world {
 
-    padding: 5px 14px;
+    flex: 1;
+
+    padding: 10px 14px;
 
     color: #cbd5e1;
     text-decoration: none;
+    text-align: center;
 
-    border-radius: 999px;
+    border-radius: 9px;
 
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     font-weight: 600;
 
     transition: color 0.2s, background-color 0.2s;
 
 }
 
-.tl-tab--on {
+.tl-world--on {
 
     color: white;
 
@@ -2967,9 +2973,17 @@ button.region-loc {
 
 @media (hover: hover) {
 
-    .tl-tab:hover {
+    .tl-world:hover {
 
         color: white;
+
+        background: rgba(255, 255, 255, 0.07);
+
+    }
+
+    .tl-world--on:hover {
+
+        background: color-mix(in srgb, var(--accent) 52%, transparent);
 
     }
 
@@ -3545,14 +3559,7 @@ button.region-loc {
 
 @media (max-width: 899px) {
 
-    /* En móvil la barra NO se queda pegada arriba. Con el ancho que deja el
-       marco, los controles no caben en una fila y la barra ocupa tres: pegada
-       se comería la quinta parte de la pantalla en todas las páginas. Aquí se
-       queda arriba del todo y se sube a ella cuando hace falta; en qué era
-       estás lo dice igualmente el título de cada era al pasar. */
     .tl-bar {
-
-        position: static;
 
         gap: 7px;
 
@@ -3570,23 +3577,11 @@ button.region-loc {
 
     }
 
-    /* En móvil las pestañas se llevan una fila entera, a tercios: así son
-       cómodas de pulsar con el pulgar y la barra se queda en dos filas
-       previsibles en vez de repartirse sola. */
-    .tl-tabs {
+    .tl-world {
 
-        flex: 1 0 100%;
+        padding: 9px 8px;
 
-    }
-
-    .tl-tab {
-
-        flex: 1;
-
-        padding: 5px 8px;
-
-        font-size: 0.82rem;
-        text-align: center;
+        font-size: 0.86rem;
 
     }
 
