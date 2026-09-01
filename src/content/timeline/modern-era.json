@@ -1,47 +1,111 @@
 {
   "order": 4,
   "name": "Modern Era",
+  "world": "mobius",
   "color": "#b8459e",
   "artist": "Pocho and Jashuon",
   "items": [
-    { "type": "year", "text": "year 14" },
+    {
+      "type": "year",
+      "text": "year 14"
+    },
     {
       "type": "event",
       "layer": "release",
       "title": "Sonic Adventure",
-      "related": [{ "section": "gods", "id": "chaos" }]
+      "related": [
+        {
+          "section": "gods",
+          "id": "chaos"
+        }
+      ]
     },
     {
       "type": "event",
       "layer": "release",
       "title": "Sonic Adventure 2",
-      "related": [{ "section": "gods", "id": "solaris" }]
+      "related": [
+        {
+          "section": "gods",
+          "id": "solaris"
+        }
+      ]
     },
-    { "type": "year", "text": "year 15" },
-    { "type": "event", "layer": "release", "title": "Sonic Heroes" },
-    { "type": "label", "text": "Post-Genesis Wave // Pre-Genesis Wave" },
-    { "type": "year", "text": "year 16" },
-    { "type": "event", "layer": "release", "title": "Shadow the Hedgehog" },
-    { "type": "year", "text": "year 17" },
-    { "type": "event", "layer": "release", "title": "Sonic Unleashed" },
-    { "type": "event", "layer": "release", "title": "Sonic Generations" },
-    { "type": "label", "text": "Post-Genesis Wave // IDW Comics" },
-    { "type": "year", "text": "year 18" },
-    { "type": "event", "layer": "release", "title": "Sonic Forces" },
-    { "type": "event", "layer": "release", "title": "Sonic Frontiers" },
+    {
+      "type": "year",
+      "text": "year 15"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic Heroes"
+    },
+    {
+      "type": "label",
+      "text": "Post-Genesis Wave // Pre-Genesis Wave"
+    },
+    {
+      "type": "year",
+      "text": "year 16"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Shadow the Hedgehog"
+    },
+    {
+      "type": "year",
+      "text": "year 17"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic Unleashed"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic Generations"
+    },
+    {
+      "type": "label",
+      "text": "Post-Genesis Wave // IDW Comics"
+    },
+    {
+      "type": "year",
+      "text": "year 18"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic Forces"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic Frontiers"
+    },
     {
       "type": "event",
       "date": "now",
       "title": "We are here",
       "text": "Where the server's present sits on the line."
     },
-    { "type": "gap", "text": "a long way ahead" },
+    {
+      "type": "gap",
+      "text": "a long way ahead"
+    },
     {
       "type": "event",
       "date": "year 200",
       "year": true,
       "title": "200 Years Future",
-      "related": [{ "section": "worlds", "id": "future-200" }]
+      "related": [
+        {
+          "section": "worlds",
+          "id": "future-200"
+        }
+      ]
     }
   ]
 }

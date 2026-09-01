@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import timeline from "../data/lore/timeline";
+import { mainWorlds } from "../data/worlds/index";
 import TimelineEra from "../components/TimelineEra";
+import NotFound from "./NotFound";
 import asset from "../lib/asset";
 import slug from "../lib/slug";
 
@@ -65,9 +67,31 @@ function prepare(eras){
 }
 
 
+// Cada dimensión tiene su propia línea. Las pestañas salen de los mundos que
+// tienen alguna era escrita: al crear la primera era de un mundo desde el panel,
+// su pestaña aparece sola.
+function timelinesOf(eras){
+
+    return mainWorlds
+        .filter(world => eras.some(era => era.world === world.id))
+        .map(world => ({ id: world.id, name: world.name }));
+
+}
+
+
 export default function Timeline(){
 
-    const eras = prepare(timeline);
+    const { world } = useParams();
+
+    const timelines = timelinesOf(timeline);
+
+    // Sin mundo en la dirección se abre el primero. Con uno que no tiene línea,
+    // mejor decirlo que enseñar una página vacía sin explicación.
+    const currentWorld = world ?? timelines[0]?.id;
+
+    const known = timelines.some(item => item.id === currentWorld);
+
+    const eras = prepare(timeline.filter(era => era.world === currentWorld));
 
     // Los lanzamientos de juegos y cómics son otra cronología metida en la
     // misma: se pueden apagar para leer solo la historia del mundo.
@@ -161,6 +185,15 @@ export default function Timeline(){
     }, [current, eras]);
 
 
+    // Después de los hooks a propósito: saltárselos en un render rompería el
+    // orden que React necesita.
+    if(!known){
+
+        return <NotFound title="Timeline not found" />;
+
+    }
+
+
     const currentEra = eras.find(era => era.id === current);
 
     const boardClasses = ["tl-board"];
@@ -181,7 +214,12 @@ export default function Timeline(){
             <nav className="breadcrumb">
                 <Link to="/lore">Lore</Link>
                 <span className="breadcrumb__sep">/</span>
-                <span className="breadcrumb__current">Timeline</span>
+                <span className="breadcrumb__sep">/</span>
+                <Link to="/lore/timeline">Timeline</Link>
+                <span className="breadcrumb__sep">/</span>
+                <span className="breadcrumb__current">
+                    {timelines.find(item => item.id === currentWorld)?.name}
+                </span>
             </nav>
 
             <h1 className="page-title">
@@ -201,6 +239,29 @@ export default function Timeline(){
               lleva los dos interruptores.
             */}
             <div className="tl-bar">
+
+                {/*
+                  Cada dimensión tiene su línea. Son enlaces, no botones: el
+                  mundo va en la dirección, así que se puede enlazar un evento
+                  concreto de una línea concreta, y el botón de atrás funciona.
+                */}
+                <nav className="tl-tabs" aria-label="Timelines">
+
+                    {
+                        timelines.map(item => (
+
+                            <NavLink
+                                key={item.id}
+                                to={`/lore/timeline/${item.id}`}
+                                className={item.id === currentWorld ? "tl-tab tl-tab--on" : "tl-tab"}
+                            >
+                                {item.name}
+                            </NavLink>
+
+                        ))
+                    }
+
+                </nav>
 
                 <p className="tl-bar__where">
 
@@ -244,6 +305,17 @@ export default function Timeline(){
                 }
 
             </div>
+
+            {
+                eras.every(era => (era.items ?? []).length === 0) && (
+
+                    <p className="tl-empty">
+                        This timeline has no events yet. They are added era by era
+                        from the editing panel.
+                    </p>
+
+                )
+            }
 
         </div>
 

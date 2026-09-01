@@ -145,6 +145,11 @@ function App() {
                         element={<Timeline />}
                     />
 
+                    <Route
+                        path="/lore/timeline/:world"
+                        element={<Timeline />}
+                    />
+
 
                     {/* Gods */}
 

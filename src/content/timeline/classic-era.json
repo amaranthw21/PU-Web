@@ -1,19 +1,63 @@
 {
   "order": 3,
   "name": "Classic Era",
+  "world": "mobius",
   "color": "#d1743a",
   "items": [
-    { "type": "year", "text": "Year 0" },
-    { "type": "event", "title": "Sonic is born" },
-    { "type": "label", "text": "Archie Comics // Pre-Genesis Wave" },
-    { "type": "event", "layer": "release", "title": "Sonic the Hedgehog" },
-    { "type": "event", "layer": "release", "title": "Sonic CD" },
-    { "type": "event", "layer": "release", "title": "Sonic the Hedgehog 2" },
-    { "type": "year", "text": "year 11" },
-    { "type": "event", "layer": "release", "title": "Sonic the Hedgehog 3 & Knuckles" },
-    { "type": "event", "layer": "release", "title": "Knuckles' Chaotix" },
-    { "type": "event", "layer": "release", "title": "Sonic Mania" },
-    { "type": "event", "layer": "release", "title": "Sonic Superstars" },
-    { "type": "year", "text": "year 13" }
+    {
+      "type": "year",
+      "text": "Year 0"
+    },
+    {
+      "type": "event",
+      "title": "Sonic is born"
+    },
+    {
+      "type": "label",
+      "text": "Archie Comics // Pre-Genesis Wave"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic the Hedgehog"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic CD"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic the Hedgehog 2"
+    },
+    {
+      "type": "year",
+      "text": "year 11"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic the Hedgehog 3 & Knuckles"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Knuckles' Chaotix"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic Mania"
+    },
+    {
+      "type": "event",
+      "layer": "release",
+      "title": "Sonic Superstars"
+    },
+    {
+      "type": "year",
+      "text": "year 13"
+    }
   ]
 }

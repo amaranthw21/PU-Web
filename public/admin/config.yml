@@ -811,6 +811,12 @@ collections:
     fields:
       - { name: order, label: Order, widget: number, value_type: int, hint: "Position on the Timeline page. Lower numbers come first." }
       - { name: name, label: Name, widget: string, hint: "e.g. 'Ancient Times', 'Classic Era'." }
+      - name: world
+        label: Timeline
+        widget: select
+        options: [mobius, moebius, sol, future-200]
+        default: mobius
+        hint: "Which dimension's timeline this era belongs to. Each one is a separate tab on the Timeline page, and a world only gets a tab once it has an era."
       - { name: color, label: "Era colour", widget: color, required: false, hint: "Tints the era's name, its event cards and the page frame while the reader is inside this era. Empty keeps the site's magenta." }
       - { name: background, label: "Era artwork", widget: image, required: false, hint: "Becomes the page background while the reader is inside this era." }
       - { name: artist, label: "Art by", widget: string, required: false, hint: "Credit shown beside the era's name." }

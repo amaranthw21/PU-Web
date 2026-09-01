@@ -85,7 +85,9 @@ const COLLECTIONS = [
         modules: import.meta.glob("../content/timeline/*.json", { eager: true }),
         // Todas las eras viven en la misma página, así que el resultado lleva a
         // su tramo, no al principio.
-        route: (id, entry) => entry.name ? `/lore/timeline#${slug(entry.name)}` : null
+        route: (id, entry) => entry.name && entry.world
+            ? `/lore/timeline/${entry.world}#${slug(entry.name)}`
+            : null
     },
     {
         type: "section",

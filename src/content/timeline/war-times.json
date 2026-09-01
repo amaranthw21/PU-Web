@@ -1,12 +1,26 @@
 {
   "order": 2,
   "name": "War Times",
+  "world": "mobius",
   "color": "#2f6f9e",
   "items": [
-    { "type": "event", "date": "50 yrs ago", "title": "The Ark is built as an underground colony" },
-    { "type": "event", "title": "The Ark is launched into space" },
-    { "type": "event", "title": "The massacre of the Ark — Maria dies" },
-    { "type": "gap", "text": "a generation" },
+    {
+      "type": "event",
+      "date": "50 yrs ago",
+      "title": "The Ark is built as an underground colony"
+    },
+    {
+      "type": "event",
+      "title": "The Ark is launched into space"
+    },
+    {
+      "type": "event",
+      "title": "The massacre of the Ark — Maria dies"
+    },
+    {
+      "type": "gap",
+      "text": "a generation"
+    },
     {
       "type": "event",
       "title": "The Great War starts",
@@ -15,10 +29,24 @@
     {
       "type": "event",
       "title": "Eggman conquers what will become the Eggpire",
-      "related": [{ "section": "worlds", "id": "mobius" }]
+      "related": [
+        {
+          "section": "worlds",
+          "id": "mobius"
+        }
+      ]
     },
-    { "type": "event", "title": "The Acorn Kingdom becomes a puppet state" },
-    { "type": "event", "title": "The nations unite against Eggman" },
-    { "type": "event", "title": "Eggman is defeated — the Great War ends" }
+    {
+      "type": "event",
+      "title": "The Acorn Kingdom becomes a puppet state"
+    },
+    {
+      "type": "event",
+      "title": "The nations unite against Eggman"
+    },
+    {
+      "type": "event",
+      "title": "Eggman is defeated — the Great War ends"
+    }
   ]
 }

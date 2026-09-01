@@ -327,6 +327,14 @@ type — but the site owner has to rename the file for the address to follow.
 
 ## The Timeline
 
+**There is one timeline per dimension** — Mobius, Moebius, Sol — and the tabs at
+the top of the page switch between them. Which one an era belongs to is its
+**Timeline** field, and a dimension only gets a tab once it has at least one era,
+so creating the first era of a new world makes its tab appear on its own.
+
+The dimension is part of the address (`/lore/timeline/moebius`), which means a
+link can point at one event of one timeline, and the back button works.
+
 The Timeline is **one line running down the page**, and the eras are stretches of
 it rather than separate pictures. Scrolling is how you travel it, so it works the
 same on a phone as on a desktop. Each entry in the **Timeline (eras)** collection
@@ -426,10 +434,13 @@ The Timeline is its own layout rather than a shared one. `TimelineEra` renders a
 era as a list of three-column rows — card, line, date — and the line is a
 pseudo-element down the middle of the list; on narrow screens the same rows
 restack with the line moved to the left margin, so there is no second layout to
-keep in sync. `pages/Timeline.jsx` does the rest: it hands each event its anchor
-and its side (alternating, counting only events, so a gap or a label doesn't
-break the rhythm), and an IntersectionObserver over the era sections drives both
-the sticky "you are here" bar and the page background.
+keep in sync. `pages/Timeline.jsx` does the rest: it filters the eras down to the
+dimension in the URL, hands each event its anchor and its side (alternating,
+counting only events, so a gap or a label doesn't break the rhythm), and an
+IntersectionObserver over the era sections drives both the "you are here" bar and
+the page background. That bar is sticky on desktop only — the frame leaves about
+295px of usable width on a phone, where its controls need three rows and a
+sticky one would eat a fifth of the screen on every page.
 
 A faction's characters part is the regions part with different field names, so
 `ContentBlock` translates `groups`/`characters` into `regions`/`locations` and
