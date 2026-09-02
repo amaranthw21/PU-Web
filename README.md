@@ -194,8 +194,8 @@ kind you want:
 
 | Part type | What it gives you |
 | --- | --- |
-| **Text** | Just text. Leave a blank line between paragraphs. |
-| **Text + image** | Text with an image beside it. **Image side** picks whether the image sits on the right (default) or the left. |
+| **Text** | Text, with an optional **heading** above it. Leave a blank line between paragraphs. |
+| **Text + image** | The same, with an image beside it. The heading stays with the text, so the picture sits next to the whole section. **Image side** picks whether the image sits on the right (default) or the left. |
 | **Image** | Just an image, filling the width. |
 | **Regions** | A map of the country plus a set of regions, each with its own locations. **Countries only.** |
 | **Characters** | The same thing for a faction: groups of characters instead of regions of locations. **Factions only.** |
@@ -206,6 +206,15 @@ picture. On phones, a **Text + image** part stacks: text first, image underneath
 Parts appear in the order you add them, and you can mix as many as you like — a
 block can be text, then text with a picture on the right, then a full-width
 image, and so on. A **Text + image** part with no image just renders as text.
+
+The **heading** is what turns a part into a named section inside the block — like
+*Innate Powers* on the Powers page. Leave it empty and you get a plain paragraph,
+exactly as before. A block can hold several of them, so one block can cover
+several named points instead of needing one block each.
+
+Headings are plain text: **bold or italics inside a paragraph aren't supported
+anywhere on the site yet.** If you need a word emphasised mid-sentence, tell the
+owner — it's a separate change.
 
 ### The Regions part
 
