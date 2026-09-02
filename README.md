@@ -214,14 +214,18 @@ several named points instead of needing one block each.
 
 ### Writing inside a text field
 
-Every text field on the site understands four bits of formatting. Anything else
-you type stays exactly as written.
+The long text fields — descriptions, the text of a part, a world's presentation —
+open with a small toolbar: **bold**, *italics*, a link and a bulleted list. Those
+four buttons are all there is on purpose: they are exactly what the site knows
+how to draw, so nothing you write can come out ignored.
+
+You can also type the formatting by hand, which is often faster:
 
 | You type | You get |
 | --- | --- |
 | `**like this**` | **bold** |
 | `*like this*` | *italics* |
-| A line starting with `- ` | a bullet; several in a row make a list |
+| A line starting with `- ` | a bullet; several in a row make a list (`*` and `+` work too) |
 | `[the words](/lore/gods/chaos)` | a link to that page |
 
 A blank line still starts a new paragraph, and bullets can follow a lead-in
@@ -232,10 +236,11 @@ For links, use the address as it appears after the site's name: `/lore/gods/chao
 `/rulesbook/general-conduct`. Those stay inside the site. A full `https://…`
 address also works and opens in a new tab.
 
-Two things on purpose: italics only work with asterisks (not `_underscores_`,
-which appear in image filenames), and there are no headings, tables or images in
-this syntax — headings are the **Heading** field of a part, and images are their
-own kind of part.
+Three things on purpose: italics only work with asterisks (not `_underscores_`,
+which appear in image filenames); there are no headings, tables or images in this
+syntax — headings are the **Heading** field of a part, and images are their own
+kind of part; and short fields (a card's **Summary**, a chat message, an infobox
+value) stay plain text, because a toolbar on a one-line field is in the way.
 
 ### The Regions part
 
@@ -500,6 +505,26 @@ deliberately not markdown: a library (react-markdown + remark) would add some
 45 kB gzipped to a 104 kB bundle and bring tables, code and headings the site
 doesn't use. Returning elements rather than HTML also means there is no
 `dangerouslySetInnerHTML` and nothing to sanitise.
+
+The panel side is one block at the root of `config.yml`:
+
+```yaml
+field_defaults:
+  richtext:
+    buttons: [bold, italic, link, bulleted-list]
+    editor_components: []
+```
+
+Sveltia's RichText field takes that list and shows only those buttons (it also
+accepts `markdown` as an alias of the type, and stores a Markdown string either
+way), so the toolbar can never offer a heading or a table that `Paragraphs`
+would then ignore. `field_defaults` applies it to every RichText field at once,
+which is why no collection repeats it. Switching a field from `text` to
+`richtext` needs no migration — both store a plain string.
+
+Bullets accept `-`, `*` and `+` because the editor's list button may write any of
+them; a space after the marker is what tells a bullet apart from an italic
+opening the line.
 
 Two traps that are already handled, in case anyone touches it: the inline regex
 is walked with `matchAll`, because `exec` keeps its position inside the regex

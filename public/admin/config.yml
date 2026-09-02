@@ -18,6 +18,16 @@ backend:
 media_folder: public
 public_folder: /
 
+# Editor de texto enriquecido (campos `richtext`): solo los botones que la web
+# sabe pintar. Si el editor ofreciera encabezados, tablas o imágenes, el mod las
+# escribiría y la página las ignoraría, que es peor que no tener el botón.
+#
+# Se pone aquí una vez y vale para todos los campos, sin repetirlo por colección.
+field_defaults:
+  richtext:
+    buttons: [bold, italic, link, bulleted-list]
+    editor_components: []
+
 collections:
   # ───────────────────────── Species ─────────────────────────
   - name: species
@@ -46,7 +56,7 @@ collections:
       - { name: background, label: Background, widget: image, required: false, hint: "Full-page background for this species' own page." }
       - { name: color, label: "Accent color", widget: color, required: false, hint: "Tints the frame, the title and the Basic Information box on this species' own page. Empty keeps the site's magenta." }
       - { name: summary, label: Summary, widget: text, required: false }
-      - { name: description, label: Description, widget: text, required: false, hint: "Intro paragraph, shown above the Contents list. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: richtext, required: false, hint: "Intro paragraph, shown above the Contents list. Leave a blank line between paragraphs." }
 
       # ── Cita de cabecera, pintada como conversación de chat ──
       # Species es la primera colección que la usa, así que el campo se define
@@ -109,7 +119,7 @@ collections:
                 summary: "{{fields.title}} {{fields.text}}"
                 fields:
                   - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
-                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
 
               - name: textImage
                 label: Text + image
@@ -117,7 +127,7 @@ collections:
                 summary: "{{fields.title}} {{fields.text}}"
                 fields:
                   - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
-                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
                   - name: imageSide
@@ -151,7 +161,7 @@ collections:
                     hint: "Add one per group, e.g. 'Known members' or 'Notable individuals'."
                     fields:
                       - { name: title, label: Title, widget: string }
-                      - { name: description, label: Description, widget: text, required: false, hint: "Leave a blank line between paragraphs." }
+                      - { name: description, label: Description, widget: richtext, required: false, hint: "Leave a blank line between paragraphs." }
                       - name: characters
                         label: Characters
                         widget: list
@@ -162,7 +172,7 @@ collections:
                         fields:
                           - { name: name, label: Name, widget: string }
                           - { name: image, label: Image, widget: image, required: false }
-                          - { name: description, label: Description, widget: text, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
+                          - { name: description, label: Description, widget: richtext, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
 
       # ── Filas extra, para lo que no cabe en las fijas ──
       # Igual que la cita: Species es la primera colección que lo usa, así que se
@@ -202,7 +212,7 @@ collections:
         default: main
       - { name: name, label: Name, widget: string }
       - { name: image, label: Main image, widget: image, required: false }
-      - { name: presentation, label: Presentation, widget: text, required: false, hint: "Intro at the top of this hub's page. Leave a blank line between paragraphs. Empty and no intro box appears." }
+      - { name: presentation, label: Presentation, widget: richtext, required: false, hint: "Intro at the top of this hub's page. Leave a blank line between paragraphs. Empty and no intro box appears." }
       - { name: imageFolder, label: "Image folder (optional)", widget: string, required: false }
       - { name: placeholderImage, label: "Placeholder image (optional)", widget: image, required: false }
       - name: factionGroups
@@ -238,7 +248,7 @@ collections:
         default: mobius
       - { name: name, label: Name, widget: string }
       - { name: domain, label: Domain, widget: string, required: false, hint: "First row of the Basic Information box." }
-      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: richtext, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
       - { name: image, label: Image, widget: image, required: false }
       - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "e.g. '30% center'" }
       - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
@@ -294,7 +304,7 @@ collections:
                 summary: "{{fields.title}} {{fields.text}}"
                 fields:
                   - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
-                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
 
               - name: textImage
                 label: Text + image
@@ -302,7 +312,7 @@ collections:
                 summary: "{{fields.title}} {{fields.text}}"
                 fields:
                   - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
-                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
                   - name: imageSide
@@ -341,7 +351,7 @@ collections:
       - { name: backgroundPosition, label: "Background position (CSS)", widget: string, required: false, hint: "e.g. 'center 30%'" }
       - { name: backgroundZoom, label: "Background zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.05" }
       - { name: summary, label: Summary, widget: text, required: false, hint: "Shown inside the accordion. Leave a blank line between paragraphs." }
-      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: richtext, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
 
       - *quote
       - *blocks
@@ -367,7 +377,7 @@ collections:
       - { name: backgroundPosition, label: "Background position (CSS)", widget: string, required: false, hint: "e.g. 'center 30%'" }
       - { name: backgroundZoom, label: "Background zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.05" }
       - { name: summary, label: Summary, widget: text, required: false, hint: "Shown inside the accordion. Leave a blank line between paragraphs." }
-      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: richtext, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
       - *quote
       - *blocks
 
@@ -392,7 +402,7 @@ collections:
       - { name: backgroundPosition, label: "Background position (CSS)", widget: string, required: false, hint: "e.g. 'center 30%'" }
       - { name: backgroundZoom, label: "Background zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.05" }
       - { name: summary, label: Summary, widget: text, required: false, hint: "Shown inside the accordion. Leave a blank line between paragraphs." }
-      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: richtext, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
       - *quote
       - *blocks
 
@@ -422,7 +432,7 @@ collections:
       - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "e.g. '30% center'" }
       - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
       - { name: color, label: "Accent color", widget: color, required: false, hint: "Tints the frame, the name and the Basic Information box on this item's own page. Empty keeps the site's magenta." }
-      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: richtext, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
       - *quote
       - *extra_info
       - *blocks
@@ -443,7 +453,7 @@ collections:
       - { name: order, label: Order, widget: number, value_type: int }
       - { name: name, label: Name, widget: string }
       - { name: image, label: Image, widget: image, required: false }
-      - { name: presentation, label: Presentation, widget: text, required: false, hint: "Intro at the top of this world's page. Leave a blank line between paragraphs." }
+      - { name: presentation, label: Presentation, widget: richtext, required: false, hint: "Intro at the top of this world's page. Leave a blank line between paragraphs." }
       - { name: map, label: Map, widget: image, required: false }
       - name: countryGroups
         label: Country groups
@@ -548,7 +558,7 @@ collections:
                 summary: "{{fields.title}} {{fields.text}}"
                 fields:
                   - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
-                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
 
               - name: textImage
                 label: Text + image
@@ -556,7 +566,7 @@ collections:
                 summary: "{{fields.title}} {{fields.text}}"
                 fields:
                   - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
-                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
                   - name: imageSide
@@ -589,7 +599,7 @@ collections:
                     summary: "{{fields.title}}"
                     fields:
                       - { name: title, label: Title, widget: string }
-                      - { name: description, label: Description, widget: text, required: false, hint: "Leave a blank line between paragraphs." }
+                      - { name: description, label: Description, widget: richtext, required: false, hint: "Leave a blank line between paragraphs." }
                       - name: locations
                         label: Locations
                         widget: list
@@ -600,7 +610,7 @@ collections:
                         fields:
                           - { name: name, label: Name, widget: string }
                           - { name: image, label: Image, widget: image, required: false }
-                          - { name: description, label: Description, widget: text, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
+                          - { name: description, label: Description, widget: richtext, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
 
       # ── Filas extra, para lo que no cabe en las fijas ──
       - *extra_info
@@ -688,7 +698,7 @@ collections:
                 summary: "{{fields.title}} {{fields.text}}"
                 fields:
                   - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
-                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
 
               - name: textImage
                 label: Text + image
@@ -696,7 +706,7 @@ collections:
                 summary: "{{fields.title}} {{fields.text}}"
                 fields:
                   - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
-                  - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
+                  - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
                   - name: imageSide
@@ -730,7 +740,7 @@ collections:
                     hint: "Add one per group of characters, e.g. 'Leaders' or 'Members'."
                     fields:
                       - { name: title, label: Title, widget: string }
-                      - { name: description, label: Description, widget: text, required: false, hint: "Leave a blank line between paragraphs." }
+                      - { name: description, label: Description, widget: richtext, required: false, hint: "Leave a blank line between paragraphs." }
                       - name: characters
                         label: Characters
                         widget: list
@@ -741,7 +751,7 @@ collections:
                         fields:
                           - { name: name, label: Name, widget: string }
                           - { name: image, label: Image, widget: image, required: false }
-                          - { name: description, label: Description, widget: text, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
+                          - { name: description, label: Description, widget: richtext, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
 
       # ── Filas extra, para lo que no cabe en las fijas ──
       - *extra_info
@@ -777,7 +787,7 @@ collections:
       - { name: order, label: Order, widget: number, value_type: int }
       - { name: title, label: Title, widget: string }
       - { name: route, label: "Route (optional)", widget: string, required: false, hint: "e.g. /lore/gods. Leave empty if it doesn't link anywhere." }
-      - { name: description, label: Description, widget: text, required: false, hint: "Shown inside the card on the Lore page. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: richtext, required: false, hint: "Shown inside the card on the Lore page. Leave a blank line between paragraphs." }
 
   # ───────────────────────── Rulesbook ─────────────────────────
   # Cada entrada es un capítulo: una tarjeta en /rulesbook y su propia página
@@ -798,7 +808,7 @@ collections:
       - { name: order, label: Order, widget: number, value_type: int, hint: "Position on the Rulesbook page (number)" }
       - { name: name, label: Name, widget: string, hint: "Chapter title, e.g. 'General Conduct'." }
       - { name: summary, label: Summary, widget: text, required: false, hint: "Shown inside the card on the Rulesbook page." }
-      - { name: description, label: Description, widget: text, required: false, hint: "Intro of this chapter's own page, above the Contents list. Leave a blank line between paragraphs." }
+      - { name: description, label: Description, widget: richtext, required: false, hint: "Intro of this chapter's own page, above the Contents list. Leave a blank line between paragraphs." }
       - *blocks
 
   # ───────────────────────── Timeline ─────────────────────────
@@ -850,7 +860,7 @@ collections:
                 options: [world, release]
                 default: world
                 hint: "'World' is history. 'Release' is a game or comic coming out — those are a separate layer readers can switch off."
-              - { name: text, label: "Extra text", widget: text, required: false, hint: "Optional, under the title. Leave a blank line between paragraphs." }
+              - { name: text, label: "Extra text", widget: richtext, required: false, hint: "Optional, under the title. Leave a blank line between paragraphs." }
               - { name: image, label: "Picture", widget: image, required: false, hint: "A game cover or an illustration, inside the card." }
               - name: portraits
                 label: Characters

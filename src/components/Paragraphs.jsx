@@ -11,6 +11,10 @@ import { Link } from "react-router-dom";
 //     **negrita**            *cursiva*
 //     - viñeta               [texto](/ruta)
 //
+// La viñeta vale con "-", "*" o "+", que son los tres que usa markdown: el
+// editor del panel escribe uno u otro según le parece, y una lista hecha con su
+// botón tiene que salir como lista igual.
+//
 // No es markdown entero a propósito. Una librería (react-markdown + remark) son
 // unos 45 kB comprimidos sobre un bundle de 104 kB, y traería tablas, código y
 // encabezados que aquí no se usan —los encabezados ya los pone el título de cada
@@ -32,6 +36,11 @@ import { Link } from "react-router-dom";
 // posición a la de fuera y el recorrido no avanzaría nunca. matchAll trabaja
 // sobre una copia, así que la recursión es segura.
 const INLINE = /\*\*([\s\S]+?)\*\*|\*([\s\S]+?)\*|\[([^\]]+)\]\(([^)\s]+)\)/g;
+
+
+// El espacio detrás del marcador es lo que distingue una viñeta de una cursiva
+// al principio de la línea: "* item" es viñeta, "*item*" es cursiva.
+const BULLET = /^[-*+] +/;
 
 
 function Anchor({ href, children }){
@@ -114,7 +123,7 @@ export default function Paragraphs({ text, className }){
                 .filter(Boolean)
                 .forEach(line => {
 
-                    const kind = line.startsWith("- ") ? "list" : "text";
+                    const kind = BULLET.test(line) ? "list" : "text";
                     const open = chunks[chunks.length - 1];
 
                     if(open?.kind === kind){
@@ -140,7 +149,7 @@ export default function Paragraphs({ text, className }){
                                 chunk.lines.map((line, k) => (
 
                                     <li key={k}>
-                                        {inline(line.slice(2))}
+                                        {inline(line.replace(BULLET, ""))}
                                     </li>
 
                                 ))
