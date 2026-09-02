@@ -212,9 +212,35 @@ The **heading** is what turns a part into a named section inside the block — l
 exactly as before. A block can hold several of them, so one block can cover
 several named points instead of needing one block each.
 
-Headings are plain text: **bold or italics inside a paragraph aren't supported
-anywhere on the site yet.** If you need a word emphasised mid-sentence, tell the
-owner — it's a separate change.
+### Writing inside a text field
+
+The long text fields — descriptions, the text of a part, a world's presentation —
+open with a small toolbar: **bold**, *italics*, a link and a bulleted list. Those
+four buttons are all there is on purpose: they are exactly what the site knows
+how to draw, so nothing you write can come out ignored.
+
+You can also type the formatting by hand, which is often faster:
+
+| You type | You get |
+| --- | --- |
+| `**like this**` | **bold** |
+| `*like this*` | *italics* |
+| A line starting with `- ` | a bullet; several in a row make a list (`*` and `+` work too) |
+| `[the words](/lore/gods/chaos)` | a link to that page |
+
+A blank line still starts a new paragraph, and bullets can follow a lead-in
+sentence in the same paragraph — write the sentence, then the bullets on their
+own lines.
+
+For links, use the address as it appears after the site's name: `/lore/gods/chaos`,
+`/rulesbook/general-conduct`. Those stay inside the site. A full `https://…`
+address also works and opens in a new tab.
+
+Three things on purpose: italics only work with asterisks (not `_underscores_`,
+which appear in image filenames); there are no headings, tables or images in this
+syntax — headings are the **Heading** field of a part, and images are their own
+kind of part; and short fields (a card's **Summary**, a chat message, an infobox
+value) stay plain text, because a toolbar on a one-line field is in the way.
 
 ### The Regions part
 
@@ -472,6 +498,40 @@ IntersectionObserver over the era sections drives both the "you are here" bar an
 the page background. That bar is sticky on desktop only — the frame leaves about
 295px of usable width on a phone, where its controls need three rows and a
 sticky one would eat a fifth of the screen on every page.
+
+`components/Paragraphs.jsx` is where the small text syntax lives — bold,
+italics, bullets and links, about eighty lines that return React elements. It is
+deliberately not markdown: a library (react-markdown + remark) would add some
+45 kB gzipped to a 104 kB bundle and bring tables, code and headings the site
+doesn't use. Returning elements rather than HTML also means there is no
+`dangerouslySetInnerHTML` and nothing to sanitise.
+
+The panel side is one block at the root of `config.yml`:
+
+```yaml
+field_defaults:
+  richtext:
+    buttons: [bold, italic, link, bulleted-list]
+    editor_components: []
+```
+
+Sveltia's RichText field takes that list and shows only those buttons (it also
+accepts `markdown` as an alias of the type, and stores a Markdown string either
+way), so the toolbar can never offer a heading or a table that `Paragraphs`
+would then ignore. `field_defaults` applies it to every RichText field at once,
+which is why no collection repeats it. Switching a field from `text` to
+`richtext` needs no migration — both store a plain string.
+
+Bullets accept `-`, `*` and `+` because the editor's list button may write any of
+them; a space after the marker is what tells a bullet apart from an italic
+opening the line.
+
+Two traps that are already handled, in case anyone touches it: the inline regex
+is walked with `matchAll`, because `exec` keeps its position inside the regex
+itself and the function recurses (a link's label is parsed too) — sharing that
+position hangs the render in an infinite loop. And the styling hangs off the
+`.paragraph` / `.paragraph-list` classes it adds rather than "any `p` or `li`",
+which would also restyle the Contents list, the breadcrumb and the artist credit.
 
 A faction's characters part is the regions part with different field names, so
 `ContentBlock` translates `groups`/`characters` into `regions`/`locations` and

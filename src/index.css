@@ -2244,6 +2244,64 @@ body::before {
 
 }
 
+/* Lo que el CMS puede escribir dentro de un texto: negrita, cursiva, viñetas y
+   enlaces. Se estila aquí, en un solo sitio, porque Paragraphs lo usan todos los
+   campos de texto del sitio.
+
+   Los selectores cuelgan de las clases que pone Paragraphs (.paragraph y
+   .paragraph-list) y no de "cualquier p o li dentro del contenido": si no, se
+   llevaban por delante la lista de contenidos, la miga de pan y el crédito del
+   artista, que también son enlaces pero no texto del CMS. */
+.paragraph strong,
+.paragraph-list strong {
+
+    color: white;
+
+}
+
+.paragraph a,
+.paragraph-list a {
+
+    color: color-mix(in srgb, var(--accent) 25%, white);
+
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    transition: color 0.2s;
+
+}
+
+@media (hover: hover) {
+
+    .paragraph a:hover,
+    .paragraph-list a:hover {
+
+        color: white;
+
+    }
+
+}
+
+.paragraph-list {
+
+    margin: 0 0 18px;
+    padding-left: 22px;
+
+}
+
+.paragraph-list li {
+
+    margin-bottom: 7px;
+
+}
+
+.paragraph-list li::marker {
+
+    color: color-mix(in srgb, var(--accent) 55%, transparent);
+
+}
+
+
 /* El título de una parte: un apartado con nombre dentro del bloque. Se queda
    por debajo del título del bloque (que va en su cabecera con icono) y por
    encima del texto, con el subrayado ajustado al ancho de la palabra —de ahí el
