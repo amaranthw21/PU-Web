@@ -8,7 +8,7 @@
   "background": "/species/yui-karasunos-official-new-sonic-channel-artwork-of-big-and-v0-756vi46y0yi61.webp",
   "color": "#b9d220",
   "summary": "Mobians are one of the most widespread and populous races in Mobius along with humans. They are anthropomorphic animals, encompassing countless species: hedgehogs, wolves, birds, reptiles, insects, aquatic creatures.... Any animal you can imagine can be a Mobian. \n\nThey can be found on nearly every continent and in almost every nation, forming the backbone of many cultures, societies, and conflicts.\nThe exact origin of Mobians is unknown. They are native to the planet, evolving naturally over millennia alongside humans and other intelligent races. Ancient ruins, murals, and records suggest Mobians have existed since prehistoric times, long before modern civilizations formed.",
-  "description": "",
+  "description": "Mobians are one of the most widespread and diverse races on Mobius, consisting of countless anthropomorphic animal species. They are native to the planet and have existed alongside humans and other intelligent races since prehistoric times. Today, Mobians can be found across nearly every continent and culture, with their counterparts on Moebius known as Moebians and those on Sol as Solians.",
   "quote": [
     {
       "speaker": "Walpurgis",
@@ -21,17 +21,11 @@
       "text": "\"Further back than anyone still alive can tell you.\""
     }
   ],
-  "origin": "Mobius",
-  "habitat": "Great Forest and the northern plains",
+  "origin": "Mobius - Moebius - Sol",
+  "habitat": "All the planet",
   "lifespan": "Around 90 years",
-  "traits": [
-    "Lorem ipsum dolor sit amet",
-    "Consectetur adipiscing elit"
-  ],
-  "abilities": [
-    "Sed do eiusmod tempor",
-    "Ut labore et dolore magna"
-  ],
+  "traits": [],
+  "abilities": [],
   "blocks": [
     {
       "title": "Overview",
@@ -39,10 +33,12 @@
       "parts": [
         {
           "type": "text",
+          "title": "",
           "text": "Mobians are one of the most widespread and populous races in Mobius along with humans. They are anthropomorphic animals, encompassing countless species: hedgehogs, wolves, birds, reptiles, insects, aquatic creatures.... Any animal you can imagine can be a Mobian."
         },
         {
           "type": "textImage",
+          "title": "",
           "text": "They can be found on nearly every continent and in almost every nation, forming the backbone of many cultures, societies, and conflicts.\nThe exact origin of Mobians is unknown. They are native to the planet, evolving naturally over millennia alongside humans and other intelligent races. Ancient ruins, murals, and records suggest Mobians have existed since prehistoric times, long before modern civilizations formed.",
           "image": "/species/FXCFiZRXEAEiHPP-removebg-preview (2).png",
           "caption": "Sonic - by Yui Karasuno",
@@ -56,9 +52,10 @@
       "parts": [
         {
           "type": "textImage",
-          "text": "Mobians are extremely abundant and globally distributed.\n\nAlthough some species of Mobians are more common in certain parts of a planet than in others, the population is fairly distributed. So it's not unusual to find a kangaroo in Eurish or a polar bear in Shamar.\n\nIn Moebius these species are called Moebians, while in Sol they are called Solians.",
+          "title": "",
+          "text": "Mobians are extremely abundant and globally distributed.\n\nAlthough some species of Mobians are more common in certain parts of a planet than in others, the population is fairly distributed. So it's not unusual to find a kangaroo in Eurish or a polar bear in Shamar.\n\n**In Moebius these species are called Moebians, while in Sol they are called Solians.**",
           "image": "/species/images-removebg-preview.png",
-          "caption": "",
+          "caption": "Honey the Cat - By Yui Karasuno",
           "imageSide": "left"
         }
       ]
@@ -66,47 +63,96 @@
     {
       "title": "Natural Powers & Chaos Affinity",
       "icon": "",
-      "parts": []
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Innate Powers",
+          "text": "Some Mobians are among the few species born with innate powers, fueled by an internal reserve of planetary energy. Those from Mobius draw upon **Chaos Energy**, while those from Moebius and Sol respectively draw upon **Anarchy Energy** and **Harmony Energy**.\n\nThese powers can manifest in many different ways, including super speed, elemental manipulation, enhanced strength, flight, psychic abilities, fire-breathing, and more. Generally, each Mobian possesses their own unique set of abilities, independent of their species, family, or country of origin. However, it is possible for two or more Mobians to develop similar or even identical power sets.\n\nMobians cannot acquire innate powers later in life. They are either born with them or they are not. However, some Mobians may possess **dormant powers** that remain inactive until something triggers or awakens them. Until that point, they may appear to be completely normal, unpowered Mobians.\n\nThere are several ways in which dormant powers can be awakened, though the most common are heavy exposure to their planet's respective energy—Chaos, Anarchy, or Harmony—or a powerful traumatic event. Once awakened, these dormant abilities can manifest much like innate powers that were active from birth.",
+          "image": "/species/a73657d45120f66ec48ba816a049b740-removebg-preview.png",
+          "caption": "Blaze the Cat - By Yui Karasuno",
+          "imageSide": "right"
+        },
+        {
+          "type": "text",
+          "title": "Magic Powers",
+          "text": "Some Mobians have a special connection to their planet's ambient energy, allowing them to manipulate it and use it to perform what is commonly referred to as **\"magic.\"** Mobians from Mobius draw upon **Chaos Energy**, while those from Moebius and Sol respectively use **Anarchy Energy** and **Harmony Energy**.\n\nMagic can manifest in countless different ways, depending on the caster, their natural affinity, and how they have learned to manipulate the energy. It can take the form of traditional spells, physical enhancement, elemental manipulation, divination, and many other applications. Because of this versatility, there is often little obvious distinction between magic and innate powers. An ability that appears to be an innate power may actually be the result of magic, and vice versa.\n\nLike humans, Mobians require a **Catalyst** or **Artifact** to properly channel and control magical energy. A Catalyst can take virtually any form, depending on the caster and their tradition. While wands and staffs are among the more traditional choices, a Catalyst could just as easily be a sword, pendant, musical instrument, or almost any other object capable of serving as a focus for the caster's power. The object itself does not necessarily have to be inherently magical (when they are magical they are Artifacts); its purpose is to help the caster channel, shape, and control the ambient planetary energy.\n\nHowever, there is an important limitation: **only Mobians without innate powers are capable of learning magic.** Those born with innate abilities are unable to develop this connection to the ambient planetary energy as their own reserves clash with the ambient energy, meaning the two paths are mutually exclusive."
+        },
+        {
+          "type": "image",
+          "image": "/species/yui-karasunos-newest-artwork-of-chaos-and-tikal-v0-asg8veakjo971.webp",
+          "caption": "Tikal & Chaos - Art by Yui Karasuno"
+        },
+        {
+          "type": "textImage",
+          "title": "Biological Powers",
+          "text": "Some Mobian species may share similar abilities as a result of specific genetic traits or adaptations unique to their species. However, there is no single biological ability that all Mobians possess simply by virtue of being Mobian.\n\nFor example, many two-tailed fox Mobians are naturally capable of flight by rapidly rotating their tails like a helicopter. Likewise, Mobians with particularly large or specially shaped ears may be able to use them to generate enough lift to fly, essentially functioning like wings. Other species may possess their own unique physical adaptations that grant them abilities not shared by other Mobians.\n\nThese abilities are considered **species traits** rather than innate powers. While they may be unusual or even superhuman by the standards of other species, they are a natural part of the Mobian's biology and can be explained by just pointing to the organ or part of the body in question.",
+          "image": "/species/tumblr_5fa37b5a807f569343114571dca51194_422fdaea_640-removebg-preview (1).png",
+          "caption": "Tails the Fox - By Yui Karasuno",
+          "imageSide": "left"
+        },
+        {
+          "type": "textImage",
+          "title": "Other",
+          "text": "Still, not all Mobians possess supernatural abilities. Many live entirely ordinary lives, relying instead on skill, training, technology, teamwork, or their connection to a **Wisp** rather than any innate power or magical ability.\n\nInnate powers and magic are **rare, but not exceptionally so**. They are uncommon enough to be noteworthy, but common enough that their existence is a normal and accepted part of Mobian society. Most importantly, possessing an innate power or the ability to use magic does not automatically make a Mobian important, powerful, or influential. A Mobian's abilities are only one aspect of who they are, and their social standing or impact on the world depends far more on how they choose to use their talents—and on the circumstances of their life.",
+          "image": "/species/GeKGaFrWMAAznYe-removebg-preview.png",
+          "caption": "Amy the Hedgehog - By Yui Karasuno",
+          "imageSide": "right"
+        }
+      ]
     },
     {
-      "title": "Known members",
+      "title": "Physical Traits",
       "icon": "",
       "parts": [
         {
-          "type": "characters",
-          "image": "",
-          "caption": "",
-          "groups": [
-            {
-              "title": "Notable individuals",
-              "description": "El apartado \"Characters\" es el mismo que usan las facciones: un carrusel de retratos que se abren al pulsarlos.",
-              "characters": [
-                {
-                  "name": "Argus",
-                  "image": "/gods/argus.png",
-                  "description": "Los personajes con descripción se pueden pulsar y abren este panel debajo. Los que no la tienen, no."
-                },
-                {
-                  "name": "Ilumina",
-                  "image": "/gods/ilumina.webp",
-                  "description": "Otro ejemplo, para ver cómo queda el carrusel con más de uno."
-                },
-                {
-                  "name": "Sin retrato",
-                  "image": "",
-                  "description": "Sin imagen se pinta el hueco vacío con el color de acento."
-                }
-              ]
-            }
-          ]
+          "type": "textImage",
+          "title": "",
+          "text": "Mobians are generally considered the **baseline standard of physical capability** when compared to other races. An average, untrained Mobian possesses no inherent physical advantage over other species and is typically weaker than an average human.\n\nIndividual Mobians can, of course, exceed this baseline through **training, physical conditioning, specialized skills, or genetic advantages**. Certain species may also possess natural physical traits that give them advantages in areas such as strength, speed, agility, endurance, or flight. However, these are exceptions based on the individual or their species rather than traits shared by all Mobians.\n\nIn other words, being a Mobian does not inherently make someone stronger, faster, or tougher than members of other races. An ordinary Mobian is simply the standard against which physical capabilities are generally measured.",
+          "image": "/species/2025-avatar-pict.jpeg.f7db98cbf7f120ac256965cd4a9ee66a-removebg-preview.png",
+          "caption": "Gadget the Wolf - Art by Yui Karasuno",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Special Cases",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Below, we will go over a few notable cases.\n\nIf you cannot find what you are looking for in this list or still have questions or doubts after reading it, please contact a moderator for clarification."
+        },
+        {
+          "type": "textImage",
+          "title": "Echidnas",
+          "text": "The Echidna species is considered nearly extinct on Mobius. At present, only three known Echidnas remain: Knuckles, Julie-Su, and Shade.\n\nFor simplicity, Julie-Su and Shade are considered to have originated from the Twilight Cage, which combines the concepts of the Dark Brotherhood and the Dark Legion into a single group. Both were transported to Mobius after Argus determined that they were capable of redemption.\n\nThere is also a living population of Echidnas on Moebius. This tribe is composed of O'nux and original characters (OCs).\n\nThere are no Echidnas in Sol.\n\n**OC Restriction: At present, any OC Echidna must belong to the Moebian Echidna tribe. Mobius-born Echidna OCs are not currently permitted due to the species' near-extinction status.**",
+          "image": "/species/788779265_17981155986116633_4656412838192440459_n-removebg-preview.png",
+          "caption": "Knuckles the Echidna - Art by Yui Karasuno",
+          "imageSide": "right"
+        },
+        {
+          "type": "text",
+          "title": "Tasmanian Devils",
+          "text": "As with the Echidnas, Tasmanian devils are almost extinct on Mobius with the exception of Thrash; however, there is a tribe of them, the Matangaru, on Maritana (Moebius)."
+        },
+        {
+          "type": "text",
+          "title": "Prehistoric Animals",
+          "text": "Your character can be based on a prehistoric animal. It doesn't need to be thousands or hundreds of years old. On this planet, they didn't go extinct; they're just another species of Mobian."
+        },
+        {
+          "type": "text",
+          "title": "Hybrids of Animals",
+          "text": "If you want your character to be a mix of cat and dog, or if you want your tiger to have wings... feel free to do so. Hybrid animals are allowed. \n\nNor do you need to feel obligated to make your character completely anthropomorphic; if you want your character to have a tail instead of legs or to be some kind of centaur... feel free to do so."
+        },
+        {
+          "type": "text",
+          "title": "Mythological / Fantasy Animals",
+          "text": "Yes, your character can be based on a mythological creature or monster. If you want to be a dragon, a phoenix, a kelpie, a kraken, a unicorn or whatever other creature your mind can conjure… feel free. However, keep in mind that, while they may be a bit rarer than a blue hedgehog, pun intended, they're not exactly one of a kind…"
         }
       ]
     }
   ],
-  "extraInfo": [
-    {
-      "label": "First recorded",
-      "value": "Ejemplo de fila extra del Basic Information"
-    }
-  ]
+  "extraInfo": []
 }
