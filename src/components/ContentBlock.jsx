@@ -38,11 +38,27 @@ function BlockText({ title, text }){
 // lados; "whole" la deja entera con su proporción, centrada, y renuncia a
 // igualar la altura. Lo segundo es para mapas y fotos de grupo, que un recorte
 // destroza.
-function BlockImage({ image, caption, fit }){
+// Los tamaños admitidos se listan aquí y no se pega el valor en la clase a
+// pelo: el desplegable del panel ya los limita, pero un JSON editado a mano no.
+const SIZES = ["small", "medium", "large"];
+
+
+function BlockImage({ image, caption, fit, size }){
+
+    const classes = ["block-figure"];
+
+    if(fit === "whole"){
+        classes.push("block-figure--whole");
+    }
+
+    if(SIZES.includes(size)){
+        classes.push(`block-figure--${size}`);
+    }
+
 
     return (
 
-        <figure className={fit === "whole" ? "block-figure block-figure--whole" : "block-figure"}>
+        <figure className={classes.join(" ")}>
 
             {/*
               La imagen va envuelta porque dentro de un "texto + imagen" esa
@@ -92,7 +108,14 @@ function BlockPart({ part }){
             return null;
         }
 
-        return <BlockImage image={part.image} caption={part.caption} fit={part.fit} />;
+        return (
+            <BlockImage
+                image={part.image}
+                caption={part.caption}
+                fit={part.fit}
+                size={part.size}
+            />
+        );
 
     }
 

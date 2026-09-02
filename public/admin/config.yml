@@ -153,6 +153,17 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: size
+                    label: "Picture width"
+                    widget: select
+                    options:
+                      - { label: "Full width", value: full }
+                      - { label: "Large (two thirds)", value: large }
+                      - { label: "Medium (half)", value: medium }
+                      - { label: "Small (a third)", value: small }
+                    default: full
+                    required: false
+                    hint: "How much of the page's width the picture takes. Anything below full width is centred."
                   - name: fit
                     label: "Picture size"
                     widget: select
@@ -356,6 +367,17 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: size
+                    label: "Picture width"
+                    widget: select
+                    options:
+                      - { label: "Full width", value: full }
+                      - { label: "Large (two thirds)", value: large }
+                      - { label: "Medium (half)", value: medium }
+                      - { label: "Small (a third)", value: small }
+                    default: full
+                    required: false
+                    hint: "How much of the page's width the picture takes. Anything below full width is centred."
                   - name: fit
                     label: "Picture size"
                     widget: select
@@ -628,6 +650,17 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: size
+                    label: "Picture width"
+                    widget: select
+                    options:
+                      - { label: "Full width", value: full }
+                      - { label: "Large (two thirds)", value: large }
+                      - { label: "Medium (half)", value: medium }
+                      - { label: "Small (a third)", value: small }
+                    default: full
+                    required: false
+                    hint: "How much of the page's width the picture takes. Anything below full width is centred."
                   - name: fit
                     label: "Picture size"
                     widget: select
@@ -786,6 +819,17 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: size
+                    label: "Picture width"
+                    widget: select
+                    options:
+                      - { label: "Full width", value: full }
+                      - { label: "Large (two thirds)", value: large }
+                      - { label: "Medium (half)", value: medium }
+                      - { label: "Small (a third)", value: small }
+                    default: full
+                    required: false
+                    hint: "How much of the page's width the picture takes. Anything below full width is centred."
                   - name: fit
                     label: "Picture size"
                     widget: select
