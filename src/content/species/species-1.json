@@ -2,11 +2,13 @@
   "order": 1,
   "group": "main",
   "name": "Species One",
-  "image": "/species/species-1.png",
-  "background": "/worlds/column_01_03.jpg",
-  "color": "#4fb286",
-  "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  "description": "Ficha de ejemplo, para ver cómo queda una especie con todos sus apartados rellenos. El resto de especies siguen siendo placeholders.\n\nEsta entradilla es el campo Description: va antes del índice, igual que en las fichas de dioses e items.",
+  "image": "/species/a3608ed2dfc77b329c7994999395d52a.jpg",
+  "imagePosition": "",
+  "imageZoom": null,
+  "background": "/species/yui-karasunos-official-new-sonic-channel-artwork-of-big-and-v0-756vi46y0yi61.webp",
+  "color": "#b9d220",
+  "summary": "Mobians are one of the most widespread and populous races in Mobius along with humans. They are anthropomorphic animals, encompassing countless species: hedgehogs, wolves, birds, reptiles, insects, aquatic creatures.... Any animal you can imagine can be a Mobian. \n\nThey can be found on nearly every continent and in almost every nation, forming the backbone of many cultures, societies, and conflicts.\nThe exact origin of Mobians is unknown. They are native to the planet, evolving naturally over millennia alongside humans and other intelligent races. Ancient ruins, murals, and records suggest Mobians have existed since prehistoric times, long before modern civilizations formed.",
+  "description": "",
   "quote": [
     {
       "speaker": "Walpurgis",
@@ -37,26 +39,34 @@
       "parts": [
         {
           "type": "text",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          "text": "Mobians are one of the most widespread and populous races in Mobius along with humans. They are anthropomorphic animals, encompassing countless species: hedgehogs, wolves, birds, reptiles, insects, aquatic creatures.... Any animal you can imagine can be a Mobian."
         },
         {
           "type": "textImage",
-          "text": "Una parte de tipo \"Text + image\": la imagen se pone a un lado del texto y el mod elige de qué lado cae.",
-          "image": "/worlds/mobius.jpg",
-          "caption": "Pie de foto de ejemplo",
+          "text": "They can be found on nearly every continent and in almost every nation, forming the backbone of many cultures, societies, and conflicts.\nThe exact origin of Mobians is unknown. They are native to the planet, evolving naturally over millennia alongside humans and other intelligent races. Ancient ruins, murals, and records suggest Mobians have existed since prehistoric times, long before modern civilizations formed.",
+          "image": "/species/FXCFiZRXEAEiHPP-removebg-preview (2).png",
+          "caption": "Sonic - by Yui Karasuno",
           "imageSide": "right"
         }
       ]
     },
     {
-      "title": "Biology",
+      "title": "Population",
       "icon": "",
       "parts": [
         {
-          "type": "text",
-          "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+          "type": "textImage",
+          "text": "Mobians are extremely abundant and globally distributed.\n\nAlthough some species of Mobians are more common in certain parts of a planet than in others, the population is fairly distributed. So it's not unusual to find a kangaroo in Eurish or a polar bear in Shamar.\n\nIn Moebius these species are called Moebians, while in Sol they are called Solians.",
+          "image": "/species/images-removebg-preview.png",
+          "caption": "",
+          "imageSide": "left"
         }
       ]
+    },
+    {
+      "title": "Natural Powers & Chaos Affinity",
+      "icon": "",
+      "parts": []
     },
     {
       "title": "Known members",
