@@ -4,9 +4,31 @@ import asset from "../lib/asset";
 
 
 // Los párrafos de un bloque llevan siempre la misma clase.
-function BlockText({ text }){
+//
+// El título es opcional: es lo que convierte una parte en un apartado con
+// nombre ("Innate Powers:") en vez de un párrafo suelto. Va en h3 porque el
+// bloque que lo contiene ya usa un h2.
+function BlockText({ title, text }){
 
-    return <Paragraphs text={text} className="country-block__text" />;
+    return (
+
+        <>
+
+            {
+                title?.trim() && (
+
+                    <h3 className="block-part__title">
+                        {title}
+                    </h3>
+
+                )
+            }
+
+            <Paragraphs text={text} className="country-block__text" />
+
+        </>
+
+    );
 
 }
 
@@ -45,7 +67,7 @@ function BlockPart({ part }){
 
     if(part.type === "text"){
 
-        return <BlockText text={part.text} />;
+        return <BlockText title={part.title} text={part.text} />;
 
     }
 
@@ -96,7 +118,7 @@ function BlockPart({ part }){
         // Sin imagen se comporta como una parte de solo texto, para que una
         // parte a medio rellenar no deje un hueco raro.
         if(!part.image?.trim()){
-            return <BlockText text={part.text} />;
+            return <BlockText title={part.title} text={part.text} />;
         }
 
         const side = part.imageSide === "left" ? "left" : "right";
@@ -105,8 +127,13 @@ function BlockPart({ part }){
 
             <div className={`block-split block-split--${side}`}>
 
+                {/*
+                  El título va dentro de la columna de texto, no encima de las
+                  dos: así la imagen queda al lado del apartado completo, título
+                  incluido.
+                */}
                 <div className="block-split__text">
-                    <BlockText text={part.text} />
+                    <BlockText title={part.title} text={part.text} />
                 </div>
 
                 <BlockImage image={part.image} caption={part.caption} />

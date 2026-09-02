@@ -106,15 +106,17 @@ collections:
               - name: text
                 label: Text
                 widget: object
-                summary: "Text: {{fields.text}}"
+                summary: "{{fields.title}} {{fields.text}}"
                 fields:
+                  - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
                   - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
 
               - name: textImage
                 label: Text + image
                 widget: object
-                summary: "Text + image: {{fields.text}}"
+                summary: "{{fields.title}} {{fields.text}}"
                 fields:
+                  - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
                   - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
@@ -289,15 +291,17 @@ collections:
               - name: text
                 label: Text
                 widget: object
-                summary: "Text: {{fields.text}}"
+                summary: "{{fields.title}} {{fields.text}}"
                 fields:
+                  - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
                   - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
 
               - name: textImage
                 label: Text + image
                 widget: object
-                summary: "Text + image: {{fields.text}}"
+                summary: "{{fields.title}} {{fields.text}}"
                 fields:
+                  - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
                   - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
@@ -541,15 +545,17 @@ collections:
               - name: text
                 label: Text
                 widget: object
-                summary: "Text: {{fields.text}}"
+                summary: "{{fields.title}} {{fields.text}}"
                 fields:
+                  - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
                   - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
 
               - name: textImage
                 label: Text + image
                 widget: object
-                summary: "Text + image: {{fields.text}}"
+                summary: "{{fields.title}} {{fields.text}}"
                 fields:
+                  - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
                   - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
@@ -679,15 +685,17 @@ collections:
               - name: text
                 label: Text
                 widget: object
-                summary: "Text: {{fields.text}}"
+                summary: "{{fields.title}} {{fields.text}}"
                 fields:
+                  - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
                   - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
 
               - name: textImage
                 label: Text + image
                 widget: object
-                summary: "Text + image: {{fields.text}}"
+                summary: "{{fields.title}} {{fields.text}}"
                 fields:
+                  - { name: title, label: "Heading (optional)", widget: string, required: false, hint: "A heading above this text, like ‘Innate Powers’. Leave it empty for a plain paragraph." }
                   - { name: text, label: Text, widget: text, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
