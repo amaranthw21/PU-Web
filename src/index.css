@@ -2348,6 +2348,61 @@ body::before {
 
 }
 
+/* Tamaño de una imagen suelta. Sin esto ocupa siempre todo el ancho, que para
+   un retrato o un icono es demasiado. Van centradas: una imagen a media anchura
+   pegada al margen izquierdo parece un descuido.
+
+   No afecta a "texto + imagen": ahí el ancho lo manda su columna, y la parte no
+   tiene este campo. */
+.block-figure--small,
+.block-figure--medium,
+.block-figure--large {
+
+    margin-inline: auto;
+
+}
+
+.block-figure--small {
+
+    max-width: 33%;
+
+}
+
+.block-figure--medium {
+
+    max-width: 50%;
+
+}
+
+.block-figure--large {
+
+    max-width: 66%;
+
+}
+
+/* En una pantalla estrecha un tercio del ancho no se ve: los tamaños suben. */
+@media (max-width: 700px) {
+
+    .block-figure--small {
+
+        max-width: 60%;
+
+    }
+
+    .block-figure--medium {
+
+        max-width: 80%;
+
+    }
+
+    .block-figure--large {
+
+        max-width: 100%;
+
+    }
+
+}
+
 .block-figure img {
 
     display: block;

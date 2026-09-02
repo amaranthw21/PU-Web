@@ -196,7 +196,7 @@ kind you want:
 | --- | --- |
 | **Text** | Text, with an optional **heading** above it. Leave a blank line between paragraphs. |
 | **Text + image** | The same, with an image beside it. The heading stays with the text, so the picture sits next to the whole section. **Image side** picks whether the image sits on the right (default) or the left. **Picture size** decides what happens when the picture and the text aren't the same shape: *fill the space* (the default) grows it to the height of the text and crops its sides, and *show the whole picture* keeps it complete and centred instead. |
-| **Image** | Just an image, filling the width. It has the same **Picture size** choice. |
+| **Image** | Just an image. **Picture width** sets how much of the page it takes — full width, two thirds, half or a third — and anything under full width is centred. It has the same **Picture size** choice as above, and the two combine: half width *and* the whole picture, for instance. |
 | **Regions** | A map of the country plus a set of regions, each with its own locations. **Countries only.** |
 | **Characters** | The same thing for a faction: groups of characters instead of regions of locations. **Factions only.** |
 
@@ -498,6 +498,13 @@ IntersectionObserver over the era sections drives both the "you are here" bar an
 the page background. That bar is sticky on desktop only — the frame leaves about
 295px of usable width on a phone, where its controls need three rows and a
 sticky one would eat a fifth of the screen on every page.
+
+A standalone image also takes a **Picture width** (`size`): `small`, `medium` and
+`large` cap it at a third, a half and two thirds of the content width and centre
+it, and below 700px those relax to 60/80/100% — a third of a phone screen is not
+a picture. The value goes through a whitelist in `ContentBlock` rather than
+straight into a class name, because a hand-edited JSON isn't limited by the
+panel's dropdown.
 
 The **Picture size** field is the escape hatch for images that a crop would
 ruin — a map, a group shot. `whole` drops the grid floor, lets the image keep its
