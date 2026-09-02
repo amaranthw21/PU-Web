@@ -33,11 +33,16 @@ function BlockText({ title, text }){
 }
 
 
-function BlockImage({ image, caption }){
+// `fit` decide qué hacer cuando la caja no tiene la proporción de la imagen:
+// "fill" (lo normal) la estira hasta la altura del texto y recorta por los
+// lados; "whole" la deja entera con su proporción, centrada, y renuncia a
+// igualar la altura. Lo segundo es para mapas y fotos de grupo, que un recorte
+// destroza.
+function BlockImage({ image, caption, fit }){
 
     return (
 
-        <figure className="block-figure">
+        <figure className={fit === "whole" ? "block-figure block-figure--whole" : "block-figure"}>
 
             {/*
               La imagen va envuelta porque dentro de un "texto + imagen" esa
@@ -87,7 +92,7 @@ function BlockPart({ part }){
             return null;
         }
 
-        return <BlockImage image={part.image} caption={part.caption} />;
+        return <BlockImage image={part.image} caption={part.caption} fit={part.fit} />;
 
     }
 
@@ -145,7 +150,7 @@ function BlockPart({ part }){
                     <BlockText title={part.title} text={part.text} />
                 </div>
 
-                <BlockImage image={part.image} caption={part.caption} />
+                <BlockImage image={part.image} caption={part.caption} fit={part.fit} />
 
             </div>
 

@@ -2641,6 +2641,41 @@ button.region-loc {
 
 }
 
+/* "Imagen entera": renuncia a igualar la altura y respeta la proporción de la
+   imagen, centrada en la fila. Es la salida para mapas y fotos de grupo, donde
+   recortar por los lados se lleva por delante lo que se quería enseñar. */
+.block-figure--whole .block-figure__media::before {
+
+    content: none;
+
+}
+
+/* Basta con esto, aunque la regla de la imagen estirada sea más específica: en
+   este modo la caja vuelve a ser un bloque de altura automática, y un
+   height: 100% contra una altura automática no impone nada. */
+.block-figure--whole img {
+
+    aspect-ratio: auto;
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+.block-split .block-figure--whole {
+
+    align-self: center;
+
+}
+
+.block-split .block-figure--whole .block-figure__media {
+
+    display: block;
+
+    flex: none;
+
+}
+
 .block-split .block-figure__media img {
 
     grid-area: 1 / 1;

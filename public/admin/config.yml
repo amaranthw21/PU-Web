@@ -130,6 +130,15 @@ collections:
                   - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: fit
+                    label: "Picture size"
+                    widget: select
+                    options:
+                      - { label: "Fill the space (crops the sides)", value: fill }
+                      - { label: "Show the whole picture", value: whole }
+                    default: fill
+                    required: false
+                    hint: "'Fill the space' grows the picture to the height of the text beside it and crops its sides. Choose 'whole picture' for a map or a group shot, where cropping would cut out what matters."
                   - name: imageSide
                     label: Image side
                     widget: select
@@ -144,6 +153,15 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: fit
+                    label: "Picture size"
+                    widget: select
+                    options:
+                      - { label: "Fill the space (crops the sides)", value: fill }
+                      - { label: "Show the whole picture", value: whole }
+                    default: fill
+                    required: false
+                    hint: "'Fill the space' grows the picture to the height of the text beside it and crops its sides. Choose 'whole picture' for a map or a group shot, where cropping would cut out what matters."
 
               - name: characters
                 label: Characters
@@ -315,6 +333,15 @@ collections:
                   - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: fit
+                    label: "Picture size"
+                    widget: select
+                    options:
+                      - { label: "Fill the space (crops the sides)", value: fill }
+                      - { label: "Show the whole picture", value: whole }
+                    default: fill
+                    required: false
+                    hint: "'Fill the space' grows the picture to the height of the text beside it and crops its sides. Choose 'whole picture' for a map or a group shot, where cropping would cut out what matters."
                   - name: imageSide
                     label: Image side
                     widget: select
@@ -329,6 +356,15 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: fit
+                    label: "Picture size"
+                    widget: select
+                    options:
+                      - { label: "Fill the space (crops the sides)", value: fill }
+                      - { label: "Show the whole picture", value: whole }
+                    default: fill
+                    required: false
+                    hint: "'Fill the space' grows the picture to the height of the text beside it and crops its sides. Choose 'whole picture' for a map or a group shot, where cropping would cut out what matters."
 
   # ───────────────────────── Energies ─────────────────────────
   - name: energy
@@ -569,6 +605,15 @@ collections:
                   - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: fit
+                    label: "Picture size"
+                    widget: select
+                    options:
+                      - { label: "Fill the space (crops the sides)", value: fill }
+                      - { label: "Show the whole picture", value: whole }
+                    default: fill
+                    required: false
+                    hint: "'Fill the space' grows the picture to the height of the text beside it and crops its sides. Choose 'whole picture' for a map or a group shot, where cropping would cut out what matters."
                   - name: imageSide
                     label: Image side
                     widget: select
@@ -583,6 +628,15 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: fit
+                    label: "Picture size"
+                    widget: select
+                    options:
+                      - { label: "Fill the space (crops the sides)", value: fill }
+                      - { label: "Show the whole picture", value: whole }
+                    default: fill
+                    required: false
+                    hint: "'Fill the space' grows the picture to the height of the text beside it and crops its sides. Choose 'whole picture' for a map or a group shot, where cropping would cut out what matters."
 
               - name: regions
                 label: Regions
@@ -709,6 +763,15 @@ collections:
                   - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: fit
+                    label: "Picture size"
+                    widget: select
+                    options:
+                      - { label: "Fill the space (crops the sides)", value: fill }
+                      - { label: "Show the whole picture", value: whole }
+                    default: fill
+                    required: false
+                    hint: "'Fill the space' grows the picture to the height of the text beside it and crops its sides. Choose 'whole picture' for a map or a group shot, where cropping would cut out what matters."
                   - name: imageSide
                     label: Image side
                     widget: select
@@ -723,6 +786,15 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - name: fit
+                    label: "Picture size"
+                    widget: select
+                    options:
+                      - { label: "Fill the space (crops the sides)", value: fill }
+                      - { label: "Show the whole picture", value: whole }
+                    default: fill
+                    required: false
+                    hint: "'Fill the space' grows the picture to the height of the text beside it and crops its sides. Choose 'whole picture' for a map or a group shot, where cropping would cut out what matters."
 
               - name: characters
                 label: Characters
