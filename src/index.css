@@ -2342,6 +2342,12 @@ body::before {
 
 }
 
+.block-figure__media {
+
+    display: block;
+
+}
+
 .block-figure img {
 
     display: block;
@@ -2554,7 +2560,11 @@ button.region-loc {
 .block-split {
 
     display: flex;
-    align-items: flex-start;
+
+    /* Estirados los dos: es lo que permite que la imagen llegue a la altura del
+       texto. El suelo de la imagen lo pone .block-figure__media. */
+    align-items: stretch;
+
     gap: 20px;
 
     margin: 18px 0;
@@ -2587,7 +2597,61 @@ button.region-loc {
 
     flex: 0 0 40%;
 
+    /* Sin esto la figura se ensancha más allá de su 40%: al darle altura a la
+       imagen, su ancho natural pasa a ser su tamaño mínimo y el flex lo
+       respeta. */
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
     margin: 0;
+
+}
+
+/* La imagen crece hasta la altura del texto que tiene al lado. Antes se
+   quedaba en su 4:3 y, con un apartado largo, sobraban cientos de píxeles a su
+   derecha.
+
+   El truco es la rejilla de una sola celda: el ::before impone el suelo —la
+   proporción de siempre— y la imagen ocupa esa misma celda al 100%. Si el texto
+   es más alto, la caja se estira y la imagen con ella; si el texto es más corto,
+   manda el suelo y la imagen no se achata. */
+.block-split .block-figure__media {
+
+    display: grid;
+
+    /* La columna no debe crecer con el ancho natural de la imagen: manda el
+       40% de la figura. */
+    grid-template-columns: minmax(0, 1fr);
+
+    flex: 1 1 auto;
+    min-height: 0;
+    min-width: 0;
+
+}
+
+.block-split .block-figure__media::before {
+
+    content: "";
+
+    grid-area: 1 / 1;
+
+    aspect-ratio: 4 / 3;
+
+}
+
+.block-split .block-figure__media img {
+
+    grid-area: 1 / 1;
+
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+
+    /* La altura la manda la celda; la proporción fija estorbaría. Lo que sobra
+       de la imagen se recorta por los lados (object-fit: cover, que ya trae). */
+    aspect-ratio: auto;
 
 }
 
@@ -2606,6 +2670,16 @@ button.region-loc {
         flex: none;
 
         width: 100%;
+
+    }
+
+    /* Apilado no hay texto al lado que igualar: la imagen vuelve a su
+       proporción de siempre. */
+    .block-split .block-figure__media img {
+
+        aspect-ratio: 4 / 3;
+
+        height: auto;
 
     }
 

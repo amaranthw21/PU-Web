@@ -39,12 +39,21 @@ function BlockImage({ image, caption }){
 
         <figure className="block-figure">
 
-            <img
-                src={asset(image)}
-                loading="lazy"
-                alt={caption ?? ""}
-                onError={e => { e.currentTarget.closest("figure").style.display = "none"; }}
-            />
+            {/*
+              La imagen va envuelta porque dentro de un "texto + imagen" esa
+              caja es la que se estira hasta la altura del texto: la figura
+              entera no puede, que también lleva el pie.
+            */}
+            <span className="block-figure__media">
+
+                <img
+                    src={asset(image)}
+                    loading="lazy"
+                    alt={caption ?? ""}
+                    onError={e => { e.currentTarget.closest("figure").style.display = "none"; }}
+                />
+
+            </span>
 
             {
                 caption && (
