@@ -42,6 +42,7 @@
           "text": "They can be found on nearly every continent and in almost every nation, forming the backbone of many cultures, societies, and conflicts.\nThe exact origin of Mobians is unknown. They are native to the planet, evolving naturally over millennia alongside humans and other intelligent races. Ancient ruins, murals, and records suggest Mobians have existed since prehistoric times, long before modern civilizations formed.",
           "image": "/species/FXCFiZRXEAEiHPP-removebg-preview (2).png",
           "caption": "Sonic - by Yui Karasuno",
+          "fit": "fill",
           "imageSide": "right"
         }
       ]
@@ -56,6 +57,7 @@
           "text": "Mobians are extremely abundant and globally distributed.\n\nAlthough some species of Mobians are more common in certain parts of a planet than in others, the population is fairly distributed. So it's not unusual to find a kangaroo in Eurish or a polar bear in Shamar.\n\n**In Moebius these species are called Moebians, while in Sol they are called Solians.**",
           "image": "/species/images-removebg-preview.png",
           "caption": "Honey the Cat - By Yui Karasuno",
+          "fit": "fill",
           "imageSide": "left"
         }
       ]
@@ -70,6 +72,7 @@
           "text": "Some Mobians are among the few species born with innate powers, fueled by an internal reserve of planetary energy. Those from Mobius draw upon **Chaos Energy**, while those from Moebius and Sol respectively draw upon **Anarchy Energy** and **Harmony Energy**.\n\nThese powers can manifest in many different ways, including super speed, elemental manipulation, enhanced strength, flight, psychic abilities, fire-breathing, and more. Generally, each Mobian possesses their own unique set of abilities, independent of their species, family, or country of origin. However, it is possible for two or more Mobians to develop similar or even identical power sets.\n\nMobians cannot acquire innate powers later in life. They are either born with them or they are not. However, some Mobians may possess **dormant powers** that remain inactive until something triggers or awakens them. Until that point, they may appear to be completely normal, unpowered Mobians.\n\nThere are several ways in which dormant powers can be awakened, though the most common are heavy exposure to their planet's respective energy—Chaos, Anarchy, or Harmony—or a powerful traumatic event. Once awakened, these dormant abilities can manifest much like innate powers that were active from birth.",
           "image": "/species/a73657d45120f66ec48ba816a049b740-removebg-preview.png",
           "caption": "Blaze the Cat - By Yui Karasuno",
+          "fit": "fill",
           "imageSide": "right"
         },
         {
@@ -80,7 +83,9 @@
         {
           "type": "image",
           "image": "/species/yui-karasunos-newest-artwork-of-chaos-and-tikal-v0-asg8veakjo971.webp",
-          "caption": "Tikal & Chaos - Art by Yui Karasuno"
+          "caption": "Tikal & Chaos - Art by Yui Karasuno",
+          "fit": "fill",
+          "size": "medium"
         },
         {
           "type": "textImage",
@@ -88,6 +93,7 @@
           "text": "Some Mobian species may share similar abilities as a result of specific genetic traits or adaptations unique to their species. However, there is no single biological ability that all Mobians possess simply by virtue of being Mobian.\n\nFor example, many two-tailed fox Mobians are naturally capable of flight by rapidly rotating their tails like a helicopter. Likewise, Mobians with particularly large or specially shaped ears may be able to use them to generate enough lift to fly, essentially functioning like wings. Other species may possess their own unique physical adaptations that grant them abilities not shared by other Mobians.\n\nThese abilities are considered **species traits** rather than innate powers. While they may be unusual or even superhuman by the standards of other species, they are a natural part of the Mobian's biology and can be explained by just pointing to the organ or part of the body in question.",
           "image": "/species/tumblr_5fa37b5a807f569343114571dca51194_422fdaea_640-removebg-preview (1).png",
           "caption": "Tails the Fox - By Yui Karasuno",
+          "fit": "fill",
           "imageSide": "left"
         },
         {
@@ -96,6 +102,7 @@
           "text": "Still, not all Mobians possess supernatural abilities. Many live entirely ordinary lives, relying instead on skill, training, technology, teamwork, or their connection to a **Wisp** rather than any innate power or magical ability.\n\nInnate powers and magic are **rare, but not exceptionally so**. They are uncommon enough to be noteworthy, but common enough that their existence is a normal and accepted part of Mobian society. Most importantly, possessing an innate power or the ability to use magic does not automatically make a Mobian important, powerful, or influential. A Mobian's abilities are only one aspect of who they are, and their social standing or impact on the world depends far more on how they choose to use their talents—and on the circumstances of their life.",
           "image": "/species/GeKGaFrWMAAznYe-removebg-preview.png",
           "caption": "Amy the Hedgehog - By Yui Karasuno",
+          "fit": "fill",
           "imageSide": "right"
         }
       ]
@@ -108,8 +115,9 @@
           "type": "textImage",
           "title": "",
           "text": "Mobians are generally considered the **baseline standard of physical capability** when compared to other races. An average, untrained Mobian possesses no inherent physical advantage over other species and is typically weaker than an average human.\n\nIndividual Mobians can, of course, exceed this baseline through **training, physical conditioning, specialized skills, or genetic advantages**. Certain species may also possess natural physical traits that give them advantages in areas such as strength, speed, agility, endurance, or flight. However, these are exceptions based on the individual or their species rather than traits shared by all Mobians.\n\nIn other words, being a Mobian does not inherently make someone stronger, faster, or tougher than members of other races. An ordinary Mobian is simply the standard against which physical capabilities are generally measured.",
-          "image": "/species/2025-avatar-pict.jpeg.f7db98cbf7f120ac256965cd4a9ee66a-removebg-preview.png",
+          "image": "/species/gadget-wears-the-kicks-art-by-yui-karasuno-v0-4prsxtij46eg1-removebg-preview.png",
           "caption": "Gadget the Wolf - Art by Yui Karasuno",
+          "fit": "fill",
           "imageSide": "right"
         }
       ]
@@ -127,8 +135,9 @@
           "type": "textImage",
           "title": "Echidnas",
           "text": "The Echidna species is considered nearly extinct on Mobius. At present, only three known Echidnas remain: Knuckles, Julie-Su, and Shade.\n\nFor simplicity, Julie-Su and Shade are considered to have originated from the Twilight Cage, which combines the concepts of the Dark Brotherhood and the Dark Legion into a single group. Both were transported to Mobius after Argus determined that they were capable of redemption.\n\nThere is also a living population of Echidnas on Moebius. This tribe is composed of O'nux and original characters (OCs).\n\nThere are no Echidnas in Sol.\n\n**OC Restriction: At present, any OC Echidna must belong to the Moebian Echidna tribe. Mobius-born Echidna OCs are not currently permitted due to the species' near-extinction status.**",
-          "image": "/species/788779265_17981155986116633_4656412838192440459_n-removebg-preview.png",
+          "image": "/species/788779265_17981155986116633_4656412838192440459_n-removebg-preview (1).png",
           "caption": "Knuckles the Echidna - Art by Yui Karasuno",
+          "fit": "fill",
           "imageSide": "right"
         },
         {
