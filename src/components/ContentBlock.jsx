@@ -43,7 +43,38 @@ function BlockText({ title, text }){
 const SIZES = ["small", "medium", "large"];
 
 
-function BlockImage({ image, caption, fit, size }){
+// Qué parte de la imagen se conserva cuando hay que recortarla: un porcentaje
+// por eje, como object-position. 0 es el borde izquierdo (o superior), 50 el
+// centro y 100 el derecho (o inferior).
+//
+// Se eligió porcentaje en vez de una lista de anclajes porque los anclajes solo
+// dan nueve puntos, y ajustar un personaje suele pedir algo intermedio. Lo que
+// no sea un número se ignora y manda el centro: el panel lo limita, pero un
+// JSON editado a mano no.
+function percent(value){
+
+    const number = Number(value);
+
+    if(!Number.isFinite(number)){
+
+        return 50;
+
+    }
+
+    return Math.min(100, Math.max(0, number));
+
+}
+
+
+function BlockImage({ image, caption, fit, size, positionX, positionY }){
+
+    const x = percent(positionX);
+    const y = percent(positionY);
+
+    // Centrado es el comportamiento por defecto del CSS: no hace falta escribirlo.
+    const position = x === 50 && y === 50
+        ? undefined
+        : { objectPosition: `${x}% ${y}%` };
 
     const classes = ["block-figure"];
 
@@ -71,6 +102,7 @@ function BlockImage({ image, caption, fit, size }){
                     src={asset(image)}
                     loading="lazy"
                     alt={caption ?? ""}
+                    style={position}
                     onError={e => { e.currentTarget.closest("figure").style.display = "none"; }}
                 />
 
@@ -114,6 +146,8 @@ function BlockPart({ part }){
                 caption={part.caption}
                 fit={part.fit}
                 size={part.size}
+                positionX={part.imagePositionX}
+                positionY={part.imagePositionY}
             />
         );
 
@@ -173,7 +207,13 @@ function BlockPart({ part }){
                     <BlockText title={part.title} text={part.text} />
                 </div>
 
-                <BlockImage image={part.image} caption={part.caption} fit={part.fit} />
+                <BlockImage
+                    image={part.image}
+                    caption={part.caption}
+                    fit={part.fit}
+                    positionX={part.imagePositionX}
+                    positionY={part.imagePositionY}
+                />
 
             </div>
 

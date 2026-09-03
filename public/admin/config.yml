@@ -130,6 +130,8 @@ collections:
                   - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - { name: imagePositionX, label: "Crop from the left (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "Only matters when the picture has to be cropped. 0 keeps its left edge, 50 the middle, 100 its right edge — nudge it until the character is in frame." }
+                  - { name: imagePositionY, label: "Crop from the top (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "The same for the other direction: 0 keeps the top of the picture, 50 the middle, 100 the bottom." }
                   - name: fit
                     label: "Picture size"
                     widget: select
@@ -153,6 +155,8 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - { name: imagePositionX, label: "Crop from the left (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "Only matters when the picture has to be cropped. 0 keeps its left edge, 50 the middle, 100 its right edge — nudge it until the character is in frame." }
+                  - { name: imagePositionY, label: "Crop from the top (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "The same for the other direction: 0 keeps the top of the picture, 50 the middle, 100 the bottom." }
                   - name: size
                     label: "Picture width"
                     widget: select
@@ -344,6 +348,8 @@ collections:
                   - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - { name: imagePositionX, label: "Crop from the left (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "Only matters when the picture has to be cropped. 0 keeps its left edge, 50 the middle, 100 its right edge — nudge it until the character is in frame." }
+                  - { name: imagePositionY, label: "Crop from the top (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "The same for the other direction: 0 keeps the top of the picture, 50 the middle, 100 the bottom." }
                   - name: fit
                     label: "Picture size"
                     widget: select
@@ -367,6 +373,8 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - { name: imagePositionX, label: "Crop from the left (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "Only matters when the picture has to be cropped. 0 keeps its left edge, 50 the middle, 100 its right edge — nudge it until the character is in frame." }
+                  - { name: imagePositionY, label: "Crop from the top (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "The same for the other direction: 0 keeps the top of the picture, 50 the middle, 100 the bottom." }
                   - name: size
                     label: "Picture width"
                     widget: select
@@ -627,6 +635,8 @@ collections:
                   - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - { name: imagePositionX, label: "Crop from the left (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "Only matters when the picture has to be cropped. 0 keeps its left edge, 50 the middle, 100 its right edge — nudge it until the character is in frame." }
+                  - { name: imagePositionY, label: "Crop from the top (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "The same for the other direction: 0 keeps the top of the picture, 50 the middle, 100 the bottom." }
                   - name: fit
                     label: "Picture size"
                     widget: select
@@ -650,6 +660,8 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - { name: imagePositionX, label: "Crop from the left (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "Only matters when the picture has to be cropped. 0 keeps its left edge, 50 the middle, 100 its right edge — nudge it until the character is in frame." }
+                  - { name: imagePositionY, label: "Crop from the top (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "The same for the other direction: 0 keeps the top of the picture, 50 the middle, 100 the bottom." }
                   - name: size
                     label: "Picture width"
                     widget: select
@@ -796,6 +808,8 @@ collections:
                   - { name: text, label: Text, widget: richtext, hint: "Leave a blank line between paragraphs." }
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - { name: imagePositionX, label: "Crop from the left (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "Only matters when the picture has to be cropped. 0 keeps its left edge, 50 the middle, 100 its right edge — nudge it until the character is in frame." }
+                  - { name: imagePositionY, label: "Crop from the top (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "The same for the other direction: 0 keeps the top of the picture, 50 the middle, 100 the bottom." }
                   - name: fit
                     label: "Picture size"
                     widget: select
@@ -819,6 +833,8 @@ collections:
                 fields:
                   - { name: image, label: Image, widget: image }
                   - { name: caption, label: Caption, widget: string, required: false }
+                  - { name: imagePositionX, label: "Crop from the left (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "Only matters when the picture has to be cropped. 0 keeps its left edge, 50 the middle, 100 its right edge — nudge it until the character is in frame." }
+                  - { name: imagePositionY, label: "Crop from the top (%)", widget: number, value_type: int, default: 50, min: 0, max: 100, required: false, hint: "The same for the other direction: 0 keeps the top of the picture, 50 the middle, 100 the bottom." }
                   - name: size
                     label: "Picture width"
                     widget: select

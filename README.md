@@ -195,8 +195,8 @@ kind you want:
 | Part type | What it gives you |
 | --- | --- |
 | **Text** | Text, with an optional **heading** above it. Leave a blank line between paragraphs. |
-| **Text + image** | The same, with an image beside it. The heading stays with the text, so the picture sits next to the whole section. **Image side** picks whether the image sits on the right (default) or the left. **Picture size** decides what happens when the picture and the text aren't the same shape: *fill the space* (the default) grows it to the height of the text and crops its sides, and *show the whole picture* keeps it complete and centred instead. |
-| **Image** | Just an image. **Picture width** sets how much of the page it takes — full width, two thirds, half or a third — and anything under full width is centred. It has the same **Picture size** choice as above, and the two combine: half width *and* the whole picture, for instance. |
+| **Text + image** | The same, with an image beside it. The heading stays with the text, so the picture sits next to the whole section. **Image side** picks whether the image sits on the right (default) or the left. **Picture size** decides what happens when the picture and the text aren't the same shape: *fill the space* (the default) grows it to the height of the text and crops its sides, and *show the whole picture* keeps it complete and centred instead. The two **Crop from…** percentages aim it: 0 keeps the picture's left edge (or its top), 50 the middle, 100 the far side. Nudge them until the character is in frame. |
+| **Image** | Just an image. It has the same two **Crop from…** percentages. **Picture width** sets how much of the page it takes — full width, two thirds, half or a third — and anything under full width is centred. It has the same **Picture size** choice as above, and the two combine: half width *and* the whole picture, for instance. |
 | **Regions** | A map of the country plus a set of regions, each with its own locations. **Countries only.** |
 | **Characters** | The same thing for a faction: groups of characters instead of regions of locations. **Factions only.** |
 
@@ -498,6 +498,23 @@ IntersectionObserver over the era sections drives both the "you are here" bar an
 the page background. That bar is sticky on desktop only — the frame leaves about
 295px of usable width on a phone, where its controls need three rows and a
 sticky one would eat a fifth of the screen on every page.
+
+The crop is aimed with `imagePositionX` / `imagePositionY` — two percentages that
+become `object-position`. Percentages rather than a list of nine anchors because
+nine points is not enough to frame a character: the useful value is usually
+somewhere in between (20% framed the witch on the Humans page; no anchor would
+have).
+
+Two things worth knowing when helping someone with it. Which axis actually gets
+cropped depends on the box, not on the picture: a 500×500 image in a 345×1058
+column (a very long section) is scaled to 1058 wide, so the crop is horizontal
+and the vertical percentage does nothing there. And at that ratio only a third of
+the picture's width is visible at all, which no percentage can fix — that is what
+*show the whole picture* is for.
+
+Values are clamped to 0–100 and anything that isn't a number falls back to
+centred, because the panel's limits don't apply to a hand-edited JSON. Centred is
+left as no inline style at all, since it is what CSS does anyway.
 
 A standalone image also takes a **Picture width** (`size`): `small`, `medium` and
 `large` cap it at a third, a half and two thirds of the content width and centre

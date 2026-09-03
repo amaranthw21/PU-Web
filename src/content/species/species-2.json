@@ -68,8 +68,9 @@
           "text": "Humans are free to practice and use magic, and, if anything, they appear to have a greater affinity for it than Mobians. Humans are uniquely capable of learning magic even when they possess no initial natural affinity for it. In fact, a specialized form of magic known as _Magitek_ counts Regina Ferrum, a human from Chu-Nan, among its most famous practitioners.\n\nHowever, this does not mean humans are exempt from the limitations of magic. Like Mobians, humans require a **Catalyst** or **Artifact** to properly channel and control magical energy. Possessing magical abilities may be unusual, but it does not automatically make a human more important, powerful, or special than an otherwise ordinary human.\n\nMagic can manifest in countless different ways depending on the caster, their natural affinity, and how they have learned to manipulate magical energy. It may take the form of traditional spells, physical enhancement, elemental manipulation, divination, or countless other applications. \n\nLike mobians, most humans require a Catalyst or an Artifact. **Catalyst** can take virtually any form depending on the caster and their magical tradition. Wands and staffs are among the most traditional choices, but a Catalyst could just as easily be a broom, a pistol,  a piece of clothing, or almost any other object capable of serving as a focus for the caster's power.\n\nThe object itself does not necessarily need to be inherently magical. When an object possesses its own magical properties, it is instead classified as an **Artifact**. A Catalyst's primary purpose is to help the caster channel, shape, and control the ambient planetary energy necessary to perform magic.\n\nTherefore, while humans may possess a greater natural aptitude for learning magic than Mobians, they are not fundamentally exempt from the rules governing magical use. Their greater affinity simply means that, with sufficient knowledge and training, even a human without an initial magical affinity can learn to manipulate it.",
           "image": "/species/Witchcart_1_-_Sonic_the_Hedgehog-removebg-preview.png",
           "caption": "Wendy Witchcart - Unknown Artist",
-          "fit": "whole",
-          "imageSide": "left"
+          "fit": "fill",
+          "imageSide": "left",
+          "imagePositionX": 20
         },
         {
           "type": "text",
