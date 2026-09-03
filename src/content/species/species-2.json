@@ -1,7 +1,136 @@
 {
   "order": 2,
-  "name": "Species Two",
-  "image": "/species/species-2.png",
+  "group": "main",
+  "name": "Humans",
+  "image": "/species/487507956_1399611751349802_2915637449319708038_n.jpg",
+  "imagePosition": "",
+  "imageZoom": null,
+  "background": "/species/what-has-been-the-best-style-for-human-characters-in-the-v0-z38hs7ivcpnc1.webp",
+  "color": "#49b8fc",
   "summary": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  "description": "**Basically, humans are humans:** adaptable, resilient, technologically advanced, capable of learning magic, and widespread enough to have played a major role in shaping modern civilization.",
+  "quote": [],
+  "origin": "Mobius - Moebius",
+  "habitat": "All around the planet",
+  "lifespan": "90 years Aprox",
+  "traits": [],
+  "abilities": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Humans are one of the most widespread and politically influential races in the world. Found on nearly every continent, they have shaped much of modern civilization through governments, industry, science, and warfare. \n\nWhile they lack the natural connection to Chaos energy that some other races possess, humans compensate through adaptability, organization, and technological advancement. Being the backbone of a lot of modern technology.\n\nBasically, humans are humans.",
+          "image": "/species/new-sonic-channel-artwork-of-dr-eggman-v0-6hk31rfu0hec1-removebg-preview.png",
+          "caption": "Dr Eggman - By Yui Karasuno",
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Population",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Humans originate from multiple regions across the globe, with no single cultural or geographic homeland. You can pretty much find humans in any part of the world… as you do with mobians and they are as numerous as them, if not more. \n\nSomething to note is that in most cities there are at least _some_ accommodations for both humans and mobians. Think Zootopia. Humans are inherently larger than Mobians, so anything and anywhere that caters to humans only will likely be too big for most mobians, and vice versa. Some places globally will be more human or mobian focused in scale, like mobians in Cardinal Archipelago or Humans in Spagonia. \n\n**The humans in Moebius are still named humans. There is no humans in the Sol Dimension**"
+        },
+        {
+          "type": "image",
+          "image": "/species/657290570_1705701844074123_4728857512287758557_n.jpg",
+          "caption": "Miles \"Tails\" Prower and the students of Spagonia University - By Yui Karasuno",
+          "fit": "fill",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Natural Powers & Chaos Affinity",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Innate powers",
+          "text": "Humans, much like in real life, do not possess innate supernatural powers. This means that, unfortunately, they cannot naturally achieve abilities such as super speed, breathing fire, or creating blizzards on their own.\n\nAlthough humans cannot directly harness the powers of planetary energies—Chaos on Mobius and Anarchy on Moebius—their lack of sensitivity to these forces makes them more resistant to their negative effects. As a result, humans are far more resilient to the consequences of prolonged exposure to these energies. They are also nearly immune to the influence of entities such as Dark Gaia and similar forces.\n\nHowever, there is one way for a human to gain something resembling innate powers: by becoming the host of a fragment of a god. For example, Princess Elise could be capable of manipulating fire because she has Iblis residing within her.\n\nThat said, cases like these are extreme exceptions and should not be treated as evidence that humans naturally possess supernatural abilities. Any human who gains powers through a divine fragment or similar circumstance would require a much more in-depth explanation to establish exactly how and why those abilities manifest.",
+          "image": "/species/625012475_1655822799062028_5177151927344799824_n-removebg-preview.png",
+          "caption": "Princess Elise - Art by Yui Karasuno",
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Magic Powers",
+          "text": "Humans are free to practice and use magic, and, if anything, they appear to have a greater affinity for it than Mobians. Humans are uniquely capable of learning magic even when they possess no initial natural affinity for it. In fact, a specialized form of magic known as _Magitek_ counts Regina Ferrum, a human from Chu-Nan, among its most famous practitioners.\n\nHowever, this does not mean humans are exempt from the limitations of magic. Like Mobians, humans require a **Catalyst** or **Artifact** to properly channel and control magical energy. Possessing magical abilities may be unusual, but it does not automatically make a human more important, powerful, or special than an otherwise ordinary human.\n\nMagic can manifest in countless different ways depending on the caster, their natural affinity, and how they have learned to manipulate magical energy. It may take the form of traditional spells, physical enhancement, elemental manipulation, divination, or countless other applications. \n\nLike mobians, most humans require a Catalyst or an Artifact. **Catalyst** can take virtually any form depending on the caster and their magical tradition. Wands and staffs are among the most traditional choices, but a Catalyst could just as easily be a broom, a pistol,  a piece of clothing, or almost any other object capable of serving as a focus for the caster's power.\n\nThe object itself does not necessarily need to be inherently magical. When an object possesses its own magical properties, it is instead classified as an **Artifact**. A Catalyst's primary purpose is to help the caster channel, shape, and control the ambient planetary energy necessary to perform magic.\n\nTherefore, while humans may possess a greater natural aptitude for learning magic than Mobians, they are not fundamentally exempt from the rules governing magical use. Their greater affinity simply means that, with sufficient knowledge and training, even a human without an initial magical affinity can learn to manipulate it.",
+          "image": "/species/Witchcart_1_-_Sonic_the_Hedgehog-removebg-preview.png",
+          "caption": "Wendy Witchcart - Unknown Artist",
+          "fit": "fill",
+          "imageSide": "left"
+        },
+        {
+          "type": "text",
+          "title": "Biological Powers",
+          "text": "Humans do not possess any special powers simply by being human."
+        },
+        {
+          "type": "text",
+          "title": "Other",
+          "text": "In addition to magic, humans frequently rely on technology, cybernetics, conventional weapons, and other engineered enhancements to bridge the gap between themselves and more naturally powerful species.\n\nThis reliance on technology is particularly evident among the world's most technologically advanced nations. Historically, these nations tend to have populations in which humans make up a larger proportion of the population, leading to cultures and societies that place greater emphasis on technological development, engineering, and artificial means of enhancing physical capabilities.\n\nThis does not necessarily mean that humans are inherently more technologically inclined than other species. Rather, their lack of innate supernatural abilities has historically encouraged them to develop alternative methods of matching or surpassing the capabilities of naturally empowered species."
+        },
+        {
+          "type": "image",
+          "image": "/species/tumblr_9a28ef0b88b0d199ed0ad93eaf96c56d_c0d1d65b_1280.jpg",
+          "caption": "Eggman, Cubot & Orbot - Art by Yui Karasuno",
+          "fit": "fill",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Physical Traits",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "On average, humans are taller than Mobians and possess greater baseline physical strength, particularly when it comes to raw lifting power and sustained physical exertion. While they generally lack the natural speed, reflexes, and agility commonly associated with Mobians, humans tend to excel in stamina, endurance, and overall physical resilience."
+        },
+        {
+          "type": "image",
+          "image": "/species/SCCalendarMarch24.webp",
+          "caption": "Silver the Hedgehog and Sonic-Man - Art by Tomoko Kanemoto",
+          "fit": "fill",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Special Cases",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Enhanced humans",
+          "text": "Yes, if you want to do like Bucky from the Avengers and have cybernetics implanted in your body, you can. It's a good way to give your human “powers” Robocop."
+        },
+        {
+          "type": "text",
+          "title": "Princess Elise / Princess of Caeluna",
+          "text": "For story reasons, there are two notable exceptions to the general rule that humans do not possess innate powers. Princess Elise, who once had Iblis sealed within her, and the Princess of Caeluna, who technically has Cailleach sealed within her, may be given powers at the member's discretion.\n\nHowever, these should be treated as exceptional circumstances rather than evidence that humans can naturally possess supernatural abilities. At the end of the day, both characters are still human. Their powers should therefore remain reasonable and appropriate to the circumstances surrounding the entity sealed within them. **Don't go too crazy with their abilities.**"
+        },
+        {
+          "type": "image",
+          "image": "/species/qi6gazddunpa1.jpg",
+          "caption": "Princess Elise and Silver the Hedgehog - Art by Tomoko Kanemoto",
+          "fit": "fill",
+          "size": "full"
+        }
+      ]
+    }
+  ],
+  "extraInfo": []
 }
