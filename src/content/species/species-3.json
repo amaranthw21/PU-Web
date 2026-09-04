@@ -8,7 +8,7 @@
   "background": "/species/wisps2.jpg",
   "color": "#ca6b33",
   "summary": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "description": "Aliens are beings that originate from planets beyond the world’s own. They come from a wide variety of species and civilizations, each with their own biology, abilities, cultures, and sources of power.\n\nUnlike native species, aliens do not naturally possess a connection to the planet’s Chaos, Harmony, or Anarchy Energies. Their abilities instead typically stem from their unique biology, technology, or the energy systems of their homeworlds.",
   "quote": [],
   "origin": "Out of Space",
   "habitat": "Mobius - Moebius - Sol",
@@ -134,7 +134,7 @@
         },
         {
           "type": "text",
-          "title": "Archie Alien Races",
+          "title": "Archie / STC / Fleetway  Alien Races",
           "text": "You can use them as inspiration... but we recommend you give them a glow-up. Most of them look literally from another universe, pun intended."
         },
         {
