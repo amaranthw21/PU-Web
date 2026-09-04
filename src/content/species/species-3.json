@@ -1,7 +1,149 @@
 {
   "order": 3,
-  "name": "Species Three",
-  "image": "/species/species-3.png",
+  "group": "main",
+  "name": "Aliens",
+  "image": "/species/Sonic.the.Hedgehog.1024.4355557.webp",
+  "imagePosition": "",
+  "imageZoom": null,
+  "background": "/species/wisps2.jpg",
+  "color": "#ca6b33",
   "summary": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "quote": [],
+  "origin": "Out of Space",
+  "habitat": "Mobius - Moebius - Sol",
+  "lifespan": "Unknown",
+  "traits": [],
+  "abilities": [],
+  "blocks": [
+    {
+      "title": "overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Aliens are sentient species that originate from beyond the skies of the planet Mobius (Sol or Moebius), coming from distant planets, galaxies, or star systems. They are not native to Mobius and often bring with them unfamiliar cultures, technologies, and worldviews. Well-known examples include the Black Arms, the Wisps, and individuals such as Dodon-Pa.\n\nAliens vary greatly in temperament and intent. Some species are openly hostile to others like the aftermentioned Black Arms, while others are peaceful, like the Wisp",
+          "image": "/species/dean08g-4ff73130-3280-44ec-a90b-1604725e25d8-ezgif.com-webp-to-png-converter (2).png",
+          "caption": "Dodon Pa - IDW Comics",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Population",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Alien presence on Mobius was historically rare and isolated, limited to crashes, small invasions, or ancient encounters. This changed dramatically after Dodon-Pa opened Mobius to interstellar travel, turning Monopole into a major gateway between the planet and the wider galaxy.\n\n**In the Sol Dimension, the only known alien tribe was the Akkadians, the Ancients version from Sol that combines these with the Babylonians, that are long gone from the planet. Alien sightings at all are none existent now.** \n\n**On Moebius, large alien sightings are rarer, as are the numbers of this species in general. Although the Chaldeans (Anti-Babylonians), Primevals (Anti-Ancients), and Wisps arrived on the planet. The number of aliens is much smaller than on Mobius... because the Astral Leviathan devoured most of them.**",
+          "image": "/species/yui-karasuno-tokyo-game-music-fes-artwork-v0-tzgcwr3r8vk71-removebg-preview.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Natural Powers & Chaos Affinity",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Innate Powers/Magic Powers",
+          "text": "Aliens lack the natural connection to the planet’s Chaos Energy. As a result, they cannot naturally use Chaos Energy or wield the Chaos Emeralds directly. Likewise, they are incapable of using magic.\n\nThe exception to this rule is hybrids between Mobians and Aliens, such as Shadow and Eclipse. However, these cases are extreme exceptions and should not be considered representative of Aliens as a whole.",
+          "image": "/species/c545cb0f4a31a3575bcba7f7f6848a79-removebg-preview.png",
+          "caption": "Shadow the Hedgehog - By Yui Karasuno",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Biological Powers",
+          "text": "Most alien species possess abilities derived from their unique biology or natural energy sources. For example, Wisps can harness their Hyper-go-on energy, while the Dark Arms possess powerful telepathic abilities as a result of their hive-mind nature.\n\nSome alien species are capable of harnessing their own unique forms of energy. This is usually the result of originating from a different planet with its own planetary energy system, independent of Chaos, Harmony, and Anarchy Energies.\n\nIf you wish to introduce an alien species with its own unique energy, you may submit it to the moderators for review. The submission should explain what the energy is, where it originates, how it is accessed or harnessed, and what effects or abilities it produces.\n\nThese energies should be distinct from Chaos, Harmony, and Anarchy Energies and should have their own established rules and limitations.",
+          "image": "/species/2196164_sanikink_eclipse-the-darkling-removebg-preview.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        },
+        {
+          "type": "text",
+          "title": "Other",
+          "text": "Not surprisingly, alien civilizations often possess highly advanced technology. While they might not have things like Wispons, it wouldn't be strange to encounter an alien with a laser beam or a lightsaber."
+        }
+      ]
+    },
+    {
+      "title": "Physical Traits",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Alien appearances vary widely. Some resemble Mobians closely, making them difficult to distinguish at a glance, like in Dodon-pa’s case. Others are unmistakably alien, featuring non-animal or non-human anatomy, unusual proportions, glowing elements, or abstract forms like Eclipse.\n\nPhysical design is flexible and depends on the character concept and the idea behind it… however we ask that they at least look like they belong to the universe (Looking at you Archie)"
+        },
+        {
+          "type": "image",
+          "image": "/species/SonicFrontiers_Ancients_Planet_Explosion.webp",
+          "caption": "Ancients - Sonic Frontiers",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Special Cases",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Black Arms",
+          "text": "Right now, in the server, there are only two confirmed members of the Black Arms on Mobius: Shadow, who is considered a Mobian, and Eclipse, who is considered an alien. _Coincidentally, these two characters are also the only Mobian-Alien \"hybrids\" that are allowed._\n\n**You can’t make a black arms OC since they are considered extinct at this point in the story.**"
+        },
+        {
+          "type": "text",
+          "title": "Anti-Black Arms",
+          "text": "Unfortunately, the entire species met its end as a convenient snack for the Astral Leviathan, preventing the invasion from ever taking place. If anyone wishes to create an Anti-Eclipse, they may choose to make them part of this species, but they would be among the last surviving (and complete) members of it."
+        },
+        {
+          "type": "text",
+          "title": "Wisp",
+          "text": "Wisps, unlike the two previous races, this species can be used to create an OC (Original Character) if desired. They can also serve as a \"companion\" or \"sidekick\" to another character, as is the case with the Wisps that accompany Whisper.\n\n**In Moebius, wisps are quite limited, with Nega-Wisps being the most common. There are no Wisps on Sol**\n\n**New types of Wisp cannot be created.**"
+        },
+        {
+          "type": "text",
+          "title": "Ancient / Primeval / Akkadians",
+          "text": "These chaos-like creatures that appear in Sonic Frontiers... went extinct a long time ago. \n\n**None of them are alive, neither the Ancient in Mobius nor the Primeval in Moebius… and the Akkadians left Sol a long time ago.**"
+        },
+        {
+          "type": "text",
+          "title": "Chaldean Race",
+          "text": "The Anti-Babylonians of **Moebius**. Unlike their counterparts on Mobius, this alien species successfully reached Moebius and survived. Over time, they managed to conquer the territory of Chaldea, though they have been unable to expand much farther or leave the planet itself.\n\nThey are currently the most widespread alien species on Moebius."
+        },
+        {
+          "type": "text",
+          "title": "Archie Alien Races",
+          "text": "You can use them as inspiration... but we recommend you give them a glow-up. Most of them look literally from another universe, pun intended."
+        },
+        {
+          "type": "text",
+          "title": "OC Alien Races",
+          "text": "You can create your own alien races… or use the alien race that another person has created, however, if you do the last one, please, make sure to ask for permission first. Note that this will have to be discussed with mods thoroughly for plot integration and to make sure they tonally fit."
+        }
+      ]
+    }
+  ],
+  "extraInfo": []
 }
