@@ -1,7 +1,202 @@
 {
   "order": 4,
-  "name": "Species Four",
-  "image": "/species/species-4.png",
-  "summary": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  "group": "main",
+  "name": "Robots",
+  "image": "/species/586531050_1600505414593767_1737956142059900914_n.jpg",
+  "imagePosition": "",
+  "imageZoom": null,
+  "background": "/species/ynd63girmzxd1.jpeg",
+  "color": "#df4a36",
+  "summary": "Robots are artificial beings created through advanced technology. They can take almost any form and possess abilities based on their hardware, software, and installed systems. While they lack innate supernatural powers, they can use advanced technology, energy sources, and external artifacts to replicate a wide variety of effects.",
+  "description": "Robots are artificial beings created through advanced technology. They can take almost any form and possess abilities based on their hardware, software, and installed systems. While they lack innate supernatural powers, they can use advanced technology, energy sources, and external artifacts to replicate a wide variety of effects.",
+  "quote": [],
+  "origin": "Mobius - Moebius - Sol",
+  "habitat": "Mobius & Moebius -> All the planet; Sol Dimension -> Pirates & Vajra Tribal lands",
+  "lifespan": "Inmortal (As long as they have an energy source)",
+  "traits": [],
+  "abilities": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Robots are artificial beings created through advanced technology. They can take virtually any form, including humans, Mobians, Mobinis, animals, or entirely original designs.\n\nTo qualify as a true _character_ rather than simple machinery, a robot must possess a sufficient level of intelligence, autonomy, and personality. Simple drones, mass-produced units, and mindless machines—such as standard Egg Pawns—do **not** qualify unless they demonstrate independent thought, decision-making, or self-awareness.",
+          "image": "/species/image-19-removebg-preview.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Population",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "While the majority of robots originate from Dr Eggman, due to his near-obsessive focus on robotics, they are by no means exclusive to him. Despite Eggman’s clear claim to technological dominance, patent law has yet to catch up… assuming any court would dare to take that case.\n\nSo robots can be found anywhere technology is sufficiently advanced.\n\n**However, Common \"robots”,  think of something Eggman would make, are quite a rare sight in Sol… in fact, most of them WERE made by Eggman.** \n\n**On the other hand the Golems (Sol’s native robots) can be found in Vajra.**"
+        },
+        {
+          "type": "image",
+          "image": "/species/EwfXAOxXAAUt1Ch.jpg",
+          "caption": "Cream the Rabbit & Gemerl - Yui Karasuno",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Natural Powers & Chaos Affinity",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Innate Powers/Magic Powers:",
+          "text": "Some robot units may be specifically designed to utilize powerful artifacts, such as the Chaos Emeralds or the Phantom Ruby.\n\nAbilities gained through these artifacts are **not considered innate powers**, as they require an external object to function. However, the effects produced by such artifacts can replicate or closely resemble supernatural abilities, magic, or other forms of innate power.\n\nThe distinction is that the robot itself is not naturally capable of producing these effects; it is using an external artifact to do so.\n\n**Robots can also use Chaos, Harmony, or Anarchy Energy as a power source. This does not mean they can naturally manipulate or wield these energies themselves. Rather, they utilize them through technological means to fuel their systems, weapons, or other abilities.**\n\n**Unless explicitly stated otherwise, robots are assumed to use a Chaos Drive as their default energy source if in Moebius, an anarchy beryl if in Moebius or a Harmony core if in Sol (and you are not a golem).**",
+          "image": "/species/images-removebg-preview (1).png",
+          "caption": "Frontiers Robot - Art by Yui Karasuno",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "“Biological” Powers",
+          "text": "All robot abilities must come from their **Hardware**, **Software**, or **Installed Add-ons**.\n\n- **Hardware** includes physical components such as weapons, engines, sensors, and other mechanical systems.\n- **Software** includes AI routines, combat protocols, targeting systems, and other programmed functions.\n- **Installed Add-ons** include additional equipment such as flight units, energy shields, specialized weapons, and other modifications.\n\n**Robots may also use the energy of their respective dimension—such as Chaos, Harmony, or Anarchy Energy—to power their technological systems. However, this does not allow them to naturally perform supernatural abilities.**\n\nFor example, a robot cannot conjure a fireball from nothing in the same way Blaze can. It **can**, however, produce and fire a similar projectile if it possesses an integrated flamethrower, plasma cannon, or equivalent weapon capable of doing so.",
+          "image": "/species/sonic-channels-sage-art-v0-lhcbgphqlm2f1-removebg-preview.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "text",
+          "title": "Other",
+          "text": "Other\n\nRobots are generally immune to effects that specifically target biological or living organisms, including energies such as **Null Infection**, **Dark Gaia Energy**, or the power of the **Inner Leviathan**.\n\nAdditionally, a robot's physical destruction does not necessarily mean the permanent destruction of the character. As long as a backup of its data, AI, or core programming exists somewhere, the robot can potentially be rebuilt or restored, even if its original body has been completely destroyed.\n\nHowever, if no valid backup exists, the robot's destruction may be permanent."
+        },
+        {
+          "type": "image",
+          "image": "/species/mkb5rhrgz9rb1.jpg",
+          "caption": "Sage and Supreme - Art by Yui Karasuno",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Physical Traits",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Robots often exceed organic beings in terms of raw durability, precision, and endurance. They do not tire, bleed, or experience pain in the conventional sense, though physical damage, overheating, and system failures remain genuine threats.\n\nA robot’s strength, speed, and resilience depend entirely on its design, construction, and available resources. A cheaply built machine may be more fragile than an average Mobian, while a high-end robot can rival or even surpass elite fighters.\n\nUltimately, a robot’s capabilities are determined by what its hardware and systems are designed and equipped to handle.",
+          "image": "/species/tumblr_7c2282070891d770dbe03bbc5709a053_b056d23e_1280-removebg-preview.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Special Cases",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Metals",
+          "text": "**Metals** are a special class of robots personally created by Dr. Eggman. Unlike ordinary machines, they are deliberately designed as artificial imitations of existing individuals, replicating their appearance, abilities, combat data, and other defining traits.\n\n**Only Dr. Eggman can create a Metal.** The sole exception is **Metal Scourge**, which may be created by someone else in Moebius, such as Rotor or Dr. Kintobor.",
+          "image": "/species/iyo9h8vkelp91-removebg-preview.png",
+          "caption": "Metal Sonic - By Yui Karasuno",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "text",
+          "title": "",
+          "text": "Because of their nature, Metals are subject to several strict rules:\n\n- **Character Eligibility:** Only original characters (OCs) may be used as the basis for new Metal robots, with the exception of canon characters who already have an established Metal counterpart in the _Archie Sonic/Mega Man_ crossover.\n- **Player Permission:** If the character being used as the basis for a Metal belongs to another player, their **explicit permission is required** before a Metal version can be created (unless is a canon version Aka. Metal Sally for example).\n- **Approval:** Creating or playing a Metal character may require approval from the player portraying Dr. Eggman. If that player is unavailable, approval may instead be obtained from the server moderators."
+        },
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Loyalty to Eggman\n\n**Most importantly, Metals are loyal to Dr. Eggman. Their core programming and artificial intelligence are specifically designed to obey him without question.**\n\nWhile deviations from this programming are not completely impossible, they require an **exceptionally strong and well-justified narrative reason**. Acting directly against Eggman fundamentally contradicts the Metal's original purpose, programming, and design, and therefore should be treated as an extraordinary circumstance rather than the norm.",
+          "image": "/species/MetalSeries.webp",
+          "caption": "Metal Series - Archie Comics",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        },
+        {
+          "type": "textImage",
+          "title": "AI (Artificial Intelligence)",
+          "text": "Artificial Intelligences\n\n**Artificial Intelligences (AIs)**, such as Sage, Nicole, Phage, and Ariem, are perfectly plausible characters to create. An AI can be designed with its own personality, intelligence, goals, and methods of interacting with the world.\n\nYou are also free to determine how an AI interacts with the physical world outside of a computer or digital system. For example, Nicole uses nanobots to construct and maintain a physical body for herself.\n\nHowever, **being an AI does not make a character omniscient**. An AI can only access information that is available to it through its systems, databases, networks, sensors, or other established sources. There are things that simply cannot be found on the internet, and an AI should not automatically know information that it has no means of obtaining.\n\nIn short, **an AI can be incredibly knowledgeable, but it is not all-knowing.**",
+          "image": "/species/PhageTransparent.webp",
+          "caption": "Phage - Archie Comics",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Gizoids:",
+          "text": "Only two Gizoids remain active: Gemerl and Fixit. All others in mobius have been destroyed. This also includes the copies that appeared in Sonic Battle. \n\n**Charybdis and Scylla from Sonic Chronicles are trapped in the Twilight Cage for the foreseeable future.**",
+          "image": "/species/Fixit.webp",
+          "caption": "Fixit - Sonic Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "text",
+          "title": "Shadow Android",
+          "text": "**There is only one shadow Android active,** the rest of them were destroyed."
+        },
+        {
+          "type": "textImage",
+          "title": "Golems",
+          "text": "Golems\n\n**Golems** are a subspecies of robots found exclusively in the **Sol Dimension**. Unlike conventional robots, their core is not mechanical but rather a **sphere of plasma**. They can freely shape this plasma into whatever form they desire, typically adopting an appearance resembling a Mobian or Ancient.\n\nGolems possess a remarkable affinity for **magnetism**, allowing them to inhabit, control, and manipulate metallic bodies at will in order to perform their duties. Even when outside of these bodies, it is customary for Golems to adorn themselves with pieces of metal. This tradition is largely inspired by the Akkadians and also serves to make Vajra feel more at ease.\n\nGolems serve **Vajra, the God of Fire of the Sol Dimension (Sol-Chaos)**. For most of their existence, they functioned primarily as servants carrying out their designated duties. However, only a few generations ago, Golems began developing individual personalities and a greater sense of individuality through their interactions with the Soleans.\n\nYou may choose to portray a Golem with an appearance similar to the robots seen in _Sonic Frontiers_, representing the forms they typically assume when inhabiting metallic bodies. Alternatively, you can use the provided reference design, or give them a more distinctly **Ancient-inspired appearance**, reflecting their origins and connection to the Sol Dimension.",
+          "image": "/species/Golem.webp",
+          "caption": "Golem - By Xanandra",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "image",
+          "image": "/species/because-of-the-current-lore-with-the-ancients-i-interpreted-v0-l7opnit27bre1.webp",
+          "caption": "Ancient Reinterpretation - By Cyberlord1109 in NewGrounds",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        },
+        {
+          "type": "text",
+          "title": "”Metal Sonic” Variants",
+          "text": "To avoid having 200 different versions of metal sonic, **only Scrapnik Mecha Sonic, Metal Sonic, Captain Sonic and Shard** are allowed in the server. This means that no, you cannot use silver sonic or metal sonic 3.0 or that weird metal sonic from Sonic X.\n\nMore variants might be added in the future if we deem them necessary for the story."
+        }
+      ]
+    }
+  ],
+  "extraInfo": []
 }
