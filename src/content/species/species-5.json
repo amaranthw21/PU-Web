@@ -1,7 +1,20 @@
 {
   "order": 5,
-  "name": "Species Five",
-  "image": "/species/species-5.png",
+  "group": "main",
+  "name": "Robian",
+  "image": "/species/jules-hedgehog-sonics-dad-redesign-by-drawloverlala-v0-l8utyd6dcmg31.webp",
+  "imagePosition": "",
+  "imageZoom": null,
+  "background": "/species/Sonic_Man.webp",
+  "color": "#b0e3fb",
   "summary": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "quote": [],
+  "origin": "Mobius - Moebius",
+  "habitat": "",
+  "lifespan": "",
+  "traits": [],
+  "abilities": [],
+  "blocks": [],
+  "extraInfo": []
 }
