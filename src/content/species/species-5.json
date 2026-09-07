@@ -15,6 +15,151 @@
   "lifespan": "",
   "traits": [],
   "abilities": [],
-  "blocks": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "**Robians** are living beings who have undergone a process of robotization, transforming their organic bodies into entirely or predominantly mechanical ones. Unlike robots created from scratch, Robians were once living beings, such as Mobians, humans, or members of other organic races.\n\nThe transformation affects more than their physical bodies. Depending on the method used, robotization can alter a Robian’s relationships, identity, memories, and natural abilities."
+        },
+        {
+          "type": "textImage",
+          "title": "Robotization",
+          "text": "**Robotizer-created Robians** are those who were transformed directly by a Robotizer. They are not born; they are created through the machine’s robotization process. The vast majority of known Robotizer-created Robians are the result of the actions of the Eggman Empire.\n\nA Robotizer-created Robian can potentially revert to flesh and blood by undergoing the robotization process again using the same Robotizer that originally transformed them. However, if the Robian has replaced parts of their body with additional robotic enhancements, external modifications, or non-original components, the reversal process may become impossible or irreversible. As a result, many Robotizer-created Robians remain permanently trapped in their mechanical forms.",
+          "image": "/species/Matilda_Roboticized.webp",
+          "caption": "Robians - Sonic Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Cyberization",
+          "text": "**Cyberization** is another form of mechanical augmentation in which a living being is transformed into a cyborg by incorporating cybernetic components into their organic body. Unlike Robotization, Cyberization does not necessarily replace the entire body and can be performed either partially or completely.\n\nCyberization is most commonly associated with individuals who serve the Eggman Empire, particularly those who willingly undergo the process in exchange for enhanced abilities, improved physical conditions, or other benefits.\n\nA Cyberized individual is **not automatically considered a Robian**. The distinction depends on the extent and nature of the transformation. Cyberization can leave a person largely organic, partially mechanical, or almost entirely mechanical, but the process itself is separate from Robotization.",
+          "image": "/species/Cassia_Rough_Color_Model.webp",
+          "caption": "Cassia the Pronghorn - Sonic Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        },
+        {
+          "type": "text",
+          "title": "Half - Robians",
+          "text": "Mobians who have undergone **partial Robotization or partial Cyberization** are known as **Half-Robians**.\n\nHalf-Robians retain a substantial portion of their original organic bodies while having some of their body transformed into mechanical components through Robotization."
+        },
+        {
+          "type": "image",
+          "image": "/species/Bunnie_is_Restored.webp",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Population",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The vast majority of known Robians are a consequence of the actions of the **Eggman Empire**. As a result, Robians are most commonly found in regions that are currently under, or have previously been under, Eggman’s control. Large populations can particularly be found throughout the **Acorn Kingdom** and the territories comprising the **Eggman Empire**, where Robotization was used extensively for military, industrial, and other purposes. \n\nHowever, many **Half-Robians** and other partially mechanized individuals can also be found among the ranks of the Egg Armies. As many Mobians serving the Eggman Empire undergo **Cyberization.**\n\nRobians can also be found on **Moebius**, although their origins there are notably different. The existence of Robians on Moebius is largely attributed to **Anti-Doctor Eggman**, who used the Robotizer according to its original purpose: as a means of treating and healing people through mechanical transformation.",
+          "image": "/species/Conquering_Storm_profile.webp",
+          "caption": "Conquering Storm - Archie Comics",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Natural Powers & Chaos Affinity",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Upon undergoing **complete Robotization or Cyberization**, a Robian loses any innate powers or magical abilities they possessed prior to the transformation. The loss of these abilities is a consequence of the extensive mechanical conversion of their body and the disruption of whatever systems originally enabled them.\n\nBy default, all Robians are presumed to be equipped with a **Chaos Drive**. This is to make our lifes easier. So unless you want to specify that your robian has some other source of energy, we will default to Chaos Drive.\n\n**Partial-Robians**, however, can retain the innate powers or magical abilities they possessed before their transformation. As long as the mechanical portion of their body remains below **50%**, their original abilities remain functional.\n\nOnce a Partial-Robian reaches or exceeds the **50% mechanical threshold**, their innate powers or magical abilities are lost, effectively placing them under the same limitation as a fully Robotized or Cyberized individual.",
+          "image": "/species/Mecha_Sonic_Robian.webp",
+          "caption": "Mecha Sonic Robian - Archie Comics",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Biological Powers",
+          "text": "Upon complete Robotization or Cyberization, Robians lose the biological powers they possessed in their original organic forms.\n\nHowever, their new mechanical bodies can **mimic certain aspects of their former abilities** to a limited extent through weaponry, specialized hardware, and other technological modifications. These systems can reproduce effects similar to a Robian's previous biological powers, but they are no longer natural abilities.\n\nSuch imitations are entirely dependent on the Robian's mechanical components and the technology incorporated into their body. They can therefore differ in strength, functionality, and limitations from the original biological power they replicate.",
+          "image": "/species/MechaKnuckles.webp",
+          "caption": "Mecha Knuckles Robian - Sonic Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "text",
+          "title": "Other",
+          "text": "Unlike conventional robots, which must be specifically designed or modified to safely interact with powerful artifacts such as the **Chaos Emeralds** or the **Phantom Ruby**, Robians can wield such artifacts naturally, provided they possessed the ability to do so prior to their transformation."
+        }
+      ]
+    },
+    {
+      "title": "Physical Traits",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Robians are, in many respects, **robots**. As mechanical beings, they possess many of the same inherent advantages and limitations as other robots, including increased durability, precision, and endurance compared to most organic beings.\n\nRobians can often withstand physical stresses that would seriously injure or kill an organic individual. They do not tire in the conventional sense, do not bleed, and do not experience physical pain as organic beings do. However, this does not make them immune to damage. Structural damage, overheating, power depletion, and system failures remain genuine threats to their continued operation.\n\nWhat most distinctly separates Robians from ordinary robots is their **appearance**. Rather than being designed from scratch, a Robian's mechanical body retains the physical appearance and general characteristics of the organic individual they once were. Their mechanical construction is therefore shaped around their former anatomy, allowing them to remain visually recognizable even after complete transformation.",
+          "image": "/species/it_ll_be_alright_son_by_empireofasun_ddbp4kx-pre.jpg",
+          "caption": "Mecha sonic (Robian) and Jules - By Empireofasun",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Special Cases",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "New Robians",
+          "text": "The creation of new Robians has become considerably more difficult in recent years. **Eggman abandoned the development and widespread use of the Robotizer some time ago**, and most existing Robotizers have since been destroyed, decommissioned, or otherwise rendered unusable.\n\nAs a result, there are currently only a few known ways for a living being to become a Robian:\n\n- **The Robotizer in Robotropolis**, which remains one of the few functional Robotizers still known to exist.\n- **The Robotizer possessed by Anti-Doctor Eggman on Moebius**, which continues to be used according to its original, primarily medical purpose.\n- **Complete Cyberization by Dr Eggman or similar**, which can transform a living being into a fully mechanical or predominantly mechanical state comparable to that of a Robian, despite being a separate process from Robotization."
+        },
+        {
+          "type": "text",
+          "title": "Old Robian",
+          "text": "If your character is an **Old Robian**—someone who was Robotized during the era when Eggman still used the Robotizer extensively—and they are neither from the **Acorn Kingdom** nor were they Robotized in **Robotropolis**, then there is, unfortunately, **no known way to restore them to an organic state**.\n\nThe Robotizers that could potentially reverse their transformation have long since been destroyed, abandoned, or rendered inaccessible. Without access to the same Robotizer that originally transformed them, restoration is considered impossible under normal circumstances.\n\nAt that point, the only known solution would be nothing short of a **miracle**.\n\nAnd honestly... good luck getting any of the Gaias or Solaris to help. We’re not entirely convinced any of them even knows how to operate a computer."
+        },
+        {
+          "type": "text",
+          "title": "Zombots",
+          "text": "This is an **extremely edge-case exception**, but it is included because, realistically, someone is going to ask about it.\n\nTechnically, the **Zombot Virus has been cured** according to IDW canon. Therefore, characters should generally not be able to remain infected by the virus under normal circumstances.\n\nHowever, if you have a **good, compelling reason** for your character to still be a Zombot—or to retain partial effects of the virus—this can potentially be negotiated with the moderators on a case-by-case basis.\n\nThere is one important condition: **your character must not be capable of infecting other characters.** Whatever explanation is used for their continued condition, the Zombot Virus cannot be used to spread a new outbreak.\n\nIn short: **yes, you can potentially play a Zombot or partially affected character, but you will need a solid justification and moderator approval.**"
+        },
+        {
+          "type": "image",
+          "image": "/species/OhNoSonMuch%3Fsimos.webp",
+          "caption": "Zombots - Sonic IDW",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "size": "large"
+        }
+      ]
+    }
+  ],
   "extraInfo": []
 }
