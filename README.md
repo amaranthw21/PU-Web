@@ -52,7 +52,8 @@ That's it. Your change is saved and the live site rebuilds itself in about
 | **Worlds** | The main worlds, each with its own page and map |
 | **Countries** | Individual countries, each with its own page |
 | **Side worlds** | Secondary dimensions (button only, no page) |
-| **Lore (sections)** | The index of sections on the Lore page |
+| **Lore (sections)** | The cards on the Lore page — one per section, each with its picture |
+| **Server Chronicles** | What has happened in the server, one chronicle per entry |
 | **Rulesbook** | The server rules, one chapter per entry |
 
 ## Fields you'll see, in plain terms
@@ -361,6 +362,39 @@ Renaming a block changes its link, so old links to it stop working. Renaming a
 whole chapter is fine — the address comes from the file name, not the name you
 type — but the site owner has to rename the file for the address to follow.
 
+## The Lore page
+
+The cards on the Lore page are the **Lore (sections)** collection, and each one
+takes an **Image**: the card stays a text card, and the art comes in from the
+right and fades out towards the words. Without an image it looks exactly as it
+did before.
+
+The pictures that ship with it are borrowed from art already in the site — pick
+your own from the panel whenever you like. **Image position** frames them, the
+way it does on a species card. And a section with no **Route** still gets its
+card; it simply isn't a link.
+
+## Server Chronicles
+
+Each entry in the **Server Chronicles** collection is one chronicle: a card on
+`/lore/chronicles` and a page of its own. It is written like any other lore
+entry — quote, intro, sections with their **Content blocks** — plus two fields of
+its own:
+
+- **When**, free text (`Year 15 · Spring`, `After the Great War`), shown under the
+  title and on the card. Write it the way you say it in play; nothing sorts by it,
+  the **Order** field decides the position.
+- **Related entries**, which put links under the title to the gods, worlds or
+  factions the chronicle involved. Pick the section and paste the entry's ID —
+  the last part of its address, so `chaos` for `/lore/gods/chaos`. If that entry
+  is later renamed or deleted, its link stops appearing instead of breaking.
+
+Like a god or an item, a chronicle can carry its own **Background** and **Accent
+color**: while its page is open, the page dresses itself in them.
+
+The entry that ships with it is an example. Delete it once the first real
+chronicle is written.
+
 ## The Timeline
 
 **There is one timeline per dimension** — Mobius, Moebius, Sol — and a bar of its
@@ -486,6 +520,30 @@ On a phone the **Admin** link lives at the bottom of the sidebar panel rather
 than in the top bar. It used to sit six pixels from the ☰ button, and people
 reaching for the menu kept landing in the editing panel — which, asking them to
 sign in with GitHub, looked like the CMS opening on its own.
+
+The Lore cards are the plain `Card` with an optional picture behind them. The
+gradient is painted *over* the image rather than masking it, so the flat half
+stays the panel colour and the text is legible against any art. The component
+only hands the CSS the image and its framing as custom properties, because the
+direction is the stylesheet's call: from the right where there's width, from the
+bottom below 700px, where splitting the width would leave the text in a sliver.
+
+Its grid is `.card-grid--lore`, two wide columns, and
+`:last-child:nth-child(odd)` makes the last card span both when the number of
+sections is odd — five cards in two columns left one dangling. It adjusts itself:
+with six sections the rule doesn't apply.
+
+`EntryCard`'s `link` also became optional along the way (a section with no route
+renders as a `div` instead of a link that goes nowhere), which is worth keeping
+for anything else built on it.
+
+Server Chronicles reuse `LoreDetail`, the same full-width page as energies,
+powers and transformations. Two optional props were added for them — `meta` (the
+line under the title) and `related` — so those three pages are untouched. The
+`RelatedEntries` component and `lib/entryLink.js` are shared with the Timeline:
+`entryLink` resolves a section plus an ID to a name and a route by reading the
+content in raw, and returns null for anything it can't resolve, which is what
+makes a removed entry drop its link rather than break it.
 
 The Timeline is its own layout rather than a shared one. `TimelineEra` renders an
 era as a list of three-column rows — card, line, date — and the line is a

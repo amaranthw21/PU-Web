@@ -1,0 +1,7 @@
+{
+  "order": 5,
+  "title": "Server Chronicles",
+  "image": "/worlds/mobius.jpg",
+  "route": "/lore/chronicles",
+  "description": "What has actually happened in the server, arc by arc."
+}

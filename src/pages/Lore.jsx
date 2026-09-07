@@ -1,5 +1,5 @@
-import Card from "../components/Card";
 import lore from "../data/lore/lore";
+import Card from "../components/Card";
 import useDocumentTitle from "../lib/useDocumentTitle";
 
 
@@ -8,17 +8,25 @@ export default function Lore(){
     useDocumentTitle("Lore");
 
 
-
     return (
 
-        <>
+        <div>
 
-            <h1>
+            <h1 className="page-title">
                 Lore
             </h1>
 
+            <p className="page-intro">
+                Everything the setting is made of. Pick a shelf.
+            </p>
 
-            <div className="grid">
+
+            {/*
+              Las cajas de texto de siempre, pero con el arte de cada sección
+              entrando por la derecha y desvaneciéndose. Así el texto manda —es
+              una página índice— y la página deja de ser cinco recuadros grises.
+            */}
+            <div className="grid card-grid--lore">
 
                 {
                     lore.map(section => (
@@ -31,6 +39,10 @@ export default function Lore(){
 
                             description={section.description}
 
+                            image={section.image}
+
+                            imagePosition={section.imagePosition}
+
                             link={section.route}
 
                         />
@@ -40,8 +52,7 @@ export default function Lore(){
 
             </div>
 
-
-        </>
+        </div>
 
     );
 

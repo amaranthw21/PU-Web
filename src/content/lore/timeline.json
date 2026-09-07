@@ -1,6 +1,7 @@
 {
   "order": 1,
   "title": "Timeline",
+  "image": "/gods/solaris.png",
   "route": "/lore/timeline",
   "description": "A chronological record of the events that shaped the world."
 }
