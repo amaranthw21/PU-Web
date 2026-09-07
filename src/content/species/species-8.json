@@ -1,7 +1,22 @@
 {
   "order": 8,
-  "name": "Species Eight",
-  "image": "/species/species-8.png",
+  "group": "main",
+  "name": "Genies",
+  "image": "/species/df42b494a4d11d8775f7b59857944a96.webp",
+  "imagePosition": "",
+  "imageZoom": null,
+  "background": "/species/HAAtxC5WEAEUNT6.jpg",
+  "color": "#f70358",
   "summary": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "quote": [],
+  "origin": "Mobius",
+  "habitat": "Shahra",
+  "lifespan": "Inmortal",
+  "traits": [],
+  "abilities": [
+    "Probability Manipulation (Miracle)"
+  ],
+  "blocks": [],
+  "extraInfo": []
 }
