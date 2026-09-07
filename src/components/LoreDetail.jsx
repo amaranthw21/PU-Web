@@ -4,6 +4,7 @@ import ContentToc from "./ContentToc";
 import ContentBlock from "./ContentBlock";
 import CountryQuote from "./CountryQuote";
 import Paragraphs from "./Paragraphs";
+import RelatedEntries from "./RelatedEntries";
 import NotFound from "../pages/NotFound";
 import withBlockIds from "../lib/blocks";
 import useDocumentTitle from "../lib/useDocumentTitle";
@@ -17,7 +18,12 @@ import useDocumentTitle from "../lib/useDocumentTitle";
 // `trail` son los niveles de la miga de pan que van entre "Lore" y el nombre de
 // la entrada, p. ej. [{ label: "Mechanics", to: "/lore/energy-powers" },
 // { label: "Powers", to: "/lore/energy-powers/powers" }].
-export default function LoreDetail({ item, trail, notFound }){
+//
+// `meta` es una línea suelta bajo el título (una fecha, un arco) y `related` las
+// fichas con las que tiene que ver la entrada. Las dos son opcionales: las usan
+// las crónicas del servidor, y las energías, poderes y transformaciones no las
+// pasan, así que sus fichas no cambian.
+export default function LoreDetail({ item, trail, notFound, meta, related }){
 
     const blocks = withBlockIds(item?.blocks);
 
@@ -67,10 +73,22 @@ export default function LoreDetail({ item, trail, notFound }){
                 {item.name}
             </h1>
 
+            {
+                meta?.trim() && (
+
+                    <p className="detail-meta">
+                        {meta}
+                    </p>
+
+                )
+            }
+
 
             <div className="country-body">
 
                 <CountryQuote messages={item.quote} />
+
+                <RelatedEntries related={related} />
 
                 {
                     item.description?.trim() && (

@@ -1038,3 +1038,46 @@ collections:
             summary: "Label: {{fields.text}}"
             fields:
               - { name: text, label: Text, widget: string, hint: "e.g. 'Archie Comics // Pre-Genesis Wave'. Cuts across the line." }
+
+  # ───────────────────────── Server Chronicles ─────────────────────────
+  # Cada entrada es una crónica: una tarjeta en /lore/chronicles y su propia
+  # página. Reutiliza la cita, los bloques y las filas extra de las demás
+  # fichas, y añade la fecha y las entradas relacionadas.
+  - name: chronicles
+    label: Server Chronicles
+    label_singular: Chronicle
+    folder: src/content/chronicles
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/chronicles
+    public_folder: /chronicles
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int, hint: "Position on the Server Chronicles page (number)" }
+      - { name: name, label: Name, widget: string }
+      - { name: date, label: When, widget: string, required: false, hint: "Shown under the title and on the card, e.g. 'Year 15 · Spring' or 'After the Great War'. Free text: write it however you say it in play." }
+      - { name: summary, label: Summary, widget: text, required: false, hint: "Shown on the card when there is no date." }
+      - { name: image, label: Image, widget: image, required: false, hint: "Fills the card on the Server Chronicles page." }
+      - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "Moves the picture inside its card, e.g. 'center 20%'." }
+      - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
+      - { name: background, label: Background, widget: image, required: false, hint: "Full-page background while this chronicle's own page is open." }
+      - { name: color, label: "Accent color", widget: color, required: false, hint: "Tints the frame, the title and the links on this chronicle's page. Empty keeps the site's magenta." }
+      - { name: description, label: Description, widget: richtext, required: false, hint: "Intro paragraph, shown above the Contents list." }
+      - name: related
+        label: "Related entries"
+        widget: list
+        required: false
+        label_singular: Entry
+        summary: "{{fields.section}} / {{fields.id}}"
+        hint: "Who and what this chronicle involved, shown as links under the title. If an entry is renamed or removed, its link just stops appearing."
+        fields:
+          - name: section
+            label: Section
+            widget: select
+            options: [gods, items, species, energy, powers, transformations, worlds, factions, countries]
+          - { name: id, label: "Entry ID", widget: string, hint: "The last part of that entry's address. For https://…/lore/gods/chaos it is 'chaos'." }
+      - *quote
+      - *extra_info
+      - *blocks

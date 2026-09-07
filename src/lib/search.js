@@ -80,6 +80,12 @@ const COLLECTIONS = [
         route: (id) => `/rulesbook/${id}`
     },
     {
+        type: "chronicle",
+        label: "Server Chronicles",
+        modules: import.meta.glob("../content/chronicles/*.json", { eager: true }),
+        route: (id) => `/lore/chronicles/${id}`
+    },
+    {
         type: "era",
         label: "Timeline",
         modules: import.meta.glob("../content/timeline/*.json", { eager: true }),

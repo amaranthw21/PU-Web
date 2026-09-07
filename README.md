@@ -53,6 +53,7 @@ That's it. Your change is saved and the live site rebuilds itself in about
 | **Countries** | Individual countries, each with its own page |
 | **Side worlds** | Secondary dimensions (button only, no page) |
 | **Lore (sections)** | The index of sections on the Lore page |
+| **Server Chronicles** | What has happened in the server, one chronicle per entry |
 | **Rulesbook** | The server rules, one chapter per entry |
 
 ## Fields you'll see, in plain terms
@@ -361,6 +362,27 @@ Renaming a block changes its link, so old links to it stop working. Renaming a
 whole chapter is fine — the address comes from the file name, not the name you
 type — but the site owner has to rename the file for the address to follow.
 
+## Server Chronicles
+
+Each entry in the **Server Chronicles** collection is one chronicle: a card on
+`/lore/chronicles` and a page of its own. It is written like any other lore
+entry — quote, intro, sections with their **Content blocks** — plus two fields of
+its own:
+
+- **When**, free text (`Year 15 · Spring`, `After the Great War`), shown under the
+  title and on the card. Write it the way you say it in play; nothing sorts by it,
+  the **Order** field decides the position.
+- **Related entries**, which put links under the title to the gods, worlds or
+  factions the chronicle involved. Pick the section and paste the entry's ID —
+  the last part of its address, so `chaos` for `/lore/gods/chaos`. If that entry
+  is later renamed or deleted, its link stops appearing instead of breaking.
+
+Like a god or an item, a chronicle can carry its own **Background** and **Accent
+color**: while its page is open, the page dresses itself in them.
+
+The entry that ships with it is an example. Delete it once the first real
+chronicle is written.
+
 ## The Timeline
 
 **There is one timeline per dimension** — Mobius, Moebius, Sol — and a bar of its
@@ -486,6 +508,14 @@ On a phone the **Admin** link lives at the bottom of the sidebar panel rather
 than in the top bar. It used to sit six pixels from the ☰ button, and people
 reaching for the menu kept landing in the editing panel — which, asking them to
 sign in with GitHub, looked like the CMS opening on its own.
+
+Server Chronicles reuse `LoreDetail`, the same full-width page as energies,
+powers and transformations. Two optional props were added for them — `meta` (the
+line under the title) and `related` — so those three pages are untouched. The
+`RelatedEntries` component and `lib/entryLink.js` are shared with the Timeline:
+`entryLink` resolves a section plus an ID to a name and a route by reading the
+content in raw, and returns null for anything it can't resolve, which is what
+makes a removed entry drop its link rather than break it.
 
 The Timeline is its own layout rather than a shared one. `TimelineEra` renders an
 era as a list of three-column rows — card, line, date — and the line is a

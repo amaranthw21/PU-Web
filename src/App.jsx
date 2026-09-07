@@ -24,6 +24,8 @@ import CountryDetail from "./pages/worlds/CountryDetail";
 
 import Lore from "./pages/Lore";
 import Timeline from "./pages/Timeline";
+import Chronicles from "./pages/chronicles/Chronicles";
+import ChronicleDetail from "./pages/chronicles/ChronicleDetail";
 
 // Gods Page
 import Gods from "./pages/gods/Gods";
@@ -148,6 +150,19 @@ function App() {
                     <Route
                         path="/lore/timeline/:world"
                         element={<Timeline />}
+                    />
+
+
+                    {/* Server Chronicles */}
+
+                    <Route
+                        path="/lore/chronicles"
+                        element={<Chronicles />}
+                    />
+
+                    <Route
+                        path="/lore/chronicles/:id"
+                        element={<ChronicleDetail />}
                     />
 
 

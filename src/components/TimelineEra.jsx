@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import asset from "../lib/asset";
-import entryLink from "../lib/entryLink";
+import RelatedEntries from "./RelatedEntries";
 import Paragraphs from "./Paragraphs";
 
 
@@ -30,43 +29,6 @@ function Portraits({ portraits }){
                         loading="lazy"
                         onError={e => { e.currentTarget.style.display = "none"; }}
                     />
-
-                ))
-            }
-
-        </div>
-
-    );
-
-}
-
-
-// Enlaces a las fichas que tienen que ver con el evento. Los que no se resuelven
-// (una entrada borrada o renombrada) no se pintan: un enlace roto es peor que
-// ninguno.
-function Related({ related }){
-
-    const links = (related ?? [])
-        .map(item => entryLink(item.section, item.id))
-        .filter(Boolean);
-
-    if(links.length === 0){
-
-        return null;
-
-    }
-
-
-    return (
-
-        <div className="tl-chips">
-
-            {
-                links.map(link => (
-
-                    <Link key={link.route} className="tl-chip" to={link.route}>
-                        {link.name}
-                    </Link>
 
                 ))
             }
@@ -137,7 +99,7 @@ function Event({ item }){
                     )
                 }
 
-                <Related related={item.related} />
+                <RelatedEntries related={item.related} />
 
             </article>
 

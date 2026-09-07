@@ -1,0 +1,32 @@
+{
+  "order": 1,
+  "name": "An Example Chronicle",
+  "date": "Year 15 · Spring",
+  "summary": "Delete this one once you write the first real chronicle — it is here to show the shape.",
+  "description": "The intro of a chronicle. It can use **bold**, *italics*, bullet lists and links to [any page of the archive](/lore/gods/chaos).",
+  "related": [
+    { "section": "gods", "id": "chaos" },
+    { "section": "worlds", "id": "mobius" }
+  ],
+  "blocks": [
+    {
+      "title": "How it started",
+      "parts": [
+        {
+          "type": "text",
+          "title": "The setup",
+          "text": "A chronicle is written like any other entry: sections with a title, and inside each one text, pictures, or text with a picture beside it."
+        }
+      ]
+    },
+    {
+      "title": "How it ended",
+      "parts": [
+        {
+          "type": "text",
+          "text": "And the last section. Add as many as the story needs — the Contents list at the top builds itself from their titles."
+        }
+      ]
+    }
+  ]
+}
