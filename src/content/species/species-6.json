@@ -1,7 +1,110 @@
 {
   "order": 6,
-  "name": "Species Six",
-  "image": "/species/species-6.png",
-  "summary": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  "group": "main",
+  "name": "Zeti",
+  "image": "/species/IDW41DeadlySix.webp",
+  "imagePosition": "",
+  "imageZoom": null,
+  "background": "/species/the-deadly-six-getting-their-nails-done-art-by-yui-karasuno-v0-rsruj1ks7ysf1.webp",
+  "color": "#47fdff",
+  "summary": "The Zeti are a rare, long-lived and extremely powerful species native to the Lost Hex, with populations also existing on Mobius and Moebius, but not the Sol Dimension. They possess superhuman physical abilities, unique innate powers, and electromagnetic manipulation that allows them to control machines, though they have no magical abilities. Their immense strength and versatility make Zeti characters particularly challenging to balance.",
+  "description": "The **Zeti** are a rare, long-lived and extremely powerful species native to the **Lost Hex**, with populations also existing on Mobius and Moebius, but not the Sol Dimension. They possess superhuman physical abilities, unique innate powers, and electromagnetic manipulation that allows them to control machines, though they have no magical abilities. Their immense strength and versatility make Zeti characters particularly challenging to balance.",
+  "quote": [],
+  "origin": "Mobius - Moebius",
+  "habitat": "Lost Hex (Mobius)",
+  "lifespan": "+1000",
+  "traits": [],
+  "abilities": [
+    "Electromagnetic Field Manipulation"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The **Zeti** are a race of powerful, horned, demon-like beings native to the planetoid known as the **Lost Hex**. They are generally intelligent, highly aggressive, and naturally dominant, often seeking to establish control over others through force, intimidation, or displays of power.\n\nFollowing the events of Sonic Lost World and a small moment during the Virus saga in IDW, the Zeti are no longer under **Eggman’s** control. Their long-term goals, population, and relationship with the wider world remain largely unknown. \n\nAs a result, Zeti are regarded throughout **Mobius** as dangerous and unpredictable beings, with their intentions often difficult to determine.",
+          "image": "/species/how-do-you-feel-about-how-the-comics-handled-the-deadly-6-v0-95cft90p9mlc1.webp",
+          "caption": "Sonic IDW Cover - Nº41",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Population",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The Zeti originate from the Lost Hex, a fragmented planetoid composed of multiple floating landmasses. They are native to this environment and are rarely found outside it unless forcibly displaced or acting under specific circumstances.\n\nThey are extremely rare, with only a small known population. Most of what the world knows about the Zeti comes from encounters with the group known as the Deadly Six.\n\n**The Zeti don't exist in sol dimension... but they do exist in Moebius.**",
+          "image": "/species/xehfhlay8o7e1-removebg-preview.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Natural Powers & Chaos Affinity",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Innate Powers:",
+          "text": "Zeti possess a variety of innate abilities, although their specific powers can differ considerably between individuals. Some members of the species possess unique abilities, such as **Zavok's** ability to breathe fire and fire lasers from his mouth, or **Master Zik's** telekinetic ability to manipulate objects from a distance.\n\nOne of the most commonly observed innate abilities among the Zeti is the capacity to **generate and project harmful energy**, which can be discharged directly at opponents as offensive attacks.\n\nThe exact nature, strength, and application of a Zeti's abilities can vary from individual to individual, with some possessing powers far beyond those commonly seen among their species."
+        },
+        {
+          "type": "image",
+          "image": "/species/G11SyvKXMAA42WK.jpg",
+          "caption": "Zazz & Espio the Chameleon - Tomoko Kanemoto",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "size": "full"
+        },
+        {
+          "type": "text",
+          "title": "Magic Powers",
+          "text": "The Zeti lack any magical powers."
+        },
+        {
+          "type": "textImage",
+          "title": "Biological Powers",
+          "text": "The Zeti possess an **innate ability to manipulate electromagnetic fields**, which allows them to exert control over machines, particularly robots. This ability is a natural part of their biology and is one of the traits most commonly associated with the species.\n\nDr. Eggman famously exploited this ability through the use of the **Cacophonic Conch**, using its effects to suppress the Zeti and force them into servitude. Under its influence, the Zeti were compelled to control and command Eggman's robotic armies.\n\nImportantly, **all Zeti are susceptible to the effects of Cacophonic Conchs**. The sound emitted by these devices inhibits their electromagnetic abilities and causes the Zeti exposed to it considerable physical pain. Their electromagnetic manipulation can also be disrupted or prevented through the use of **electromagnetic shielding**, providing an effective technological countermeasure against their abilities.",
+          "image": "/species/ZavokControlsMetal.webp",
+          "caption": "Zavok & Metal Sonic - Sonic IDW",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Physical Traits",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The Zeti have very long lifespans, which can be up to over a thousand years of age like Master Zik, the oldest known member of the species. For example a century old Zeti's appearance is that of a young adult.\n\nIn terms of physical abilities, the Zeti are a very powerful race, possessing superhuman strength, speed, durability and agility. They are capable of leaping incredible distances through midair, lifting high amounts of weight and smashing very sturdy substances and even running at high speeds.\n\nBecause of their powerful nature, balancing this species is a challenge and requires careful consideration.",
+          "image": "/species/sonicidw_issue41_raw.webp",
+          "caption": "Sonic IDW Cover - Nº41",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        }
+      ]
+    }
+  ],
+  "extraInfo": []
 }
