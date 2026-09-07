@@ -68,7 +68,7 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "fill",
-          "size": "full"
+          "size": "large"
         },
         {
           "type": "text",
