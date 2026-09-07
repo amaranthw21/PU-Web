@@ -4,7 +4,7 @@ import asset from "../lib/asset";
 
 import rules from "../data/rules/rules";
 import lore from "../data/lore/lore";
-import species from "../data/species";
+import { mainSpecies, companionSpecies } from "../data/species";
 import { mainWorlds } from "../data/worlds/index";
 import { mainFactions, sideFactions } from "../data/factions";
 
@@ -67,19 +67,18 @@ const SECTIONS = [
         to: "/species",
         label: "Species",
         icon: <SpeciesIcon />,
-        children: species.map(entry => ({
-            to: `/species/${entry.id}`,
-            label: entry.name
-        }))
+        children: grouped(
+            mainSpecies,
+            companionSpecies,
+            "Companions",
+            entry => `/species/${entry.id}`
+        )
     },
     {
         to: "/factions",
         label: "Factions",
         icon: <FactionsIcon />,
-        children: [...mainFactions, ...sideFactions].map(faction => ({
-            to: faction.route,
-            label: faction.name
-        }))
+        children: grouped(mainFactions, sideFactions, "Side dimensions")
     },
     {
         to: "/credits",
@@ -87,6 +86,30 @@ const SECTIONS = [
         icon: <CreditsIcon />
     }
 ];
+
+
+// Los submenús de Species y Factions no son una lista plana: tienen dos grupos
+// que la página también separa (razas principales y companions; hub principal y
+// dimensiones secundarias). Ordenados por su campo `order` se intercalaban, que
+// es justo lo que se veía mal.
+//
+// Un rótulo es un hijo sin `to`: la lista lo pinta como cabecera en vez de como
+// enlace. El primer grupo va sin rótulo —es lo que se espera al abrir— y el
+// segundo lo lleva. Si un grupo está vacío no se pinta su rótulo.
+function grouped(first, second, secondLabel, route){
+
+    const link = entry => ({
+        to: typeof route === "function" ? route(entry) : entry.route,
+        label: entry.name
+    });
+
+    return [
+        ...first.map(link),
+        ...(second.length > 0 ? [{ label: secondLabel }] : []),
+        ...second.map(link)
+    ];
+
+}
 
 
 // A qué sección pertenece una ruta. "/" solo coincide consigo misma; el resto
@@ -227,15 +250,21 @@ export default function Sidebar({ menuOpen, onNavigate, pinned, onTogglePin }){
                                             {
                                                 section.children.map(child => (
 
-                                                    <li key={child.to}>
+                                                    <li key={child.to ?? `head-${child.label}`}>
 
-                                                        <NavLink
-                                                            to={child.to}
-                                                            className="rail__sublink"
-                                                            onClick={onNavigate}
-                                                        >
-                                                            {child.label}
-                                                        </NavLink>
+                                                        {
+                                                            child.to
+                                                                ? <NavLink
+                                                                      to={child.to}
+                                                                      className="rail__sublink"
+                                                                      onClick={onNavigate}
+                                                                  >
+                                                                      {child.label}
+                                                                  </NavLink>
+                                                                : <span className="rail__subhead">
+                                                                      {child.label}
+                                                                  </span>
+                                                        }
 
                                                     </li>
 
