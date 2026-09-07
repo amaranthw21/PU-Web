@@ -201,6 +201,131 @@ body::before {
 
 }
 
+/* ─────────────── Portada ─────────────── */
+
+/* La cabecera: qué es esto. Con arte, el degradado va por encima igual que en
+   las tarjetas de Lore, así que el texto se lee sobre cualquier imagen. */
+.home-hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-bottom: 34px;
+    padding: 32px 28px;
+
+    background: rgba(31, 41, 55, 0.72);
+
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    border-radius: 14px;
+
+}
+
+.home-hero--art {
+
+    background-image: linear-gradient(
+            to right,
+            rgba(20, 16, 28, 0.94) 0%,
+            rgba(20, 16, 28, 0.88) 45%,
+            rgba(20, 16, 28, 0.55) 100%
+        ),
+        var(--home-art);
+
+    background-position: center, center;
+    background-size: auto, cover;
+
+}
+
+.home-hero__title {
+
+    margin: 0 0 14px;
+
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+
+    letter-spacing: 0.02em;
+
+    text-wrap: balance;
+
+}
+
+.home-hero__text {
+
+    max-width: 62ch;
+
+    color: #cbd5e1;
+
+}
+
+.home-hero__cta {
+
+    display: inline-block;
+
+    margin-top: 18px;
+    padding: 10px 20px;
+
+    color: white;
+    text-decoration: none;
+
+    background: color-mix(in srgb, var(--accent) 35%, transparent);
+
+    border: 1px solid color-mix(in srgb, var(--accent) 70%, transparent);
+    border-radius: 999px;
+
+    font-weight: 600;
+
+    transition: background-color 0.2s;
+
+}
+
+@media (hover: hover) {
+
+    .home-hero__cta:hover {
+
+        background: color-mix(in srgb, var(--accent) 55%, transparent);
+
+    }
+
+}
+
+.home-section {
+
+    margin-bottom: 34px;
+
+}
+
+.home-more {
+
+    margin: 16px 0 0;
+
+    text-align: right;
+
+}
+
+.home-more a {
+
+    color: color-mix(in srgb, var(--accent) 25%, white);
+    text-decoration: none;
+
+}
+
+/* En móvil el arte de la cabecera entra por abajo, como en las tarjetas. */
+@media (max-width: 700px) {
+
+    .home-hero--art {
+
+        background-image: linear-gradient(
+                to bottom,
+                rgba(20, 16, 28, 0.94) 0%,
+                rgba(20, 16, 28, 0.9) 55%,
+                rgba(20, 16, 28, 0.45) 100%
+            ),
+            var(--home-art);
+
+    }
+
+}
+
+
 /* La rejilla de la página Lore: dos por fila y anchas. Las tarjetas llevan el
    arte a la derecha, así que necesitan ancho para que quepan las dos cosas —el
    texto y el trozo de imagen que se ve—. */
