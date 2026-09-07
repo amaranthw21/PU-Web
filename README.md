@@ -365,13 +365,14 @@ type — but the site owner has to rename the file for the address to follow.
 ## The Lore page
 
 The cards on the Lore page are the **Lore (sections)** collection, and each one
-takes an **Image**: the card fills itself with that art and lays the section's
-name and description over it, like the cards on Gods or Species. Without an
-image, the card falls back to the section's initial.
+takes an **Image**: the card stays a text card, and the art comes in from the
+right and fades out towards the words. Without an image it looks exactly as it
+did before.
 
 The pictures that ship with it are borrowed from art already in the site — pick
-your own from the panel whenever you like. And a section with no **Route** still
-gets its card; it simply isn't a link.
+your own from the panel whenever you like. **Image position** frames them, the
+way it does on a species card. And a section with no **Route** still gets its
+card; it simply isn't a link.
 
 ## Server Chronicles
 
@@ -520,12 +521,21 @@ than in the top bar. It used to sit six pixels from the ☰ button, and people
 reaching for the menu kept landing in the editing panel — which, asking them to
 sign in with GitHub, looked like the CMS opening on its own.
 
-The Lore page uses `EntryCard` (the art tile from Gods and Species) rather than
-the plain text `Card` it had. `EntryCard`'s `link` became optional for it — a
-section without a route renders the same tile as a `div` instead of a link that
-goes nowhere. Its grid is `.card-grid--lore`: three columns instead of four,
-because five destinations with a sentence each were breaking the sentence over
-four lines in a narrow tile, and 3 + 2 reads better than 4 + 1.
+The Lore cards are the plain `Card` with an optional picture behind them. The
+gradient is painted *over* the image rather than masking it, so the flat half
+stays the panel colour and the text is legible against any art. The component
+only hands the CSS the image and its framing as custom properties, because the
+direction is the stylesheet's call: from the right where there's width, from the
+bottom below 700px, where splitting the width would leave the text in a sliver.
+
+Its grid is `.card-grid--lore`, two wide columns, and
+`:last-child:nth-child(odd)` makes the last card span both when the number of
+sections is odd — five cards in two columns left one dangling. It adjusts itself:
+with six sections the rule doesn't apply.
+
+`EntryCard`'s `link` also became optional along the way (a section with no route
+renders as a `div` instead of a link that goes nowhere), which is worth keeping
+for anything else built on it.
 
 Server Chronicles reuse `LoreDetail`, the same full-width page as energies,
 powers and transformations. Two optional props were added for them — `meta` (the

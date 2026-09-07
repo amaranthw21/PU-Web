@@ -201,13 +201,21 @@ body::before {
 
 }
 
-/* La rejilla de la página Lore: tres por fila y más anchas. Son cinco destinos
-   con una frase cada uno, y a cuatro columnas la frase salía en cuatro líneas
-   dentro de una tarjeta estrecha. A tres quedan 3 + 2, que además reparte mejor
-   la segunda fila. */
+/* La rejilla de la página Lore: dos por fila y anchas. Las tarjetas llevan el
+   arte a la derecha, así que necesitan ancho para que quepan las dos cosas —el
+   texto y el trozo de imagen que se ve—. */
 .card-grid--lore {
 
-    grid-template-columns: repeat(3, minmax(0, 340px));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+}
+
+/* Con un número impar de secciones, la última se lleva la fila entera: cinco a
+   dos columnas dejaban una tarjeta suelta y descolgada. Se ajusta sola —con seis
+   secciones esta regla no se aplica—. */
+.card-grid--lore > :last-child:nth-child(odd) {
+
+    grid-column: 1 / -1;
 
 }
 
@@ -217,7 +225,7 @@ body::before {
     }
 
     .card-grid--lore {
-        grid-template-columns: repeat(2, minmax(0, 340px));
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
@@ -1415,6 +1423,67 @@ body::before {
     border-radius: 12px;
 
     transition: transform 0.2s;
+
+}
+
+/* Con arte: el degradado va POR ENCIMA de la imagen —no es una máscara—, así
+   que la parte plana sigue siendo el panel de siempre y el texto se lee con
+   cualquier arte. En ancho entra por la derecha. */
+.card--art {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 190px;
+
+    background-image: linear-gradient(
+            to right,
+            #1f2937 0%,
+            rgba(31, 41, 55, 0.92) 38%,
+            rgba(31, 41, 55, 0.35) 72%,
+            rgba(31, 41, 55, 0.15) 100%
+        ),
+        var(--card-art);
+
+    background-position: center, var(--card-art-position, center);
+    background-size: auto, cover;
+    background-repeat: no-repeat, no-repeat;
+
+}
+
+/* El texto no pasa de la mitad: es donde el degradado sigue siendo opaco. */
+.card--art h2,
+.card--art .paragraph {
+
+    max-width: 62%;
+
+}
+
+@media (max-width: 700px) {
+
+    /* Estrecho, el arte entra por abajo en vez de por un lado: partir el ancho
+       en dos dejaría el texto en una columna de nada. */
+    .card--art {
+
+        min-height: 210px;
+
+        background-image: linear-gradient(
+                to bottom,
+                #1f2937 0%,
+                rgba(31, 41, 55, 0.9) 42%,
+                rgba(31, 41, 55, 0.2) 100%
+            ),
+            var(--card-art);
+
+    }
+
+    .card--art h2,
+    .card--art .paragraph {
+
+        max-width: none;
+
+    }
 
 }
 

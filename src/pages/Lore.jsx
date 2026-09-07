@@ -1,5 +1,5 @@
 import lore from "../data/lore/lore";
-import EntryCard from "../components/EntryCard";
+import Card from "../components/Card";
 import useDocumentTitle from "../lib/useDocumentTitle";
 
 
@@ -22,30 +22,26 @@ export default function Lore(){
 
 
             {/*
-              Las mismas tarjetas con arte que Gods o Species, en vez de las
-              cajas de texto que había: esta es la puerta de entrada al lore y
-              cinco recuadros grises no invitan a entrar. La descripción de cada
-              sección va de subtítulo, y sin imagen la tarjeta cae en el
-              marcador con la inicial.
+              Las cajas de texto de siempre, pero con el arte de cada sección
+              entrando por la derecha y desvaneciéndose. Así el texto manda —es
+              una página índice— y la página deja de ser cinco recuadros grises.
             */}
-            <div className="grid card-grid card-grid--lore">
+            <div className="grid card-grid--lore">
 
                 {
                     lore.map(section => (
 
-                        <EntryCard
+                        <Card
 
                             key={section.id}
 
-                            name={section.title}
+                            title={section.title}
 
-                            subtitle={section.description}
+                            description={section.description}
 
                             image={section.image}
 
                             imagePosition={section.imagePosition}
-
-                            imageZoom={section.imageZoom}
 
                             link={section.route}
 
