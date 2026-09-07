@@ -1,0 +1,20 @@
+{
+  "order": 10,
+  "group": "main",
+  "name": "Seedrian",
+  "image": "/species/5776a32117163a5fa50bd36f83b1d8a7.jpg",
+  "imagePosition": "",
+  "imageZoom": null,
+  "background": "/species/481180309_1316024229470463_6219276401246640908_n.jpg",
+  "color": "#ff9dab",
+  "summary": "",
+  "description": "",
+  "quote": [],
+  "origin": "Sol",
+  "habitat": "Plant Kingdom",
+  "lifespan": "90",
+  "traits": [],
+  "abilities": [],
+  "blocks": [],
+  "extraInfo": []
+}
