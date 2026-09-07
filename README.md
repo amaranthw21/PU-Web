@@ -52,7 +52,7 @@ That's it. Your change is saved and the live site rebuilds itself in about
 | **Worlds** | The main worlds, each with its own page and map |
 | **Countries** | Individual countries, each with its own page |
 | **Side worlds** | Secondary dimensions (button only, no page) |
-| **Lore (sections)** | The index of sections on the Lore page |
+| **Lore (sections)** | The cards on the Lore page — one per section, each with its picture |
 | **Server Chronicles** | What has happened in the server, one chronicle per entry |
 | **Rulesbook** | The server rules, one chapter per entry |
 
@@ -362,6 +362,17 @@ Renaming a block changes its link, so old links to it stop working. Renaming a
 whole chapter is fine — the address comes from the file name, not the name you
 type — but the site owner has to rename the file for the address to follow.
 
+## The Lore page
+
+The cards on the Lore page are the **Lore (sections)** collection, and each one
+takes an **Image**: the card fills itself with that art and lays the section's
+name and description over it, like the cards on Gods or Species. Without an
+image, the card falls back to the section's initial.
+
+The pictures that ship with it are borrowed from art already in the site — pick
+your own from the panel whenever you like. And a section with no **Route** still
+gets its card; it simply isn't a link.
+
 ## Server Chronicles
 
 Each entry in the **Server Chronicles** collection is one chronicle: a card on
@@ -508,6 +519,13 @@ On a phone the **Admin** link lives at the bottom of the sidebar panel rather
 than in the top bar. It used to sit six pixels from the ☰ button, and people
 reaching for the menu kept landing in the editing panel — which, asking them to
 sign in with GitHub, looked like the CMS opening on its own.
+
+The Lore page uses `EntryCard` (the art tile from Gods and Species) rather than
+the plain text `Card` it had. `EntryCard`'s `link` became optional for it — a
+section without a route renders the same tile as a `div` instead of a link that
+goes nowhere. Its grid is `.card-grid--lore`: three columns instead of four,
+because five destinations with a sentence each were breaking the sentence over
+four lines in a narrow tile, and 3 + 2 reads better than 4 + 1.
 
 Server Chronicles reuse `LoreDetail`, the same full-width page as energies,
 powers and transformations. Two optional props were added for them — `meta` (the

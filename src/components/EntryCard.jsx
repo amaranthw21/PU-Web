@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import asset from "../lib/asset";
 
 
+// `link` es opcional: una sección de Lore puede no tener página todavía, y en
+// ese caso la tarjeta se pinta igual pero sin ser un enlace, en vez de llevar a
+// ninguna parte.
 export default function EntryCard({ name, subtitle, image, imagePosition, imageZoom, link }) {
 
     // Si la imagen no existe / falla al cargar, caemos al placeholder magenta.
@@ -11,11 +14,16 @@ export default function EntryCard({ name, subtitle, image, imagePosition, imageZ
     const showImage = image && !imgError;
 
 
+    const classes = showImage ? "entry-card" : "entry-card entry-card--empty";
+
+    const Tag = link ? Link : "div";
+
+
     return (
 
-        <Link
-            to={link}
-            className={showImage ? "entry-card" : "entry-card entry-card--empty"}
+        <Tag
+            {...(link ? { to: link } : {})}
+            className={classes}
         >
 
             {
@@ -54,7 +62,7 @@ export default function EntryCard({ name, subtitle, image, imagePosition, imageZ
 
             </div>
 
-        </Link>
+        </Tag>
 
     );
 

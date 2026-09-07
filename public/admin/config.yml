@@ -915,9 +915,14 @@ collections:
     create: true
     identifier_field: title
     summary: "{{fields.order}} · {{fields.title}}"
+    media_folder: /public/lore
+    public_folder: /lore
     fields:
       - { name: order, label: Order, widget: number, value_type: int }
       - { name: title, label: Title, widget: string }
+      - { name: image, label: Image, widget: image, required: false, hint: "Fills this section's card on the Lore page. Without one, the card shows the section's initial." }
+      - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "Moves the picture inside its card, e.g. 'center 20%'." }
+      - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
       - { name: route, label: "Route (optional)", widget: string, required: false, hint: "e.g. /lore/gods. Leave empty if it doesn't link anywhere." }
       - { name: description, label: Description, widget: richtext, required: false, hint: "Shown inside the card on the Lore page. Leave a blank line between paragraphs." }
 

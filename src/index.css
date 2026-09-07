@@ -201,14 +201,29 @@ body::before {
 
 }
 
+/* La rejilla de la página Lore: tres por fila y más anchas. Son cinco destinos
+   con una frase cada uno, y a cuatro columnas la frase salía en cuatro líneas
+   dentro de una tarjeta estrecha. A tres quedan 3 + 2, que además reparte mejor
+   la segunda fila. */
+.card-grid--lore {
+
+    grid-template-columns: repeat(3, minmax(0, 340px));
+
+}
+
 @media (max-width: 900px) {
     .card-grid {
         grid-template-columns: repeat(2, minmax(0, 300px));
     }
+
+    .card-grid--lore {
+        grid-template-columns: repeat(2, minmax(0, 340px));
+    }
 }
 
 @media (max-width: 520px) {
-    .card-grid {
+    .card-grid,
+    .card-grid--lore {
         grid-template-columns: minmax(0, 320px);
     }
 }

@@ -1,6 +1,7 @@
 {
   "order": 4,
   "title": "Important Items",
+  "image": "/energy/master-emerald.png",
   "route": "/lore/items",
   "description": "The different items that exist in this world"
 }
