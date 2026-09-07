@@ -39,6 +39,18 @@ html {
        rebotar el scroll por encima o por debajo de la página en iOS. */
     background-color: #14101c;
 
+    /* Sin rebote elástico al llegar a los extremos.
+       
+       La barra de arriba es `sticky`, o sea que forma parte del documento: al
+       tirar hacia abajo estando ya arriba del todo, macOS bota la página entera
+       y la barra baja con ella, dejando un hueco encima. Quitando el rebote no
+       hay nada que botar.
+       
+       Lo otro que se podía hacer era pasar la barra a `fixed`, pero eso la saca
+       del flujo y obliga a compensar su altura en todo lo demás; esto es una
+       línea y no mueve nada de sitio. */
+    overscroll-behavior-y: none;
+
 }
 
 :target {
