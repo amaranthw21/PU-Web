@@ -697,6 +697,15 @@ hardcoded on purpose.
 
 ## The navigation
 
+The page doesn't bounce at either end (`overscroll-behavior-y: none` on `html`).
+That is deliberate: the top bar is `sticky`, so it belongs to the document, and
+macOS's elastic overscroll dragged it down along with the page whenever someone
+pulled up while already at the top, leaving a gap above it. The other way out was
+making the bar `fixed`, which takes it out of the flow and means compensating for
+its height everywhere else. The trade is that pull-to-refresh no longer works on
+Android — for a single-page app that reloads nothing anyway, that seemed a fair
+price.
+
 The sections live in `components/Sidebar.jsx`, not in the top bar: on desktop it
 is a rail of icons pinned to the left edge that widens on hover or on
 `:focus-within` (so keyboard and mouse behave the same), and the button at the
