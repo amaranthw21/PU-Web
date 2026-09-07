@@ -1,7 +1,22 @@
 {
   "order": 9,
-  "name": "Species Nine",
-  "image": "/species/species-9.png",
+  "group": "main",
+  "name": "Fae",
+  "image": "/species/Merlina_23.webp",
+  "imagePosition": "",
+  "imageZoom": null,
+  "background": "/species/bu3fitr7hswc1.jpeg",
+  "color": "#9055b5",
   "summary": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "quote": [],
+  "origin": "Mobius",
+  "habitat": "Sylvania - Dukedom of Camelot",
+  "lifespan": "90",
+  "traits": [
+    "They breathe CO2"
+  ],
+  "abilities": [],
+  "blocks": [],
+  "extraInfo": []
 }
