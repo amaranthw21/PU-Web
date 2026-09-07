@@ -68,9 +68,10 @@ const SECTIONS = [
         label: "Species",
         icon: <SpeciesIcon />,
         children: grouped(
-            mainSpecies,
-            companionSpecies,
-            "Companions",
+            [
+                ["Main Species", mainSpecies],
+                ["Companion Only", companionSpecies]
+            ],
             entry => `/species/${entry.id}`
         )
     },
@@ -78,7 +79,10 @@ const SECTIONS = [
         to: "/factions",
         label: "Factions",
         icon: <FactionsIcon />,
-        children: grouped(mainFactions, sideFactions, "Side dimensions")
+        children: grouped([
+            ["Main Factions", mainFactions],
+            ["Other Dimensions", sideFactions]
+        ])
     },
     {
         to: "/credits",
@@ -94,20 +98,22 @@ const SECTIONS = [
 // es justo lo que se veía mal.
 //
 // Un rótulo es un hijo sin `to`: la lista lo pinta como cabecera en vez de como
-// enlace. El primer grupo va sin rótulo —es lo que se espera al abrir— y el
-// segundo lo lleva. Si un grupo está vacío no se pinta su rótulo.
-function grouped(first, second, secondLabel, route){
+// enlace. Los dos grupos llevan el suyo —con uno solo rotulado, el otro parece
+// una lista a la que se le ha olvidado el título— y las palabras son las mismas
+// que usan las páginas, para no tener dos nombres para lo mismo. Si un grupo
+// está vacío, su rótulo no se pinta.
+function grouped(groups, route){
 
     const link = entry => ({
         to: typeof route === "function" ? route(entry) : entry.route,
         label: entry.name
     });
 
-    return [
-        ...first.map(link),
-        ...(second.length > 0 ? [{ label: secondLabel }] : []),
-        ...second.map(link)
-    ];
+    return groups.flatMap(([label, entries]) =>
+        entries.length > 0
+            ? [{ label }, ...entries.map(link)]
+            : []
+    );
 
 }
 
