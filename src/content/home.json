@@ -27,5 +27,32 @@
   "chroniclesTitle": "Latest chronicles",
   "showChronicles": true,
   "discordLabel": "",
-  "discordUrl": ""
+  "discordUrl": "",
+  "linksTitle": "Links",
+  "links": [
+    {
+      "label": "The Discord server",
+      "description": "Where the roleplay actually happens.",
+      "url": "https://discord.gg/",
+      "group": ""
+    },
+    {
+      "label": "Art on Tumblr",
+      "description": "The blog where the server's art gets posted.",
+      "url": "https://tumblr.com/",
+      "group": "Art and socials"
+    },
+    {
+      "label": "Character application",
+      "description": "Fill this in before bringing a new character in.",
+      "url": "https://forms.gle/",
+      "group": "Forms and sheets"
+    },
+    {
+      "label": "Sonic Wiki",
+      "description": "For anything canon we haven't written down here.",
+      "url": "https://sonic.fandom.com/",
+      "group": "References"
+    }
+  ]
 }

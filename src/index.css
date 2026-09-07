@@ -308,6 +308,102 @@ body::before {
 
 }
 
+/* Los enlaces de fuera: Discord, redes, formularios, wikis. Botones anchos con
+   su descripción, agrupados por tipo cuando hay grupos. */
+.home-links + .home-links {
+
+    margin-top: 22px;
+
+}
+
+.home-links__group {
+
+    margin: 0 0 10px;
+
+    color: #94a3b8;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+}
+
+.home-links__grid {
+
+    display: grid;
+
+    /* Con tope de ancho y alineados a la izquierda: un grupo de un solo enlace
+       estirado a todo el ancho parece un error, no una decisión. */
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 340px));
+    justify-content: start;
+
+    gap: 12px;
+
+}
+
+.home-link {
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 14px 16px;
+
+    color: #e2e8f0;
+    text-decoration: none;
+
+    background: rgba(31, 41, 55, 0.8);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+    transition: transform 0.2s, border-color 0.2s, background-color 0.2s;
+
+}
+
+.home-link__label {
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-weight: 700;
+
+}
+
+/* La flecha avisa de que el enlace se va del sitio. */
+.home-link__out {
+
+    color: #94a3b8;
+
+    font-size: 0.85em;
+
+}
+
+.home-link__text {
+
+    color: #94a3b8;
+
+    font-size: 0.88rem;
+    line-height: 1.45;
+
+}
+
+@media (hover: hover) {
+
+    .home-link:hover {
+
+        transform: translateY(-3px);
+
+        background: rgba(31, 41, 55, 0.95);
+        border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+
+    }
+
+}
+
+
 /* En móvil el arte de la cabecera entra por abajo, como en las tarjetas. */
 @media (max-width: 700px) {
 

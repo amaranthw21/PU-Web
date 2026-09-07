@@ -384,6 +384,14 @@ Under that, the front page shows the **first three chronicles** on its own, in
 the order they have on the Server Chronicles page, with a link to the rest. There
 is a switch to hide that section if you'd rather not have it.
 
+Last comes **Links**: everything that lives outside the archive — the Discord,
+art blogs, application forms, other wikis. Each one takes a label, an address and
+a line of description, and an optional **Group** files it under a heading
+(*Art and socials*, *Forms and sheets*…). Links with no group come first, without
+a heading, which is where the important one belongs. An address inside the site
+works too and won't open a new tab; anything external does, and says so with an
+arrow.
+
 ## The Lore page
 
 The cards on the Lore page are the **Lore (sections)** collection, and each one

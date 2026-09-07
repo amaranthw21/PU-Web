@@ -13,6 +13,73 @@ import asset from "../lib/asset";
 const CHRONICLES = 3;
 
 
+// Los enlaces se agrupan por su etiqueta de grupo, respetando el orden en que
+// están escritos: los que no tienen grupo van primero y sin rótulo, que suelen
+// ser los importantes. Ocho enlaces mezclados de golpe se leen como un montón.
+function byGroup(links){
+
+    const groups = [];
+
+    (links ?? [])
+        .filter(link => link.label?.trim() && link.url?.trim())
+        .forEach(link => {
+
+            const name = link.group?.trim() ?? "";
+            const open = groups.find(group => group.name === name);
+
+            if(open){
+                open.links.push(link);
+            } else {
+                groups.push({ name, links: [link] });
+            }
+
+        });
+
+    return groups;
+
+}
+
+
+// Un enlace de la lista. Interno (empieza por /) o externo, y en ese caso abre
+// en otra pestaña.
+function HomeLink({ link }){
+
+    const external = !link.url.startsWith("/");
+
+
+    return (
+
+        <a
+            className="home-link"
+            href={link.url}
+            {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+        >
+
+            <span className="home-link__label">
+
+                {link.label}
+
+                {external && <span className="home-link__out" aria-hidden="true">↗</span>}
+
+            </span>
+
+            {
+                link.description?.trim() && (
+
+                    <span className="home-link__text">
+                        {link.description}
+                    </span>
+
+                )
+            }
+
+        </a>
+
+    );
+
+}
+
+
 export default function Home(){
 
     // Sin texto: la pestaña se queda con el nombre del sitio, que en la
@@ -22,6 +89,8 @@ export default function Home(){
     const featured = home.showChronicles
         ? chronicles.slice(0, CHRONICLES)
         : [];
+
+    const linkGroups = byGroup(home.links);
 
 
     return (
@@ -157,6 +226,52 @@ export default function Home(){
                                 All chronicles →
                             </Link>
                         </p>
+
+                    </section>
+
+                )
+            }
+
+            {
+                linkGroups.length > 0 && (
+
+                    <section className="home-section">
+
+                        <h2 className="worlds-heading">
+                            {home.linksTitle?.trim() || "Links"}
+                        </h2>
+
+                        {
+                            linkGroups.map(group => (
+
+                                <div key={group.name || "main"} className="home-links">
+
+                                    {
+                                        group.name && (
+
+                                            <h3 className="home-links__group">
+                                                {group.name}
+                                            </h3>
+
+                                        )
+                                    }
+
+                                    <div className="home-links__grid">
+
+                                        {
+                                            group.links.map(link => (
+
+                                                <HomeLink key={link.url} link={link} />
+
+                                            ))
+                                        }
+
+                                    </div>
+
+                                </div>
+
+                            ))
+                        }
 
                     </section>
 

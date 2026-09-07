@@ -60,6 +60,19 @@ collections:
               - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "e.g. 'center 20%'" }
           - { name: chroniclesTitle, label: "Chronicles heading", widget: string, required: false, hint: "The heading over the chronicles on the front page. Empty uses 'Latest chronicles'." }
           - { name: showChronicles, label: "Show the latest chronicles", widget: boolean, default: true, hint: "Shows the first three chronicles, in the order they have on their own page. Turn it off to hide the section." }
+          - { name: linksTitle, label: "Links heading", widget: string, required: false, hint: "The heading over the links. Empty uses 'Links'." }
+          - name: links
+            label: Links
+            widget: list
+            required: false
+            label_singular: Link
+            summary: "{{fields.label}} → {{fields.url}}"
+            hint: "Everything that lives outside the archive: the Discord, art blogs, forms, other wikis. They come out in the order you put them."
+            fields:
+              - { name: label, label: Label, widget: string, hint: "What the button says, e.g. 'The Discord server'." }
+              - { name: url, label: Address, widget: string, hint: "The full address, https:// included. An address inside the site (/rulesbook) also works and won't open a new tab." }
+              - { name: description, label: Description, widget: string, required: false, hint: "One line under the label. What someone finds if they click." }
+              - { name: group, label: Group, widget: string, required: false, hint: "Optional heading to file this link under, e.g. 'Art and socials'. Links sharing a group appear together; the ones with no group come first, without a heading." }
 
   # ───────────────────────── Species ─────────────────────────
   - name: species
