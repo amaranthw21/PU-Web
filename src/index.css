@@ -1773,6 +1773,24 @@ body::before {
 
 }
 
+/* Rótulo de un grupo dentro de un submenú: separa las razas companion de las
+   principales, o las dimensiones secundarias del hub. No es un enlace, así que
+   no se ilumina ni responde al ratón. */
+.rail__subhead {
+
+    display: block;
+
+    padding: 9px 20px 4px 58px;
+
+    color: #8b95a5;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+}
+
 .rail__sublink {
 
     display: flex;

@@ -608,6 +608,12 @@ is a rail of icons pinned to the left edge that widens on hover or on
 bottom pins it open. Below 900px there is no rail — the same component is the
 panel the hamburger opens, already expanded.
 
+Species and Factions come out in two labelled groups, using the same wording as
+their pages: *Main Species* / *Companion Only*, *Main Factions* / *Other
+Dimensions*. Sorted by `order` alone they interleaved, which read as a mistake.
+A submenu entry without a `to` is that group's heading rather than a link, and a
+group with nothing in it prints no heading.
+
 The submenus are not written by hand: each section maps over the same data the
 pages use (`data/rules`, `data/lore/lore`, `data/species`, `mainWorlds`,
 `mainFactions` + `sideFactions`), so publishing a world or a rule chapter adds it
