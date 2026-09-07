@@ -42,6 +42,7 @@ That's it. Your change is saved and the live site rebuilds itself in about
 
 | Collection | What it holds |
 | --- | --- |
+| **Pages → Home page** | The front page: its greeting, its intro, the *Start here* cards and the button |
 | **Species** | The playable/known species |
 | **Faction hubs** | The faction hubs, one per world (button, intro and groups) |
 | **Factions** | Individual factions, each with its own page |
@@ -362,6 +363,35 @@ Renaming a block changes its link, so old links to it stop working. Renaming a
 whole chapter is fine — the address comes from the file name, not the name you
 type — but the site owner has to rename the file for the address to follow.
 
+## The front page
+
+**Pages → Home page** in the panel is the front page, and it is a single form
+rather than a collection — there is only ever one front page.
+
+What you write there:
+
+- The **greeting** and the **intro**: what this archive is, for someone arriving
+  for the first time. A **header picture** sits behind them, fading out towards
+  the words.
+- The **Start here** cards: where a newcomer should go first. Three or four work
+  best; each one takes a title, a line of description and an address inside the
+  site (`/rulesbook`, `/species`…). They can carry a picture too, which comes in
+  from the right like the Lore cards.
+- An optional **button** — a Discord invite, say. Give it a label and a full
+  `https://` address; leave either empty and no button appears.
+
+Under that, the front page shows the **first three chronicles** on its own, in
+the order they have on the Server Chronicles page, with a link to the rest. There
+is a switch to hide that section if you'd rather not have it.
+
+Last comes **Links**: everything that lives outside the archive — the Discord,
+art blogs, application forms, other wikis. Each one takes a label, an address and
+a line of description, and an optional **Group** files it under a heading
+(*Art and socials*, *Forms and sheets*…). Links with no group come first, without
+a heading, which is where the important one belongs. An address inside the site
+works too and won't open a new tab; anything external does, and says so with an
+arrow.
+
 ## The Lore page
 
 The cards on the Lore page are the **Lore (sections)** collection, and each one
@@ -520,6 +550,13 @@ On a phone the **Admin** link lives at the bottom of the sidebar panel rather
 than in the top bar. It used to sit six pixels from the ☰ button, and people
 reaching for the menu kept landing in the editing panel — which, asking them to
 sign in with GitHub, looked like the CMS opening on its own.
+
+The front page is `src/content/home.json`, a single file rather than a folder
+collection — hence the `files` collection in `config.yml`, the only one. Its
+*Start here* cards reuse the same `Card` as the Lore page, so their pictures fade
+in the same way, and the chronicles it features are simply the first three of
+`data/lore/chronicles` (no sorting of its own: the chronicles' `order` decides,
+which keeps one list in charge).
 
 The Lore cards are the plain `Card` with an optional picture behind them. The
 gradient is painted *over* the image rather than masking it, so the flat half

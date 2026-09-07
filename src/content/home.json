@@ -1,0 +1,58 @@
+{
+  "greeting": "Welcome to the archive",
+  "intro": "This is where the setting lives: its worlds, its gods, the rules everyone plays by and the record of what has happened so far.\n\nEverything here is written by the moderation team. If something looks wrong or missing, tell a mod — it can be fixed in a couple of minutes.",
+  "image": "/worlds/mobius.jpg",
+  "startHere": [
+    {
+      "title": "Read the rules",
+      "description": "What is allowed in a scene, and how conflicts get resolved.",
+      "route": "/rulesbook"
+    },
+    {
+      "title": "Pick a species",
+      "description": "What your character can be, and what that means for them.",
+      "route": "/species"
+    },
+    {
+      "title": "See the worlds",
+      "description": "Mobius, Moebius, Sol and what lies between them.",
+      "route": "/worlds"
+    },
+    {
+      "title": "Dig into the lore",
+      "description": "Gods, energies, items and the timeline of it all.",
+      "route": "/lore"
+    }
+  ],
+  "chroniclesTitle": "Latest chronicles",
+  "showChronicles": true,
+  "discordLabel": "",
+  "discordUrl": "",
+  "linksTitle": "Links",
+  "links": [
+    {
+      "label": "The Discord server",
+      "description": "Where the roleplay actually happens.",
+      "url": "https://discord.gg/",
+      "group": ""
+    },
+    {
+      "label": "Art on Tumblr",
+      "description": "The blog where the server's art gets posted.",
+      "url": "https://tumblr.com/",
+      "group": "Art and socials"
+    },
+    {
+      "label": "Character application",
+      "description": "Fill this in before bringing a new character in.",
+      "url": "https://forms.gle/",
+      "group": "Forms and sheets"
+    },
+    {
+      "label": "Sonic Wiki",
+      "description": "For anything canon we haven't written down here.",
+      "url": "https://sonic.fandom.com/",
+      "group": "References"
+    }
+  ]
+}
