@@ -40,9 +40,9 @@
           "type": "textImage",
           "title": "Cyberization",
           "text": "**Cyberization** is another form of mechanical augmentation in which a living being is transformed into a cyborg by incorporating cybernetic components into their organic body. Unlike Robotization, Cyberization does not necessarily replace the entire body and can be performed either partially or completely.\n\nCyberization is most commonly associated with individuals who serve the Eggman Empire, particularly those who willingly undergo the process in exchange for enhanced abilities, improved physical conditions, or other benefits.\n\nA Cyberized individual is **not automatically considered a Robian**. The distinction depends on the extent and nature of the transformation. Cyberization can leave a person largely organic, partially mechanical, or almost entirely mechanical, but the process itself is separate from Robotization.",
-          "image": "/species/Cassia_Profile.webp",
+          "image": "/species/022_0.webp",
           "caption": "Cassia the Pronghorn - Sonic Archie",
-          "imagePositionX": 50,
+          "imagePositionX": 100,
           "imagePositionY": 50,
           "fit": "fill",
           "imageSide": "left"
