@@ -1,7 +1,24 @@
 {
   "order": 7,
-  "name": "Species Seven",
-  "image": "/species/species-7.png",
+  "group": "main",
+  "name": "Ghosts",
+  "image": "/species/Lah_Marza.webp",
+  "imagePosition": "",
+  "imageZoom": null,
+  "background": "/species/sonic-jp-official-october-2022-illustration-v0-o1986fm2jfw91.webp",
+  "color": "#a119a2",
   "summary": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur adipisci velit.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "quote": [],
+  "origin": "Mobius - Moebius - Sol",
+  "habitat": "All over the planet",
+  "lifespan": "Infinite",
+  "traits": [],
+  "abilities": [
+    "Intangibility",
+    "Levitation",
+    "Limited invisibility or translucence"
+  ],
+  "blocks": [],
+  "extraInfo": []
 }
