@@ -13,35 +13,13 @@ import asset from "../lib/asset";
 const CHRONICLES = 3;
 
 
-// Los enlaces se agrupan por su etiqueta de grupo, respetando el orden en que
-// están escritos: los que no tienen grupo van primero y sin rótulo, que suelen
-// ser los importantes. Ocho enlaces mezclados de golpe se leen como un montón.
-function byGroup(links){
-
-    const groups = [];
-
-    (links ?? [])
-        .filter(link => link.label?.trim() && link.url?.trim())
-        .forEach(link => {
-
-            const name = link.group?.trim() ?? "";
-            const open = groups.find(group => group.name === name);
-
-            if(open){
-                open.links.push(link);
-            } else {
-                groups.push({ name, links: [link] });
-            }
-
-        });
-
-    return groups;
-
-}
-
-
-// Un enlace de la lista. Interno (empieza por /) o externo, y en ese caso abre
-// en otra pestaña.
+// Un enlace: su logo y su nombre debajo, como la fila de logos que ponen las
+// webs para enlazar a otras. Sin logo se pinta la inicial, así que un enlace
+// recién añadido no se ve roto mientras no le suban la imagen.
+//
+// La descripción no se pinta —no cabe en una pieza de este tamaño— pero se
+// queda como título del enlace, así que sale al posar el ratón y la leen los
+// lectores de pantalla.
 function HomeLink({ link }){
 
     const external = !link.url.startsWith("/");
@@ -52,8 +30,26 @@ function HomeLink({ link }){
         <a
             className="home-link"
             href={link.url}
+            title={link.description?.trim() || undefined}
             {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
         >
+
+            <span className="home-link__badge">
+
+                {
+                    link.icon?.trim()
+                        ? <img
+                              src={asset(link.icon)}
+                              alt=""
+                              loading="lazy"
+                              onError={e => { e.currentTarget.style.display = "none"; }}
+                          />
+                        : <span className="home-link__initial">
+                              {link.label.charAt(0)}
+                          </span>
+                }
+
+            </span>
 
             <span className="home-link__label">
 
@@ -62,16 +58,6 @@ function HomeLink({ link }){
                 {external && <span className="home-link__out" aria-hidden="true">↗</span>}
 
             </span>
-
-            {
-                link.description?.trim() && (
-
-                    <span className="home-link__text">
-                        {link.description}
-                    </span>
-
-                )
-            }
 
         </a>
 
@@ -90,7 +76,11 @@ export default function Home(){
         ? chronicles.slice(0, CHRONICLES)
         : [];
 
-    const linkGroups = byGroup(home.links);
+    // Los enlaces útiles son los que tienen nombre y dirección; el resto son
+    // filas a medio rellenar en el panel.
+    const links = (home.links ?? []).filter(
+        link => link.label?.trim() && link.url?.trim()
+    );
 
 
     return (
@@ -233,7 +223,7 @@ export default function Home(){
             }
 
             {
-                linkGroups.length > 0 && (
+                links.length > 0 && (
 
                     <section className="home-section">
 
@@ -241,37 +231,24 @@ export default function Home(){
                             {home.linksTitle?.trim() || "Links"}
                         </h2>
 
-                        {
-                            linkGroups.map(group => (
+                        {/*
+                          Todos en una sola fila centrada. Estuvieron agrupados
+                          por tipo, con su rótulo, y era peor: los rótulos parten
+                          la fila y con pocos enlaces por grupo quedaba una
+                          columna de piezas sueltas con medio ancho vacío al
+                          lado.
+                        */}
+                        <div className="home-links__grid">
 
-                                <div key={group.name || "main"} className="home-links">
+                            {
+                                links.map(link => (
 
-                                    {
-                                        group.name && (
+                                    <HomeLink key={link.url} link={link} />
 
-                                            <h3 className="home-links__group">
-                                                {group.name}
-                                            </h3>
+                                ))
+                            }
 
-                                        )
-                                    }
-
-                                    <div className="home-links__grid">
-
-                                        {
-                                            group.links.map(link => (
-
-                                                <HomeLink key={link.url} link={link} />
-
-                                            ))
-                                        }
-
-                                    </div>
-
-                                </div>
-
-                            ))
-                        }
+                        </div>
 
                     </section>
 

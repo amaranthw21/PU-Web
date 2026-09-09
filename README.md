@@ -385,12 +385,15 @@ the order they have on the Server Chronicles page, with a link to the rest. Ther
 is a switch to hide that section if you'd rather not have it.
 
 Last comes **Links**: everything that lives outside the archive — the Discord,
-art blogs, application forms, other wikis. Each one takes a label, an address and
-a line of description, and an optional **Group** files it under a heading
-(*Art and socials*, *Forms and sheets*…). Links with no group come first, without
-a heading, which is where the important one belongs. An address inside the site
-works too and won't open a new tab; anything external does, and says so with an
-arrow.
+art blogs, application forms, other wikis. They come out as a row of buttons,
+each with the site's **logo** and its name underneath. Upload a square logo (a
+transparent PNG is best); without one the button shows the link's first letter,
+so a new link never looks broken.
+
+The **description** isn't printed — there is no room on a button — but it shows
+when the mouse rests on it and screen readers read it, so it's still worth
+writing. An address inside the site works too and won't open a new tab; anything
+external does, and says so with an arrow.
 
 ## The Lore page
 
@@ -550,6 +553,19 @@ On a phone the **Admin** link lives at the bottom of the sidebar panel rather
 than in the top bar. It used to sit six pixels from the ☰ button, and people
 reaching for the menu kept landing in the editing panel — which, asking them to
 sign in with GitHub, looked like the CMS opening on its own.
+
+The links at the foot of the front page went through three shapes before this
+one, and the reason is worth keeping: cards left a narrow column down the left
+with the rest of the width empty, and so did rows-in-groups, because a group
+often holds a single link. They are now one centred row of logo buttons — the
+thing sites do to link to other sites — which fills the width at any count and
+reads as deliberate even with three. Grouping went with it: the headings broke
+the row into stubs, which was the original complaint.
+
+Two details that bite: the buttons need `box-sizing: border-box` (the site
+doesn't set it globally, so a declared 132px was rendering at 154 and throwing
+the row off), and `overflow-wrap` on the label, or a long word like
+"application" widens the button past its declared size.
 
 The front page is `src/content/home.json`, a single file rather than a folder
 collection — hence the `files` collection in `config.yml`, the only one. Its
