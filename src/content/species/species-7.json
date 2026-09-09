@@ -19,6 +19,130 @@
     "Levitation",
     "Limited invisibility or translucence"
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Ghosts are an unusual race within the world, existing in the space between life and death. Unlike most species, they do not share a single origin. Instead, ghosts are divided into three distinct types, each governed by its own rules, limitations, and unique way of existing."
+        },
+        {
+          "type": "text",
+          "title": "Ghostborn",
+          "text": "Ghostborns (Aka. Natural Ghosts) are considered the **true** ghost species, consisting of beings who are born as ghosts rather than becoming one after death.\n\nThey occur naturally in only a handful of regions across the world, most notably Pumpkin Hill and the Marquisate of Poe in Sylvania in Mobius, and the Kingdom of Northumbra in Moebius. **Ghostborn are entirely absent from the Sol Dimension.**\n\nExamples of natural ghosts include Boos, Boom Boos, King Boom Boo, and Lah.\n\nUnlike truly dead spirits, natural ghosts function much like any other living race. They are capable of growing, changing, and living for extraordinarily long periods, often outlasting even long-lived species such as the Zeti. Most importantly, they are not bound to any particular person, place, or object.\n\nThough ghostly by nature, ghostborns are fully alive in their own unique way. Their existence is simply governed by rules and biological processes that differ from those of ordinary living beings."
+        },
+        {
+          "type": "image",
+          "image": "/species/F9wMuNnb0AA1MmC.jpeg",
+          "caption": "Lah - Sonic Ghost Tale",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        },
+        {
+          "type": "textImage",
+          "title": "Remnants",
+          "text": "Remnants (Aka. Lingering Ghosts) are the remnants of living beings who died while retaining an unresolved emotional, spiritual, or symbolic connection to the world of the living. Unlike ghostborns, they are **not considered a true species**, but rather an aftereffect of death—or, in some cases, the result of a curse.\n\nOne of their defining traits is that they retain an appearance remarkably similar to the one they possessed at the moment of death. They cannot grow, age, or undergo normal physical changes. Their existence is essentially frozen in the state they were in when they died or got cursed.\n\nRemnants are typically bound to a **place, object, or person**, which serves as the focus of their haunting. However, their connection can also extend to those who remember them, allowing them to manifest around people even when they are far removed from whatever they are haunting. One example is Tikal the Echidna, whose spirit remained connected to the Master Emerald after her death.\n\nTheir existence is closely tied to **memory**. The more people who remember a lingering ghost, the stronger and more stable its presence can become. Conversely, as memories of them fade, so too does their strength. This does not mean they can simply disappear, however. A lingering ghost can only truly pass on once whatever unresolved matter, emotional attachment, curse, or other circumstance keeps it bound to the world has been resolved.\n\nIn this sense, lingering ghosts are not truly alive, nor are they entirely dead. They are echoes of those who have passed on, sustained by whatever connection still remains between them and the living world.",
+          "image": "/species/tumblr_4b224d5d95d7a96e87d6b92e737c47b7_0719c838_1280.jpg",
+          "caption": "Sonic (Ghost of the Future) - By Evan Stanley",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Phantoms",
+          "text": "Phantoms are a unique class of ghost found exclusively within the **Sol Dimension, particularly in the Erlik Princedom.** Like the remnants, they are **not considered a true species**, but rather entities created through the effects of Null’s curse.\n\nTheir most distinctive trait is their appearance. Phantoms are typically dark in coloration and possess a viscous, liquid-like form, giving their bodies an almost oily appearance. Their physical forms can appear unstable, as though their bodies are composed of some strange substance rather than conventional matter.\n\nPhantoms are generally highly aggressive toward outsiders who enter the Princedom, making them a significant threat to those unfamiliar with the region. Their hostility, however, is not necessarily an inherent trait of their original selves, but rather a consequence of the curse that transformed them.\n\nWhat makes Phantoms particularly unusual is that their transformation is not necessarily permanent. If an individual was already afflicted by Null’s curse **before their death**, the resulting Phantom may retain enough of their original essence to potentially be restored to the species they belonged to in life, whether Mobian or otherwise.\n\nIn this sense, Phantoms are not truly a new form of life or even a conventional type of undead. They are the result of a living being's identity being distorted by Null's curse, with death further altering what remains of them. Unlike ghostborns, they were never meant to exist as ghosts in the first place.",
+          "image": "/species/oardefault.jpg",
+          "caption": "Null - Sonic Universe Restored",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        }
+      ]
+    },
+    {
+      "title": "Population",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The three types of ghosts differ significantly in where they can originate and manifest.\n\nGhostborns are restricted to a small number of regions where their kind occurs naturally. These include **Pumpkin Hill** and the **Marquisate of Poe in Sylvania** on Mobius, as well as the **Kingdom of Northumbra on Moebius**. Ghostborns do not naturally occur in the Sol Dimension.\n\nRemnants, by contrast, are not geographically restricted. They can manifest anywhere their connection allows them to exist. A Remnant may appear near the person, place, or object to which it is bound, but can also manifest around individuals who remember them, even if those people are located far from the ghost's original place of death.\n\nPhantoms are the most geographically restricted of the three. They are exclusive to the **Erlik Princedom in the Sol Dimension**, where they are created as a consequence of Null's curse. Their existence is therefore tied not only to the curse itself, but also to the region in which it operates."
+        },
+        {
+          "type": "image",
+          "image": "/species/Cream-the-Rabbit-Halloween.avif",
+          "caption": "Cream the Rabbit in Pumpkin Hill",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Natural Powers & Chaos Affinity",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Regardless of their type—**Ghostborns, Remnants, or Phantoms**—ghosts cannot manipulate Chaos Energy, Anarchy, Harmony, or magic. These forces are fundamentally beyond their ability to wield directly.\n\nHowever, ghosts can **absorb and feed upon planetary energies** to replenish their own spiritual energy. While this does not allow them to manipulate the energy itself, it can greatly increase their strength and stability.\n\nA ghost can accomplish this by haunting an artifact or location containing a significant concentration of planetary energy. For example, a ghost bound to a **Chaos Drive** could gradually draw energy from it, using the stored Chaos Energy to sustain itself.\n\nWith enough energy, a ghost can become extraordinarily powerful. In some cases, a ghost that continuously feeds upon a sufficiently potent energy source can reach a level of strength comparable to that of a ghost whose existence is sustained by the memories of many people.\n\nThis provides ghosts with an alternative means of maintaining their power. **Remnants**, in particular, may weaken as they become forgotten, but a sufficiently powerful energy source can compensate for that loss. Likewise, a Phantom or Ghostborn can replenish its reserves through the same method, despite being unable to actually wield the energy as magic or Chaos-based abilities.\n\nIn other words, ghosts can **consume planetary energy, but they cannot command it**.",
+          "image": "/species/7142578_2559977_kyalbrownart_untitled-7142578.ecd25e074af7a54a4394cc7cb2e555cc.webp",
+          "caption": "Knuckles the Echidna - by kyalbrownart",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Biological Powers",
+          "text": "Regardless of whether they are **Ghostborns, Remnants, or Phantoms**, all ghosts possess a basic set of innate abilities:\n\n- **Intangibility** — the ability to pass through solid matter.\n- **Levitation** — the ability to float and move without relying on physical support.\n- **Limited Invisibility** — the ability to become invisible or partially translucent, allowing them to obscure their presence from the living.\n\nSome ghosts may also retain or develop abilities resembling those they possessed while alive. However, these powers are not limitless. **All ghost abilities are powered by the ghost's own life force.** The more energy a ghost expends, the more its reserves are depleted.",
+          "image": "/species/F9wYiPIWMAAaFbT.webp",
+          "caption": "Uh & Sy - Sonic Ghost Tale",
+          "imagePositionX": 45,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        }
+      ]
+    },
+    {
+      "title": "Physical Traits",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "**Ghostborns** resemble the classic depiction of ghosts: pale or white bodies, floating movement, and forms that often lack legs or possess an indistinct lower half. Their bodies are unmistakably supernatural, making them immediately distinguishable from living beings. Despite their unusual appearance, however, their forms are natural to their species rather than the result of death or transformation.\n\n**Remnants** retain the appearance they possessed in life. Their bodies, clothing, injuries, and other physical traits remain essentially unchanged, leaving them permanently frozen in the state they were in at the moment of death. To an observer, a Remnant may appear almost completely alive at first glance, with their ghostly nature becoming apparent only through traits such as their intangibility or other supernatural abilities.\n\n**Phantoms** are typically dark in coloration and possess a viscous, liquid-like form, almost as though their bodies were composed of or coated in oil. Their appearance reflects the corrupting influence of Null's curse, giving them a distinctly unnatural and often unsettling appearance.",
+          "image": "/species/tikal-art-from-sonic-and-tails-r-episode-8-v0-heJOHQeUA864_5rQqy14nzNMfIToXQr5Md1Wk0bDrnc-removebg-preview.png",
+          "caption": "Tikal - Art from Sonic And Tails R",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Special Cases",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Death Canon Characters + Tikal",
+          "text": "You cannot create an OC who is the ghost of a canon character who has already died, such as Maria or Gerald. Their stories have already been told, and their deaths should remain part of the past.\n\nTikal is also in the banned list for a similar reason."
+        }
+      ]
+    }
+  ],
   "extraInfo": []
 }
