@@ -17,6 +17,119 @@
   "abilities": [
     "Probability Manipulation (Miracle)"
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Genies originate exclusively from Lunar City, an ancient mystical city located in the Crescent Dunes Region of Shamar. No genies native to any other region of the world are known to exist.\n\nFor centuries, Lunar City and its inhabitants were sealed within the enchanted book **The Secret Rings** (yes, the game is canon), created by Walpurgis. \n\nIt was only recently, through the efforts of Sonic the Hedgehog, that the seal was broken, freeing both the city and its genie inhabitants and returning them to the world.",
+          "image": "/species/Gh0uVXNa4AAn655-removebg-preview.png",
+          "caption": "Shahra the Genie of the Ring - Art by Yui Karasuno",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Population",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Genies are a rare species. Even following their liberation, their numbers remain limited, with most continuing to reside in or around Lunar City. Although some have begun to explore and interact with the modern world, genies remain an uncommon sight beyond their homeland, having historically been kept in widespread servitude and bonded to others.\n\nIt is still posible to find genies that have been trapped into objects outside of Shamar.\n\n**Genies are a unique species native to Mobius. On Moebius, they were driven to extinction by the Chaldeans, while no genies exist in the Sol Dimension.**"
+        },
+        {
+          "type": "image",
+          "image": "/species/635099709_17946494703102062_2381682364032667000_n.jpg",
+          "caption": "Shahra -  Concept Art",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Natural Powers & Chaos Affinity",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Innate Powers / Magic Powers:",
+          "text": "Genies do not possess any innate magical abilities or supernatural powers."
+        },
+        {
+          "type": "textImage",
+          "title": "Biological Powers",
+          "text": "Genies possess immense reality-altering powers, but with one crucial restriction: **they cannot use their powers for themselves, not even in self-defense.**\n\nTheir abilities manifest exclusively through the granting of wishes. Even then, genies do not directly create matter or rewrite reality. Instead, they manipulate **probability and causality**, subtly influencing events so that a wished-for outcome occurs naturally, provided it was **theoretically possible** to begin with.\n\nFor example, a wish for wealth might cause the wisher to win the lottery, receive an unexpected inheritance, or experience an unforeseen business opportunity rather than simply causing money to appear from nothing.\n\nThe strength and scale of a wish's outcome depend on the individual genie's power. A weaker genie might only be capable of producing a small stroke of luck, such as causing the wisher to find a few lost coins in their pocket. A more powerful genie, however, could manipulate circumstances on a much greater scale, potentially causing the wisher to win the lottery or acquire a substantial fortune through an unlikely chain of events.\n\nAs a result, while all genies possess the ability to grant wishes, **the extent of their influence over probability and causality varies considerably from one genie to another.**",
+          "image": "/species/GenieMocksSonic.webp",
+          "caption": "",
+          "imagePositionX": 80,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Special Rules",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Freedom to deny",
+          "text": "**Genies are not inherently obligated to grant wishes and may refuse a request at their own discretion.** However, each genie possesses a specific magical phrase that can compel them to grant wishes when properly invoked.\n\nOnce a wisher successfully invokes the appropriate phrase, the genie becomes magically bound to comply with the wisher's wishes. The exact phrase required varies from genie to genie, making knowledge of a particular genie's binding phrase essential to compelling their service."
+        },
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Genies cannot use Chaos Energy or the Chaos Emeralds. Instead, they may draw upon a unique set of mystical artifacts known as the **Seven World Rings**.\n\nWhen a genie possesses a World Ring, they gain limited access to their own innate power, allowing them to use **their abilities independently rather than being restricted to wish granting for others.** The more World Rings a genie possesses, the greater the portion of their power they can freely access.\n\nHowever, a genie’s full potential can only be unlocked by possessing all seven World Rings.",
+          "image": "/species/1811355104854d1a8ce2ccd499126903.jpeg",
+          "caption": "Seven World Rings",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Sealing & Vulnerability",
+          "text": "Although immortal, genies remain vulnerable to magical containment. Certain enchanted objects possess the ability to seal a genie indefinitely, cutting them off from the outside world and binding them to the will of whoever controls the object.\n\nThe practice of sealing genies was widespread in ancient times, with many genies being imprisoned and forced into servitude for centuries. This history has left a lasting impact on genie society, causing many to distrust and fear other races, particularly those who might seek to exploit or enslave them.",
+          "image": "/species/Anniversary_illustrationMarch_2026-removebg-preview.png",
+          "caption": "Erazor Djinn - Art by Yui Karasuno",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        }
+      ]
+    },
+    {
+      "title": "Physical Traits",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Genies possess the ability to freely alter their physical appearance. They can change details such as their clothing, coloration, and other visual features, with some even choosing to adopt appearances resembling other species, such as Mobians.\n\nDespite their supernatural nature, genies possess no exceptional physical strength or durability. A genie is generally comparable to an average human in terms of physical capabilities.\n\nGenies do not age beyond a certain point and are functionally immortal, though they are not invulnerable. They cannot be killed through conventional means, but they remain vulnerable to magical forms of containment. A genie can be sealed within an enchanted object, rendering them unable to act or interact with the outside world for as long as the seal remains intact."
+        },
+        {
+          "type": "image",
+          "image": "/species/Ringscon4 (1).webp",
+          "caption": "Erazor Djinn Design",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        }
+      ]
+    }
+  ],
   "extraInfo": []
 }
