@@ -14,7 +14,95 @@
   "habitat": "Plant Kingdom",
   "lifespan": "90",
   "traits": [],
-  "abilities": [],
-  "blocks": [],
+  "abilities": [
+    "Plant Manipulation",
+    "Transformation under intense emotions"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The Seedrians are a distinctive species native to the Sol Dimension. In the earliest days of their world, during its creation, they were engineered by the first Soleans as living weapons—tireless beings who required neither food nor rest and could sustain themselves indefinitely by drawing energy directly from the planet itself.\n\nTheir fate changed when one of their own, Cooksonia, was chosen by the Earth Sol Emerald to become its guardian. Inspired by this unprecedented event, the Seedrians broke free from the control of rival nations and forged a homeland of their own. This new nation would eventually become known as the Plant Kingdom.",
+          "image": "/species/d7e61u5-3140823f-9220-43d9-9eda-cad781615a57-removebg-preview (1).png",
+          "caption": "Cosmo - Art by Cheroy in DeviantArt",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Population",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The Seedrians hold dominion over the Plant Kingdom, a region centered around Soma Island—the largest and most habitable landmass in the archipelago—along with the smaller islands that surround it.\n\nAlthough a small number of Seedrians may occasionally be encountered beyond the borders of the Plant Kingdom, such sightings are rare. \n\n**The species is native exclusively to the Sol Dimension.**",
+          "image": "/species/sonic_boom_hertia_the_seedrian__by_cheroy_d7ncuna--removebg-preview.png",
+          "caption": "Hertia - Art by Cheroy in DeviantArt",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        }
+      ]
+    },
+    {
+      "title": "Natural Powers & Chaos Affinity",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Natural Powers & Chaos Affinity",
+          "text": "Seedrians do not possess any innate magical abilities or supernatural powers."
+        },
+        {
+          "type": "textImage",
+          "title": "Biological Powers",
+          "text": "Seedrians possess two natural abilities.\n\n**The first is the ability to grow and manipulate plant life**. The strength and expression of this power varies greatly between individuals. Some Seedrians can summon vast forests in mere moments, while others may struggle to coax even a single blade of grass from the soil.\n\n**Their second ability is considerably more volatile: the power to transform into massive, lizard-like forms resembling dragons or dinosaurs when overwhelmed by intense negative emotions such as stress, fear, or anguish. In rare cases, exceptionally powerful positive emotions can trigger the transformation as well.**\n\nHowever, this transformation comes at a severe cost. The transformed Seedrian rapidly consumes energy at a rate far greater than they can replenish from their surroundings. For most Seedrians, prolonged transformation is ultimately fatal.\n\nBecause of the danger it poses, this transformation is typically sealed by a Blessed Amulet. As long as the amulet remains intact, the transformation cannot be triggered. Should a Seedrian transform, however, contact with a Blessed Amulet can forcibly revert them to their normal form.",
+          "image": "/species/sonic_boom_landar_the_seedrian__by_cheroy_d7o2arh--removebg-preview.png",
+          "caption": "Landar - Art by Cheroy in DeviantArt",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Blessed Amulet Powers",
+          "text": "Because Blessed Amulets are forged from special gemstones, Seedrians can channel their powers through them, much like they can with other gems throughout the world.\n\nFor most of the population, these amulets are crafted from common gemstones infused with Sol Dimension energy. As a result, they provide only minor enhancements, typically granting a modest increase in physical strength and speed.\n\nAmong older generations and members of the royal family, however, Blessed Amulets created using energy from the Earth Sol Emerald are far more prevalent. These amulets grant the wielder geokinetic abilities, though the extent and precision of this control varies from one Seedrian to another.\n\nThis tradition dates back to the founding of the Plant Kingdom, when the Seedrians relied heavily on the Earth Sol Emerald as a primary source of energy for creating Blessed Amulets. In more recent generations, however, this practice has gradually begun to change.\n\nOther types of gemstones can also be used to create Blessed Amulets. While such amulets were once relatively uncommon, they have become increasingly widespread due to new policies within the Plant Kingdom that provide broader access to a greater variety of gemstones, reducing the kingdom's reliance on a single source.",
+          "image": "/species/sonic_boom_starla_the_seedrian__by_cheroy_d7nwwnm--removebg-preview.png",
+          "caption": "Starla - Art by Cheroy in DeviantArt",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        }
+      ]
+    },
+    {
+      "title": "Physical Traits",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Seedrians possess a vaguely humanoid form, with plant-like features naturally integrated throughout their bodies, particularly in their hair and natural coverings.\n\nMale Seedrians typically have horn-like branches extending from their heads, and their overall physiology tends to lean toward a more reptilian or lizard-like structure, most notably through the presence of tails.\n\nFemale Seedrians, by contrast, tend to exhibit more floral characteristics, with softer, flower-like structures adorning their bodies and typically lacking tails.\n\nThese distinctions, however, are general tendencies rather than strict biological rules. Seedrian physical traits can vary considerably between individuals regardless of sex. Male Seedrians may possess prominent flowers or other floral features, while female Seedrians can develop branches and other traits more commonly associated with males. Such variations are a natural part of Seedrian diversity.",
+          "image": "/species/sonic_boom_chyrsanthemum_the_seedrian_by_cheroy_d7__1_-removebg-preview.png",
+          "caption": "Chyrsanthemum & Lucas - Art by Cheroy in DeviantArt",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    }
+  ],
   "extraInfo": []
 }
