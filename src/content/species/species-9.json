@@ -14,9 +14,115 @@
   "habitat": "Sylvania - Dukedom of Camelot",
   "lifespan": "90",
   "traits": [
-    "They breathe CO2"
+    "They breathe CO2.",
+    "They can use Magic without catalysts.",
+    "They can use Magic freely in any dimension."
   ],
-  "abilities": [],
-  "blocks": [],
+  "abilities": [
+    "Swordmanship"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The Fae are a mystical race originating from the Grand Duchy of Camelot in Sylvania. For some time, they were imprisoned within the enchanted tome _The Dark Knight_, a magical book created by the sorceress Walpurgis. Their captivity finally came to an end when Sonic the Hedgehog freed them from the book, allowing the Fae to return to the world.\n\nThe Fae possess a unique biological trait that distinguishes them from other races. Rather than breathing oxygen, they inhale carbon monoxide and release oxygen as a byproduct, functioning in a manner remarkably similar to plant life. This unusual adaptation grants them exceptional resilience in environments that would be toxic or otherwise hazardous to most other races.",
+          "image": "/species/images-removebg-preview (2).png",
+          "caption": "Merlina - Art by Yui Karasuno",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Population",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "**All known Fae originate from the Grand Duchy of Camelot.** Similar to the Genies, no Fae have been born naturally on Mobius for many years, as every living Fae was once trapped within the Dark Knight Story Book.\n\nDespite this, the Fae population remains limited but stable. Though relatively few in number, they are far from extinct, with Fae villages and communities scattered throughout Camelot.\n\nFae are exclusive to Mobius and cannot be found on Sol. At present, there are no Fae freely living elsewhere on Mobius, as the entire race remains sealed within the Moebius version of the Dark Knight Story Book. They simply do not exist on Sol.",
+          "image": "/species/actor-king-arthur-sonic-and-the-black-knight-348354_large.jpg",
+          "caption": "King Arthur - Dark Knight Game",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        }
+      ]
+    },
+    {
+      "title": "Natural Powers & Chaos Affinity",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Innate Powers",
+          "text": "Fae cannot store Chaos, Harmony, or Anarchy energy within their bodies. As a result, they have no innate powers."
+        },
+        {
+          "type": "text",
+          "title": "Magic powers",
+          "text": "The Fae possess the greatest natural affinity for magic of any known race. As a result, every Fae is capable of learning and wielding magic to some extent. Unlike other magical races, however, Fae do not require a catalyst, artifact, or other external medium to channel their power, making them the only known beings capable of using magic entirely on their own, withouth needing training.\n\nFae are also unique in their ability to wield magic freely outside their native dimension, allowing them to retain and use their magical abilities even when traveling beyond their home realm.\n\nSome Fae possess an even rarer and more powerful form of sorcery known as **High Ancient Magic**, as demonstrated by Merlina. However, the nature and manifestation of this brand of magic can vary significantly from one Fae to another, with each individual expressing it in their own unique way."
+        },
+        {
+          "type": "image",
+          "image": "/species/new-sonic-channel-art-with-merlina-and-caliburn-v0-fvc3fuz7tz7c1.webp",
+          "caption": "Merlina & Sonic - Art by Tomoko Kanemoto",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        },
+        {
+          "type": "textImage",
+          "title": "Others",
+          "text": "The Fae possess their own unique magical artifacts. The most powerful among them is the Scabbard of Excalibur, a relic capable of granting immense power, even immortality, to a Fae. However, its influence can also slowly drive its wielder into madness.\n\nTo counterbalance this power, a second set of artifacts known as the Sacred Swords was created. But although these artifacts belong to the Fae, those chosen to wield them are often Mobians or humans rather than Fae themselves.",
+          "image": "/species/thumb.jpg",
+          "caption": "Excalibur - Christian Sanchez (Artstation)",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Physical Traits",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Fae are vaguely humanoid in appearance, with most resembling the inhabitants of Camelot seen throughout _Sonic and the Black Knight_. Others, such as Merlina and Duke Arthur, possess a far more humanlike appearance. Regardless of their individual features, Fae can usually be distinguished by their notably pointed ears.\n\n**As a species, Fae possess enhanced physical abilities compared to both Mobians and Humans, including greater strength and speed. These traits are natural to the Fae and do not rely on magic or external catalysts.**\n\nMost Fae are also trained in the art of swordsmanship, at least to a basic level. Swordsmanship is deeply ingrained in Fae culture, with many learning the fundamentals of combat from a young age."
+        },
+        {
+          "type": "image",
+          "image": "/species/SathBK_concept_artwork_1 (1).webp",
+          "caption": "Townspeople - Sonic And the Dark Knight",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "size": "full"
+        }
+      ]
+    },
+    {
+      "title": "Difference Between Fae and Fairy",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "**Fae** is the name of the species as a whole. However, in Sylvania, it is customary to grant the title of **Fairy** to member of other species who, through their magical skill and mastery, have demonstrated that they are equal or nearly equal in magical ability to a trained Fae.\n\nOne example is **Lady Nimue**, who holds the title of Fairy."
+        }
+      ]
+    }
+  ],
   "extraInfo": []
 }
