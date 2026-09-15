@@ -3,8 +3,9 @@
   "faction": "mobius",
   "group": "main",
   "name": "Freedom Fighters",
-  "image": "/factions/mobius/main-1.png",
-  "background": "/worlds/column_01_03.jpg",
+  "image": "/factions/mobius/main-2.png",
+  "background": "/factions/dbel166-964804a8-2f32-4b6b-aca8-c81f67985ff3.jpg",
+  "color": "",
   "quote": [
     {
       "speaker": "Walpurgis",
@@ -20,14 +21,20 @@
   "leader": "Princess Sally Acorn",
   "headquarters": "Knothole Village",
   "bases": [
-    "Great Forest (hidden outposts)",
-    "Knothole Village (main base)"
+    "Knothole Village"
   ],
   "allies": [
-    "Acorn Kingdom"
+    "The Restoration",
+    "Wild Pack",
+    "Shijin Warriors",
+    "Woodland Kingsmen",
+    "Desert Riders",
+    "Outriders",
+    "Frostguard"
   ],
   "enemies": [
-    "Eggman Army (Northamer)"
+    "Eggman Army (Northamer)",
+    "Eggman Empire"
   ],
   "blocks": [
     {
@@ -35,8 +42,65 @@
       "icon": "",
       "parts": [
         {
-          "type": "text",
-          "text": "Ficha de ejemplo, para ver cómo queda una facción escrita de verdad entre los placeholders. Bórrala o reescríbela desde el panel cuando quieras.\n\nThe resistance movement of the Acorn Kingdom. Born during Eggman's first occupation and never disbanded, the Freedom Fighters operate out of Knothole Village, protecting the scattered settlements of the southeast and raiding deep into the territory held by the Northern Eggman Army."
+          "type": "textImage",
+          "title": "",
+          "text": "The Freedom Fighters are one of the oldest organized resistance groups in the world, predating the Restoration and many of the resistance movements that would later emerge across the globe.\n\nOriginally formed to reclaim the Acorn Kingdom from Dr. Eggman, the Freedom Fighters have evolved from a small group of young rebels into a highly experienced resistance organization. Their purpose, however, has remained largely unchanged: **fight against those who seek to take away people's freedom (specially Eggman).**\n\nUnlike the Restoration, whose primary focus is rebuilding communities and creating a better future, the Freedom Fighters specialize in stopping the threats that continue to endanger the present. They are soldiers, tacticians, spies, scouts, and rebels who operate on the front lines as well as behind enemy lines.\n\nThey defend towns, liberate occupied territories, sabotage enemy infrastructure, gather intelligence, train new recruits, and support resistance movements beyond their own borders.\n\nThe two organizations frequently cooperate, sharing resources, intelligence, and personnel when necessary. Where the Restoration builds, the Freedom Fighters fight to make sure there is something worth rebuilding.\n\nTheir ultimate goal is not simply to win another battle against Eggman.\n\nIt is to make sure he can never threaten their people again.",
+          "image": "/factions/SU95VariantColors.webp",
+          "caption": "Sonic Universe Nº95 Variant",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        }
+      ]
+    },
+    {
+      "title": "Backstory",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Past",
+          "text": "Long before the Restoration existed, and before organized resistance movements became common across the world, there was the first spark of rebellion: the Freedom Fighters.\n\nAfter the fall of the Acorn Kingdom, Princess Sally Acorn was only a small child when she began gathering others who refused to accept Eggman's rule. What started as a handful of young heroes determined to reclaim their homeland slowly developed into a genuine resistance movement.\n\nThey had almost none of the advantages Eggman's forces possessed. They lacked numbers, resources, equipment, and formal military training. What they did have was determination, knowledge of their homeland, and the willingness to fight an enemy who believed they had already won.\n\nThe Freedom Fighters relied heavily on sabotage, infiltration, espionage, reconnaissance, and carefully planned strikes. They avoided fighting Eggman's forces on their terms whenever possible, instead attacking supply lines, disrupting operations, freeing prisoners, sabotaging factories, and striking vulnerable targets before disappearing again.\n\nOver time, their successes accumulated.\n\nThe small rebellion became a force that Eggman's Empire could no longer ignore. And, eventually, the Freedom Fighters succeeded in their greatest objective: the Acorn Kingdom was liberated.\n\nEggman's forces were driven out, the people were able to return to their homes, and the kingdom began the long process of recovering from years of occupation.\n\nFor the first time, the Freedom Fighters had won.\n\nBut their work was far from over.",
+          "image": "/factions/YoungFreedomFighters.PNG.webp",
+          "caption": "Freedom fighters Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Post-Liberation / Pre-Forces",
+          "text": "Liberating the Acorn Kingdom did not erase the damage Eggman had left behind.\n\nYears of occupation had changed the kingdom permanently. Factories, military installations, damaged infrastructure, polluted areas, abandoned weapons, and remnants of Eggman's forces remained scattered throughout the country. Entire communities had to learn how to live without the Empire's presence.\n\nThe Freedom Fighters refused to simply walk away so their role changed from liberators to protectors.\n\nThey helped towns defend themselves against remaining threats, dismantled abandoned military installations, destroyed dangerous technology, hunted down remnants of Eggman's forces, and assisted communities in reclaiming areas that had once been under Imperial control.\n\nBut their efforts eventually extended beyond the Acorn Kingdom.\n\nThe Freedom Fighters understood better than most what it meant to lose a homeland. As other regions began suffering under Eggman's expansion, they started assisting local resistance groups and emerging rebel movements.\n\nThey shared intelligence, provided training, supplied equipment, and occasionally sent their own members to fight alongside foreign resistance forces.\n\nTheir reputation spread.\n\nThe Freedom Fighters became more than the resistance of one kingdom. They became an example of what could be accomplished against an enemy that appeared impossible to defeat.",
+          "image": "/factions/0c08de6bf9f759352028a40422c0b939.jpg",
+          "caption": "Freedom Fighters - Art by herms85 in DeviantArt",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
+        },
+        {
+          "type": "textImage",
+          "title": "War of Forces",
+          "text": "When the War of Forces began, Eggman's Empire struck the Acorn Kingdom once again.\n\nThe kingdom that the Freedom Fighters had spent years protecting was reclaimed by the Empire, turning their homeland back into a battlefield.\n\nFor the Freedom Fighters, this was more than another military conflict. It was a devastating reminder that their previous victory had never been permanent. But neither were they the same people who had fought the first occupation.\n\nYears of experience had transformed the Freedom Fighters into a highly capable resistance force. They knew Eggman's tactics. They knew the terrain. They understood how his armies operated, where his supply lines were vulnerable, and how to fight a superior force without confronting it directly.\n\nThey returned to the methods that had made them legends.\n\nSabotage.\n\nInfiltration.\n\nIntelligence.\n\nGuerrilla warfare.\n\nOpen combat when necessary.\n\nLittle by little, the Freedom Fighters began reclaiming the Acorn Kingdom.\n\nTheir progress was slow, costly, and often difficult, but they managed to take back roughly half of the kingdom and their capital.\n\nThe war had once again proven what the Freedom Fighters had always believed:\n\n**Being outnumbered does not mean being defeated.**",
+          "image": "/factions/rqz6v913vpoe1.jpeg",
+          "caption": "Sonic Universe 96",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right"
+        },
+        {
+          "type": "textImage",
+          "title": "Post-Forces",
+          "text": "Even after reclaiming large portions of their homeland, the Freedom Fighters understand that victory is not the same as restoration.\n\nEggman's second occupation has left another generation of scars across the Acorn Kingdom. Infrastructure has been damaged again, communities have been displaced, enemy technology remains scattered throughout the territory, and occupied areas still require liberation.\n\nThe Freedom Fighters therefore continue operating even after major battles have ended. Their mission is now twofold: **protect what has been reclaimed and continue pushing Eggman's  Northamer Army out of what remains occupied.**\n\nThey conduct raids against Imperial installations, disrupt supply routes, gather intelligence, protect liberated communities, and train the next generation of resistance fighters.\n\nAt the same time, they continue assisting resistance movements elsewhere in the world.",
+          "image": "/factions/SU_041_Cover%3B_Raw.webp",
+          "caption": "Sonic Universe Nº41",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left"
         }
       ]
     },
@@ -50,13 +114,90 @@
           "caption": "",
           "groups": [
             {
-              "title": "Leaders",
-              "description": "The ones who decide where the next raid goes.",
+              "title": "Team Sally",
+              "description": "The main attack force",
               "characters": [
                 {
                   "name": "Sally Acorn",
-                  "image": "",
+                  "image": "/factions/SallyAcornArchie.webp",
                   "description": "Princess of the Acorn Kingdom and the one who holds the movement together."
+                },
+                {
+                  "name": "Nicole the Holo-Lynx",
+                  "image": "/factions/Nicole_Pre-SGW_Archie_profile.webp",
+                  "description": "A highly intelligent, fiercely loyal holographic lynx AI and Sally Acorn’s trusted companion."
+                },
+                {
+                  "name": "Rotor the Walrus",
+                  "image": "/factions/latest_cb=20200404211614.webp",
+                  "description": "A brilliant, gentle-hearted inventor and steadfast freedom fighter who keeps the team’s machines running."
+                },
+                {
+                  "name": "Antoine D'Coolette",
+                  "image": "",
+                  "description": "A brave but bumbling French-accented freedom fighter who grows from a cowardly nobleman into a courageous swordsman."
+                },
+                {
+                  "name": "Bunnie D'Coolette",
+                  "image": "/factions/Bunnie_D%27Coolette_Pre-SGW_profile.webp",
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "title": "Secret Freedom Fighters",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Elias Acorn",
+                  "image": "/factions/Elias_Acorn_SU42.webp",
+                  "description": ""
+                },
+                {
+                  "name": "Harvey Who",
+                  "image": "/factions/latest_cb=20221025201519.webp",
+                  "description": ""
+                },
+                {
+                  "name": "Shard the Metal Sonic",
+                  "image": "/factions/Shard.webp",
+                  "description": ""
+                },
+                {
+                  "name": "Larry the Lynx",
+                  "image": "/factions/image__4_-removebg-preview.png",
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "title": "Other",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Mina Mongoose",
+                  "image": "/factions/a8wcf8zwpy0c1-removebg-preview.png",
+                  "description": ""
+                },
+                {
+                  "name": "Julie-Su",
+                  "image": "/factions/latest_cb=20201202215720.webp",
+                  "description": ""
+                },
+                {
+                  "name": "Saffron Bee",
+                  "image": "/factions/320acd3646a0b106b3c278f736f8552b5b4881dc.webp",
+                  "description": ""
+                },
+                {
+                  "name": "Uncle Chuck",
+                  "image": "/factions/0Wj9XEhMLd7tAxSx780kXNy9klSWVVlIzpqbhsZx1JBVoqJ0rEWY7bVZY7EB73moTwJFiNa81kCJf06QJuSfb62_bXBxJjOvEZ6W6FCpeVtOTQq3wl0mb4BhLsikStd9baLTWrpUisz56iiPFMBwtcVIes9dpnBs7wH4xy5ltRU-removebg-preview.webp",
+                  "description": ""
+                },
+                {
+                  "name": "Ben Muttski",
+                  "image": "/factions/1200_cb=20241007003928&path-prefix=protagonist.webp",
+                  "description": ""
                 }
               ]
             }
@@ -66,6 +207,14 @@
     }
   ],
   "extraInfo": [
+    {
+      "label": "Neutral",
+      "value": "G.U.N"
+    },
+    {
+      "label": "Teams",
+      "value": "Sally's Team\nSecret Freedom Fighters"
+    },
     {
       "label": "Founded",
       "value": "During Eggman's first occupation"
