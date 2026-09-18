@@ -47,6 +47,7 @@ That's it. Your change is saved and the live site rebuilds itself in about
 | **Faction hubs** | The faction hubs, one per world (button, intro and groups) |
 | **Factions** | Individual factions, each with its own page |
 | **Gods** | Deities, grouped by category (mobius / moebius / sol / other) |
+| **NPCs** | The characters the staff plays, grouped the same way as the gods |
 | **Energies** | Energy types, including player-made ones |
 | **Powers** | Power categories, including player-made ones |
 | **Transformations** | Transformation categories, including player-made ones |
@@ -299,7 +300,11 @@ faction's name as the heading and its emblem underneath.
 **On a god** the only fixed row is **Domain**, with the god's name as the
 heading.
 
-All three boxes then share:
+**On an NPC** the fixed rows are **Species**, **Affiliation**, **Country** and
+**Role**, with the NPC's name as the heading and their portrait underneath —
+a god is known by their name, a character by their face.
+
+All four boxes then share:
 
 - **Leave a row empty and it shows "N/A"** rather than disappearing, so the box
   looks the same on every entry.
@@ -325,6 +330,24 @@ add one entry each:
 
 An entry with no name is skipped, and with no harbingers at all the section
 doesn't appear.
+
+## NPCs
+
+The **NPCs** collection works like **Gods**: each entry is a card on `/lore/npcs`
+and a page of its own, with the same quote, Contents list and content blocks.
+
+- **Category** picks which group of the page they are listed under — *NPCs of
+  Mobius*, *of Sol*, *of Moebius* or *Other NPCs* — and a group nobody is in
+  doesn't appear at all. **Order** decides the order inside the group.
+- **Species**, **Affiliation**, **Country** and **Role** are the four rows of
+  the Basic Information box. Leave one empty and it shows *N/A*; anything they
+  don't cover goes in **Extra rows**.
+- **Role** does double duty: it's also the line under their name on the NPCs
+  page, so keep it short — *Knothole's mechanic*, not a paragraph.
+- **Image** is their portrait: it fills their card and sits under their name in
+  the Basic Information box. **Image position** and **Image zoom** frame it, the
+  way they do everywhere else — `center 20%` with a zoom of `1.2` is a good
+  start for a face.
 
 ## Energies, Powers and Transformations
 
@@ -525,8 +548,8 @@ those paths are prefixed at runtime by the `asset()` helper in
 
 ## Shared pieces
 
-Countries, Factions, Gods, Energies, Powers and Transformations render the same
-page shape, so the parts are shared rather than copied:
+Countries, Factions, Gods, NPCs, Energies, Powers and Transformations render the
+same page shape, so the parts are shared rather than copied:
 
 | Piece | What it does |
 | --- | --- |

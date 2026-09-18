@@ -50,6 +50,12 @@ const COLLECTIONS = [
         route: (id) => `/lore/gods/${id}`
     },
     {
+        type: "npc",
+        label: "NPCs",
+        modules: import.meta.glob("../content/npcs/*.json", { eager: true }),
+        route: (id) => `/lore/npcs/${id}`
+    },
+    {
         type: "item",
         label: "Items",
         modules: import.meta.glob("../content/items/*.json", { eager: true }),

@@ -31,6 +31,10 @@ import ChronicleDetail from "./pages/chronicles/ChronicleDetail";
 import Gods from "./pages/gods/Gods";
 import GodDetail from "./pages/gods/GodDetail";
 
+// NPCs Page
+import Npcs from "./pages/npcs/Npcs";
+import NpcDetail from "./pages/npcs/NpcDetail";
+
 
 // Mechanics & Transformations Page
 
@@ -176,6 +180,19 @@ function App() {
                     <Route 
                         path="/lore/gods/:id" 
                         element={<GodDetail />} 
+                    />
+
+
+                    {/* NPCs */}
+
+                    <Route
+                        path="/lore/npcs"
+                        element={<Npcs />}
+                    />
+
+                    <Route
+                        path="/lore/npcs/:id"
+                        element={<NpcDetail />}
                     />
 
 
