@@ -3081,6 +3081,84 @@ button.region-loc {
 }
 
 
+/* El otro reparto posible de "texto + imagen": el texto rodea la imagen. La
+   figura flota a un lado y las líneas la esquivan mientras haya imagen; cuando
+   se acaba, el texto sigue a ancho completo. Es lo que pide un apartado mucho
+   más largo que alta es la imagen, donde dos columnas dejaban la mitad derecha
+   vacía o estiraban la foto hasta deformarla. */
+
+.block-wrap {
+
+    margin: 18px 0;
+
+}
+
+/* El contenedor tiene que abarcar a su flotante: sin esto, una imagen más alta
+   que el texto se sale del apartado y se mete en el siguiente. */
+.block-wrap::after {
+
+    content: "";
+
+    display: block;
+
+    clear: both;
+
+}
+
+/* El título del apartado se queda arriba, a todo lo ancho, y la imagen empieza
+   por debajo de él.
+
+   Hace falta decirlo porque el título es inline-block —lo es para que su
+   subrayado se ciña a la palabra— y con la línea abierta el flotante se le
+   ponía al lado. En bloque la cierra, y el ancho de su contenido le deja el
+   subrayado como estaba. */
+.block-wrap .block-part__title {
+
+    display: block;
+
+    width: fit-content;
+
+}
+
+.block-wrap .block-figure {
+
+    float: right;
+
+    width: 40%;
+
+    /* Nada por arriba —la primera línea del texto y la imagen empiezan juntas—
+       y aire por el lado que da al texto. */
+    margin: 0 0 14px 20px;
+
+}
+
+.block-wrap--left .block-figure {
+
+    float: left;
+
+    margin: 0 20px 14px 0;
+
+}
+
+/* Aquí la imagen no iguala altura con nada: se queda con su proporción de
+   siempre, o entera si se pidió "imagen entera". */
+.block-wrap .block-figure__media {
+
+    display: block;
+
+}
+
+/* De un flotante solo se apartan las líneas de texto, no las cajas. Una lista
+   se metería por debajo de la imagen con sus viñetas escondidas, así que se le
+   da contexto de formato propio: así se aparta la lista entera, con sus puntos
+   a la vista. */
+.block-wrap .paragraph-list {
+
+    overflow: hidden;
+
+}
+
+
 @media (max-width: 700px) {
 
     .block-split,
@@ -3105,6 +3183,36 @@ button.region-loc {
         aspect-ratio: 4 / 3;
 
         height: auto;
+
+    }
+
+    /* Con el ancho de un móvil, al texto que rodea la imagen le quedan tres o
+       cuatro palabras por línea: deja de flotar y se apila. La columna es para
+       poder mandarla debajo del texto —donde la pone el otro reparto— sin que
+       se cuele entre el título del apartado y su primer párrafo. */
+    .block-wrap {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    /* Apilado no hay flotante que abarcar. */
+    .block-wrap::after {
+
+        content: none;
+
+    }
+
+    .block-wrap .block-figure {
+
+        float: none;
+
+        order: 1;
+
+        width: 100%;
+
+        margin: 0;
 
     }
 

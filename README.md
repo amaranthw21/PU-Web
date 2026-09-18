@@ -197,13 +197,14 @@ kind you want:
 | Part type | What it gives you |
 | --- | --- |
 | **Text** | Text, with an optional **heading** above it. Leave a blank line between paragraphs. |
-| **Text + image** | The same, with an image beside it. The heading stays with the text, so the picture sits next to the whole section. **Image side** picks whether the image sits on the right (default) or the left. **Picture size** decides what happens when the picture and the text aren't the same shape: *fill the space* (the default) grows it to the height of the text and crops its sides, and *show the whole picture* keeps it complete and centred instead. The two **Crop from…** percentages aim it: 0 keeps the picture's left edge (or its top), 50 the middle, 100 the far side. Nudge them until the character is in frame. |
+| **Text + image** | The same, with an image beside it. The heading stays with the text, so the picture sits next to the whole section. **Image side** picks whether the image sits on the right (default) or the left. **How the text sits** picks the shape of the part: *beside the picture* (the default) keeps text and picture as two columns, whatever their length, while *wrapped around the picture* lets the text run alongside the picture and then carry on at full width underneath it — the one to reach for when the section is much longer than the picture is tall. **Picture size** decides what happens when the picture and the text aren't the same shape: *fill the space* (the default) grows it to the height of the text and crops its sides, and *show the whole picture* keeps it complete and centred instead. (Wrapped never stretches the picture, so there it only picks between the usual crop and the whole picture.) The two **Crop from…** percentages aim it: 0 keeps the picture's left edge (or its top), 50 the middle, 100 the far side. Nudge them until the character is in frame. |
 | **Image** | Just an image. It has the same two **Crop from…** percentages. **Picture width** sets how much of the page it takes — full width, two thirds, half or a third — and anything under full width is centred. It has the same **Picture size** choice as above, and the two combine: half width *and* the whole picture, for instance. |
 | **Regions** | A map of the country plus a set of regions, each with its own locations. **Countries only.** |
 | **Characters** | The same thing for a faction: groups of characters instead of regions of locations. **Factions only.** |
 
 **Text + image** and **Image** both take an optional **Caption**, shown under the
-picture. On phones, a **Text + image** part stacks: text first, image underneath.
+picture. On phones, a **Text + image** part stacks: text first, image underneath, either
+way round it was laid out.
 
 Parts appear in the order you add them, and you can mix as many as you like — a
 block can be text, then text with a picture on the right, then a full-width

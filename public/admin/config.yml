@@ -192,6 +192,15 @@ collections:
                     options: [right, left]
                     default: right
                     hint: "Which side of the text the image sits on."
+                  - name: layout
+                    label: "How the text sits"
+                    widget: select
+                    options:
+                      - { label: "Beside the picture (two columns)", value: column }
+                      - { label: "Wrapped around the picture", value: wrap }
+                    default: column
+                    required: false
+                    hint: "'Beside the picture' keeps text and picture as two columns, however long each one is. 'Wrapped' runs the text along the picture and then carries on at full width underneath it — better when the section is much longer than the picture is tall. Wrapped never stretches the picture to the height of the text, so 'Picture size' only chooses between the usual crop and the whole picture."
 
               - name: image
                 label: Image
@@ -410,6 +419,15 @@ collections:
                     options: [right, left]
                     default: right
                     hint: "Which side of the text the image sits on."
+                  - name: layout
+                    label: "How the text sits"
+                    widget: select
+                    options:
+                      - { label: "Beside the picture (two columns)", value: column }
+                      - { label: "Wrapped around the picture", value: wrap }
+                    default: column
+                    required: false
+                    hint: "'Beside the picture' keeps text and picture as two columns, however long each one is. 'Wrapped' runs the text along the picture and then carries on at full width underneath it — better when the section is much longer than the picture is tall. Wrapped never stretches the picture to the height of the text, so 'Picture size' only chooses between the usual crop and the whole picture."
 
               - name: image
                 label: Image
@@ -697,6 +715,15 @@ collections:
                     options: [right, left]
                     default: right
                     hint: "Which side of the text the image sits on."
+                  - name: layout
+                    label: "How the text sits"
+                    widget: select
+                    options:
+                      - { label: "Beside the picture (two columns)", value: column }
+                      - { label: "Wrapped around the picture", value: wrap }
+                    default: column
+                    required: false
+                    hint: "'Beside the picture' keeps text and picture as two columns, however long each one is. 'Wrapped' runs the text along the picture and then carries on at full width underneath it — better when the section is much longer than the picture is tall. Wrapped never stretches the picture to the height of the text, so 'Picture size' only chooses between the usual crop and the whole picture."
 
               - name: image
                 label: Image
@@ -870,6 +897,15 @@ collections:
                     options: [right, left]
                     default: right
                     hint: "Which side of the text the image sits on."
+                  - name: layout
+                    label: "How the text sits"
+                    widget: select
+                    options:
+                      - { label: "Beside the picture (two columns)", value: column }
+                      - { label: "Wrapped around the picture", value: wrap }
+                    default: column
+                    required: false
+                    hint: "'Beside the picture' keeps text and picture as two columns, however long each one is. 'Wrapped' runs the text along the picture and then carries on at full width underneath it — better when the section is much longer than the picture is tall. Wrapped never stretches the picture to the height of the text, so 'Picture size' only chooses between the usual crop and the whole picture."
 
               - name: image
                 label: Image
