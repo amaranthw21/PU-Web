@@ -18,6 +18,16 @@ backend:
 media_folder: public
 public_folder: /
 
+# Limpia el nombre del archivo al subirlo. Sin esto se guarda tal cual venga, y
+# una imagen bajada de una wiki suele traer el nombre ya codificado —el apóstrofo
+# de "Bunnie D'Coolette" llega como "%27"—. Ese nombre se guardaba literal, con
+# su porcentaje, pero el navegador descodifica la dirección antes de pedir el
+# archivo: buscaba "Bunnie D'Coolette..." y no lo encontraba, así que la imagen
+# salía rota por mucho que se volviera a subir.
+media_libraries:
+  all:
+    slugify_filename: true
+
 # Editor de texto enriquecido (campos `richtext`): solo los botones que la web
 # sabe pintar. Si el editor ofreciera encabezados, tablas o imágenes, el mod las
 # escribiría y la página las ignoraría, que es peor que no tener el botón.
