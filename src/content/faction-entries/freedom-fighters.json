@@ -50,7 +50,8 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "whole",
-          "imageSide": "right"
+          "imageSide": "right",
+          "layout": "wrap"
         }
       ]
     },
@@ -67,7 +68,8 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "whole",
-          "imageSide": "right"
+          "imageSide": "right",
+          "layout": "wrap"
         },
         {
           "type": "textImage",
@@ -78,7 +80,8 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "whole",
-          "imageSide": "left"
+          "imageSide": "left",
+          "layout": "wrap"
         },
         {
           "type": "textImage",
@@ -89,7 +92,8 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "whole",
-          "imageSide": "right"
+          "imageSide": "right",
+          "layout": "wrap"
         },
         {
           "type": "textImage",
@@ -100,7 +104,8 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "fill",
-          "imageSide": "left"
+          "imageSide": "left",
+          "layout": "wrap"
         }
       ]
     },
