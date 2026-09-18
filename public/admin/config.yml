@@ -441,6 +441,51 @@ collections:
                     required: false
                     hint: "'Fill the space' grows the picture to the height of the text beside it and crops its sides. Choose 'whole picture' for a map or a group shot, where cropping would cut out what matters."
 
+  # ───────────────────────── NPCs ─────────────────────────
+  # Va detrás de Gods a propósito: reutiliza los bloques de contenido
+  # (*blocks), que se definen allí.
+  - name: npcs
+    label: NPCs
+    label_singular: NPC
+    folder: src/content/npcs
+    extension: json
+    format: json
+    create: true
+    identifier_field: name
+    summary: "{{fields.order}} · {{fields.name}}"
+    media_folder: /public/npcs
+    public_folder: /npcs
+    fields:
+      - { name: order, label: Order, widget: number, value_type: int }
+      - name: category
+        label: Category
+        widget: select
+        options: [mobius, moebius, sol, other]
+        default: mobius
+        hint: "Which group of the NPCs page this one is listed under. A group with nobody in it doesn't appear."
+      - { name: name, label: Name, widget: string }
+      - { name: species, label: Species, widget: string, required: false, hint: "First row of the Basic Information box. Empty rows show 'N/A' rather than disappearing." }
+      - { name: affiliation, label: Affiliation, widget: string, required: false, hint: "Who they answer to: a faction, a court, a crew. Add one line per group if there is more than one." }
+      - { name: country, label: Country, widget: string, required: false, hint: "Where they are from, or where they can be found." }
+      - { name: role, label: Role, widget: string, required: false, hint: "What they do, e.g. 'Knothole's mechanic'. Also shown under their name on the NPCs page." }
+      - { name: description, label: Description, widget: richtext, required: false, hint: "Intro of this entry's own page, above the sections. Leave a blank line between paragraphs." }
+      - { name: image, label: Image, widget: image, required: false, hint: "Their portrait: on the card of the NPCs page and under their name in the Basic Information box." }
+      - { name: imagePosition, label: "Image position (CSS object-position)", widget: string, required: false, hint: "e.g. 'center 20%' to show the head" }
+      - { name: imageZoom, label: "Image zoom", widget: number, value_type: float, required: false, hint: "e.g. 1.2" }
+      - { name: color, label: "Accent color", widget: color, required: false, hint: "Tints the frame, the name and the Basic Information box on this NPC's own page. Empty keeps the site's magenta." }
+
+      # ── Filas extra del Basic Information ──
+      # Definido en Species, la primera colección que lo usa.
+      - *extra_info
+
+      # ── Cita de cabecera, pintada como conversación de chat ──
+      # Definida en Species, la primera colección que la usa.
+      - *quote
+
+      # ── Bloques de contenido de la ficha ──
+      # Definidos en Gods, justo encima.
+      - *blocks
+
   # ───────────────────────── Energies ─────────────────────────
   - name: energy
     label: Energies

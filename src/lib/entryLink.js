@@ -9,6 +9,10 @@ const SECTIONS = {
         modules: import.meta.glob("../content/gods/*.json", { eager: true }),
         route: id => `/lore/gods/${id}`
     },
+    npcs: {
+        modules: import.meta.glob("../content/npcs/*.json", { eager: true }),
+        route: id => `/lore/npcs/${id}`
+    },
     items: {
         modules: import.meta.glob("../content/items/*.json", { eager: true }),
         route: id => `/lore/items/${id}`

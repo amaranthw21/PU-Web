@@ -1,0 +1,13 @@
+{
+  "order": 1,
+  "category": "mobius",
+  "name": "Example NPC",
+  "species": "Mobian",
+  "affiliation": "Freedom Fighters",
+  "country": "Knothole Village",
+  "role": "Example role",
+  "description": "Description of the NPC.",
+  "image": "",
+  "imagePosition": "center",
+  "color": ""
+}
