@@ -50,7 +50,8 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "whole",
-          "imageSide": "right"
+          "imageSide": "right",
+          "layout": "wrap"
         }
       ]
     },
@@ -67,7 +68,8 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "whole",
-          "imageSide": "right"
+          "imageSide": "right",
+          "layout": "wrap"
         },
         {
           "type": "textImage",
@@ -78,7 +80,8 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "whole",
-          "imageSide": "left"
+          "imageSide": "left",
+          "layout": "wrap"
         },
         {
           "type": "textImage",
@@ -89,18 +92,20 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "whole",
-          "imageSide": "right"
+          "imageSide": "right",
+          "layout": "wrap"
         },
         {
           "type": "textImage",
           "title": "Post-Forces",
           "text": "Even after reclaiming large portions of their homeland, the Freedom Fighters understand that victory is not the same as restoration.\n\nEggman's second occupation has left another generation of scars across the Acorn Kingdom. Infrastructure has been damaged again, communities have been displaced, enemy technology remains scattered throughout the territory, and occupied areas still require liberation.\n\nThe Freedom Fighters therefore continue operating even after major battles have ended. Their mission is now twofold: **protect what has been reclaimed and continue pushing Eggman's  Northamer Army out of what remains occupied.**\n\nThey conduct raids against Imperial installations, disrupt supply routes, gather intelligence, protect liberated communities, and train the next generation of resistance fighters.\n\nAt the same time, they continue assisting resistance movements elsewhere in the world.",
-          "image": "/factions/SU_041_Cover%3B_Raw.webp",
+          "image": "/factions/SU_041_Cover_Raw.webp",
           "caption": "Sonic Universe Nº41",
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "fill",
-          "imageSide": "left"
+          "imageSide": "left",
+          "layout": "wrap"
         }
       ]
     },
@@ -139,7 +144,7 @@
                 },
                 {
                   "name": "Bunnie D'Coolette",
-                  "image": "/factions/Bunnie_D%27Coolette_Pre-SGW_profile.png",
+                  "image": "/factions/Bunnie_DCoolette_Pre-SGW_profile.png",
                   "description": ""
                 }
               ]

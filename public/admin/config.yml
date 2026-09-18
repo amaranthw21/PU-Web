@@ -18,6 +18,16 @@ backend:
 media_folder: public
 public_folder: /
 
+# Limpia el nombre del archivo al subirlo. Sin esto se guarda tal cual venga, y
+# una imagen bajada de una wiki suele traer el nombre ya codificado —el apóstrofo
+# de "Bunnie D'Coolette" llega como "%27"—. Ese nombre se guardaba literal, con
+# su porcentaje, pero el navegador descodifica la dirección antes de pedir el
+# archivo: buscaba "Bunnie D'Coolette..." y no lo encontraba, así que la imagen
+# salía rota por mucho que se volviera a subir.
+media_libraries:
+  all:
+    slugify_filename: true
+
 # Editor de texto enriquecido (campos `richtext`): solo los botones que la web
 # sabe pintar. Si el editor ofreciera encabezados, tablas o imágenes, el mod las
 # escribiría y la página las ignoraría, que es peor que no tener el botón.
@@ -192,6 +202,15 @@ collections:
                     options: [right, left]
                     default: right
                     hint: "Which side of the text the image sits on."
+                  - name: layout
+                    label: "How the text sits"
+                    widget: select
+                    options:
+                      - { label: "Beside the picture (two columns)", value: column }
+                      - { label: "Wrapped around the picture", value: wrap }
+                    default: column
+                    required: false
+                    hint: "'Beside the picture' keeps text and picture as two columns, however long each one is. 'Wrapped' runs the text along the picture and then carries on at full width underneath it — better when the section is much longer than the picture is tall. Wrapped never stretches the picture to the height of the text, so 'Picture size' only chooses between the usual crop and the whole picture."
 
               - name: image
                 label: Image
@@ -410,6 +429,15 @@ collections:
                     options: [right, left]
                     default: right
                     hint: "Which side of the text the image sits on."
+                  - name: layout
+                    label: "How the text sits"
+                    widget: select
+                    options:
+                      - { label: "Beside the picture (two columns)", value: column }
+                      - { label: "Wrapped around the picture", value: wrap }
+                    default: column
+                    required: false
+                    hint: "'Beside the picture' keeps text and picture as two columns, however long each one is. 'Wrapped' runs the text along the picture and then carries on at full width underneath it — better when the section is much longer than the picture is tall. Wrapped never stretches the picture to the height of the text, so 'Picture size' only chooses between the usual crop and the whole picture."
 
               - name: image
                 label: Image
@@ -697,6 +725,15 @@ collections:
                     options: [right, left]
                     default: right
                     hint: "Which side of the text the image sits on."
+                  - name: layout
+                    label: "How the text sits"
+                    widget: select
+                    options:
+                      - { label: "Beside the picture (two columns)", value: column }
+                      - { label: "Wrapped around the picture", value: wrap }
+                    default: column
+                    required: false
+                    hint: "'Beside the picture' keeps text and picture as two columns, however long each one is. 'Wrapped' runs the text along the picture and then carries on at full width underneath it — better when the section is much longer than the picture is tall. Wrapped never stretches the picture to the height of the text, so 'Picture size' only chooses between the usual crop and the whole picture."
 
               - name: image
                 label: Image
@@ -870,6 +907,15 @@ collections:
                     options: [right, left]
                     default: right
                     hint: "Which side of the text the image sits on."
+                  - name: layout
+                    label: "How the text sits"
+                    widget: select
+                    options:
+                      - { label: "Beside the picture (two columns)", value: column }
+                      - { label: "Wrapped around the picture", value: wrap }
+                    default: column
+                    required: false
+                    hint: "'Beside the picture' keeps text and picture as two columns, however long each one is. 'Wrapped' runs the text along the picture and then carries on at full width underneath it — better when the section is much longer than the picture is tall. Wrapped never stretches the picture to the height of the text, so 'Picture size' only chooses between the usual crop and the whole picture."
 
               - name: image
                 label: Image

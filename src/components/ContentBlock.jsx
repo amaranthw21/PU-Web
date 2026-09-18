@@ -3,26 +3,40 @@ import CountryRegions from "./CountryRegions";
 import asset from "../lib/asset";
 
 
-// Los párrafos de un bloque llevan siempre la misma clase.
+// El título de un apartado es opcional: es lo que convierte una parte en un
+// apartado con nombre ("Innate Powers:") en vez de un párrafo suelto. Va en h3
+// porque el bloque que lo contiene ya usa un h2.
 //
-// El título es opcional: es lo que convierte una parte en un apartado con
-// nombre ("Innate Powers:") en vez de un párrafo suelto. Va en h3 porque el
-// bloque que lo contiene ya usa un h2.
+// Está suelto, y no solo dentro de BlockText, porque en "el texto rodea la
+// imagen" el título va por delante de la imagen y el texto por detrás.
+function BlockTitle({ title }){
+
+    if(!title?.trim()){
+
+        return null;
+
+    }
+
+
+    return (
+
+        <h3 className="block-part__title">
+            {title}
+        </h3>
+
+    );
+
+}
+
+
+// Los párrafos de un bloque llevan siempre la misma clase.
 function BlockText({ title, text }){
 
     return (
 
         <>
 
-            {
-                title?.trim() && (
-
-                    <h3 className="block-part__title">
-                        {title}
-                    </h3>
-
-                )
-            }
+            <BlockTitle title={title} />
 
             <Paragraphs text={text} className="country-block__text" />
 
@@ -193,6 +207,38 @@ function BlockPart({ part }){
         }
 
         const side = part.imageSide === "left" ? "left" : "right";
+
+        // "wrap": en vez de dos columnas, la imagen flota a un lado y el texto
+        // la rodea —pega a su costado mientras haya imagen y sigue a ancho
+        // completo por debajo—.
+        //
+        // El orden de los tres importa: un flotante solo aparta lo que viene
+        // después de él, así que el título va delante (se queda arriba, a todo
+        // lo ancho, con la imagen empezando por debajo) y los párrafos detrás,
+        // que son los que tienen que rodearla.
+        if(part.layout === "wrap"){
+
+            return (
+
+                <div className={`block-wrap block-wrap--${side}`}>
+
+                    <BlockTitle title={part.title} />
+
+                    <BlockImage
+                        image={part.image}
+                        caption={part.caption}
+                        fit={part.fit}
+                        positionX={part.imagePositionX}
+                        positionY={part.imagePositionY}
+                    />
+
+                    <Paragraphs text={part.text} className="country-block__text" />
+
+                </div>
+
+            );
+
+        }
 
         return (
 
