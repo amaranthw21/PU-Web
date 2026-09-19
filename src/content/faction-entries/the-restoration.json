@@ -54,7 +54,7 @@
           "caption": "Sonic IDW Cover - Nº19",
           "imagePositionX": 50,
           "imagePositionY": 50,
-          "fit": "fill",
+          "fit": "whole",
           "imageSide": "right",
           "layout": "wrap"
         },
@@ -66,7 +66,7 @@
           "caption": "Sonic IDW Cover - Nº42",
           "imagePositionX": 50,
           "imagePositionY": 50,
-          "fit": "fill",
+          "fit": "whole",
           "imageSide": "left",
           "layout": "column"
         },
@@ -78,7 +78,7 @@
           "caption": "Sonic IDW Cover - Nº 57",
           "imagePositionX": 50,
           "imagePositionY": 50,
-          "fit": "fill",
+          "fit": "whole",
           "imageSide": "right",
           "layout": "wrap"
         },
@@ -90,7 +90,7 @@
           "caption": "Sonic IDW Cover - Nº 71",
           "imagePositionX": 50,
           "imagePositionY": 50,
-          "fit": "fill",
+          "fit": "whole",
           "imageSide": "left",
           "layout": "wrap"
         }
