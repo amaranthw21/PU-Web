@@ -1,0 +1,212 @@
+{
+  "order": 2,
+  "faction": "mobius",
+  "group": "main",
+  "name": "The Restoration",
+  "image": "/factions/mobius/main-1.png",
+  "background": "/factions/idw29-30cover.webp",
+  "color": "#d40403",
+  "quote": [],
+  "leader": "Jewel the Beetle",
+  "headquarters": "Emeraldville - Restoration HQ",
+  "bases": [
+    "Cardinal Archipelago"
+  ],
+  "allies": [
+    "Freedom Fighters"
+  ],
+  "enemies": [
+    "Eggman Empire"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Born from the final days of the Resistance, the Restoration stands as a symbol of what comes after the war depicted in _Forces_. When the conflict against Dr. Eggman finally ended, the world was left in pieces: towns lay destroyed, families had been scattered, and entire regions struggled to recover. Rather than disband, those who had fought for freedom chose to stay together and help rebuild the world they had fought to save.\n\nThus, the Restoration was formed.\n\nThe organization was initially led by Amy Rose, whose leadership had helped hold the Resistance together through its darkest days and into its earliest years of reconstruction. In time, however, command of the Restoration would pass to Jewel the Beetle, who would guide the organization as it evolved beyond its wartime roots.\n\nAlthough the Restoration remains fully capable of defending itself, it is no longer an army. Its purpose has changed.\n\nThey are builders, medics, planners, scouts, engineers, and volunteers from every corner of the world. They travel from town to town repairing homes, clearing wreckage, restoring infrastructure, shutting down stray Badniks, and providing aid to anyone still suffering the consequences of Eggman's war.\n\nThe Restoration does not fight to win a war anymore.\n\nIt works to make sure there is a world worth having won it for.",
+          "image": "/factions/951b7014-165b-4772-af85-69dabee74f1e.jpg",
+          "caption": "IDW Cover - Nº45",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Backstory",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Past and Infection",
+          "text": "The Restoration was created as the successor to the Resistance after the war ended. With the Resistance disbanded, its former members and volunteers shifted their focus from fighting a war to rebuilding the world. The Restoration began repairing cities and communities damaged during the conflict, providing supplies, helping displaced civilians, and dealing with remaining threats left behind by Eggman's forces."
+        },
+        {
+          "type": "textImage",
+          "title": "Crisis City and Darkest Hour",
+          "text": "The Restoration's humanitarian mission was severely tested when the Metal Virus outbreak began. As cities fell to the infection and people were transformed into Zombots, the organization shifted into emergency-response mode. Rescue teams evacuated civilians from infected areas, established shelters, transported refugees, distributed supplies, and coordinated with other groups to find survivors.\n\nAs the outbreak spread, Restoration facilities became increasingly important as safe zones. Its members conducted search-and-rescue missions while trying to keep infected individuals contained. The organization was forced to balance its humanitarian ideals with increasingly desperate measures to prevent the infection from spreading.\n\nThe Metal Virus eventually reached Restoration facilities themselves, turning their headquarters into a dangerous containment zone. An outbreak among refugees caused the situation to collapse, forcing the Restoration to evacuate its remaining personnel and civilians.\n\nThe evacuation came at a tremendous cost, with many people becoming infected while others sacrificed themselves to give the survivors time to escape. The Restoration ultimately lost its headquarters and was forced to abandon it entirely, scattering its surviving members and refugees.\n\nThe organization nevertheless continued its work, establishing temporary operations while searching for a way to survive the crisis.\n\nWith the world overwhelmed by Zombots, the Restoration and its allies gathered at their final major refuge. The crisis became a global battle against the forces controlling the Metal Virus, with the Restoration supporting the larger effort through evacuation, defense, logistics, and protection of civilians.\n\nThe conflict culminated in the Metal Virus being removed from the world. The infected were restored, bringing the immediate catastrophe to an end. However, the Restoration was left with the enormous task of helping people recover from the devastation.",
+          "image": "/factions/sonic_idw_19_coverb_raw.webp",
+          "caption": "Sonic IDW Cover - Nº19",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Test Run!",
+          "text": "After the Metal Virus crisis, the Restoration returned to its original purpose: reconstruction. Its members faced enormous amounts of work, from rebuilding damaged communities to locating displaced people and organizing relief efforts.\n\nLeadership also began changing during this period. The Restoration gradually transitioned away from its wartime origins, with greater emphasis being placed on administration, organization, volunteers, and long-term recovery.\n\nA new generation of leadership began taking responsibility for the organization, while the Restoration's surviving members continued responding to threats whenever necessary.\n\nThe Restoration eventually established a new, larger headquarters and reorganized itself around a volunteer-based structure. The organization now had dedicated facilities, workshops, administrative areas, and other resources for coordinating reconstruction efforts.\n\nRather than functioning as a military force, the Restoration became a broad humanitarian network. It helped rebuild communities affected by the Metal Virus, searched for missing people, maintained infrastructure, and provided assistance to those still recovering from the war and its aftermath.\n\nAlthough the organization could still mobilize fighters when necessary, combat was no longer its central identity.\n\nThe Restoration's rebuilding efforts were interrupted by renewed attacks from the Deadly Six. Several communities came under attack, forcing Restoration personnel to defend civilians and investigate the source of the attacks.\n\nThe threat eventually reached Restoration headquarters itself. The organization was forced to defend its own facilities while dealing with the kidnapping of one of its members.\n\nAlthough the crisis was resolved and the Deadly Six were dealt with, the incident demonstrated that the Restoration remained vulnerable to major threats even after the Metal Virus crisis.",
+          "image": "/factions/idw42coverriraw.webp",
+          "caption": "Sonic IDW Cover - Nº42",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left",
+          "layout": "column"
+        },
+        {
+          "type": "textImage",
+          "title": "Trial by fire",
+          "text": "Following the Zeti crisis, the Restoration continued its reconstruction work while its members began facing personal changes and new responsibilities.\n\nSome members temporarily stepped away from the organization because of outside threats, personal goals, or the need to pursue other paths. Others remained committed to Restoration work.\n\nThe organization consequently became less dependent on any particular group of individuals and increasingly relied on its wider network of volunteers and workers.\n\nThe Restoration began expanding beyond pure reconstruction and humanitarian relief by developing a rapid-response system. The idea was to have trained teams capable of reaching dangerous situations quickly, protecting civilians, and dealing with threats before they could escalate.\n\nThis represented a gradual evolution in the Restoration's role. It was still fundamentally a civilian organization dedicated to helping communities, but it recognized that protecting those communities sometimes required direct action.\n\nThe Restoration therefore began developing specialized teams while continuing its broader reconstruction efforts.",
+          "image": "/factions/idw57coverriraw.webp",
+          "caption": "Sonic IDW Cover - Nº 57",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Phantom Riders",
+          "text": "The Restoration attempted to expand its operations through partnerships with outside organizations. However, one such partnership eventually became a serious problem when its partner attempted to manipulate and exploit the Restoration for its own purposes.\n\nThe crisis exposed the dangers of trusting outside organizations without sufficient oversight. The Restoration was forced to deal with sabotage, deception, and an attempted takeover.\n\nThe incident ultimately ended the partnership and reinforced the need for the Restoration to remain careful about who it allowed into its operations.\nThe conflict surrounding the partnership escalated into a major incident involving a sabotaged race, criminal activity, and an attempt to seize control of a Restoration transport vessel.\n\nThe Restoration's resources were effectively turned against it, putting civilians, personnel, and an entire city at risk. The crisis culminated in an attempt to crash the hijacked vessel, forcing everyone involved to work together to evacuate the Restoration's headquarters.\n\nThe headquarters was ultimately destroyed.\n\nThe destruction was a major emotional and logistical blow to the organization. The building that had served as the center of its reconstruction network was gone, along with much of the infrastructure supporting its operations.\n\nHowever, the Restoration itself survived.\n\nThe people who made up the organization were still there, and they immediately began helping one another and preparing to rebuild. The destruction of the headquarters demonstrated that the Restoration was not defined by a building, but by the people who volunteered, worked, and sacrificed themselves to help others.",
+          "image": "/factions/how-does-everyone-feel-about-about-sonic-riders-being-v0-id2xnhewq13d1.jpg",
+          "caption": "Sonic IDW Cover - Nº 71",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Team Sonic",
+              "description": "The legendary trio of Sonic, Tails, and Knuckles, combining speed, ingenuity, and strength to face major threats and protect those in need.",
+              "characters": [
+                {
+                  "name": "Sonic the Hedgehog",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-1.png",
+                  "description": "A fearless, free-spirited hero who values freedom above all else and races into danger whenever someone needs his help."
+                },
+                {
+                  "name": "Tails the Fox",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-2.png",
+                  "description": "A brilliant young inventor and loyal friend whose technical expertise and quick thinking make him an invaluable member of Team Sonic."
+                },
+                {
+                  "name": "Knuckles the Echidna",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-3.png",
+                  "description": "A strong-willed and powerful echidna who protects the Master Emerald and brings unmatched strength and determination to Team Sonic."
+                }
+              ]
+            },
+            {
+              "title": "Team Rose",
+              "description": "A compassionate team centered around Amy, Cream, Big, and Gemerl, combining heart, strength, and determination to help others and protect those who cannot protect themselves.",
+              "characters": [
+                {
+                  "name": "Amy Rose",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-4.png",
+                  "description": "A compassionate and determined optimist who inspires others with her courage, empathy, and unwavering desire to help those in need."
+                },
+                {
+                  "name": "Cream the Rabbit & Cheese",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-5.png",
+                  "description": "A kind-hearted young rabbit and her loyal Chao companion, whose innocence, courage, and unwavering kindness often bring hope to those around them."
+                },
+                {
+                  "name": "Gemerl",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-7.png",
+                  "description": "A powerful combat robot turned guardian, fiercely protective of Cream and her family while learning to understand friendship and compassion."
+                },
+                {
+                  "name": "Big the Cat & Froggy",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-6.png",
+                  "description": "A gentle and easygoing fisherman with immense strength, who prefers a quiet life but is always willing to help his friends when trouble arises. Always searching for his companion Froggy"
+                }
+              ]
+            },
+            {
+              "title": "Diamond Cutters",
+              "description": "A specialized Restoration team focused on rapid response and field operations, combining teamwork, combat skills, and determination to protect others and confront emerging threats.",
+              "characters": [
+                {
+                  "name": "Tangle the Lemur",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-8.png",
+                  "description": "An energetic and adventurous lemur with an incredibly versatile tail, whose enthusiasm, bravery, and loyalty make her a dependable ally and friend."
+                },
+                {
+                  "name": "Whisper the Wolf",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-9.png",
+                  "description": "A quiet and highly skilled wolf who keeps others at a distance, but beneath her reserved nature lies a fiercely loyal and courageous protector."
+                }
+              ]
+            },
+            {
+              "title": "Others",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Lanolin the Sheep",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-10.png",
+                  "description": "A determined and disciplined sheep who strives to keep others safe, bringing organization, leadership, and a strong sense of responsibility to the Restoration."
+                },
+                {
+                  "name": "Jewel the Beetle",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-11.png",
+                  "description": "A diligent and compassionate beetle who keeps the Restoration running through careful organization, responsible leadership, and genuine care for its people."
+                },
+                {
+                  "name": "Belle the Tinketer",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-12.png",
+                  "description": "A gentle and curious wooden robot who loves tinkering and helping others, carrying on her creator's legacy while searching for her own place in the world."
+                },
+                {
+                  "name": "Gadget Wolf",
+                  "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-13.png",
+                  "description": "A resourceful and hardworking member of the Restoration, always ready to lend a hand and put their practical skills to use wherever they are needed."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Teams",
+      "value": "Diamond Cutters\nTeam Sonic\nTeam Rose"
+    },
+    {
+      "label": "Founded",
+      "value": "War to take back the Planet"
+    }
+  ]
+}
