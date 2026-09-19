@@ -120,7 +120,7 @@
           "groups": [
             {
               "title": "Team Sally",
-              "description": "The main attack force",
+              "description": "The main attack force of the Freedom fighters.",
               "characters": [
                 {
                   "name": "Sally Acorn",
@@ -145,33 +145,33 @@
                 {
                   "name": "Bunnie D'Coolette",
                   "image": "/factions/Bunnie_DCoolette_Pre-SGW_profile.png",
-                  "description": ""
+                  "description": "A kind-hearted and resilient Southern belle cyborg who combines mechanical strength with warmth and compassion, always willing to stand up for her friends and those in need."
                 }
               ]
             },
             {
               "title": "Secret Freedom Fighters",
-              "description": "",
+              "description": "A covert resistance network dedicated to opposing tyranny from the shadows, relying on espionage, sabotage, and carefully coordinated missions to protect without drawing attention.",
               "characters": [
                 {
                   "name": "Elias Acorn",
                   "image": "/factions/Elias_Acorn_SU42.webp",
-                  "description": ""
+                  "description": "A thoughtful and compassionate leader who carries the weight of his kingdom's legacy, striving to protect his people and preserve their freedom through diplomacy and courage."
                 },
                 {
                   "name": "Harvey Who",
                   "image": "/factions/latest_cb=20221025201519.webp",
-                  "description": ""
+                  "description": "A skilled and resourceful old member of the Acorn Kingdom's defense forces who uses his expertise and determination to support the resistance against tyranny, often operating alongside other covert members of the movement."
                 },
                 {
                   "name": "Shard the Metal Sonic",
                   "image": "/factions/Shard.webp",
-                  "description": ""
+                  "description": "A reformed Metal Sonic prototype who overcame his original programming, becoming a loyal hero determined to protect others and prove that he can choose his own path."
                 },
                 {
                   "name": "Larry the Lynx",
                   "image": "/factions/image__4_-removebg-preview.png",
-                  "description": ""
+                  "description": "A young and determined freedom fighter who uses his courage and resourcefulness to stand against oppression and protect his people. He is known for his bad luck."
                 }
               ]
             },
@@ -182,27 +182,27 @@
                 {
                   "name": "Mina Mongoose",
                   "image": "/factions/a8wcf8zwpy0c1-removebg-preview.png",
-                  "description": ""
+                  "description": "A talented singer and former Freedom Fighter whose music inspires others, balancing her artistic career with a strong sense of courage, compassion, and loyalty."
                 },
                 {
                   "name": "Julie-Su",
                   "image": "/factions/latest_cb=20201202215720.webp",
-                  "description": ""
+                  "description": "A tough and determined echidna with a sharp mind and fierce loyalty, who brings combat experience, independence, and a strong sense of justice to those she fights alongside. Formely a member of the Dark Brotherhood."
                 },
                 {
                   "name": "Saffron Bee",
                   "image": "/factions/320acd3646a0b106b3c278f736f8552b5b4881dc.webp",
-                  "description": ""
+                  "description": "A gentle and compassionate bee who brings warmth and kindness to those around her, determined to help others and stand up for what is right."
                 },
                 {
                   "name": "Uncle Chuck",
                   "image": "/factions/0Wj9XEhMLd7tAxSx780kXNy9klSWVVlIzpqbhsZx1JBVoqJ0rEWY7bVZY7EB73moTwJFiNa81kCJf06QJuSfb62_bXBxJjOvEZ6W6FCpeVtOTQq3wl0mb4BhLsikStd9baLTWrpUisz56iiPFMBwtcVIes9dpnBs7wH4xy5ltRU-removebg-preview.webp",
-                  "description": ""
+                  "description": "A wise and compassionate inventor who has endured years of hardship while remaining devoted to helping others and fighting for a better future."
                 },
                 {
                   "name": "Ben Muttski",
                   "image": "/factions/1200_cb=20241007003928&path-prefix=protagonist.webp",
-                  "description": ""
+                  "description": "A loyal and dependable Freedom Fighter who uses his courage and practical skills to support his allies and stand against those who threaten his home."
                 }
               ]
             }
