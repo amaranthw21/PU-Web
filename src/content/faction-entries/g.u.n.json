@@ -1,0 +1,169 @@
+{
+  "order": 3,
+  "faction": "mobius",
+  "group": "main",
+  "name": "G.U.N",
+  "image": "/factions/mobius/main-3.png",
+  "background": "/factions/sxsgdb_ep2_119.webp",
+  "color": "#fbcc62",
+  "quote": [],
+  "leader": "Commander Abraham Tower",
+  "headquarters": "G.U.N. HQ",
+  "bases": [
+    "G.U.N. Fortress - United Federation (U.F.)",
+    "G.U.N. Outpost - Republic of Chu-Nan (Chu-Nan)",
+    "Subterranean Colony H-01 (Haven) - Soumerca"
+  ],
+  "allies": [
+    "Chu-Nan Military"
+  ],
+  "enemies": [
+    "Eggman Empire"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Formed more than fifty years ago, the Guardian Units of Nations began as the UF's answer to rising global threats: terrorism, superweapons, and later against the increasingly unpredictable actions of Dr. Eggman. After the first global war, it gained international authority and resources far beyond any single nation. It became an organization built to respond to disasters, invasions, and anything that humans alone could not handle. \n\nTheir armies were vast, their technology advanced, and their machines tireless thanks to the mass-produced Chaos Drive. Over the decades, G.U.N. has shut down illegal research stations, fought extraterrestrial invaders, tracked rogue experiments, and clashed with Eggman’s empire again and again. \n\nBut G.U.N. is not a clean organization. Its history is stained with secrets buried under classified reports and erased files. The public only learned years later that G.U.N. was responsible for the raid that ended Project Shadow, the lockdown of the Space Colony ARK, and the weaponization of technology no one should have controlled. They called it “security.” Others called it “a cover-up.” Things began to change under Commander Abraham Tower. Many of the organization’s darker projects were shut down under his watch, and for the first time in decades, G.U.N. was seen as a protector instead of a threat. \n\nThen came the War to Take Back the Planet. Eggman struck harder than ever, and G.U.N. lost. Their armies were dismantled, most of their bases seized, their satellites turned against them. By the time the war ended, the organization was reduced to their primary division in the UF and a few outposts out there.",
+          "image": "/factions/sonic_the_hedgehog_19_idw_publishing_cover_ri_by_ideafan128_ddb93lt-375w-2x.jpg",
+          "caption": "Sonic IDW Cover - Nº19",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Backstory",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Past",
+          "text": "Its exact date of foundation is unknown, though the organization has existed for several decades and was originally created to respond to major criminal cases, domestic conflicts, and threats beyond their borders that might had affected the U.F.\n\nIn its early years, G.U.N. was considerably more interventionist than it would become later. The organization created secret facilities and outposts across the world, allowing it to respond to international incidents and monitor emerging military and technological threats. One of these facilities was established in Soumerca, where G.U.N. constructed an enormous underground settlement known as **Subterranean Colony H-01**, commonly called **Haven-01** which was abandoned until recently. Another one is in Chu-Nan, commonly known as **Outpost C-12**, commonly called as **G.U.N Chun-Nan Outpost**"
+        },
+        {
+          "type": "textImage",
+          "title": "Project Shadow and the ARK Incident",
+          "text": "Approximately fifty years before the present day, G.U.N. officials became increasingly concerned about Gerald's research aboard the newly completed Space Colony ARK, particularly **Project Shadow**. Fearing that the research could pose an unprecedented threat, G.U.N. leadership authorized the **ARK Seal Operation**.\n\nThe operation was publicly presented as a response to a dangerous biological outbreak aboard the ARK. In reality, G.U.N. intended to shut down the research facility, eliminate the project's personnel and research, and arrest Gerald Robotnik.\n\nDuring the raid, Gerald completed his greatest creation: **Shadow the Hedgehog**, the Ultimate Lifeform. Gerald entrusted Shadow to his granddaughter, **Maria**, who attempted to help him escape. Maria was fatally shot by a G.U.N. soldier while sending Shadow to Earth in an escape pod.\n\nThe incident deeply traumatized Gerald. He was imprisoned on Prison Island under G.U.N. supervision, while the ARK was sealed and the existence of Project Shadow was concealed from the public. Gerald eventually became consumed by grief and hatred, secretly programming the ARK to fall toward Earth as an act of revenge. G.U.N. discovered the danger and ultimately executed Gerald, while Shadow was placed into suspended animation.\n\nThe ARK incident became one of the darkest chapters in G.U.N.'s history. For decades, the organization regarded the event as a necessary act of national security, while much of the truth remained classified.",
+          "image": "/factions/shadowgenerationsgunsoldiers.webp",
+          "caption": "Shadow Generations",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        },
+        {
+          "type": "textImage",
+          "title": "he Rise of the Modern G.U.N.",
+          "text": "After the ARK incident, G.U.N. grew into a massive international organization, now openly stablishing outposts in other countries, developing advanced weapons, robotics, and research programs. Over the decades, some of these programs became increasingly questionable, continuing practices inherited from G.U.N.'s older, more secretive era.\n\nThe appointment of **Commander Abraham Tower** marked the beginning of a gradual change. Tower shifted G.U.N.'s focus toward protecting the United Federation and its people, while beginning to shut down some of the organization's more unethical experiments and programs. However, G.U.N. was too large to change overnight. Many old projects continued for years, either because they were considered useful or because their existence was buried within the organization's enormous network.\n\nThis became particularly evident during the **Prison Island Incident**. When Dr. Eggman discovered Gerald Robotnik's research and awakened Shadow, G.U.N. became involved in the resulting crisis. Their facility on Prison Island still contained remnants of Project Shadow and other classified research from the organization's past.\n\nG.U.N.'s attempts to contain the situation ultimately failed, and Prison Island was destroyed during the conflict between Eggman, Shadow, Sonic, and their allies. The incident became another turning point for Tower's reforms, demonstrating the dangers of allowing decades-old secrets and experiments to remain buried.\n\nFrom this point onward, G.U.N. continued gradually abandoning its older practices. It remained a powerful, secretive, and heavily militarized organization, but its overall purpose increasingly became **defending the United Federation rather than controlling every potential threat**.\n\nThe old G.U.N. did not disappear overnight—it slowly became buried beneath the new one.",
+          "image": "/factions/iyc0xe5uxsqix50ai6pzryo_fpi7wo5rjowwiw2wxjk7xf_fahg60cez1u06fskfykboygx8eh157yrajv6xqptpxxoxtyml3sigpzyrv0hdt6ni39_6cz8w_th_8umw-6eehcmwppowiyqa1ewj3jtxgltwvpkr31hq08seopa.webp",
+          "caption": "Abraham Tower - Dark Beginnings",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left",
+          "layout": "column"
+        },
+        {
+          "type": "textImage",
+          "title": "The Eggman War",
+          "text": "In the following years, G.U.N. continued operating as one of the United Federation's principal military organizations. It investigated international incidents, protected important facilities, and occasionally worked alongside individuals such as Shadow and Rouge.\n\nTower's G.U.N. increasingly focused on defense, intelligence, and rapid response rather than maintaining the aggressively interventionist approach of its earlier decades.\n\nNevertheless, the organization remained enormous. Old personnel remained in positions of authority, old facilities continued operating, and classified programs inherited from previous administrations could still be found throughout its network.\n\nSome of G.U.N.'s darkest practices therefore survived well into the modern era, even as the organization officially moved away from them.\n\nThen came the **Eggman War**. When Dr. Eggman launched his global campaign, G.U.N. became one of the major military forces opposing him.\n\nThe conflict devastated the organization.\n\nEggman's forces overwhelmed G.U.N.'s military infrastructure, destroying or capturing many of its bases and outposts across the world. G.U.N. lost much of its international network, including facilities that had existed for decades.\n\nWith G.U.N. effectively removed from the battlefield and Sonic captured, Eggman was able to conquer the vast majority of the planet.\n\nThe war left G.U.N. severely weakened.",
+          "image": "/factions/idw60coverriraw.webp",
+          "caption": "Sonic IDW Cover - Nº60",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "text",
+          "title": "Post-War G.U.N.",
+          "text": "After Eggman's defeat, G.U.N. did not immediately return to its former strength.\n\nWith most of its foreign infrastructure destroyed, G.U.N. was forced to consolidate what remained of its forces. Its primary responsibility became the **security and reconstruction of the United Federation**, rather than maintaining a large military presence around the world.\n\nMost of G.U.N.'s former overseas outposts were abandoned or lost during the war. Leaving only Haven-01 and the Chu-Nan outpost, as the only operational ones.\n\nThe organization therefore entered a new era: smaller, more centralized, and more defensive.\n\nG.U.N. still possesses advanced military technology and remains one of the United Federation's most powerful institutions, but it can no longer project its influence across the world as it once did."
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Team Shadow",
+              "description": "Team Shadow is the team composed of Shadow the Hedgehog, Rouge the Bat, and E-123 Omega, often sent by G.U.N. on high-risk missions.",
+              "characters": [
+                {
+                  "name": "Shadow the Hedgehog",
+                  "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-1.png",
+                  "description": "The Ultimate Lifeform, a powerful and independent \"hero\" shaped by a tragic past and driven by a strong sense of duty."
+                },
+                {
+                  "name": "Rouge the Bat",
+                  "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-2.png",
+                  "description": "A cunning and charismatic spy, treasure hunter, and G.U.N. agent who excels at infiltration, intelligence gathering, and covert operations."
+                },
+                {
+                  "name": "E-123 Omega",
+                  "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-3.png",
+                  "description": "a powerful combat robot and former Eggman creation who joined Team Shadow, driven by his hatred of Eggman's machines and equipped with overwhelming firepower."
+                }
+              ]
+            },
+            {
+              "title": "Other",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Abraham Tower",
+                  "image": "/factions/iyc0xe5uxsqix50ai6pzryo_fpi7wo5rjowwiw2wxjk7xf_fahg60cez1u06fskfykboygx8eh157yrajv6xqptpxxoxtyml3sigpzyrv0hdt6ni39_6cz8w_th_8umw-6eehcmwppowiyqa1ewj3jtxgltwvpkr31hq08seopa.webp",
+                  "description": "The long-serving Commander of G.U.N., a disciplined military leader who gradually pushed the organization toward a more defensive and accountable role while confronting its troubled past."
+                },
+                {
+                  "name": "Hope Kintobor",
+                  "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-4.png",
+                  "description": "A brilliant and compassionate young G.U.N. engineer, descended from the Robotnik family."
+                },
+                {
+                  "name": "Agent Topaz",
+                  "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-5.png",
+                  "description": "A skilled and dependable G.U.N. intelligence operative, known for her professionalism, resourcefulness, and close working relationship with Rouge during covert missions."
+                },
+                {
+                  "name": "Captain Andrews",
+                  "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-6.png",
+                  "description": "A seasoned G.U.N. officer and field commander, responsible for leading troops and coordinating military operations in the field."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Neutral",
+      "value": "The Restoration\nFreedom Fighters"
+    },
+    {
+      "label": "Teams",
+      "value": "Team Dark"
+    },
+    {
+      "label": "Founded",
+      "value": "+50 years ago."
+    }
+  ]
+}
