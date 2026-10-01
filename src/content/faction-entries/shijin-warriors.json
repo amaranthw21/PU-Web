@@ -1,0 +1,91 @@
+{
+  "order": 9,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Shijin Warriors",
+  "image": "/factions/mobius/main-10-Border.png",
+  "background": "/factions/commission___chun_nan_dulcy_etc_by_adambrycethomas_da3tois-fullview.webp",
+  "color": "#d42c2d",
+  "quote": [],
+  "leader": "Dulcy the Dragon",
+  "headquarters": "Shijin Shrine",
+  "bases": [
+    "Dragon Kingdom (Chu-Nan)"
+  ],
+  "allies": [
+    "Freedom Fighters"
+  ],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Shijin Warriors are the last line of defense for the ancient clans of the former Dragon Kingdom. Formed by Dulcy the Dragon, they emerged from necessity as the Chu-Nan Military and the Iron Dominion carved deeper into clan territories and the Dragon Kingdom stood frozen, divided by old rivalries and too fractured to resist. Dulcy, unwilling to watch her homeland be consumed, sent out a desperate call for help.\n\nOnly three answered.\n\nFrom those few, she forged a team strong enough to become a symbol: Monkey Khan, Jian the Tiger, Bunker the Tortoise. Together, they stand as protectors of what remains of the Dragon Kingdom and as a reminder to the clans that courage often begins with the few, not the many. Later Cinder the Pheasant would also join the team.\n\nThough vastly outnumbered by the forces of the Iron Queen and the expanding human-led Republic, the Shijin Warriors strike where the enemy is weakest.\n\nSmall as they are, the Shijin Warriors have become a whisper of hope and, for their enemies, a growing problem that refuses to burn out."
+        },
+        {
+          "type": "image",
+          "image": "/factions/pasted-image-1790883114050.png",
+          "caption": "Shijin Warriors: Chun-Nan Freedom Fighters by izzhaziqofficial40",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Main Team",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Dulcy the Dragon",
+                  "image": "/factions/dulcy_the_dragon_pre-sgw.webp",
+                  "description": "**Dulcy the Dragon** is a powerful and spirited leader of the Shijin Warriors, known for her strength, fiery personality, and ability to take to the skies."
+                },
+                {
+                  "name": "Jian the Tiger",
+                  "image": "/factions/dulcy_the_dragon_pre-sgw-1.webp",
+                  "description": "**Jian the Tiger** is a skilled Shijin Warrior and former member of the Egg Army who defected after rejecting their cause, becoming a disciplined and formidable fighter"
+                },
+                {
+                  "name": "Bunker the Tortoise",
+                  "image": "/factions/dulcy_the_dragon_pre-sgw-2.webp",
+                  "description": "**Bunker the Tortoise** is the calm and welcoming matron of the Shijin Shrine, a spiritual warrior who values peace and meditation but can fight fiercely when needed."
+                },
+                {
+                  "name": "Cinder the Pheasant",
+                  "image": "/factions/dulcy_the_dragon_pre-sgw-3.webp",
+                  "description": "**Cinder the Pheasant** is a young and energetic Shijin Warrior, curious and spirited by nature, who looks up to the older warriors while eager to prove that she can stand alongside them."
+                },
+                {
+                  "name": "Monkey Khan",
+                  "image": "/factions/dulcy_the_dragon_pre-sgw-4.webp",
+                  "description": "**Monkey Khan** is a powerful and proud warrior who often prefers to operate independently, following his own path while still standing alongside the Shijin Warriors when they need him."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown."
+    }
+  ]
+}
