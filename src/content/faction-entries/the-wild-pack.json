@@ -1,0 +1,79 @@
+{
+  "order": 7,
+  "faction": "mobius",
+  "group": "main",
+  "name": "The Wild Pack",
+  "image": "/factions/mobius/main-7.png",
+  "background": "/factions/lupe_wolf_leader_of_the_wolf_pack_by_izzhaziqoffic.png",
+  "color": "#38b0e0",
+  "quote": [],
+  "leader": "Lupe Wolf",
+  "headquarters": "Wild Pack HQ",
+  "bases": [
+    "Great Itzana"
+  ],
+  "allies": [
+    "Freedom Fighters"
+  ],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The **Wild Pack** is Great Itzana’s foremost hero team and one of the nation’s most respected defenders. Led by **Lupe Wolf**, daughter of the Grand Chief, the Pack was originally formed in response to the constant pressure from the **Soumerca Eggman Army**, whose incursions and military operations had threatened Itzana’s borders for years.\n\nWhat began as a small defensive force with most of their original members being from La Plate, until it gradually grew into a national institution, earning the trust and admiration of people across Great Itzana. The Wild Pack brings together heroes from every corner of the country: jungle tribes, desert communities, modern cities, ancient clans, and nomadic groups. Their different backgrounds, traditions, and fighting styles sometimes make them an unconventional team, but that diversity is also their greatest strength.\n\nMore than simply soldiers, the Wild Pack has become a symbol of Itzana’s independence and unity. Wherever danger threatens its people, the Pack is expected to answer the call.\n\nTheir purpose is simple: **defend Itzana, protect its people, and stand together against anyone who threatens their homeland.**",
+          "image": "/factions/pasted-image-1790875879216.png",
+          "caption": "Sonic Archie Cover - Nº277 Variant",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Lupe & Co",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Lupe Wolf",
+                  "image": "/factions/lupe_psgw_profile.webp",
+                  "description": "The leader of the **Wild Pack** and daughter of the Grand Chief of Great Itzana, Lupe Wolf is a proud and capable warrior who takes her responsibility to her people seriously. Strong-willed and compassionate, she serves as both a defender of her homeland and a unifying figure for the many communities that make up Itzana"
+                },
+                {
+                  "name": "Leeta Wolf",
+                  "image": "/factions/lupe_psgw_profile-1.webp",
+                  "description": "A member of the **Wild Pack**, Leeta Wolf is the more level-headed and thoughtful of the two. She tends to keep a cool head when tensions rise and often acts as a calming influence on her fellow Pack members. Reliable and patient, Leeta prefers to think things through before jumping into action."
+                },
+                {
+                  "name": "Lyco Wolf",
+                  "image": "/factions/lupe_psgw_profile-2.webp",
+                  "description": "A member of the **Wild Pack**, Lyco Wolf is energetic, confident, and always eager for action. She has a competitive streak and a tendency to rush headfirst into danger, but her enthusiasm and determination make her a valuable member of the team. Lyco is particularly protective of her fellow Pack members and is quick to stand up for them."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "20 years ago"
+    }
+  ]
+}
