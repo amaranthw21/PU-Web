@@ -1,0 +1,98 @@
+{
+  "order": 5,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Clutch Mafia",
+  "image": "/factions/mobius/main-6.png",
+  "background": "/factions/image-7.webp",
+  "color": "#5b6738",
+  "quote": [],
+  "leader": "Clutch the Opossum",
+  "headquarters": "Clean Sweep INC",
+  "bases": [
+    "United Federation (U.F.)"
+  ],
+  "allies": [],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "On paper, Clean Sweep Inc. is a harmless service company — a cleanup crew that arrives after Eggman’s attacks, sweeping away the rubble, clearing the machines, “restoring order” where the Restoration doesn’t reach. Their ads promise efficiency, safety, professionalism… and discretion. To the public, they are just another business trying to profit from rebuilding the world.\n\n But Clean Sweep wasn’t built for cleanup completely. \n\nThe company is the creation of Clutch the Opossum, an aging crime boss who once ruled the underworld with charm, money, and carefully concealed cruelty. After being exposed for abusing the very Chao that made him famous, his fortune, reputation, and influence crumbled overnight. Most men would have disappeared. Clutch did not. He rebuilt. \n\nClean Sweep was his second chance, a legitimate face for an illegitimate empire. While the public saw workers hauling away Eggman’s abandoned machinery, what they didn’t see was what happened next: robots stripped for parts, energy cores smuggled into the black market, weapon fragments reassembled into something saleable. \n\nAnd what began as an organized salvage operation grew into something much darker. Illegal robotics. Stolen tech. Stockpiled weapons. A secret arms network. And a very simple goal: replace the Restoration as the world’s leading “post-war solution” by force if necessary.",
+          "image": "/factions/some-phone-wallpapers-of-covers-from-the-idw-sonic-comics-v0-trq6iq37kula1.webp",
+          "caption": "Rough & Thumble - Sonic the Bad Guys IDW Cover Nº4",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Clean Sweep INC",
+              "description": "The core members of **Clean Sweep Inc.**, serving as the company’s full-time employees and handling its day-to-day operations. They form the permanent staff of the organization.",
+              "characters": [
+                {
+                  "name": "Clutch the Opossum",
+                  "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x.webp",
+                  "description": "The founder and owner of **Clean Sweep Inc.**, Clutch the Opossum is a shrewd and opportunistic mafia boss who built his company around recovering valuable goods and taking advantage of lucrative opportunities. He is not above bending the rules when it benefits him, making him a questionable but effective employer."
+                },
+                {
+                  "name": "Rough the Skunk",
+                  "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-1.png",
+                  "description": "A full-time member of **Clean Sweep Inc.**, Rough the Skunk is a tough and aggressive enforcer who relies on intimidation and brute force to get the job done. He is the brother of **Tumble the Skunk.**"
+                },
+                {
+                  "name": "Tumbre the Skunk",
+                  "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-1.webp",
+                  "description": "A full-time member of **Clean Sweep Inc.**, Tumble the Skunk is **Rough’s brother** and a tough, easygoing bruiser, often relying on his strength and enthusiasm when handling difficult jobs."
+                }
+              ]
+            },
+            {
+              "title": "Part Timers",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Mimic the Octopus",
+                  "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-2.webp",
+                  "description": "A part-time member of **Clean Sweep Inc.**, Mimic the Octopus is a skilled infiltrator and shapeshifter whose services are brought in for jobs requiring deception or impersonation. His current whereabouts and status are unknown."
+                },
+                {
+                  "name": "Surge the Tenrec",
+                  "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-3.webp",
+                  "description": "Surge the Tenrec is a volatile and rebellious tenrec with a fierce hatred of Eggman and those who serve him. Her current relationship with the company is uncertain, particularly after her experiences as one of Starline’s creations."
+                },
+                {
+                  "name": "Kitsunami the Fennec",
+                  "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-4.webp",
+                  "description": "Kitsunami the Fennec is a quiet and anxious fennec who was often overshadowed by Surge. Despite his immense water-manipulation abilities, he is deeply insecure and struggles with the trauma and conditioning he endured under Starline."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
