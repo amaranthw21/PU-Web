@@ -1,0 +1,410 @@
+{
+  "order": 4,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Eggman Army",
+  "image": "/factions/mobius/main-4.png",
+  "background": "/factions/i-always-thought-it-was-neat-that-eggmans-empire-isnt-v0-m38d7dnwr4q91.webp",
+  "color": "#eb8829",
+  "quote": [],
+  "leader": "Doctor Ivo \"Eggman\" Robotnick",
+  "headquarters": "Imperial Tower",
+  "bases": [
+    "Eggman Empire",
+    "Robotropolis (Northamer Army HQ) - Acorn Kingdom",
+    "Stone Stormlands (Soumerca Army HQ) - Great Itzana",
+    "Efrika Eggman Army HQ - Mazuri",
+    "Lord Hood Fortress (Eurish Army HQ) - Sylvania",
+    "Midesta Eggman Army HQ - Shamar",
+    "Chu-Nan Egg Army HQ - Chu-Nan (Iron Dominion)",
+    "Downunda Egg Army HQ - Tralius",
+    "Artika Egg Army HQ - Holoska",
+    "Southern Ocean Egg Army HQ - Great Blue Realm",
+    "Northern Ocean Egg Army HQ - Kingdom of Northern Waters"
+  ],
+  "allies": [],
+  "enemies": [
+    "Freedom Fighters",
+    "G.U.N.",
+    "The Restoration",
+    "Shijin Warriors",
+    "The Wild Pack",
+    "Woodland Kingsmen",
+    "Desert Riders",
+    "The Outriders",
+    "The Frostward",
+    "Meropis Royal Guard",
+    "Brinicle Forces",
+    "Mongul S.A."
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The Eggman Army is a sprawling machine of conquest—an ever-shifting network of factories, command centers, and armies built upon Dr. Eggman’s relentless ambition to impose his will upon the world.\n\nThe Empire was founded roughly twenty years ago, in the aftermath of the Great War. When the Aguara Empire of Soumerca finally fell beneath the forces of a new emerging warlod Dr. Robotnik, the collapse left behind a power vacuum waiting to be filled. From the ruins, Eggman began building something new. What started as a conquering military force gradually evolved into the vast industrial empire that would come to bear his name.\n\nFor two decades, Eggman’s dream has been nothing less than total domination: a world brought under a single, absolute will. That dream has never fully materialized, shattered time and time again by Sonic and his allies, but neither has the Empire ever truly disappeared. It has spread across the globe like a stain, retreating when defeated, rebuilding when broken, and returning whenever its master finds an opportunity to strike.\n\nEven after losing the War to Take Back the World, the Empire never truly died. Its main forces retreated to the Eggman Empire territories in Soumerca, where they endured in the aftermath of their defeat. During Eggman’s disappearance, his forces fractured, but they did not crumble. Metal Sonic assumed command during those uncertain months, maintaining what remained of the Empire’s military structure. Snively, meanwhile, slithered through the cracks, consolidating whatever power he could seize. On the fringes of the Empire, commanders such as Thunderbolt the Chinchilla drove their regional armies forward with renewed fanaticism.",
+          "image": "/factions/3xz1v8o6uyvb1.jpg",
+          "caption": "E.G.G.M.A.N. - by Tkdboy2000.",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Across the world, the Empire survives as a patchwork of territorial forces, each with its own tactics, priorities, and commanders, yet all ultimately born from Eggman’s doctrine of domination. Together, these armies form the body of the Empire.\n\nIts heart, however, lies with Eggman’s elite creations.\n\nThe Eggpawns. The Metal Series. The Hard-Boiled Heavies. Snively, whenever he is not conspiring from the shadows. And above them all stands Sage—Eggman’s artificially created daughter, no longer merely a program, but an advanced artificial intelligence in her own right.\n\nWhen Eggman finally returned following the Horizons incident, scarred, furious, and more determined than ever, the Empire snapped back into focus. Its scattered forces began once again to fall into line beneath their creator’s banner.\n\nFor now, Eggman has made no public declaration of his next move.\n\nBut across the world, the tension is growing.\n\nThe Empire is watching.\n\nAnd somewhere in the darkness, it is preparing to strike.",
+          "image": "/factions/tumblr_96daea90da4458e3385f77487163e85a_6771ce3a_1280.jpg",
+          "caption": "Eggman Forces by drawloverlala",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "The Eggman Army",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Northamer Egg Army",
+          "text": "The North American branch of the Eggman Army occupies the western section of the Acorn Kingdom, within the Wastelands. Its main stronghold is **Robotropolis**, the former capital of the Acorn Kingdom, which was conquered, destroyed, and later rebuilt during Robotnik’s invasion and the events of Forces.\n\nThe army’s primary objective appears to be the extraction of the Wastelands’ mineral resources, particularly the crystals used as raw materials for creating **Chaos Cores**.\n\nThe force is led by **Cassia Pronghorn, Clove Pronghorn, and Phage**, supported by a small group of non-robotic personnel and a much larger army of Robians.\n\nMost of these Robians were kidnapped and forcibly robotized using the **only Robotizator still in operation**, hidden within a chamber beneath Robotropolis. This makes the city not only the army’s headquarters, but also a vital center for the Empire’s continued production of robotic soldiers.",
+          "image": "/factions/cassia_and_clove_version_concept_artwork-removebg-preview.png",
+          "caption": "Cassia & Clove Pronghorn - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Soumerca Egg Army",
+          "text": "The Soumerca branch of the Eggman Army operates closest to the heart of the Eggpire and is commanded by **Thunderbolt the Chinchilla**, Eggman’s most loyal non-metallic follower.\n\nIts primary responsibility is protecting the Eggpire’s northern borders and preventing any invasion from the north by land, be it Great Itzana, the UF... etc. Because of its strategic position, the army serves as one of the Empire’s first lines of defense.\n\nBeyond its military duties, the Soumerca Army is also tasked with acquiring valuable antiquities and historical artifacts that Eggman requires for his various plans that have its origin in Soumerca. Whether through excavation, raids, or outright theft, Thunderbolt’s forces are willing to “retrieve” anything their master considers useful.",
+          "image": "/factions/pasted-image-1790703170166.png",
+          "caption": "Thunderbolt the Chinchilla - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Eurish Egg Army",
+          "text": "The Eurish branch of the Eggman Army is commanded by **Lord Mordred Hood, Baron of Avalon in Sylvania**. Unlike most of the Empire’s regional forces, its primary purpose is not conventional warfare, but the investigation and containment of the Eggpire’s more **magical and supernatural problems**.\n\nBecause of the nature of its work, the Eurish Army contains a far greater proportion of non-robotic personnel than most other branches of the Empire.\n\nMordred Hood currently finds himself fighting on several fronts. In Mercia, he is engaged in a conflict with the **Woodland Kingsmen**, a force seeking to reclaim the lands of the Kingdom of Mercia that Mordred forcibly annexed.\n\nAt the same time, he faces opposition from **the Court of the Black Thorns of Sylvania**, which expelled him following his alliance with Eggman and the subsequent invasion of Mercia during the Sylvanian Civil war.",
+          "image": "/factions/lord_mordred_hood_pre-sgw_profile.webp",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Efrika Egg Army",
+          "text": "The Efrikan branch of the Eggman Army is directed by **Axel the Buffalo**. Compared to the Empire’s other regional forces, its operations are considerably less ambitious.\n\nIts primary activities consist of **causing trouble, disrupting local communities, and poaching**. While seemingly minor compared to the Empire’s larger military operations, Axel’s forces remain a persistent nuisance throughout the region and serve as another means of extending Eggman’s influence across Efrika.",
+          "image": "/factions/pasted-image-1790868026800.png",
+          "caption": "Axel the Buffalo - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Midesta Egg Army",
+          "text": "The Shamar branch of the Eggman Army is directed by **Nephthys the Vulture** and is primarily composed of pirates who navigate the desert sands. Their main opposition is the **Desert Riders**, with both sides maintaining a strange, almost ritualized rivalry as they constantly dance around one another without allowing the conflict to escalate into outright destruction.\n\nTheir objective is deceptively simple, yet incredibly difficult, as they need to fool Dr Eggman himself: **keep the conflict frozen in place**.\n\nThe Desert Riders and Nephthys coordinate their moves carefully, ensuring that the Riders strike hard enough to slow the Egg Army, rescue captives, sabotage shipments, and disrupt operations, but never so hard that Eggman responds with overwhelming force.\n\nFor both sides, the goal is not victory. It is preventing the war from becoming something far worse.",
+          "image": "/factions/images-1.jpeg",
+          "caption": "Nephthys the Vulture - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Yurasia Egg Army",
+          "text": "The Yurasia branch of the Eggman Army is a division of highly trained **ninjas** stationed throughout Yurashia, led by **Conquering Storm**.\n\nThe division was allowed to remain in Yurashia under a treaty negotiated between the **Iron Queen** and the Eggman Empire by Snively. However, while the ninjas continue to operate within the region, Conquering Storm and their forces are **no longer considered part of the Iron Dominion**.\n\nThey now serve exclusively under the authority of the Eggman Empire, maintaining their own presence and operations within Yurashia.",
+          "image": "/factions/pasted-image-1790708849757.png",
+          "caption": "Conquering Storm - Sonic",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Downunda Egg Army",
+          "text": "The Downunda branch of the Eggman Army is directed by **Maw the Thylacine** and functions primarily as an investigative and research division.\n\nIts forces study phenomena, locations, technologies, and discoveries that Dr. Eggman either has no personal interest in investigating or prefers to keep away from the wider Eggman Empire. As a result, the Downunda Army operates with considerable independence, often handling obscure or sensitive research far from the rest of the Empire.\n\nRecently, however, the division has faced increasing difficulties. Its long-standing natural enemies, the **Outriders**, continue to interfere with its operations, while the **Suppression Squad** has suddenly appeared in the region, creating an entirely new threat to Maw’s investigations.",
+          "image": "/factions/pasted-image-1790709143796.png",
+          "caption": "Maw the Thylacine - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Artika Egg Army",
+          "text": "The Artika branch of the Eggman Army is directed by **Tundra the Walrus** and works closely with the **Northern Ocean Egg Army** to defend the Empire’s interests across Artika and the Northern Waters.\n\nIts presence in the region is relatively limited, however, largely due to **Mammoth Mogul’s** well-known hostility toward Eggman and the constant pressure exerted by the **Frostguard**, who regularly strike against Eggman forces and infrastructure.\n\nAs a result, Tundra’s forces maintain a smaller, largely defensive presence, relying heavily on their northern allies to protect what territory and resources the Empire still controls.",
+          "image": "/factions/pasted-image-1790709448604.png",
+          "caption": "Tundra the Walrus - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Northern Ocean Egg Army",
+          "text": "The Northern Ocean branch of the Eggman Army is directed by **Akhlut the Orca** and is responsible for securing the Empire’s interests across the Northern Ocean. It regularly clashes with the Brinicle forces of the Kingdom of the Northern Waters, particularly over control of key waters and strategic positions.\n\nFor operations above the water, Akhlut’s forces often rely on support from the **Artika Egg Army**. However, there is some friction between the two branches due to the strained relationship between Akhlut the Orca and **Tundra the Walrus**, commander of the Artika forces. While the two armies continue to cooperate when necessary, their personal disagreements can sometimes make coordination more difficult.",
+          "image": "/factions/pasted-image-1790852829826.png",
+          "caption": "Akhlut the Orca - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        },
+        {
+          "type": "textImage",
+          "title": "Southern Ocean Egg Army",
+          "text": "The Southern Ocean branch of the Eggman Army is essentially a full fleet of vessels operating throughout the Southern Ocean under the command of **Abyss the Squid**. Its forces are primarily devoted to piracy, raiding shipping lanes and attacking vessels across the region in the interests of the Eggman Empire.\n\nDespite their effectiveness, they are not particularly well regarded by the **Adabat Pirate Council**, largely due to the unnecessary violence often employed by Abyss and his crews. Their activities have also brought them into frequent conflict with the **Meropis Royal Guard**, as some of their raids and operations take them dangerously close the Great Blue Realm waters.",
+          "image": "/factions/pasted-image-1790853212129.png",
+          "caption": "Abbys the Squid - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Leader & Close aides",
+              "description": "Those closest to **Eggman himself**, including his usual personal minions and trusted members of his inner circle.",
+              "characters": [
+                {
+                  "name": "Dr. Ivo \"Eggman\" Robotnik",
+                  "image": "/factions/idwdr.eggman.webp",
+                  "description": "The self-proclaimed genius behind the Eggman Empire, who seeks to conquer the world and bend it to his will."
+                },
+                {
+                  "name": "SAGE",
+                  "image": "/factions/idwdr.eggman-1.webp",
+                  "description": "Eggman’s highly advanced AI assistant, created to support his operations and serve as one of his most trusted and capable allies. The closest thing Eggman has had to a recognised daughter."
+                },
+                {
+                  "name": "Agent Stone",
+                  "image": "/factions/idwdr.eggman-2.webp",
+                  "description": "Eggman’s loyal personal agent, serving as his trusted aide and handling a wide range of missions and operations on his behalf."
+                },
+                {
+                  "name": "Snively",
+                  "image": "/factions/idwdr.eggman-3.webp",
+                  "description": "Eggman’s cunning and long-suffering nephew, who serves as his personal assistant and advisor while secretly harboring ambitions of his own."
+                },
+                {
+                  "name": "Orbot and Cubot",
+                  "image": "/factions/pasted-image-1790854160862.png",
+                  "description": "Eggman’s bumbling robotic assistants, who accompany him on his schemes and carry out various tasks for the Eggman Empire."
+                }
+              ]
+            },
+            {
+              "title": "Metal Series",
+              "description": "A series of powerful robotic creations built by Eggman, designed to replicate and surpass his greatest enemies while serving as elite weapons of the Eggman Empire.",
+              "characters": [
+                {
+                  "name": "Metal Sonic",
+                  "image": "/factions/idwdr.eggman-4.webp",
+                  "description": "Eggman’s ultimate robotic rival to Sonic, built to match his speed and abilities while serving as one of the Empire’s most powerful machines."
+                },
+                {
+                  "name": "Metal Knuckles",
+                  "image": "/factions/idwdr.eggman-5.webp",
+                  "description": "A robotic duplicate of Knuckles created by Eggman, designed to replicate his strength and combat abilities while serving as a powerful enforcer of the Eggman Empire."
+                },
+                {
+                  "name": "Metal Tails",
+                  "image": "/factions/idwdr.eggman-6.webp",
+                  "description": "A robotic duplicate of Tails created by Eggman, designed to replicate his intelligence and aerial abilities while serving as a versatile machine of the Eggman Empire."
+                },
+                {
+                  "name": "Metal Amy",
+                  "image": "/factions/idwdr.eggman-7.webp",
+                  "description": "A robotic duplicate of Amy created by Eggman, designed to replicate her combat abilities and serve as a powerful member of the Metal Series."
+                },
+                {
+                  "name": "Metal Sally",
+                  "image": "/factions/idwdr.eggman-8.webp",
+                  "description": "A robotic duplicate of Sally Acorn created by Eggman, designed to replicate her tactical abilities and serve as a capable strategist within the Metal Series."
+                },
+                {
+                  "name": "Metal Trip",
+                  "image": "/factions/idwdr.eggman-9.webp",
+                  "description": "A robotic duplicate of Trip the Sungazer created by Eggman, designed to replicate her unique abilities and combat skills as part of the Metal Series."
+                }
+              ]
+            },
+            {
+              "title": "Hard Egg Boiled",
+              "description": "A group of powerful Eggman-built mercenary robots, each equipped with specialized abilities and designed to serve as elite enforcers of the Eggman Empire.",
+              "characters": [
+                {
+                  "name": "Heavy King",
+                  "image": "/factions/sm_pc_digital_manual_uk_king.webp",
+                  "description": "The leader of the Hard-Boiled Heavies, a powerful armored robot who commands the group and serves as one of Eggman’s elite enforcers."
+                },
+                {
+                  "name": "Heavy Magician",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-1.webp",
+                  "description": "A mysterious Hard-Boiled Heavy capable of using powerful magical abilities and disguises, serving as one of Eggman’s elite robotic enforcers."
+                },
+                {
+                  "name": "Heavy Shinobi",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-2.webp",
+                  "description": "A highly agile Hard-Boiled Heavy modeled after a ninja, specializing in stealth, speed, and close-quarters combat as one of Eggman’s elite enforcers."
+                },
+                {
+                  "name": "Heavy Rider",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-3.webp",
+                  "description": "A heavily armed Hard-Boiled Heavy built for high-speed pursuit, specializing in mounted combat and aggressive attacks as one of Eggman’s elite enforcers."
+                },
+                {
+                  "name": "Heavy Gunner",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-4.webp",
+                  "description": "A heavily armed Hard-Boiled Heavy specializing in long-range firepower and heavy weaponry, serving as the group’s primary ranged combatant."
+                }
+              ]
+            },
+            {
+              "title": "Egg Army Bosses",
+              "description": "The commanders of the Eggman Army, each responsible for leading their own forces and overseeing the Empire’s military operations across different regions.",
+              "characters": [
+                {
+                  "name": "Clove the Pronghorn",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-5.webp",
+                  "description": "The reluctant leader of the **Northamer Egg Army**, Clove the Pronghorn is a reserved and reticent commander who serves the Eggman Empire despite having little desire to be there. She is the sister of **Cassia Pronghorn**."
+                },
+                {
+                  "name": "Cassia Pronghorn",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-6.webp",
+                  "description": "A member of the **Northamer Egg Army** and the sister of **Clove the Pronghorn**, Cassia is not a devoted believer in Eggman’s cause. She remains in his service largely because of an illness that Eggman has promised to keep at bay, leaving her loyalty to the Empire complicated and reluctant."
+                },
+                {
+                  "name": "Thunderbolt the Chinchilla",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-7.webp",
+                  "description": "The commander of the **Soumerca Egg Army**, Thunderbolt the Chinchilla oversees Eggman’s forces throughout Soumerca and is responsible for maintaining the Empire’s presence across the region."
+                },
+                {
+                  "name": "Lord Mordred Hood",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-8.webp",
+                  "description": "The commander of the **Eurish Egg Army**, Lord Mordred Hood is a Baron of Sylvania and ruler of the Barony of Avalon. He oversees Eggman’s forces across Eurish territories while maintaining his own authority within Sylvania."
+                },
+                {
+                  "name": "Conquering Storm",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-9.webp",
+                  "description": "Formerly the leader of the **Raiju Clan** of the Iron Dominion, she defected to the Eggman Empire and now commands the **Yurasia Egg Army**, using her experience and knowledge of the region in service to her new allegiance."
+                },
+                {
+                  "name": "Nephthys the Vulture",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-10.webp",
+                  "description": "The commander of the **Midesta Egg Army**, Nephthys the Vulture is more concerned with maintaining the balance of power in Shamar than with expanding Eggman’s influence across the region."
+                },
+                {
+                  "name": "Maw the Thylacine",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-11.webp",
+                  "description": "The commander of the **Downunda Egg Army**, Maw the Thylacine is an enigmatic and impeccably calm gentleman with an obsession for robotics and perfection. Hungry for knowledge, he is a firm believer in Eggman’s vision, convinced that the Empire’s conquest will ultimately serve the greater good and “save the world from itself.”"
+                },
+                {
+                  "name": "Axel the Water Buffalo",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-12.webp",
+                  "description": "The commander of the **Efrika Egg Army**, Axel the Water Buffalo is a gruff and serious leader whose loyalty to Eggman is driven more by fear than respect. Though he values teamwork and has little problem getting his hands dirty, he is especially close to his own troops, treating them as brothers and sisters."
+                },
+                {
+                  "name": "Tundra the Walrus",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-13.webp",
+                  "description": "The commander of the **Artika Egg Army**, Tundra the Walrus is a proud warrior who lives by a strict code of strength and honor. He believes the strongest should rule, putting him at odds with his son **Rotor**, whose intellectual pursuits he greatly disapproves of. His loyalty to Eggman is tied to this belief in strength, while his deep hatred of **Akhlut** stems from their long-standing rivalry and Tundra’s belief that Akhlut lacks honor."
+                },
+                {
+                  "name": "Abyss the Squid",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-14.webp",
+                  "description": "The commander of the **Southern Ocean Egg Army**, Abyss the Squid is a greedy and self-serving pirate who joined Eggman in pursuit of riches and resources. She enjoys plundering the oceans for treasure, constantly boasting about her exploits, and relishes the thrill of battle and raiding."
+                },
+                {
+                  "name": "Akhlut the Orca",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-15.webp",
+                  "description": "The commander of the **Northern Ocean Egg Army**, Akhlut the Orca is a bloodthirsty and war-hungry leader who deliberately provokes his enemies into conflict. Smug and disrespectful, he enjoys mocking his rivals, particularly Tundra, though he still shows a degree of honor toward his own warriors. Unlike many Egg Bosses, Akhlut appears genuinely loyal to Eggman and rarely speaks ill of the doctor."
+                }
+              ]
+            },
+            {
+              "title": "Others",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Beauregard Rabbot",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-16.webp",
+                  "description": "A member of the Eggman Empire and the father of **Bunnie Rabbot**, Beauregard is a relaxed and caring figure who treats his fellow army members like family. Despite serving on the opposing side, he remains deeply proud of **Bunnie** and cares for her dearly, even as their conflicting allegiances may eventually force them to face each other."
+                },
+                {
+                  "name": "Matilda the Armadillo",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-17.webp",
+                  "description": "A member of the Eggman Army and the sister of **Mighty the Armadillo**, Matilda is a strong-willed and capable fighter who remains loyal to her comrades despite the difficult circumstances surrounding her allegiance."
+                },
+                {
+                  "name": "PHAGE",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-18.webp",
+                  "description": "An advanced but unruly AI considered too useful for Eggman to dispose of, PHAGE was assigned to the **Northamer Egg Army** to keep it under closer supervision. When interacting with the physical world, PHAGE uses members of the **Doll Series** as vessels, allowing it to directly interact with and influence the real world."
+                },
+                {
+                  "name": "Chaos Gamma",
+                  "image": "/factions/sm_pc_digital_manual_uk_king-19.webp",
+                  "description": "A powerful combat robot created by Eggman, **Chaos Gamma** is one of the more specialized machines in his arsenal, designed for high-level combat and built to harness the destructive power of Chaos energy."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Neutral",
+      "value": "Iron Dominion"
+    },
+    {
+      "label": "Teams",
+      "value": "Metal Series\nHard Egg Boiled\nNorthamer Egg Army\nSoumerca Egg Army\nEurish Egg Army\nMidesta Egg Army\nEfrika Egg Army\nYurasia Egg Army\nDownunda Egg Army\nArtika Egg Army\nNorthern Ocean Egg Army\nSouthern Ocean Egg Army"
+    },
+    {
+      "label": "Founded",
+      "value": "20 years ago, after the fall of the Aguara Empire."
+    }
+  ]
+}
