@@ -1,0 +1,146 @@
+{
+  "order": 8,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Iron Dominion",
+  "image": "/factions/mobius/main-8.png",
+  "background": "/factions/the_iron_dominion.webp",
+  "color": "#f93e58",
+  "quote": [],
+  "leader": "Regina Ferrum",
+  "headquarters": "Iron Fortress",
+  "bases": [
+    "Iron Dominion (Chu-Nan)"
+  ],
+  "allies": [],
+  "enemies": [
+    "Shijin Warriors",
+    "Chu-Nan Military"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The Iron Dominion is not simply a faction, it is a state, a system, and a vision of what Chu-nan could be if ruled with strength instead of compromise or ideals. Its ruler, the Iron Queen, Regina Ferrum, commands it with both ancient sorcery and modern machinery, forging them into a single doctrine: order through control, unity through conquest.\n\nWhere the Republic debates over human superiority and the Dragon Kingdom remembers its golden past, the Dominion acts. It is built on the belief that a fractured land can only be saved by a single, unchallenged throne. Under Regina’s banner, humans and Mobians serve side by side, not because the Dominion is compassionate, but because efficiency leaves no room for prejudice. Everyone has worth if they are useful.\n\nAt the heart of the Dominion stand the Four Clans, each bound to Regina by oath or defeat. Once independent powers, they now form the pillars of her rule who carry out her will across Chu-nan. These clans are Gossamer, experts of homeland espionage and the spiritual; Shinobi, experts of international espionage and defense; Yagyu, a merchant guild who funds the Iron Dominion and is known for pillaging, and Raiju its offensive force.  \n\n The end goal is simple: An empire that functions because no one is allowed to break it.",
+          "image": "/factions/pasted-image-1790877831326.png",
+          "caption": "Heads of the Iron Dominion Clans - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Iron Dominion Clans",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Iron Clan",
+          "text": "The **Iron Clan** was formed by Regina Ferrum after she took control of the Iron Dominion. It is made up primarily of her closest associates, the people who supported her during her rise and became part of her inner circle.\n\nUnlike the older clans, the Iron Clan has almost no blood ties between its members. They come from different backgrounds and families, making the clan one of the least uniform in the Dominion. Their main bond is their loyalty to Regina and their role in the new order she created.\n\nIt is also the youngest clan, meaning it has had much less time to develop its own traditions and identity. Membership is based more on **personal loyalty and association with Regina** than ancestry, making the Iron Clan considerably more fluid than the older clans.\n\nIt's leader is called the **Head of Four Houses**",
+          "image": "/factions/pasted-image-1790878273751.png",
+          "caption": "Regina Ferrum - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Raiju Clan",
+          "text": "The **Raiju Clan** has always been the main fighting force of the Iron Dominion, with a long tradition of producing warriors and commanders. Their previous leader, **Conquering Storm**, defected from the Iron Dominion to join the Eggman Army, leaving a small stain on the clan's honor that their new leader now has to overcome.\n\nBecause of his defection, the clan abandoned the title of **Conquering Storm** for its leaders. The current head instead bears the title **Vanquishing Tempest**, symbolizing the clan's determination to restore its honor and move beyond the disgrace of its former leader.",
+          "image": "/factions/pasted-image-1790879534564.png",
+          "caption": "Conquering Storm - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Yagyu Clan",
+          "text": "The **Yagyu Clan** is responsible for much of the Iron Dominion's wealth, specializing in theft, smuggling, and the redistribution of resources. Despite their reputation as thieves, they follow a strict code established by their ancestors. They do not steal from those who cannot afford the loss, and wealth taken by the clan is distributed among its members so that no one is left hungry or consumed by greed. They see themselves less as common thieves and more as **distributors of wealth**, using their skills to strengthen their own community.\n\nOne of their traditions is the **Trial of Bells**. To be recognized as a true ninja of the Yagyu Clan, a young member must sneak into the chambers of three elder clan members and steal a hidden bell without being detected. Successfully stealing all three proves that they possess the stealth and cunning expected of a Yagyu.\n\nThe leaders of this clan are called the **Head of Rich Nights.** Sango a relatively new leader following the elimination of the previous heads, who attempted to double-cross Regina Ferrum. As a result, Rich Nights inherits not only the responsibility of managing the clan's wealth, but also the difficult task of proving the Yagyu's loyalty to the new Dominion.",
+          "image": "/factions/pasted-image-1790880092812.png",
+          "caption": "The old Rich Nights - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Gossamer Clan",
+          "text": "The **Gossamer Clan** is a tribe of ninja, most of whom are arachnids, who are entrusted with watching over the **Web of Fate**. Some time after the clan's founding, their original head gifted them this precious artifact. By reading its threads, the Gossamer could glimpse the possible paths an individual might take and the consequences that could follow from each choice.\n\nBecause of this, the Gossamer Clan primarily serves as the Iron Dominion's **information network**. They gather secrets, monitor important figures, and use their knowledge of the Web of Fate to help guide the Dominion's decisions. Although they are perfectly capable assassins, killing is not their primary role. Their greatest weapon is what they know—and what they can foresee.\n\nIts leader is called the **Head of Endless Reach**",
+          "image": "/factions/pasted-image-1790880519244.png",
+          "caption": "Endless Reach - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Shinobi Clan",
+          "text": "The **Shinobi Clan** is the Iron Dominion's main force for missions involving espionage, infiltration, assassination, and other covert operations. They are highly trained agents who are sent wherever secrecy and precision are required.\n\nThe clan remains loyal to Regina Ferrum, but its leader, the **Head of Constant Vigil**, has a more complicated relationship with her members. On numerous occasions, she has secretly covered for shinobi who wished to abandon the clan and seek a life outside the Dominion rather than forcing them to remain. She has even helped her own child, **Espio**, one of those who chose to leave, whenever she can.",
+          "image": "/factions/pasted-image-1790880592049.png",
+          "caption": "Head of Constant Vigil - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "The 5 Heads",
+              "description": "While it says 5 heads, only 3 are avaliable at the moment, since the **Head of Rich Nights** and **Vanquishing Tempest** would be OCs",
+              "characters": [
+                {
+                  "name": "Regina Ferrum",
+                  "image": "/factions/iron_queen_arrival.webp",
+                  "description": "**Regina Ferrum** is the ruthless and ambitious Iron Queen of the Iron Dominion, a powerful Magitek sorceress who seeks to expand her influence and forge an empire of her own."
+                },
+                {
+                  "name": "Endless Reach",
+                  "image": "/factions/iron_queen_arrival-1.webp",
+                  "description": "A mysterious and powerful head who helped shape the Dominion and its clans through her gifts and guidance. She is the main reader of the Web of fate."
+                },
+                {
+                  "name": "Constant Vigil",
+                  "image": "/factions/iron_queen_arrival-2.webp",
+                  "description": "**Constant Vigil** is the leader of the Shinobi Clan and a skilled master of espionage, as well as Espio's mother. While loyal to the Iron Dominion she quietly supports those who choose to leave the clan."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "+20 years ago"
+    }
+  ]
+}
