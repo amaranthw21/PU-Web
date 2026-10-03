@@ -1,0 +1,42 @@
+{
+  "order": 10,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Chu-Nan military",
+  "image": "/factions/mobius/main-11-border.png",
+  "background": "/factions/pasted-image-1791047207285.png",
+  "color": "#c5c7c7",
+  "quote": [],
+  "leader": "Ying Zheng",
+  "headquarters": "Dragon Palace",
+  "bases": [
+    "Chu-Nan Republic (Chu-Nan)"
+  ],
+  "allies": [
+    "G.U.N."
+  ],
+  "enemies": [
+    "Iron Dominion",
+    "Yurasia Egg Army",
+    "Shijin Warriors"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Chu-Nan Military is the iron backbone of the Chu-Nan Republic, its pride, its shield, and the instrument through which it enforces its strict social order. Born from decades of resentment after generations in which Mobians dominated human life within Chu-Nan, the Military rose to prominence roughly forty years ago, empowered by a surge of technological advancement… thanks in no small part to “assistance” from Dr. Eggman.\n\nThose early blueprints, combat frames, power-armor prototypes, control systems, became the foundation. Today, the Chu-Nan Military has long since surpassed Eggman’s original designs, developing its own cybernetics, energy weapons, and experimental soldier programs. Sleek towers, neon-lit barracks, and reinforced research megastructures make the Military’s territory feel like a living piece of cyber-punk authoritarianism.\n\nWithin its ranks, the hierarchy is brutally clear: Humans enjoy most privileges, though even they are not immune to the regime’s discipline. Mobians with powers or rare abilities are granted elite status but are heavily monitored, trained, and controlled, never truly free. And Mobians without powers occupy the lowest tier, often used as labor, shock troops, or worse—test subjects in the Military’s ongoing experimentation projects.\n\nDefection is the ultimate crime. Humans who attempt to escape face prisons and re-education centers, but Mobians suffer far worse. Many vanish into the Military’s hidden labs, become unwilling participants in augmentation experiments, or, if lucky, they might end up as servants of high-ranking officials.\n\nNo Mobian who tries to flee ever returns unchanged—if at all.\n\nDespite its brutality, the Chu-Nan Military maintains a flawless diplomatic mask. To foreign nations, it presents itself as a modern force of progress, order, and technological innovation. Its propaganda is sleek, its public relations impeccable, and its soldiers immaculate. The world sees a professional army.\n\nAs a large military nation itself, the Chun Nan Republic and its military are a part of G.U.N– technically. It’s one of the few nations left to still be in the organization after its failure in the War to Take Back the Planet, and is the only reason it didn’t go under entirely. Abraham Tower absolutely hates them and knows that they have been doing unethical experimentation outside of G.U.N behind red tape and have been planning counter measures against G.U.N, but after the organization was almost lost, he now has to begrudgingly co-exist with their “saviors”. If he does anything to fight against the Chun Nan military and their plans, G.U.N’s last bit of funding will be cut. As for the Chun Nan Republic, they see G.U.N as an annoying but valuable asset. Once upon a time, they were rivals. But soon enough they’ll see who’s really in charge.     \n\n**Important note: In the Chu-nan Military humans are above Mobians, even if your character is granted privileges because they have powers, the average joe in the street has more power of decision than them. Another thing to note is that while the “elite” mobian is mostly made by those with powers, if your character has no power but still has a special gift, like they are a genius, they can still be granted the status of elite.**"
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "+20 years ago"
+    }
+  ]
+}
