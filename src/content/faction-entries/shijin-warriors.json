@@ -15,7 +15,11 @@
   "allies": [
     "Freedom Fighters"
   ],
-  "enemies": [],
+  "enemies": [
+    "Chu-Nan Military",
+    "Eggman Army",
+    "Iron Dominion"
+  ],
   "blocks": [
     {
       "title": "Overview",
