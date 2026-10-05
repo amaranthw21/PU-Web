@@ -67,13 +67,12 @@
                   "name": "Sir Percival",
                   "image": "",
                   "description": ""
-                }
-              ]
-            },
-            {
-              "title": "Sir Gawain",
-              "description": "",
-              "characters": [
+                },
+                {
+                  "name": "Sir Gawain",
+                  "image": "",
+                  "description": ""
+                },
                 {
                   "name": "Sir Lamorak",
                   "image": "",
