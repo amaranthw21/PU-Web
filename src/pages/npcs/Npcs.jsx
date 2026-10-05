@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import EntryCard from "../../components/EntryCard";
+import { CHARACTER_PLACEHOLDER } from "../../lib/placeholders";
 import npcs, { npcCategories } from "../../data/lore/npcs/npcs";
 import useDocumentTitle from "../../lib/useDocumentTitle";
 
@@ -72,6 +73,8 @@ export default function Npcs(){
                                             imagePosition={npc.imagePosition}
 
                                             imageZoom={npc.imageZoom}
+
+                                            fallbackImage={CHARACTER_PLACEHOLDER}
 
                                             link={`/lore/npcs/${npc.id}`}
 

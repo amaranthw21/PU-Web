@@ -1,6 +1,7 @@
 import Paragraphs from "./Paragraphs";
 import CountryRegions from "./CountryRegions";
 import asset from "../lib/asset";
+import { CHARACTER_PLACEHOLDER } from "../lib/placeholders";
 
 
 // El título de un apartado es opcional: es lo que convierte una parte en un
@@ -192,6 +193,7 @@ function BlockPart({ part }){
                         locations: group.characters
                     }))
                 }}
+                fallbackImage={CHARACTER_PLACEHOLDER}
             />
         );
 

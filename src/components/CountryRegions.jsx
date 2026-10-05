@@ -6,21 +6,33 @@ import asset from "../lib/asset";
 // Una zona del carrusel: imagen + nombre. Solo es pulsable si tiene
 // descripción; si no, no hay nada que desplegar y se pinta como una tarjeta
 // normal (así no se ofrece un clic que no hace nada).
-function Location({ location, isOpen, onToggle }){
+//
+// `fallbackImage` (opcional) se usa cuando la zona no tiene imagen o la suya no
+// carga; los personajes de las facciones lo usan para su silueta genérica.
+function Location({ location, isOpen, onToggle, fallbackImage }){
 
     const canExpand = Boolean(location.description?.trim());
+
+    const image = location.image?.trim() || fallbackImage;
 
     const inner = (
 
         <>
             {
-                location.image
+                image
                     ? <img
                           className="region-loc__img"
-                          src={asset(location.image)}
+                          src={asset(image)}
                           loading="lazy"
                           alt={location.name ?? ""}
-                          onError={e => { e.currentTarget.style.visibility = "hidden"; }}
+                          onError={e => {
+                              const fallback = fallbackImage && asset(fallbackImage);
+                              if(fallback && !e.currentTarget.src.endsWith(fallback)){
+                                  e.currentTarget.src = fallback;
+                              } else {
+                                  e.currentTarget.style.visibility = "hidden";
+                              }
+                          }}
                       />
                     : <span className="region-loc__img region-loc__img--empty" />
             }
@@ -60,7 +72,7 @@ function Location({ location, isOpen, onToggle }){
 }
 
 
-function Region({ region }){
+function Region({ region, fallbackImage }){
 
     // Qué zona está desplegada. null = ninguna.
     const [openIndex, setOpenIndex] = useState(null);
@@ -102,6 +114,7 @@ function Region({ region }){
                                         key={i}
                                         location={location}
                                         isOpen={openIndex === i}
+                                        fallbackImage={fallbackImage}
                                         onToggle={() => setOpenIndex(
                                             openIndex === i ? null : i
                                         )}
@@ -145,7 +158,7 @@ function Region({ region }){
 // Una imagen de cabecera opcional (el mapa del país) y debajo los bloques con
 // su carrusel. Las facciones reutilizan esto para su apartado de personajes:
 // ContentBlock traduce grupos/personajes a regiones/zonas antes de llegar aquí.
-export default function CountryRegions({ part }){
+export default function CountryRegions({ part, fallbackImage }){
 
     const regions = (part.regions ?? []).filter(
         region => region?.title?.trim() || (region?.locations ?? []).length > 0
@@ -184,7 +197,7 @@ export default function CountryRegions({ part }){
             {
                 regions.map((region, i) => (
 
-                    <Region key={i} region={region} />
+                    <Region key={i} region={region} fallbackImage={fallbackImage} />
 
                 ))
             }

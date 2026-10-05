@@ -1,5 +1,6 @@
 import InfoboxValue from "./InfoboxValue";
 import asset from "../lib/asset";
+import { CHARACTER_PLACEHOLDER } from "../lib/placeholders";
 
 
 // Basic Information de un NPC. Sigue al de los dioses —tabla de filas fijas más
@@ -35,21 +36,26 @@ export default function NpcInfobox({ npc }){
                 {npc.name}
             </h2>
 
-            {
-                npc.image && (
-                    <img
-                        className="infobox__flag"
-                        src={asset(npc.image)}
-                        alt={npc.name}
-                        style={{
-                            objectPosition: npc.imagePosition || "center",
-                            transform: npc.imageZoom ? `scale(${npc.imageZoom})` : undefined,
-                            transformOrigin: npc.imagePosition || "center"
-                        }}
-                        onError={e => { e.currentTarget.style.display = "none"; }}
-                    />
-                )
-            }
+            {/* Sin retrato todavía (OCs sin arte), va la silueta genérica. */}
+            <img
+                className="infobox__flag"
+                src={asset(npc.image?.trim() || CHARACTER_PLACEHOLDER)}
+                alt={npc.name}
+                style={npc.image?.trim() ? {
+                    objectPosition: npc.imagePosition || "center",
+                    transform: npc.imageZoom ? `scale(${npc.imageZoom})` : undefined,
+                    transformOrigin: npc.imagePosition || "center"
+                } : undefined}
+                onError={e => {
+                    const fallback = asset(CHARACTER_PLACEHOLDER);
+                    if(!e.currentTarget.src.endsWith(fallback)){
+                        e.currentTarget.removeAttribute("style");
+                        e.currentTarget.src = fallback;
+                    } else {
+                        e.currentTarget.style.display = "none";
+                    }
+                }}
+            />
 
             <table className="infobox__table">
 

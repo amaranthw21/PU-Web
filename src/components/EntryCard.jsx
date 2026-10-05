@@ -6,12 +6,24 @@ import asset from "../lib/asset";
 // `link` es opcional: una sección de Lore puede no tener página todavía, y en
 // ese caso la tarjeta se pinta igual pero sin ser un enlace, en vez de llevar a
 // ninguna parte.
-export default function EntryCard({ name, subtitle, image, imagePosition, imageZoom, link }) {
+//
+// `fallbackImage` (opcional) sustituye a la inicial magenta cuando no hay
+// imagen o no carga; los NPCs lo usan para su silueta genérica.
+export default function EntryCard({ name, subtitle, image, imagePosition, imageZoom, link, fallbackImage }) {
 
-    // Si la imagen no existe / falla al cargar, caemos al placeholder magenta.
-    const [imgError, setImgError] = useState(false);
+    // Si la imagen no existe / falla al cargar, pasamos a `fallbackImage` y,
+    // si tampoco hay o también falla, al placeholder magenta.
+    const [failed, setFailed] = useState([]);
 
-    const showImage = image && !imgError;
+    const candidates = [image?.trim(), fallbackImage].filter(
+        src => src && !failed.includes(src)
+    );
+
+    const current = candidates[0];
+
+    const isFallback = current === fallbackImage && current !== image?.trim();
+
+    const showImage = Boolean(current);
 
 
     const classes = showImage ? "entry-card" : "entry-card entry-card--empty";
@@ -30,11 +42,12 @@ export default function EntryCard({ name, subtitle, image, imagePosition, imageZ
                 showImage
                     ? <img
                           className="entry-card__img"
-                          src={asset(image)}
+                          src={asset(current)}
                           loading="lazy"
                           alt={name}
-                          onError={() => setImgError(true)}
-                          style={{
+                          onError={() => setFailed(prev => [...prev, current])}
+                          // El encuadre y el zoom son de la imagen propia, no de la silueta.
+                          style={isFallback ? undefined : {
                               objectPosition: imagePosition || "center",
                               transform: imageZoom ? `scale(${imageZoom})` : undefined,
                               transformOrigin: imagePosition || "center"
