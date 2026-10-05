@@ -1,0 +1,74 @@
+{
+  "order": 12,
+  "faction": "mobius",
+  "group": "main",
+  "name": "S.H.S",
+  "image": "/factions/mobius/main-12-border.png",
+  "background": "/factions/pasted-image-1791210053501.png",
+  "color": "",
+  "quote": [],
+  "leader": "Professor Victoria",
+  "headquarters": "Spagonia University",
+  "bases": [
+    "Spagonia"
+  ],
+  "allies": [],
+  "enemies": [
+    "Obscura Antiques"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The Spagonia Historical Society, more commonly known as the SHS, stands as one of the world’s most ambitious institutions dedicated to archaeology, historical research, cultural preservation, and exploration. Though headquartered at the University of Spagonia, its work extends across continents, oceans, ruins, and even places most nations consider off-limits. Founded on the belief that the world is far older, stranger, and more interconnected than modern scholarship often acknowledges, the SHS seeks to uncover the forgotten stories of the civilizations that came before.\n\nLed by the renowned Professor Pickle, the SHS places particular importance on understanding and preserving history rather than simply claiming its treasures. Its researchers study ancient cultures, languages, artifacts, architecture, mythology, and the stories surrounding them, seeking to understand how past civilizations shaped the modern world. Their expeditions have taken them everywhere from the ancient ruins scattered throughout Spagonia to the mysterious remains of the Starfall Islands, the ruins of Angel Island, and countless forgotten sites across the globe.\n\nThe organization is composed of archaeologists, historians, naturalists, linguists, technologists, archivists, and experienced field researchers. Some are academic specialists, while others are explorers capable of operating in environments where conventional archaeological work is impossible. While the SHS generally prefers to remain independent of political and military interests, the unusual nature of many of their discoveries has occasionally brought them into cooperation with other organizations.\n\nTheir most notable partnerships have been with G.U.N., particularly through Professor Victoria, whose expertise and field connections have allowed the SHS to assist with the recovery, identification, and preservation of artifacts of significant historical or strategic importance, artifacts that usually need to be recovered from the hands of Dr. Eggman. The SHS has also maintained ties with the Freedom Fighters through their work with Relic, whose research into Angel Island and its ancient civilizations has opened new avenues of study for the Society.\n\nDespite the dangers that sometimes accompany their work, the SHS remains committed to one principle above all: the past belongs to everyone. Their mission is not simply to find what has been lost, but to ensure that the stories of those who came before are understood, preserved, and remembered.",
+          "image": "/factions/tumblr_86b1018133cb76075ed3a9498f93d43b_4e1e2045_2048.webp",
+          "caption": "Relic the Pika and Fixit - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Spagonian Historical Society",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Proferson Pickle",
+                  "image": "/factions/professor_tori-1.webp",
+                  "description": "Professor Pickle is a renowned historian and archaeologist specializing in ancient civilizations, literature, and mythology. As the head of the Spagonia Historical Society, he dedicates his life to uncovering and preserving the forgotten history of the world."
+                },
+                {
+                  "name": "Profesor Victoria",
+                  "image": "/factions/professor_tori-2.webp",
+                  "description": "Professor Victoria, or “Torii,” is an energetic and passionate archaeologist from Spagonia University. Specializing in ancient artifacts and the Four Great Civilizations, she works closely with G.U.N. to recover and preserve historically significant relics."
+                },
+                {
+                  "name": "Relic & Fixit",
+                  "image": "/factions/professor_tori-2-1.webp",
+                  "description": "Relic the Pika and his companion Fixit are a pair of researchers from the S.H.S. dedicated to uncovering the secrets of Angel Island. They help the Freedom Fighters from time to time."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": []
+}
