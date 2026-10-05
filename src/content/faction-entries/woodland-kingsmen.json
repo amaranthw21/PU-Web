@@ -1,0 +1,91 @@
+{
+  "order": 14,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Woodland Kingsmen",
+  "image": "/factions/mobius/main-15.png",
+  "background": "/factions/image-8.webp",
+  "color": "#68b868",
+  "quote": [],
+  "leader": "Bow Sparrow",
+  "headquarters": "Deerwood Forest",
+  "bases": [
+    "Sylvania - Barony of Avalon (Ex-Kingdom of Mercia)"
+  ],
+  "allies": [
+    "Freedom Fighters"
+  ],
+  "enemies": [
+    "Eurish Egg Army"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The Woodland Kingsmen are a small but fiercely dedicated resistance group formed by the displaced citizens of the former Kingdom of Mercia. When Mordred Hood swept through the kingdom during the Sylvania Civil War and absorbed it into Avalon, many Mercians fled into the forests, while others were not so fortunate.\n\nLed by Bow Sparrow, the Kingsmen operate from hidden camps deep within the woodlands, helping surviving Mercians evade Hood’s forces, reclaim their livelihoods, and preserve what remains of their homeland. They have no noble titles, only stubborn determination and a shared dream: to see Mercia rebuilt and free once more.\n\nTheir relationship with the Court of the Black Thorns is strained at best. However, with Mordred Hood as a common enemy, the two factions maintain a tense but functional alliance.",
+          "image": "/factions/pasted-image-1791240290437.png",
+          "caption": "Mercian Freedom Fighters Attack! - by darkspeeds",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Woodland Kingsmen",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Bow Sparrow",
+                  "image": "/factions/image-9.webp",
+                  "description": "Bow Sparrow is the leader of the Woodland Kingsmen and a former citizen of the Kingdom of Mercia. A skilled archer and determined resistance fighter, he works tirelessly to protect his people and one day see Mercia restored."
+                },
+                {
+                  "name": "Friar Buck",
+                  "image": "/factions/image-10.webp",
+                  "description": "Friar Buck is a member of the Woodland Kingsmen and a former friar of Mercia. A kind-hearted but steadfast fighter, he supports Bow Sparrow in protecting their people and keeping the hope of a free Mercia alive."
+                },
+                {
+                  "name": "Alan Quail",
+                  "image": "/factions/image-11.webp",
+                  "description": "Alan Quail is a member of the Woodland Kingsmen and a loyal companion to Bow Sparrow. A dedicated mistrel, he stands alongside his fellow Kingsmen in their struggle to protect their people and reclaim their homeland. He tends to break his lute quite often."
+                },
+                {
+                  "name": "Munch Rat",
+                  "image": "/factions/image-12.webp",
+                  "description": "Munch Rat is a rough-and-tumble member of the Woodland Kingsmen who enjoys a good fight and takes the resistance seriously. Hot-tempered and somewhat uncultured, he often clashes with the more lighthearted Alan Quail, whose teasing rarely goes unanswered."
+                },
+                {
+                  "name": "Thorn the Loop",
+                  "image": "/factions/image-13.webp",
+                  "description": "Thorn the Lop is a determined and disciplined member of the Woodland Kingsmen. Reserved and polite, she often acts as the voice of reason within the group, though even she can't resist joining her friends when they burst into song."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "+10 years ago"
+    }
+  ]
+}
