@@ -1,0 +1,76 @@
+{
+  "order": 11,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Obscura Antiques",
+  "image": "/factions/mobius/main-9.png",
+  "background": "/factions/image-1.webp",
+  "color": "",
+  "quote": [],
+  "leader": "Professor Valdus",
+  "headquarters": "Obscura Antiques",
+  "bases": [
+    "Spagonia"
+  ],
+  "allies": [],
+  "enemies": [
+    "S.H.S"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Hidden deep within the Spagonian Black Market lies Obscura Antiques, a secretive, highly exclusive artifact brokerage owned and operated by the disgraced but ever-ambitious Professor Valtus. Once a respected museum director, Valtus turned his vast academic knowledge toward darker pursuits after his fall from grace, building an underworld empire devoted to the acquisition, trade, and “liberation” of priceless relics.\n\nObscura Antiques functions as both a shop and a hub for illicit requests. Anyone with enough coin, or an artifact of equal worth, can sell, buy, or commission the retrieval of nearly any item, no matter how rare, forbidden, or sacred. Valtus employs teams of “archeological specialists,” ranging from rogue scholars to full-fledged tomb looters, who will cross borders, bypass security, and infiltrate dig sites to secure whatever their clients desire.\n\nThough the front is polished and the transactions impeccably documented, Obscura Antiques is built on theft, manipulation, and cultural plunder. Every relic that passes through its velvet-lined vaults also becomes part of Professor Valtus’s growing private collection, because behind every deal lies the true obsession of this faction: to amass the greatest hoard of ancient wonders the world has ever seen, no matter the cost or consequences."
+        },
+        {
+          "type": "image",
+          "image": "/factions/pasted-image-1791205341081.png",
+          "caption": "Megami the Jackal/Enigma - IDW 30ºAnniversary",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Obscura antiques members",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Profesor Valdus",
+                  "image": "/factions/professor_valdus.webp",
+                  "description": "Professor Valdus is a wealthy, retired archaeologist. After being “retired” from his position as headmaster of the Mythsonian Institute, he started a new business in the black market for antiques... making them disappear."
+                },
+                {
+                  "name": "Megani the Jackal / Enigma",
+                  "image": "/factions/professor_valdus-1.webp",
+                  "description": "Megani the Jackal, better known as Enigma, is a cunning and elusive treasure hunter. With a talent for deception and a mysterious past, she’s never quite as predictable as she seems."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "5 years ago"
+    }
+  ]
+}
