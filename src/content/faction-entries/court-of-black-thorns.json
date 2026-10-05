@@ -1,0 +1,146 @@
+{
+  "order": 13,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Court of Black Thorns",
+  "image": "/factions/mobius/main-14.png",
+  "background": "/factions/pasted-image-1791236164024.png",
+  "color": "#fc84b2",
+  "quote": [],
+  "leader": "Grand Duke Arthur of Camelot",
+  "headquarters": "Rosengarten Castle",
+  "bases": [
+    "Sylvania"
+  ],
+  "allies": [],
+  "enemies": [
+    "Eurish Egg Army"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Ever since the royal family vanished without a trace, Sylvania has been ruled not by a king, but by a council of nobles: the Court of the Black Thorns.\n\nThe Court is made up of every lord who holds land within Sylvania, from dukes and duchesses from ancient bloodlines, to those who earned their titles in ways no one speaks of aloud. They sit upon their respective thrones, each one more obsessed with their own domain than the fate of the kingdom as a whole.\n\nThe Court did not unite out of loyalty but out of necessity. After King Briargrave and the royal line disappeared nearly 30 years ago, Sylvania collapsed into a civil war. The blood pooled in every corner of the kingdom as each noble used the power vacuum to gain more territory and power. \n\nUntil they reached an impasse and the other nations started pressuring them to end the war either in Sylvania's terms or in theirs. So the surviving nobles gathered and created a fragile alliance, still their cooperation reluctant and their trust nonexistent. Every law is an arduous negotiation. Every peace is temporary. Every member of the Court smiles with sharpened teeth.\n\nTheir unity suffered a deep wound when Lord Mordred Hood betrayed them, siding with Dr. Eggman and offering Sylvania’s resources to the Empire in return for machines of war. The Court cast him out, but the shame of his treason still lingers like a curse on their pride.\n\nYet hope, or something close to it, returned with the reappearance of Grand Duke Arthur of Camelot, long believed dead after vanishing into one of Walpurgis books.",
+          "image": "/factions/pasted-image-1791236748180.png",
+          "caption": "Lah by @Tobimarukonatu",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Grand Duchy of Camelot",
+              "description": "When Walpurgis trapped Camelot inside the Dark Knight book, the original Knights of the Round Table were unavailable. So when she wanted to complete the story to liberate Camelot, she kidnapped random individuals—many of them Sonic's friends—and forced them into the roles of the legendary knights.",
+              "characters": [
+                {
+                  "name": "Grand Duke Arthur",
+                  "image": "/factions/image-2.webp",
+                  "description": "Grand Duke of Camelot is the noble ruler of Camelot. After being trapped inside the Dark Knight book by Walpurgis alongside his entire Grand Duchy, he slowly lost his mind and became the Dark Knight, only to be “eliminated” by Sonic. Now back to the real world, he still carries deep shame over what he did while under the book’s influence."
+                },
+                {
+                  "name": "Merlina",
+                  "image": "/factions/image-3.webp",
+                  "description": "Merlina is a powerful sorceress and the granddaughter of the legendary Merlin. Once driven by a desire to save Camelot from its inevitable end, she ultimately became the Dark Queen before being defeated by Sonic."
+                },
+                {
+                  "name": "Sir Lancelot",
+                  "image": "",
+                  "description": ""
+                },
+                {
+                  "name": "Sir Percival",
+                  "image": "",
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "title": "Sir Gawain",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Sir Lamorak",
+                  "image": "",
+                  "description": ""
+                },
+                {
+                  "name": "Sir Galahad",
+                  "image": "",
+                  "description": ""
+                },
+                {
+                  "name": "Nimue",
+                  "image": "",
+                  "description": ""
+                }
+              ]
+            },
+            {
+              "title": "Marquisate of Poe",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Lah",
+                  "image": "/factions/image-4.webp",
+                  "description": "Lah is the relatively (since she is a natural ghost) noble in charge of the Marquisate of Poe. Despite her position, she’s cheerful, excitable, and an unapologetic Sonic fan, often getting a little too enthusiastic whenever her favorite hero is involved."
+                },
+                {
+                  "name": "Uh",
+                  "image": "/factions/image-5.webp",
+                  "description": "Uh\n\nUh is a ghost who lives in the Marquisate of Poe and a close friend of Lah. He often competes with Su to see who can take the better pictures of scared people."
+                },
+                {
+                  "name": "Su",
+                  "image": "/factions/image-6.webp",
+                  "description": "Su is a ghost who lives in the Marquisate of Poe and a close friend of Lah. He enjoys scaring the living and often competes with Uh to see who can take the best pictures of frightened faces, which Lah then judges."
+                }
+              ]
+            },
+            {
+              "title": "NPC",
+              "description": "This section is dedicated exclusively to original characters created for our server’s lore. These characters are unique to our continuity.",
+              "characters": [
+                {
+                  "name": "King Briargrave",
+                  "image": "",
+                  "description": "King Briargrave was the ruler of Sylvania. He and the rest of the royal family mysteriously disappeared long ago, leaving the fate of the Sylvania royal bloodline unknown."
+                },
+                {
+                  "name": "Walpurgis",
+                  "image": "/factions/image-7-1.webp",
+                  "description": "Walpurgis, formerly known as Viviane, was once the Lady of the Lake of the Grand Duchy of Camelot. After an eternity of solitude guarding Excalibur and reading every book she could find, she slowly lost her sanity and went rogue, throwing people into books to create new stories, as she did with **The Secret Rings** and **The Black Knight.** She currently possesses the Scabbard of Excalibur, believing Nimue, the current lady of the lake did a terrible job safeguarding it."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Regions",
+      "value": "Grand Duchy of Camelot\nCounty of Avadonia\nMarquisate of Poe"
+    },
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
