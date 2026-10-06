@@ -1,0 +1,36 @@
+{
+  "order": 17,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Pirate Council",
+  "image": "/factions/mobius/main-19-border.png",
+  "background": "/factions/pasted-image-1791301619431.png",
+  "color": "#ffd100",
+  "quote": [],
+  "leader": "O'Malley Anne (Pirate King)",
+  "headquarters": "The Knives",
+  "bases": [
+    "Adabat"
+  ],
+  "allies": [],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "he Pirate Council is a loose but surprisingly functional coalition of pirate captains who sail the tropical seas surrounding Adabat. Though every member is a lawbreaker with their own interests and ego, the Council exists to prevent chaos among the pirate fleets. They meet in hidden coves or drifting seaforts to negotiate truces, settle disputes, divide smuggling routes, and occasionally coordinate large-scale operations when a threat, such as the Egg Army’s naval forces or an overzealous navy pushes into their waters. Their alliances are fragile, but the promise of mutual profit keeps blades sheathed… most of the time.\n\nDespite their fearsome reputation, the Council has an unspoken code: avoid harming common folk unless necessary and never betray a Council pact. This strange moral flexibility makes them unpredictable allies and infuriating enemies. Some captains are genuine protectors of their local islands; others simply like having a place to brag about stolen treasure. Either way, the Pirate Council remains one of the most influential and elusive powers of the Adabatian waters."
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
