@@ -1,0 +1,82 @@
+{
+  "order": 15,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Desert Riders",
+  "image": "/factions/mobius/main-16.png",
+  "background": "/factions/did_we_really_just_meet__by_alliizoo_d9ghw1a-fullview.jpg",
+  "color": "#ffd100",
+  "quote": [],
+  "leader": "Spike the Porcupine",
+  "headquarters": "N/A",
+  "bases": [
+    "Shamar"
+  ],
+  "allies": [
+    "Midesta Egg Army",
+    "Freedom Fighters"
+  ],
+  "enemies": [
+    "Eggman Empire"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Operating in the scorched dunes of Shamar, the Desert Riders are a renegade hover-board gang who have evolved far beyond their scrappy reputation. On paper, Spike the Porcupine is the official leader: charismatic, daring, and stubborn enough to spit in the face of the Egg Army’s patrol mechs but the true core of the group is a trio: Spike, Sonar, and Trevor. Together, they form the beating heart of the Riders.\n\nTheir greatest secret weapon, however, is not a hoverboard. It’s Nephthys the Vulture.\n\nThe Midesta Egg Boss, Nephthys, feeds the Desert Riders invaluable intelligence and occasionally a well-timed sabotage that she “had nothing to do with, of course.” \n\nStill, their mission is simple but incredibly difficult. Keep the conflict frozen in place. Prevent the Egg Army from fully conquering Shamar without provoking a retaliation so brutal that civilians pay the price. As a result, the Riders and Nephthys plan together all the team’s moves, that way they strike just hard enough to slow the Empire, rescue captives, ruin shipments, and disrupt operations but never so hard as to invite annihilation.",
+          "image": "/factions/pasted-image-1791279786915.png",
+          "caption": "Desert Riders - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Desert Riders",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Spike the Porcupine",
+                  "image": "/factions/image-15.webp",
+                  "description": ""
+                },
+                {
+                  "name": "Sonar the Fennec",
+                  "image": "/factions/image-16.webp",
+                  "description": ""
+                },
+                {
+                  "name": "Trevor Burrow the Mole",
+                  "image": "/factions/image-17.webp",
+                  "description": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "+10 years ago"
+    }
+  ]
+}
