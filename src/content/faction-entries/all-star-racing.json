@@ -1,0 +1,67 @@
+{
+  "order": 14,
+  "faction": "mobius",
+  "group": "main",
+  "name": "All-Star Racing",
+  "image": "/factions/mobius/main-13-border.png",
+  "background": "/factions/pasted-image-1791276231970.png",
+  "color": "",
+  "quote": [],
+  "leader": "Dodon-Pa",
+  "headquarters": "E-Stadium",
+  "bases": [
+    "Monopole"
+  ],
+  "allies": [],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "The All-Star Racers are a speed-obsessed organization born from the unlikely union of Monopole’s homegrown riders and the brilliant alien engineering of Dodon-Pa’s people.\n\nLong before Dodon-Pa ever arrived, Monopole already had a thriving underground racing culture. Small crews of riders, mechanics, and thrill-seekers operated throughout the city, gathering in makeshift workshops, competing in illegal races, and constantly modifying their machines to squeeze out every last bit of speed. They were less a formal organization and more a loose collection of rival gangs and independent riders united by their love of racing.\n\nEverything changed when Dodon-Pa unintentionally took control of Monopole when he got interested in mobius after sonic and friends participated in his tournament.\n\nRather than suppressing the city's racing culture, the Xtreme-gear, Dodon-Pa saw enormous potential in it. He began bringing the scattered rider crews together, providing them with access to the extraordinary engineering knowledge and technology of his homeworld. What had once been a collection of small street-racing groups rapidly became a unified organization equipped with machines far beyond anything the riders could have built on their own.\n\nThus, the All-Star Racers were born—not as a completely new organization, but as the evolution of an existing Monopole tradition.\n\nWith Dodon-Pa's technology at their disposal, the Racers grew into a full-fledged technological empire dedicated to pushing mobility and speed engineering to their absolute limits. Their workshops in Monopole are famous (and sometimes infamous) for churning out prototypes that defy physics, safety guidelines, and occasionally common sense. To the All-Star Racers, however, innovation has always been the rulebook.\n\nTheir expertise encompasses everything from cutting-edge race cars to advanced hover-boards. Many of these vehicles combine Mobian ingenuity with alien engineering principles, resulting in machines that would have been unimaginable to the original street racers of Monopole.\n\nRacing remains at the heart of the organization. The All-Star Racers organize frequent tournaments, time-trials, and open competitions in celebration of speed, freedom, and friendly rivalry. What began as small underground gatherings has grown into major events that draw massive crowds, making Monopole a hub for racers, thrill-seekers, mechanics, and sponsors from across the world.\n\nDespite their cheerful and competitive spirit, the All-Star Racers also play a quiet but essential role in protecting Monopole. Their elite pilots and engineers have effectively become the city's unofficial rapid-response force, using their unmatched machines and reflexes to deal with threats that conventional forces cannot reach quickly enough. Whether chasing smugglers through crowded hover-lanes or intercepting rogue machines at breakneck speeds, the All-Star Racers serve as Monopole's fast-moving shield.\n\nFor all the changes brought by Dodon-Pa, the organization has never forgotten where it came from. Beneath the advanced technology, corporate resources, and alien engineering lies the same spirit that defined Monopole's original riders: build something fast, make it faster, and then see what happens.",
+          "image": "/factions/pasted-image-1791277524819.png",
+          "caption": "Promotional Art of Sonic Crossworlds",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "All-Star Racers",
+          "groups": [
+            {
+              "title": "All-Star Racers",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Dodon-Pa",
+                  "image": "/factions/image-14.webp",
+                  "description": "Dodon Pa is a mysterious, eccentric alien king best known as the host and organizer of most of the interdimensional racing competition in the Mobius Dimension. Despite his strange and theatrical personality, Dodon Pa is a brilliant engineer and inventor with an extraordinary understanding of advanced technology. He is responsible for creating many of the highly sophisticated machines and systems used in his racing projects. Somehow he accidentally ended taking over Monopole, but they seem okay with it."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "≈ 2 year ago"
+    }
+  ]
+}
