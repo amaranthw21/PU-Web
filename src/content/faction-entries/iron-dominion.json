@@ -113,7 +113,7 @@
           "groups": [
             {
               "title": "The 5 Heads",
-              "description": "While it says 5 heads, only 3 are avaliable at the moment, since the **Head of Rich Nights** and **Vanquishing Tempest** would be OCs",
+              "description": "While it says 5 heads, only 3 are avaliable as **Canon Characters** at the moment, since the **Head of Rich Nights** and **Vanquishing Tempest** would be OCs",
               "characters": [
                 {
                   "name": "Regina Ferrum",
@@ -134,6 +134,11 @@
                   "name": "Sango (OC)",
                   "image": "/factions/pasted-image-1790884049147.png",
                   "description": "Sango, the daughter of previous Rich Nights. Currently the youngest Head in the clan at just 17 years old. She is a calm and compassionate girl with a deep love and respect for her clan, having to both follow in her mothers footsteps, and walk in Regina's shadow"
+                },
+                {
+                  "name": "Vanquishing Tempest",
+                  "image": "",
+                  "description": ""
                 }
               ]
             }
