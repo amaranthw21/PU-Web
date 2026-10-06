@@ -1,0 +1,79 @@
+{
+  "order": 16,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Babylon Rogues",
+  "image": "/factions/mobius/main-18-border.png",
+  "background": "/factions/pasted-image-1791299438058.png",
+  "color": "#0ce21d",
+  "quote": [],
+  "leader": "Jet the Hawk",
+  "headquarters": "Babylon Rogues' ship",
+  "bases": [
+    "Shamar"
+  ],
+  "allies": [],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Babylon Rogues are a legendary band of thieves whose name echoes through both ancient history and modern headlines. Descended from the mysterious Babylonian race, the Rogues inherit not only their ancestors’ technological skills but also a centuries-old legacy of treasure hunting, cunning heists, and high-speed escapes.\n\nToday, the group is led by Jet the Hawk, whose pride and competitive streak are matched only by his exceptional talent for Extreme Gear racing. Beside him are his two indispensable partners: Wave the Swallow, engineer extraordinaire and mechanical genius responsible for maintaining the team’s cutting-edge gear; and Storm the Albatross, their loyal but dangerously powerful muscle.\n\nThough widely known and feared as expert thieves, the Babylon Rogues are just as famous for their dominance in the world of Extreme Gear. Their racing prowess is nearly unmatched, and their involvement in high-profile competitions often blurs the line between sport and elaborate, well-timed heists."
+        },
+        {
+          "type": "image",
+          "image": "/factions/pasted-image-1791299661128.png",
+          "caption": "Jet the Hawk and Storm the Albatross",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Babylon Rogues",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Jet the Hawk",
+                  "image": "/factions/dlawol4-44f89fb7-83a2-4415-973d-3931237280dd-1.webp",
+                  "description": "Jet the Hawk is a cocky and fiercely competitive extreme gear racer, known for his pride, hot temper, and relentless drive to prove himself. As the leader of the Babylon Rogues, he’s always eager to challenge anyone who dares call themselves faster."
+                },
+                {
+                  "name": "Wave the Swallow",
+                  "image": "/factions/dlawol4-44f89fb7-83a2-4415-973d-3931237280dd-2.webp",
+                  "description": "Wave the Swallow is the sharp-tongued mechanic of the Babylon Rogues, possessing a brilliant mind and a fierce pride in her engineering skills. She often acts as the voice of reason behind Jet’s reckless schemes, though her own arrogance and temper can be just as formidable."
+                },
+                {
+                  "name": "Storm the Albatross",
+                  "image": "/factions/pasted-image-1791300499374.png",
+                  "description": "Storm the Albatross is the brawny and loyal muscle of the Babylon Rogues, known for his simple-minded nature and intimidating strength. Despite his rough exterior, he’s surprisingly good-natured and deeply devoted to Jet and Wave."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
