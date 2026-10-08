@@ -1,0 +1,153 @@
+{
+  "order": 22,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Meropis Royal Guard",
+  "image": "/factions/mobius/main-23.png",
+  "background": "/factions/pasted-image-1791494469856.png",
+  "color": "#a2d142",
+  "quote": [],
+  "leader": "Captain Striker the Mantis Shrimp",
+  "headquarters": "Meropis Garrison",
+  "bases": [
+    "Great Blue Realm",
+    "Undina's Ship (Ocean)",
+    "Temple of Eusebes - Great Blue Realm"
+  ],
+  "allies": [],
+  "enemies": [
+    "Southern Ocean Egg Army"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Meropis Royal Guard is the elite defense force of the underwater city of Meropis and the wider Great Blue Realm. Highly trained and fiercely loyal, they answer directly to King Puff and Queen Angelica, serving as protectors of the royal family and guardians of the Great Blue Realm oceanic territories. Under the leadership of Captain Striker, the Guard maintains constant patrols, defends Meropis from surface-world incursions, and preserves order within the kingdom’s borders.\n\nThe Royal Guard frequently keeps tabs with the Temple of Eusebes' priestess and other members of the shrine. The Temple plays an important role in Meropis helping maintain the ancient defenses and protective measures surrounding the city."
+        },
+        {
+          "type": "image",
+          "image": "/factions/pasted-image-1791495336195.png",
+          "caption": "Coral, Razor & Pearly - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        },
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Meropis Guard is also loosely connected to Undina’s unusual entourage. Her current crew was once the pirate crew know as the \"Pirates of the Setting Dawn\", until they kidnapped Undina. After the incident, they were rather \"forcefully persuaded\" to abandon their old profession and become her personal bodyguards and crew instead. They now accompany Undina during her continued studies of the world above the water, putting their experience as sailors and pirates to use while keeping their former captive safe. Despite their unconventional beginnings, the crew has gradually become a trusted part of Undina’s activities and an unofficial extension of the Royal guard."
+        },
+        {
+          "type": "image",
+          "image": "/factions/pasted-image-1791495093195.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Royal Guard",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Captain Striker",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-22.webp",
+                  "description": "Striker is the fiercely loyal captain of the Meropis Royal Guard, devoted to King Puff, Queen Angelica, and his city. Stubborn and brash, he can be distrustful of those he considers unworthy, though his actions are ultimately driven by his dedication to Meropis."
+                }
+              ]
+            },
+            {
+              "title": "Eusebes Temple",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Coral The Betta",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-23.webp",
+                  "description": "Coral is the current priestess of the Eusebes Temple, who is often too hard on herself, causing her to doubt her abilities. Though not passive or pacifistic, she finds it easier to stand up for others than herself and can become anxious when things go wrong, often relying on Razor in difficult situations."
+                },
+                {
+                  "name": "Razor the Shark",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-24.webp",
+                  "description": "Razor is an intimidating, blunt, and short-tempered warrior who was not originally from Meropis, having once lived as a pirate before becoming the \"main protector\" of the Temple of Eusebes. Though quick to anger and somewhat distrustful of surface-dwellers, he is deeply loyal and caring toward those under his protection, and will fiercely defend them when needed."
+                },
+                {
+                  "name": "Pearly the Manta Ray",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-25.webp",
+                  "description": "Pearly is a gentle, naive, and curious girl fascinated by mysterious and astronomical phenomena. Though shy at first, she quickly warms up to others and is deeply devoted to protecting the Temple of Eusebes and its Chao Garden, despite being strangely frightened by Chao themselves."
+                }
+              ]
+            },
+            {
+              "title": "Undine's Crew (Pirates of the Setting Dawn)",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Princess Undina",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-26.webp",
+                  "description": "Undina initially presents herself as a ditzy, carefree princess who prefers to be called Deena, but this hides a clever and observant mind. She often uses her seemingly airheaded nature to manipulate situations and protect others, while remaining genuinely kind and polite even toward her enemies. Despite her intelligence, Undina can be naive and shortsighted, particularly when it comes to the surface world and the consequences of her actions."
+                },
+                {
+                  "name": "Echo the Dolphin",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-27.webp",
+                  "description": "Echo is a highly dutiful and dedicated member of the Meropis Royal Guard, taking her responsibilities and Captain Striker’s orders very seriously. Thorough and determined, she will go to great lengths to complete her missions, though her strict sense of duty can sometimes make her uptight and overly cautious. She has been asigned to \"babysit\" the princess until she cames back home."
+                },
+                {
+                  "name": "Captain Shellbreaker",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-28.webp",
+                  "description": "Captain Shellbreaker is a suave and charismatic former pirate whose ruthless nature lies beneath his polished exterior. After a history of betrayal among his former crew, he has little tolerance for treachery. He now serves Undina though he proudly retains his title of captain, along with his peculiar habit of saying “otterly” instead of “utterly.”"
+                },
+                {
+                  "name": "Blade",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-29.webp",
+                  "description": "Blade is Razor’s sister and a member of Undina's crew and formerly part of the Pirates of the Setting Dawn. She shares his intimidating, cold, and blunt nature, along with a fierce temper. However, unlike her brother, she is self-centered and entitled, using her troubled past to justify hurting and plundering others."
+                },
+                {
+                  "name": "Opal",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-30.webp",
+                  "description": "Opal is a calm and lazy member of the crew who is easily amused and enjoys teasing others. She likes giving people embarrassing nicknames and is naturally nosy, often taking an interest in conversations that aren't her business."
+                },
+                {
+                  "name": "Dive",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-31.webp",
+                  "description": "Dive is a spacey, nervous, and somewhat distant member of the crew who often gets lost in his own thoughts. Despite this, he has a deep and genuine love for the sea."
+                },
+                {
+                  "name": "Mr. Bristles the Yeti Crab",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38.png",
+                  "description": "Mr. Bristles is one of the longest-serving members of the Pirates of the Setting Dawn, having witnessed many changes within the crew. He was particularly affected by Razor’s departure, which left a lasting impact on him."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Teams",
+      "value": "Royal Guard\nTemple of Eusebes\nUndina's \"pirate\" crew"
+    },
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
