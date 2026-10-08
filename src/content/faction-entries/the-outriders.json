@@ -1,0 +1,98 @@
+{
+  "order": 19,
+  "faction": "mobius",
+  "group": "main",
+  "name": "The Outriders",
+  "image": "/factions/mobius/main-20.png",
+  "background": "/factions/downunda_freedom_fighters_by_crowndilecrowds_d7902ee-fullview.jpg",
+  "color": "#6470bc",
+  "quote": [],
+  "leader": "Walt Wallaby",
+  "headquarters": "The Outriders HQ",
+  "bases": [
+    "Trallius"
+  ],
+  "allies": [
+    "Freedom Fighters"
+  ],
+  "enemies": [
+    "Downunda Egg Army"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Outriders are a resistance group born out of necessity, formed to combat the Downunda Egg Army and protect the people of Tralius. Their primary mission is simple: preserve the freedom and safety of their homeland, no matter the cost. What began as a small band of determined individuals has grown into a force willing to stand against anyone who threatens the people they have sworn to protect.\n\nTheir journey, however, has been far from easy. The Outriders have suffered their share of losses, betrayals, and personal tragedies along the way. One of the darkest moments in their history came when they lost their good friend, Duck \"Bill\" Platypus, to the Downunda Eggman Army. Bill eventually rose through the ranks to become an Egg Boss, leaving a painful reminder of just how deeply the Egg Army could reach into their own ranks. Fortunately, his story did not end there. Bill eventually changed coats once again, abandoning the Egg Army and returning to the Outriders, where he was welcomed back as one of their own.\n\nOther members have endured tragedies of a different kind. One Outrider has had to come to terms with the disappearance of his entire species the Tasmanian Devils, leaving him as one of two survivors. Such losses have only added to the Outriders' determination to protect what remains and prevent others from suffering the same fate.\n\nTheir fight became even more complicated when the Suppression Squad appeared seemingly out of nowhere, carving out territory of their own and challenging the Outriders' influence. Caught between the ambitions of the Egg Army, the growing presence of the Suppression Squad, and the personal struggles within their own ranks, the Outriders have found themselves fighting on more fronts than they ever expected.\n\nDespite every setback, loss, and betrayal, the Outriders remain determined to defend their homeland. They are bound together not only by their shared cause, but by the belief that Tralius is worth fighting for. As new threats emerge and old enemies return, the Outriders continue to resist — protecting their people, reclaiming what has been lost, and standing against all who would take their freedom away."
+        },
+        {
+          "type": "image",
+          "image": "/factions/pasted-image-1791486237692.png",
+          "caption": "The Downunda Freedom Fighters - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "The Outriders",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Walt Wallaby",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-9.webp",
+                  "description": "Walt Wallaby is a friendly, sensible, and trusted leader of the Downunda Freedom Fighters. He takes his responsibilities seriously and can be hard on himself when things go wrong or his teammates are put in danger."
+                },
+                {
+                  "name": "Barby Koala",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-10.webp",
+                  "description": "Barby Koala is a fierce and capable fighter, willing to be ruthless when the situation demands it. Despite her toughness, she is kind and caring toward her teammates and allies. She is the co-leader of the Outriders."
+                },
+                {
+                  "name": "Wombat Stu",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-11.webp",
+                  "description": "Wombat Stu is a scrappy and courageous fighter who remains fiercely loyal to his teammates and to Mobius. Although he briefly left the Outriders, his loyalty to his original group never faded. He ultimately returned to Trallius and to the Outriders"
+                },
+                {
+                  "name": "Guru Emu",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-12.webp",
+                  "description": "Guru Emu is a laid-back and peaceful individual, preferring to avoid conflict whenever possible. Wise and level-headed, he usually seeks a calmer solution, but won't hesitate to fight when the situation becomes serious."
+                },
+                {
+                  "name": "Duck \"Bill\" Platypus",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-13.webp",
+                  "description": "Duck “Bill” Platypus is a loyal and resourceful member of the Outriders who was forced to take on a dangerous undercover role within Eggman’s forces. He swore allegiance to Eggman and served under Maw the Thylacine, secretly sabotaging their efforts from within. Unable to contact his teammates, Bill’s actions made it appear as though he had truly betrayed them. Eventually, after surviving his time under Maw and undermining the Eggman Empire from the inside, Bill abandoned the Eggpire and returned to the Outriders."
+                },
+                {
+                  "name": "Thrash the Tasmanian Devil",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-14.webp",
+                  "description": "Thrash is a rough and hot-tempered fighter with a strong sense of justice and a deep hatred of echidnas, inherited from the long-standing resentment of his kind. He can be abrasive and stubborn, refusing to distinguish between those responsible for his people's suffering and innocent echidnas. Despite his prejudice and aggressive nature, Thrash has a noble side and genuinely cares about his allies, joining the Downunda Freedom Fighters to fight for a good cause and protecting his teammates when they are in danger."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "≈ 10 years ago"
+    }
+  ]
+}
