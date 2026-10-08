@@ -1,0 +1,88 @@
+{
+  "order": 21,
+  "faction": "mobius",
+  "group": "main",
+  "name": "The Frostguard",
+  "image": "/factions/mobius/main-21.png",
+  "background": "/factions/tumblr_pm4pq1ykke1ugzrvqo1_1280.jpg",
+  "color": "#e3252b",
+  "quote": [],
+  "leader": "Guntiver the Artic Wolf",
+  "headquarters": "The Frostguard HQ",
+  "bases": [
+    "Holoska"
+  ],
+  "allies": [
+    "Freedom Fighters"
+  ],
+  "enemies": [
+    "Artika Egg Army"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Frostguard is a specialized defense team dedicated to protecting Holoska and its citizens from external threats, particularly the aggressive expansion of Mongul S.A. and incursions by the Artika Egg Army. Its leader, Guntiver the Arctic Wolf, followed by a local team of volunteers, operates across the country’s key settlements and natural chokepoints, using both conventional and improvised methods to defend the population.\n\nThough vastly outmatched in resources compared to Mongul’s mercenary forces and the Egg Army’s advanced armament, Frostguard still manages to prevail through determination, ingenuity, and their intimate knowledge of Holoska’s terrain. Their mission—and their dream of maintaining the nation’s independence, safeguarding its communities, and resisting exploitation—pushes them forward even in the face of overwhelming corporate and technological might.\n\nUnknown to Frostguard, their efforts are occasionally supported by an anonymous patron. Equipment, supplies, intelligence, and other forms of assistance sometimes reach the team through intermediaries, with no clear indication of who is behind them. Guntiver and his comrades have never discovered the benefactor’s identity, and the mysterious support has become something of an unanswered question within the organization."
+        },
+        {
+          "type": "image",
+          "image": "/factions/pasted-image-1791493875574.png",
+          "caption": "Artika Freedom Fighters - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "The Frostguard",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Guntiver the Arctic Wolf",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-16.webp",
+                  "description": "Guntiver is the leader of the Frostguard and a driving force behind their active resistance. Once hesitant to fight, he has grown into a level-headed but more aggressive leader determined to protect Holoska, though his approach sometimes puts him at odds with his teammates, particularly Erma."
+                },
+                {
+                  "name": "Augustus the Polar Bear",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-17.webp",
+                  "description": "Augustus is a veteran member of the Frostguard who has repeatedly fought against Robotnik and the Artika Egg Army to protect his people. Brave and physically powerful, Augustus remains a dependable fighter and protector of the Holoskan community."
+                },
+                {
+                  "name": "Erma Ermine",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-18.webp",
+                  "description": "Erma is a skilled and fiercely proactive member of the Frostguard, having pushed for a more direct approach against Robotnik and later Eggman. Determined and impatient with hesitation, Erma can clash with her more cautious teammates, but her dedication to protecting Holoska makes her a vital member of the team."
+                },
+                {
+                  "name": "Flip Penguin",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-19.webp",
+                  "description": "Flip is the prankster of the Frostguard, known for his sharp humor and constant teasing. He enjoys taunting enemies during battle, often turning their own traits into jokes and insults."
+                },
+                {
+                  "name": "Sealia Seal",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-20.webp",
+                  "description": "Sealia is a warm and compassionate member of the Frostguard who joined the fight after witnessing the suffering caused by Robotnik’s tyranny. Though naturally peaceful, she is brave, decisive, and pragmatic when action is needed. She shares a particularly close, sibling-like bond with Augustus."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": []
+}
