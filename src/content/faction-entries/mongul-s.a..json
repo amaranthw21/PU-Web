@@ -1,0 +1,70 @@
+{
+  "order": 20,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Mongul S.A.",
+  "image": "/factions/mobius/main-22-border.png",
+  "background": "/factions/pasted-image-1791488357421.png",
+  "color": "",
+  "quote": [],
+  "leader": "Mammoth Mogul",
+  "headquarters": "Mongul S.A.",
+  "bases": [
+    "Holoska"
+  ],
+  "allies": [],
+  "enemies": [
+    "Artika Egg Army",
+    "Eggman (Personally)"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Mongul S.A. is the rapidly rising corporate empire built by Mammoth Mongul after escaping imprisonment when no one noticed. From its base in Blizzard Metropolis, the company has grown into a dominant economic and military force, exploiting Holoska’s natural wealth and industrial potential. And where money fails, Mongul relies on a well-equipped mercenary army to seize territories, enforce compliance, and intimidate local populations. Entire towns and trade routes have been pressured into submission, making the empire as feared as it is wealthy.\n\nWhile presenting itself publicly as a legitimate corporation, Mongul S.A.’s operations are ruthless and opportunistic. Resource extraction, forced acquisitions, and political manipulation are routine, leaving little room for dissent. Mongul’s ambitions extend beyond simple wealth, with his corporation serving as both an economic powerhouse and an instrument for expanding his personal influence across Holoska.\n\nYet beneath Mongul’s relentless expansion lies an unusually patient strategy. As an immortal being, Mongul does not think in terms of years or even decades. He can afford to wait. He knows that he cannot simply overpower Sonic through direct confrontation, and rather than repeatedly throwing armies at an opponent he cannot defeat, Mongul has chosen to let time work in his favor. Empires rise and fall, heroes grow old, alliances change, and civilizations eventually reach their limits. Mongul does not need to win today. He only needs to still be there when his enemies are gone.\n\nThis patience is also at the heart of Mongul’s hatred of Dr. Eggman. His hostility toward Eggman is deeply personal, but it is not born from any desire to defend the people of Holoska out of kindness. Mongul sees Eggman’s increasingly destructive ambitions as a threat to the very world he intends to eventually rule. A ruined planet is worthless to him. A world devastated by war, or reduced to a machine-dominated wasteland is not the empire Mongul has spent centuries waiting to claim. He wants a living planet, populated by people and rich in resources—a world worth conquering.\n\nFor that reason, Mongul S.A. is known to quietly fund, equip, or otherwise assist anyone capable of becoming a problem for Eggman or at the very least, become a pain in the but of the Artika Egg Army. Rebels, rival factions, mercenaries, and other troublesome elements may find themselves receiving unexpected support from Mongul in cash. His assistance is rarely motivated by loyalty or altruism; if someone can disrupt Eggman’s operations, damage his machinery, tie up his armies, or simply make his plans more difficult, Mongul considers the investment worthwhile.",
+          "image": "/factions/pasted-image-1791489986470.png",
+          "caption": "Mammoth Mongul",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "NPC",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Mammoth Mongul",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38-15.webp",
+                  "description": "Mammoth Mongul is an immortal who seeks wealth, power, and ultimately dominion over the world. After escaping imprisonment, he established Mongul S.A. and began building an economic and military empire in Holoska. Patient and calculating, Mongul knows he cannot defeat Sonic & Co head-on, so he is willing to wait as long as necessary for his enemies to fall. His deep hatred of Eggman also leads him to give monetary support anyone who can disrupt the doctor's plans."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "≈ 10 years ago"
+    }
+  ]
+}
