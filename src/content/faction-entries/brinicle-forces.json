@@ -1,0 +1,38 @@
+{
+  "order": 23,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Brinicle Forces",
+  "image": "/factions/mobius/main-24-border.png",
+  "background": "/factions/pasted-image-1791497044682.png",
+  "color": "#038de0",
+  "quote": [],
+  "leader": "King Beltedyr",
+  "headquarters": "Brinicle Forces Garrison",
+  "bases": [
+    "Kingdom of Northern Waters"
+  ],
+  "allies": [],
+  "enemies": [
+    "Northern Ocean Egg Army"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Brinicle Forces are the feared military arm of the Kingdom of the Arctic Waters, serving directly under King Beltedyr and acting as both his shield and spear in the escalating conflict between sea mobians and the world above. Once conceived as a defensive navy, the Brinicle Forces have transformed into an indoctrinated war machine driven by desperation, ecological collapse, and a rising belief that land civilizations are responsible for the Ocean’s slow death.\n\nAt the core of the Brinicle Forces is a chilling institution: the Siren Corps. Sirens—rare seal mobians whose voices can sedate or enthrall entire groups—were historically distrusted, but in recent decades they have been recast as coveted weapons. Under the guise of “protection,” sirens born within Northern Waters are taken into state custody, trained in controlled silence, and deployed as tools during raids, hunts, and border retaliation. Their abilities allow the Brinicle Forces to subdue entire platoons without open conflict—after which the military carries out whatever \"purification orders\" the crown demands. Though the kingdom denies mistreatment, sirens live under watch, stripped of autonomy, and traded to allied sea nations as bargaining chips.\n\nBeyond the Siren Corps, the Brinicle Forces include armored infantry, iceborne cavalry, and deep-sea berserkers adapted to the freezing currents surrounding the Glacier Castle. Their campaigns, framed as divine duty, aim to “relieve the Ocean’s suffering” by striking at land settlements, fishing fleets, and industrial sites. Yet internally, cracks are forming—soldiers whisper doubts, commanders question the endless bloodshed, and a growing few suspect that the true enemy may not be landfolk themselves, but the rising “God” they call “Technology”, whose unchecked spread poisons all realms."
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
