@@ -112,17 +112,23 @@
                 {
                   "name": "Sonic the Hedgehog",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-1.png",
-                  "description": "A fearless, free-spirited hero who values freedom above all else and races into danger whenever someone needs his help."
+                  "description": "A fearless, free-spirited hero who values freedom above all else and races into danger whenever someone needs his help.",
+                  "status": "taken",
+                  "player": "hydrotropicguy"
                 },
                 {
                   "name": "Tails the Fox",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-2.png",
-                  "description": "A brilliant young inventor and loyal friend whose technical expertise and quick thinking make him an invaluable member of Team Sonic."
+                  "description": "A brilliant young inventor and loyal friend whose technical expertise and quick thinking make him an invaluable member of Team Sonic.",
+                  "status": "taken",
+                  "player": "absolred"
                 },
                 {
                   "name": "Knuckles the Echidna",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-3.png",
-                  "description": "A strong-willed and powerful echidna who protects the Master Emerald and brings unmatched strength and determination to Team Sonic."
+                  "description": "A strong-willed and powerful echidna who protects the Master Emerald and brings unmatched strength and determination to Team Sonic.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             },
@@ -133,22 +139,30 @@
                 {
                   "name": "Amy Rose",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-4.png",
-                  "description": "A compassionate and determined optimist who inspires others with her courage, empathy, and unwavering desire to help those in need."
+                  "description": "A compassionate and determined optimist who inspires others with her courage, empathy, and unwavering desire to help those in need.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "Cream the Rabbit & Cheese",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-5.png",
-                  "description": "A kind-hearted young rabbit and her loyal Chao companion, whose innocence, courage, and unwavering kindness often bring hope to those around them."
+                  "description": "A kind-hearted young rabbit and her loyal Chao companion, whose innocence, courage, and unwavering kindness often bring hope to those around them.",
+                  "status": "taken",
+                  "player": "novathesd"
                 },
                 {
                   "name": "Gemerl",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-7.png",
-                  "description": "A powerful combat robot turned guardian, fiercely protective of Cream and her family while learning to understand friendship and compassion."
+                  "description": "A powerful combat robot turned guardian, fiercely protective of Cream and her family while learning to understand friendship and compassion.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Big the Cat & Froggy",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-6.png",
-                  "description": "A gentle and easygoing fisherman with immense strength, who prefers a quiet life but is always willing to help his friends when trouble arises. Always searching for his companion Froggy"
+                  "description": "A gentle and easygoing fisherman with immense strength, who prefers a quiet life but is always willing to help his friends when trouble arises. Always searching for his companion Froggy",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             },
@@ -159,12 +173,16 @@
                 {
                   "name": "Tangle the Lemur",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-8.png",
-                  "description": "An energetic and adventurous lemur with an incredibly versatile tail, whose enthusiasm, bravery, and loyalty make her a dependable ally and friend."
+                  "description": "An energetic and adventurous lemur with an incredibly versatile tail, whose enthusiasm, bravery, and loyalty make her a dependable ally and friend.",
+                  "status": "taken",
+                  "player": "Ladyofdarkness"
                 },
                 {
                   "name": "Whisper the Wolf",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-9.png",
-                  "description": "A quiet and highly skilled wolf who keeps others at a distance, but beneath her reserved nature lies a fiercely loyal and courageous protector."
+                  "description": "A quiet and highly skilled wolf who keeps others at a distance, but beneath her reserved nature lies a fiercely loyal and courageous protector.",
+                  "status": "taken",
+                  "player": "faun.friend"
                 }
               ]
             },
@@ -175,22 +193,30 @@
                 {
                   "name": "Lanolin the Sheep",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-10.png",
-                  "description": "A determined and disciplined sheep who strives to keep others safe, bringing organization, leadership, and a strong sense of responsibility to the Restoration."
+                  "description": "A determined and disciplined sheep who strives to keep others safe, bringing organization, leadership, and a strong sense of responsibility to the Restoration.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "Jewel the Beetle",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-11.png",
-                  "description": "A diligent and compassionate beetle who keeps the Restoration running through careful organization, responsible leadership, and genuine care for its people."
+                  "description": "A diligent and compassionate beetle who keeps the Restoration running through careful organization, responsible leadership, and genuine care for its people.",
+                  "status": "taken",
+                  "player": "absolred"
                 },
                 {
                   "name": "Belle the Tinketer",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-12.png",
-                  "description": "A gentle and curious wooden robot who loves tinkering and helping others, carrying on her creator's legacy while searching for her own place in the world."
+                  "description": "A gentle and curious wooden robot who loves tinkering and helping others, carrying on her creator's legacy while searching for her own place in the world.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "Gadget Wolf",
                   "image": "/factions/sonic_front_page_idw_33_by_diegorsonic_dfjlt3j-pre-13.png",
-                  "description": "A resourceful and hardworking member of the Restoration, always ready to lend a hand and put their practical skills to use wherever they are needed."
+                  "description": "A resourceful and hardworking member of the Restoration, always ready to lend a hand and put their practical skills to use wherever they are needed.",
+                  "status": "taken",
+                  "player": "choco.carol"
                 }
               ]
             }
