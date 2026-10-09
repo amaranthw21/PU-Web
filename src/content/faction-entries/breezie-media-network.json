@@ -50,22 +50,30 @@
                 {
                   "name": "Breezie the Hedgehog",
                   "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-5.webp",
-                  "description": "The owner and CEO of **Breezie Media Network**, Breezie the Hedgehog is a shrewd and ambitious businesswoman who built her influence through the media industry. Charming and calculating, she knows how to use her public image and business connections to further her own interests."
+                  "description": "The owner and CEO of **Breezie Media Network**, Breezie the Hedgehog is a shrewd and ambitious businesswoman who built her influence through the media industry. Charming and calculating, she knows how to use her public image and business connections to further her own interests.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "Scratch",
                   "image": "/factions/pasted-image-1790874270774.png",
-                  "description": "A longtime minion of Eggman, now working under Breezie. Scratch is a loud, hot-headed and somewhat dim-witted chicken who often serves as muscle alongside his partner, Grounder. Despite his bluster, he is prone to bungling and frequently finds himself outsmarted by those he pursues."
+                  "description": "A longtime minion of Eggman, now working under Breezie. Scratch is a loud, hot-headed and somewhat dim-witted chicken who often serves as muscle alongside his partner, Grounder. Despite his bluster, he is prone to bungling and frequently finds himself outsmarted by those he pursues.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Grounder",
                   "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-7.webp",
-                  "description": "A longtime minion of Eggman, and now working under Breezie. Grounder is Scratch’s more practical but equally bumbling partner. A powerful drilling robot, his stubbornness and tendency to make mistakes frequently get him into trouble."
+                  "description": "A longtime minion of Eggman, and now working under Breezie. Grounder is Scratch’s more practical but equally bumbling partner. A powerful drilling robot, his stubbornness and tendency to make mistakes frequently get him into trouble.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Coconut",
                   "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-8.webp",
-                  "description": "A longtime Eggman minion, now working for Breezie. Coconuts is a hardworking but perpetually frustrated robot who often finds himself stuck with menial tasks."
+                  "description": "A longtime Eggman minion, now working for Breezie. Coconuts is a hardworking but perpetually frustrated robot who often finds himself stuck with menial tasks.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             }
