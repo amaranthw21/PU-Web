@@ -11,13 +11,13 @@
       "id": "main",
       "label": "Main Factions",
       "placeholderLabel": "Faction",
-      "count": 24
+      "count": 25
     },
     {
       "id": "side",
       "label": "Side Factions",
       "placeholderLabel": "Side Faction",
-      "count": 4
+      "count": 5
     },
     {
       "id": "custom",
