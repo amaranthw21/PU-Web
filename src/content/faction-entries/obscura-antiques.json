@@ -53,12 +53,16 @@
                 {
                   "name": "Profesor Valdus",
                   "image": "/factions/professor_valdus.webp",
-                  "description": "Professor Valdus is a wealthy, retired archaeologist. After being “retired” from his position as headmaster of the Mythsonian Institute, he started a new business in the black market for antiques... making them disappear."
+                  "description": "Professor Valdus is a wealthy, retired archaeologist. After being “retired” from his position as headmaster of the Mythsonian Institute, he started a new business in the black market for antiques... making them disappear.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Megani the Jackal / Enigma",
                   "image": "/factions/professor_valdus-1.webp",
-                  "description": "Megani the Jackal, better known as Enigma, is a cunning and elusive treasure hunter. With a talent for deception and a mysterious past, she’s never quite as predictable as she seems."
+                  "description": "Megani the Jackal, better known as Enigma, is a cunning and elusive treasure hunter. With a talent for deception and a mysterious past, she’s never quite as predictable as she seems.",
+                  "status": "taken",
+                  "player": "hydrotropicguy"
                 }
               ]
             }
