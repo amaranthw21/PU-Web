@@ -1,0 +1,75 @@
+{
+  "order": 2,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Witchcarters",
+  "image": "/factions/mobius/Side-2-border.png",
+  "background": "/factions/image-1-1.webp",
+  "color": "#ff00a2",
+  "quote": [],
+  "leader": "Wendy Witchcart",
+  "headquarters": "Panic Puppet Fortress",
+  "bases": [
+    "Cardinal Archipelago"
+  ],
+  "allies": [],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Witchcarters are a villainous gang of thugs who work for Wendy Witchcart, assisting her in conquering islands (thought they have really only conquered one) and attacking her enemies. They are particularly skilled at handling vehicles and Extreme Gear, making them capable competitors in high-speed races. Their most notable known attack took place on Flicky Island, an area previously conquered by Dr. Eggman that was only inhabited by flickies.\n\nThe gang operates from a base on Flicky Island, within the Cardinal Archipelago. Thought they once were forced to work under the Eggpire, during the events of the first Dark gaia awakening, that relationship was broken shortly after.\n\nAlthough they remain a nuisance to the island's Flicky population, their presence is largely tolerated, as they inadvertently discourage other, more dangerous troublemakers from invading the island. As a result, the Witchcarters are now regarded as relatively minor threats and have even participated in official Xtreme competitions."
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Witchcarters",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Wendy Witchcart",
+                  "image": "/factions/image-2-1.webp",
+                  "description": "Wendy Witchcart is a wicked, egotistical witch and the leader of the Witchcarters. Despite her magical nature, she is actually an engineer at heart, demonstrating considerable talent in designing and operating machinery."
+                },
+                {
+                  "name": "Carrottia the Rabbit",
+                  "image": "/factions/image-3-1.webp",
+                  "description": "Carrottia is a flirtatious, doe-eyed, and sarcastic member of the Witchcarters, known for her extreme laziness and lack of enthusiasm for battle. She often treats combat casually, showing little concern even when captured, and can become moody when forced to work."
+                },
+                {
+                  "name": "Hocke-Wulf",
+                  "image": "/factions/image-4-1.webp",
+                  "description": "Hocke-Wulf is a giggling, mean-spirited bully who enjoys tormenting smaller and weaker creatures. Arrogant and boastful, he believes himself to be strong and intelligent, despite often displaying considerable stupidity and poor judgment."
+                },
+                {
+                  "name": "Bearenger the Grizzly",
+                  "image": "/factions/image-5-1.webp",
+                  "description": "Bearanger is a snarling, foul-tempered, and short-fused member of the Witchcarters who takes his job more seriously than his coworkers. Hardworking and aggressive, he puts considerable effort into his job, often criticizing the others for their laziness. He is straightforward with his victims, prideful, and easily angered by disrespect or underhanded attacks."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
