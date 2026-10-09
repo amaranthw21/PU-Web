@@ -51,17 +51,23 @@
                 {
                   "name": "Jet the Hawk",
                   "image": "/factions/dlawol4-44f89fb7-83a2-4415-973d-3931237280dd-1.webp",
-                  "description": "Jet the Hawk is a cocky and fiercely competitive extreme gear racer, known for his pride, hot temper, and relentless drive to prove himself. As the leader of the Babylon Rogues, he’s always eager to challenge anyone who dares call themselves faster."
+                  "description": "Jet the Hawk is a cocky and fiercely competitive extreme gear racer, known for his pride, hot temper, and relentless drive to prove himself. As the leader of the Babylon Rogues, he’s always eager to challenge anyone who dares call themselves faster.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Wave the Swallow",
                   "image": "/factions/dlawol4-44f89fb7-83a2-4415-973d-3931237280dd-2.webp",
-                  "description": "Wave the Swallow is the sharp-tongued mechanic of the Babylon Rogues, possessing a brilliant mind and a fierce pride in her engineering skills. She often acts as the voice of reason behind Jet’s reckless schemes, though her own arrogance and temper can be just as formidable."
+                  "description": "Wave the Swallow is the sharp-tongued mechanic of the Babylon Rogues, possessing a brilliant mind and a fierce pride in her engineering skills. She often acts as the voice of reason behind Jet’s reckless schemes, though her own arrogance and temper can be just as formidable.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "Storm the Albatross",
                   "image": "/factions/pasted-image-1791300499374.png",
-                  "description": "Storm the Albatross is the brawny and loyal muscle of the Babylon Rogues, known for his simple-minded nature and intimidating strength. Despite his rough exterior, he’s surprisingly good-natured and deeply devoted to Jet and Wave."
+                  "description": "Storm the Albatross is the brawny and loyal muscle of the Babylon Rogues, known for his simple-minded nature and intimidating strength. Despite his rough exterior, he’s surprisingly good-natured and deeply devoted to Jet and Wave.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             }
