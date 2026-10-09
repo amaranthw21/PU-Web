@@ -7,10 +7,10 @@
   "background": "/factions/pasted-image-1791567339934.png",
   "color": "#6d2b5f",
   "quote": [],
-  "leader": "???",
-  "headquarters": "???",
+  "leader": "Scourge the Hedgehog (Former)",
+  "headquarters": "Acorn Castle",
   "bases": [
-    "???"
+    "Acorn Empire"
   ],
   "allies": [],
   "enemies": [
@@ -20,7 +20,13 @@
     {
       "title": "Overview",
       "icon": "",
-      "parts": []
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Acorn Imperial Forces serve as the primary military arm of the Acorn Empire, comprising remnants of the old military that surrendered to Alicia Acorn upon her ascension to the throne, alongside the ambitious individuals and power-hungry factions that Scourge accumulated or forced into submission during his conquest. As a result, the organization is a complicated mix of former loyalists, opportunists, and military personnel whose allegiances do not always align.\n\nFollowing the sudden disappearance of Scourge and his closest associates a few months ago, the Empire was left without a clear ruler. With the heads of the regime, the **Suppression Squad**, having been displaced to Mobius, effective control of the Imperial Forces has fallen into the hands of a close confidant of Alicia Acorn. \n\nA provisional administration currently maintains order while efforts continue to locate Scourge or establish a suitable successor. Despite the uncertainty, the Empire has remained surprisingly stable. Indeed, quiet rumors suggest that, without Scourge and his inner circle, things may actually be running better than before."
+        }
+      ]
     }
   ],
   "extraInfo": [
