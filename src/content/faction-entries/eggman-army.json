@@ -210,27 +210,37 @@
                 {
                   "name": "Dr. Ivo \"Eggman\" Robotnik",
                   "image": "/factions/idwdr.eggman.webp",
-                  "description": "The self-proclaimed genius behind the Eggman Empire, who seeks to conquer the world and bend it to his will."
+                  "description": "The self-proclaimed genius behind the Eggman Empire, who seeks to conquer the world and bend it to his will.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "SAGE",
                   "image": "/factions/idwdr.eggman-1.webp",
-                  "description": "Eggman’s highly advanced AI assistant, created to support his operations and serve as one of his most trusted and capable allies. The closest thing Eggman has had to a recognised daughter."
+                  "description": "Eggman’s highly advanced AI assistant, created to support his operations and serve as one of his most trusted and capable allies. The closest thing Eggman has had to a recognised daughter.",
+                  "status": "taken",
+                  "player": "novathesd"
                 },
                 {
                   "name": "Agent Stone",
                   "image": "/factions/idwdr.eggman-2.webp",
-                  "description": "Eggman’s loyal personal agent, serving as his trusted aide and handling a wide range of missions and operations on his behalf."
+                  "description": "Eggman’s loyal personal agent, serving as his trusted aide and handling a wide range of missions and operations on his behalf.",
+                  "status": "taken",
+                  "player": "arstasia"
                 },
                 {
                   "name": "Snively",
                   "image": "/factions/idwdr.eggman-3.webp",
-                  "description": "Eggman’s cunning and long-suffering nephew, who serves as his personal assistant and advisor while secretly harboring ambitions of his own."
+                  "description": "Eggman’s cunning and long-suffering nephew, who serves as his personal assistant and advisor while secretly harboring ambitions of his own.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Orbot and Cubot",
                   "image": "/factions/pasted-image-1790854160862.png",
-                  "description": "Eggman’s bumbling robotic assistants, who accompany him on his schemes and carry out various tasks for the Eggman Empire."
+                  "description": "Eggman’s bumbling robotic assistants, who accompany him on his schemes and carry out various tasks for the Eggman Empire.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             },
@@ -241,32 +251,44 @@
                 {
                   "name": "Metal Sonic",
                   "image": "/factions/idwdr.eggman-4.webp",
-                  "description": "Eggman’s ultimate robotic rival to Sonic, built to match his speed and abilities while serving as one of the Empire’s most powerful machines."
+                  "description": "Eggman’s ultimate robotic rival to Sonic, built to match his speed and abilities while serving as one of the Empire’s most powerful machines.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "Metal Knuckles",
                   "image": "/factions/idwdr.eggman-5.webp",
-                  "description": "A robotic duplicate of Knuckles created by Eggman, designed to replicate his strength and combat abilities while serving as a powerful enforcer of the Eggman Empire."
+                  "description": "A robotic duplicate of Knuckles created by Eggman, designed to replicate his strength and combat abilities while serving as a powerful enforcer of the Eggman Empire.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Metal Tails",
                   "image": "/factions/idwdr.eggman-6.webp",
-                  "description": "A robotic duplicate of Tails created by Eggman, designed to replicate his intelligence and aerial abilities while serving as a versatile machine of the Eggman Empire."
+                  "description": "A robotic duplicate of Tails created by Eggman, designed to replicate his intelligence and aerial abilities while serving as a versatile machine of the Eggman Empire.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Metal Amy",
                   "image": "/factions/idwdr.eggman-7.webp",
-                  "description": "A robotic duplicate of Amy created by Eggman, designed to replicate her combat abilities and serve as a powerful member of the Metal Series."
+                  "description": "A robotic duplicate of Amy created by Eggman, designed to replicate her combat abilities and serve as a powerful member of the Metal Series.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Metal Sally",
                   "image": "/factions/idwdr.eggman-8.webp",
-                  "description": "A robotic duplicate of Sally Acorn created by Eggman, designed to replicate her tactical abilities and serve as a capable strategist within the Metal Series."
+                  "description": "A robotic duplicate of Sally Acorn created by Eggman, designed to replicate her tactical abilities and serve as a capable strategist within the Metal Series.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Metal Trip",
                   "image": "/factions/idwdr.eggman-9.webp",
-                  "description": "A robotic duplicate of Trip the Sungazer created by Eggman, designed to replicate her unique abilities and combat skills as part of the Metal Series."
+                  "description": "A robotic duplicate of Trip the Sungazer created by Eggman, designed to replicate her unique abilities and combat skills as part of the Metal Series.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             },
@@ -277,27 +299,37 @@
                 {
                   "name": "Heavy King",
                   "image": "/factions/sm_pc_digital_manual_uk_king.webp",
-                  "description": "The leader of the Hard-Boiled Heavies, a powerful armored robot who commands the group and serves as one of Eggman’s elite enforcers."
+                  "description": "The leader of the Hard-Boiled Heavies, a powerful armored robot who commands the group and serves as one of Eggman’s elite enforcers.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Heavy Magician",
                   "image": "/factions/sm_pc_digital_manual_uk_king-1.webp",
-                  "description": "A mysterious Hard-Boiled Heavy capable of using powerful magical abilities and disguises, serving as one of Eggman’s elite robotic enforcers."
+                  "description": "A mysterious Hard-Boiled Heavy capable of using powerful magical abilities and disguises, serving as one of Eggman’s elite robotic enforcers.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Heavy Shinobi",
                   "image": "/factions/sm_pc_digital_manual_uk_king-2.webp",
-                  "description": "A highly agile Hard-Boiled Heavy modeled after a ninja, specializing in stealth, speed, and close-quarters combat as one of Eggman’s elite enforcers."
+                  "description": "A highly agile Hard-Boiled Heavy modeled after a ninja, specializing in stealth, speed, and close-quarters combat as one of Eggman’s elite enforcers.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Heavy Rider",
                   "image": "/factions/sm_pc_digital_manual_uk_king-3.webp",
-                  "description": "A heavily armed Hard-Boiled Heavy built for high-speed pursuit, specializing in mounted combat and aggressive attacks as one of Eggman’s elite enforcers."
+                  "description": "A heavily armed Hard-Boiled Heavy built for high-speed pursuit, specializing in mounted combat and aggressive attacks as one of Eggman’s elite enforcers.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Heavy Gunner",
                   "image": "/factions/sm_pc_digital_manual_uk_king-4.webp",
-                  "description": "A heavily armed Hard-Boiled Heavy specializing in long-range firepower and heavy weaponry, serving as the group’s primary ranged combatant."
+                  "description": "A heavily armed Hard-Boiled Heavy specializing in long-range firepower and heavy weaponry, serving as the group’s primary ranged combatant.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             },
@@ -308,57 +340,79 @@
                 {
                   "name": "Clove the Pronghorn",
                   "image": "/factions/sm_pc_digital_manual_uk_king-5.webp",
-                  "description": "The reluctant leader of the **Northamer Egg Army**, Clove the Pronghorn is a reserved and reticent commander who serves the Eggman Empire despite having little desire to be there. She is the sister of **Cassia Pronghorn**."
+                  "description": "The reluctant leader of the **Northamer Egg Army**, Clove the Pronghorn is a reserved and reticent commander who serves the Eggman Empire despite having little desire to be there. She is the sister of **Cassia Pronghorn**.",
+                  "status": "taken",
+                  "player": "Onslaught71"
                 },
                 {
                   "name": "Cassia Pronghorn",
                   "image": "/factions/sm_pc_digital_manual_uk_king-6.webp",
-                  "description": "A member of the **Northamer Egg Army** and the sister of **Clove the Pronghorn**, Cassia is not a devoted believer in Eggman’s cause. She remains in his service largely because of an illness that Eggman has promised to keep at bay, leaving her loyalty to the Empire complicated and reluctant."
+                  "description": "A member of the **Northamer Egg Army** and the sister of **Clove the Pronghorn**, Cassia is not a devoted believer in Eggman’s cause. She remains in his service largely because of an illness that Eggman has promised to keep at bay, leaving her loyalty to the Empire complicated and reluctant.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Thunderbolt the Chinchilla",
                   "image": "/factions/sm_pc_digital_manual_uk_king-7.webp",
-                  "description": "The commander of the **Soumerca Egg Army**, Thunderbolt the Chinchilla oversees Eggman’s forces throughout Soumerca and is responsible for maintaining the Empire’s presence across the region."
+                  "description": "The commander of the **Soumerca Egg Army**, Thunderbolt the Chinchilla oversees Eggman’s forces throughout Soumerca and is responsible for maintaining the Empire’s presence across the region.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Lord Mordred Hood",
                   "image": "/factions/sm_pc_digital_manual_uk_king-8.webp",
-                  "description": "The commander of the **Eurish Egg Army**, Lord Mordred Hood is a Baron of Sylvania and ruler of the Barony of Avalon. He oversees Eggman’s forces across Eurish territories while maintaining his own authority within Sylvania."
+                  "description": "The commander of the **Eurish Egg Army**, Lord Mordred Hood is a Baron of Sylvania and ruler of the Barony of Avalon. He oversees Eggman’s forces across Eurish territories while maintaining his own authority within Sylvania.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Conquering Storm",
                   "image": "/factions/sm_pc_digital_manual_uk_king-9.webp",
-                  "description": "Formerly the leader of the **Raiju Clan** of the Iron Dominion, she defected to the Eggman Empire and now commands the **Yurasia Egg Army**, using her experience and knowledge of the region in service to her new allegiance."
+                  "description": "Formerly the leader of the **Raiju Clan** of the Iron Dominion, she defected to the Eggman Empire and now commands the **Yurasia Egg Army**, using her experience and knowledge of the region in service to her new allegiance.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Nephthys the Vulture",
                   "image": "/factions/sm_pc_digital_manual_uk_king-10.webp",
-                  "description": "The commander of the **Midesta Egg Army**, Nephthys the Vulture is more concerned with maintaining the balance of power in Shamar than with expanding Eggman’s influence across the region."
+                  "description": "The commander of the **Midesta Egg Army**, Nephthys the Vulture is more concerned with maintaining the balance of power in Shamar than with expanding Eggman’s influence across the region.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Maw the Thylacine",
                   "image": "/factions/sm_pc_digital_manual_uk_king-11.webp",
-                  "description": "The commander of the **Downunda Egg Army**, Maw the Thylacine is an enigmatic and impeccably calm gentleman with an obsession for robotics and perfection. Hungry for knowledge, he is a firm believer in Eggman’s vision, convinced that the Empire’s conquest will ultimately serve the greater good and “save the world from itself.”"
+                  "description": "The commander of the **Downunda Egg Army**, Maw the Thylacine is an enigmatic and impeccably calm gentleman with an obsession for robotics and perfection. Hungry for knowledge, he is a firm believer in Eggman’s vision, convinced that the Empire’s conquest will ultimately serve the greater good and “save the world from itself.”",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Axel the Water Buffalo",
                   "image": "/factions/sm_pc_digital_manual_uk_king-12.webp",
-                  "description": "The commander of the **Efrika Egg Army**, Axel the Water Buffalo is a gruff and serious leader whose loyalty to Eggman is driven more by fear than respect. Though he values teamwork and has little problem getting his hands dirty, he is especially close to his own troops, treating them as brothers and sisters."
+                  "description": "The commander of the **Efrika Egg Army**, Axel the Water Buffalo is a gruff and serious leader whose loyalty to Eggman is driven more by fear than respect. Though he values teamwork and has little problem getting his hands dirty, he is especially close to his own troops, treating them as brothers and sisters.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Tundra the Walrus",
                   "image": "/factions/sm_pc_digital_manual_uk_king-13.webp",
-                  "description": "The commander of the **Artika Egg Army**, Tundra the Walrus is a proud warrior who lives by a strict code of strength and honor. He believes the strongest should rule, putting him at odds with his son **Rotor**, whose intellectual pursuits he greatly disapproves of. His loyalty to Eggman is tied to this belief in strength, while his deep hatred of **Akhlut** stems from their long-standing rivalry and Tundra’s belief that Akhlut lacks honor."
+                  "description": "The commander of the **Artika Egg Army**, Tundra the Walrus is a proud warrior who lives by a strict code of strength and honor. He believes the strongest should rule, putting him at odds with his son **Rotor**, whose intellectual pursuits he greatly disapproves of. His loyalty to Eggman is tied to this belief in strength, while his deep hatred of **Akhlut** stems from their long-standing rivalry and Tundra’s belief that Akhlut lacks honor.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Abyss the Squid",
                   "image": "/factions/sm_pc_digital_manual_uk_king-14.webp",
-                  "description": "The commander of the **Southern Ocean Egg Army**, Abyss the Squid is a greedy and self-serving pirate who joined Eggman in pursuit of riches and resources. She enjoys plundering the oceans for treasure, constantly boasting about her exploits, and relishes the thrill of battle and raiding."
+                  "description": "The commander of the **Southern Ocean Egg Army**, Abyss the Squid is a greedy and self-serving pirate who joined Eggman in pursuit of riches and resources. She enjoys plundering the oceans for treasure, constantly boasting about her exploits, and relishes the thrill of battle and raiding.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Akhlut the Orca",
                   "image": "/factions/sm_pc_digital_manual_uk_king-15.webp",
-                  "description": "The commander of the **Northern Ocean Egg Army**, Akhlut the Orca is a bloodthirsty and war-hungry leader who deliberately provokes his enemies into conflict. Smug and disrespectful, he enjoys mocking his rivals, particularly Tundra, though he still shows a degree of honor toward his own warriors. Unlike many Egg Bosses, Akhlut appears genuinely loyal to Eggman and rarely speaks ill of the doctor."
+                  "description": "The commander of the **Northern Ocean Egg Army**, Akhlut the Orca is a bloodthirsty and war-hungry leader who deliberately provokes his enemies into conflict. Smug and disrespectful, he enjoys mocking his rivals, particularly Tundra, though he still shows a degree of honor toward his own warriors. Unlike many Egg Bosses, Akhlut appears genuinely loyal to Eggman and rarely speaks ill of the doctor.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             },
@@ -369,22 +423,30 @@
                 {
                   "name": "Beauregard Rabbot",
                   "image": "/factions/sm_pc_digital_manual_uk_king-16.webp",
-                  "description": "A member of the Eggman Empire and the father of **Bunnie Rabbot**, Beauregard is a relaxed and caring figure who treats his fellow army members like family. Despite serving on the opposing side, he remains deeply proud of **Bunnie** and cares for her dearly, even as their conflicting allegiances may eventually force them to face each other."
+                  "description": "A member of the Eggman Empire and the father of **Bunnie Rabbot**, Beauregard is a relaxed and caring figure who treats his fellow army members like family. Despite serving on the opposing side, he remains deeply proud of **Bunnie** and cares for her dearly, even as their conflicting allegiances may eventually force them to face each other.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Matilda the Armadillo",
                   "image": "/factions/sm_pc_digital_manual_uk_king-17.webp",
-                  "description": "A member of the Eggman Army and the sister of **Mighty the Armadillo**, Matilda is a strong-willed and capable fighter who remains loyal to her comrades despite the difficult circumstances surrounding her allegiance."
+                  "description": "A member of the Eggman Army and the sister of **Mighty the Armadillo**, Matilda is a strong-willed and capable fighter who remains loyal to her comrades despite the difficult circumstances surrounding her allegiance.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "PHAGE",
                   "image": "/factions/sm_pc_digital_manual_uk_king-18.webp",
-                  "description": "An advanced but unruly AI considered too useful for Eggman to dispose of, PHAGE was assigned to the **Northamer Egg Army** to keep it under closer supervision. When interacting with the physical world, PHAGE uses members of the **Doll Series** as vessels, allowing it to directly interact with and influence the real world."
+                  "description": "An advanced but unruly AI considered too useful for Eggman to dispose of, PHAGE was assigned to the **Northamer Egg Army** to keep it under closer supervision. When interacting with the physical world, PHAGE uses members of the **Doll Series** as vessels, allowing it to directly interact with and influence the real world.",
+                  "status": "taken",
+                  "player": "Hydrotropicguy"
                 },
                 {
                   "name": "Chaos Gamma",
                   "image": "/factions/sm_pc_digital_manual_uk_king-19.webp",
-                  "description": "A powerful combat robot created by Eggman, **Chaos Gamma** is one of the more specialized machines in his arsenal, designed for high-level combat and built to harness the destructive power of Chaos energy."
+                  "description": "A powerful combat robot created by Eggman, **Chaos Gamma** is one of the more specialized machines in his arsenal, designed for high-level combat and built to harness the destructive power of Chaos energy.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             }
