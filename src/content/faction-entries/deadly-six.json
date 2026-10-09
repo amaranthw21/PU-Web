@@ -1,0 +1,85 @@
+{
+  "order": 4,
+  "faction": "mobius",
+  "group": "side",
+  "name": "Deadly Six",
+  "image": "/factions/main-1-5.webp",
+  "background": "/factions/pasted-image-1791548418491.png",
+  "color": "",
+  "quote": [],
+  "leader": "Zavok",
+  "headquarters": "Lost World",
+  "bases": [
+    "Lost World"
+  ],
+  "allies": [],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Deadly Six are a group of six villainous Zeti who originally had little to no interest in Mobius or its inhabitants, preferring to live undisturbed on the Lost Hex. However, their lives took a turn when Doctor Eggman discovered them and sought to exploit their species' natural ability to manipulate magnetic fields. Hoping to harness this power to defeat Sonic the Hedgehog and conquer the world, Eggman attempted to bring the Deadly Six under his control, using a mind-controlling device to force them to obey his commands.\n\nUnfortunately for Eggman, his plan backfired when the Deadly Six broke free from his control and turned against him. No longer bound by his orders, the Zeti began pursuing their own destructive ambitions, threatening Mobius and its inhabitants despite having previously shown little interest in the world beyond their home. Their newfound freedom quickly turned them into a threat in their own right, forcing Sonic to intervene and stop them before they could carry out their plans.\n\nUltimately, the Deadly Six were defeated by Sonic, though their defeat did not put an end to their villainous activities. The six Zeti have continued to resurface from time to time, occasionally finding new ways to cause trouble and challenge Sonic and his allies. What began as an encounter brought about by Eggman's ambition thus turned the Deadly Six into recurring adversaries on the surface of Mobius"
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Deadly Six",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Zavok",
+                  "image": "/factions/main-1-7.webp",
+                  "description": "Zavok the leader of the Deadly Six, and holds Master Zik in high regard as a mentor. Despite his fiery temper, Zavok is patient and strategic, harboring deep grudges against Eggman for enslaving the Deadly Six and Sonic for defeating him."
+                },
+                {
+                  "name": "Zazz",
+                  "image": "/factions/pasted-image-1791549083108.png",
+                  "description": "Zazz is arguably the most unhinged member of the Deadly Six, taking pleasure in violence and displaying a reckless, berserk nature when attacking his enemies."
+                },
+                {
+                  "name": "Zeena",
+                  "image": "/factions/main-1-8.webp",
+                  "description": "Zeena is a vain, selfish, and sarcastic member of the Deadly Six who takes great pride in her appearance, fashion, and nail art. Despite her lazy and indifferent attitude, she can be persuaded through flattery and takes her duties seriously when motivated."
+                },
+                {
+                  "name": "Master Zik",
+                  "image": "/factions/pasted-image-1791549296147.png",
+                  "description": "Master Zik is the oldest and wisest member of the Deadly Six, serving as a mentor to Zavok and possessing considerable experience in combat and strategy. He was the founder of the Deadly Six."
+                },
+                {
+                  "name": "Zomon",
+                  "image": "/factions/main-1-9.webp",
+                  "description": "Zomom is a gluttonous, brutish, and dim-witted member of the Deadly Six, best known for his enormous appetite and obsession with food. Despite his lack of intelligence and tendency to act on impulse, he possesses tremendous physical strength and can be a formidable opponent in battle."
+                },
+                {
+                  "name": "Zor",
+                  "image": "/factions/main-1-10.webp",
+                  "description": "Zor is the most reclusive and melancholic member of the Deadly Six, characterized by his gloomy demeanor, pessimistic outlook, and apparent lack of enthusiasm for everything around him. He tends to be quiet and withdrawn, often expressing boredom or indifference toward his surroundings."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
