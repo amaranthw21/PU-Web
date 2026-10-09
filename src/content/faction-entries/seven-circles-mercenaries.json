@@ -179,6 +179,29 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Trivia/Misc",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Sloth/Diligence have two computer systems that they use to connect to the other divisions and daily use: H.O.R.N.S and H.A.L.O. _High Output Resource Networked System_ is the offensive system that manages hacking, combative programing, security stress tests, etc. Meanwhile, _Harmonized Advanced Logical Operations_ is the operative system, handling security, tech safety, logistics, etc. Both can be used as communication networks. Both have large databases and tracking systems for dispatch purposes."
+        },
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Symbol of Vice (Red)\nSymbol of Virtue (White/Blue)",
+          "image": "/factions/screenshot-2026-10-09-at-18.58.48.webp",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        }
+      ]
     }
   ],
   "extraInfo": [
