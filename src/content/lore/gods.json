@@ -1,7 +1,9 @@
 {
   "order": 2,
   "title": "Gods",
-  "image": "/gods/emerald-pantheon.png",
+  "image": "/lore/pasted-image-1791582459665.png",
+  "imagePosition": "",
+  "imageZoom": null,
   "route": "/lore/gods",
   "description": "Divine beings, ancient entities and gods that are canon to this universe."
 }
