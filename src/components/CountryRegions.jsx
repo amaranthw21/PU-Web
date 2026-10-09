@@ -3,6 +3,35 @@ import Paragraphs from "./Paragraphs";
 import asset from "../lib/asset";
 
 
+// Estado de un personaje de facción: si un jugador ya lo ha pedido o lo lleva.
+// "available" (o vacío) no pinta nada, para no llenar el carrusel de iconos;
+// solo se marcan los que ya no están libres. Las zonas de los países no tienen
+// este campo, así que nunca llevan icono.
+const STATUSES = {
+    reserved: { label: "Reserved", icon: "clock" },
+    taken:    { label: "In use",   icon: "check" }
+};
+
+function StatusIcon({ icon }){
+
+    if(icon === "check"){
+        return (
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12.5l4.5 4.5L19 7.5" />
+            </svg>
+        );
+    }
+
+    return (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="8" />
+            <path d="M12 7.5V12l3 2" />
+        </svg>
+    );
+
+}
+
+
 // Una zona del carrusel: imagen + nombre. Solo es pulsable si tiene
 // descripción; si no, no hay nada que desplegar y se pinta como una tarjeta
 // normal (así no se ofrece un clic que no hace nada).
@@ -15,9 +44,19 @@ function Location({ location, isOpen, onToggle, fallbackImage }){
 
     const image = location.image?.trim() || fallbackImage;
 
+    const status = STATUSES[location.status];
+    const player = location.player?.trim();
+
+    // "In use · Played by X": sale al pasar el ratón y lo lee el lector de
+    // pantalla, también en las tarjetas sin descripción que no se abren.
+    const statusText = status && [status.label, player && `Played by ${player}`]
+        .filter(Boolean)
+        .join(" · ");
+
     const inner = (
 
         <>
+            <span className="region-loc__frame">
             {
                 image
                     ? <img
@@ -37,6 +76,19 @@ function Location({ location, isOpen, onToggle, fallbackImage }){
                     : <span className="region-loc__img region-loc__img--empty" />
             }
 
+            {
+                status && (
+                    <span
+                        className={`region-loc__status region-loc__status--${location.status}`}
+                        role="img"
+                        aria-label={statusText}
+                    >
+                        <StatusIcon icon={status.icon} />
+                    </span>
+                )
+            }
+            </span>
+
             <span className="region-loc__name">
                 {location.name}
             </span>
@@ -48,7 +100,7 @@ function Location({ location, isOpen, onToggle, fallbackImage }){
     if(!canExpand){
 
         return (
-            <div className="region-loc">
+            <div className="region-loc" title={statusText || undefined}>
                 {inner}
             </div>
         );
@@ -63,6 +115,7 @@ function Location({ location, isOpen, onToggle, fallbackImage }){
             className={isOpen ? "region-loc region-loc--open" : "region-loc"}
             onClick={onToggle}
             aria-expanded={isOpen}
+            title={statusText || undefined}
         >
             {inner}
         </button>
@@ -133,6 +186,15 @@ function Region({ region, fallbackImage }){
                                     <h4 className="region__panel-title">
                                         {open.name}
                                     </h4>
+
+                                    {
+                                        STATUSES[open.status] && (
+                                            <p className={`region__panel-status region__panel-status--${open.status}`}>
+                                                {STATUSES[open.status].label}
+                                                {open.player?.trim() && ` · Played by ${open.player.trim()}`}
+                                            </p>
+                                        )
+                                    }
 
                                     <Paragraphs
                                         text={open.description}

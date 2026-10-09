@@ -270,6 +270,17 @@ collections:
                           - { name: name, label: Name, widget: string }
                           - { name: image, label: Image, widget: image, required: false }
                           - { name: description, label: Description, widget: richtext, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
+                          - name: status
+                            label: Status
+                            widget: select
+                            required: false
+                            default: available
+                            options:
+                              - { label: "Available", value: available }
+                              - { label: "Reserved (someone asked for them)", value: reserved }
+                              - { label: "In use (a player has them)", value: taken }
+                            hint: "Reserved shows a clock and In use a tick on the corner of the picture. Available shows nothing."
+                          - { name: player, label: "Played by", widget: string, required: false, hint: "Optional. Shown when hovering the picture and in the description panel, e.g. 'Played by Amaranth'." }
 
       # ── Filas extra, para lo que no cabe en las fijas ──
       # Igual que la cita: Species es la primera colección que lo usa, así que se
@@ -837,6 +848,17 @@ collections:
                           - { name: name, label: Name, widget: string }
                           - { name: image, label: Image, widget: image, required: false }
                           - { name: description, label: Description, widget: richtext, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
+                          - name: status
+                            label: Status
+                            widget: select
+                            required: false
+                            default: available
+                            options:
+                              - { label: "Available", value: available }
+                              - { label: "Reserved (someone asked for them)", value: reserved }
+                              - { label: "In use (a player has them)", value: taken }
+                            hint: "Reserved shows a clock and In use a tick on the corner of the picture. Available shows nothing."
+                          - { name: player, label: "Played by", widget: string, required: false, hint: "Optional. Shown when hovering the picture and in the description panel, e.g. 'Played by Amaranth'." }
 
       # ── Filas extra, para lo que no cabe en las fijas ──
       - *extra_info
@@ -1020,6 +1042,17 @@ collections:
                           - { name: name, label: Name, widget: string }
                           - { name: image, label: Image, widget: image, required: false }
                           - { name: description, label: Description, widget: richtext, required: false, hint: "Opens when the picture is clicked. Without one, the picture isn't clickable." }
+                          - name: status
+                            label: Status
+                            widget: select
+                            required: false
+                            default: available
+                            options:
+                              - { label: "Available", value: available }
+                              - { label: "Reserved (someone asked for them)", value: reserved }
+                              - { label: "In use (a player has them)", value: taken }
+                            hint: "Reserved shows a clock and In use a tick on the corner of the picture. Available shows nothing."
+                          - { name: player, label: "Played by", widget: string, required: false, hint: "Optional. Shown when hovering the picture and in the description panel, e.g. 'Played by Amaranth'." }
 
       # ── Filas extra, para lo que no cabe en las fijas ──
       - *extra_info
