@@ -1,7 +1,9 @@
 {
   "order": 6,
   "title": "NPCs",
-  "image": "",
+  "image": "/lore/pasted-image-1791583275206.png",
+  "imagePosition": "",
+  "imageZoom": null,
   "route": "/lore/npcs",
   "description": "The characters the staff plays: they exist in the setting, but no player owns them."
 }
