@@ -1,0 +1,36 @@
+{
+  "order": 4,
+  "faction": "mobius",
+  "group": "main",
+  "name": "A.R.M.S.",
+  "image": "/factions/moebius/main-4.png",
+  "background": "/factions/image.png",
+  "color": "#f7f191",
+  "quote": [],
+  "leader": "???",
+  "headquarters": "???",
+  "bases": [
+    "Hyperion"
+  ],
+  "allies": [],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "A.R.M.S. (Alliance for Regional Military Security) is a military alliance formed through the cooperation of Hyperion's four countries: Caeluna, Hesperia, Northumbra, and Kotinos. Functioning as the continent's counterpart to G.U.N. in Mobius, A.R.M.S. was established to safeguard Hyperion against external threats and coordinate the military capabilities of its member states. \n\nDespite their differing ideologies, priorities, and approaches to warfare, each country contributes a unique asset to the alliance, creating a collective defense force that combines financial resources, advanced technology, arcane expertise, and military strength.\n\nCaeluna provides ideological consistency and spiritual support, alongside the formidable power of Serafiel the Light, its divine protector who serves under the direct orders of the Goddess Selune. \n\nHesperia acts as one of A.R.M.S.'s primary financial and research backers, supplying funding, infrastructure, and technological development. \n\nNorthumbra specializes in arcane sciences and magitech, providing essential expertise against supernatural and arcane threats. \n\nFinally, Kotinos supplies substantial manpower and military technology, prioritizing weapons development and strategic defense, often with little regard for ethical limitations."
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
