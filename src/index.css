@@ -2957,6 +2957,93 @@ button.region-loc {
 
 }
 
+/* Marco de la imagen: hace de referencia para el icono de estado. El icono va
+   por dentro de la esquina y no sobresale, porque el carrusel recorta lo que se
+   sale de su caja (overflow-x: auto recorta también en vertical). */
+.region-loc__frame {
+
+    position: relative;
+
+    display: block;
+
+}
+
+.region-loc__status {
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: grid;
+    place-items: center;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    /* Anillo oscuro + sombra: se lee igual sobre arte claro u oscuro. */
+    border: 2px solid #0b0b12;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+
+    color: #fff;
+
+    pointer-events: none;
+
+}
+
+.region-loc__status svg {
+
+    width: 18px;
+    height: 18px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+}
+
+.region-loc__status--taken {
+
+    background: #22a559;
+
+}
+
+.region-loc__status--reserved {
+
+    background: #e0a321;
+
+}
+
+.region-loc__status--reserved svg {
+
+    stroke-width: 2.4;
+
+}
+
+.region__panel-status {
+
+    margin: -2px 0 8px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+}
+
+.region__panel-status--taken {
+
+    color: #4ade80;
+
+}
+
+.region__panel-status--reserved {
+
+    color: #fbbf24;
+
+}
+
 .region-loc__name {
 
     font-size: 0.9rem;
