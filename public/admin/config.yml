@@ -109,7 +109,14 @@ collections:
     format: json
     create: true
     identifier_field: name
-    summary: "{{fields.order}} · {{fields.name}}"
+    summary: "{{fields.order}} · {{fields.name}} — {{fields.group}}"
+    # Se puede ordenar, agrupar por grupo (main / companion) y filtrar.
+    sortable_fields: [name, order, group]
+    view_groups:
+      - { label: "Group (main / companion)", field: group }
+    view_filters:
+      - { label: "Main species", field: group, pattern: "^main$" }
+      - { label: "Companions", field: group, pattern: "^companion$" }
     media_folder: /public/species
     public_folder: /species
     fields:
@@ -325,7 +332,11 @@ collections:
     format: json
     create: true
     identifier_field: name
-    summary: "{{fields.order}} · {{fields.name}}"
+    summary: "{{fields.order}} · {{fields.name}} — {{fields.group}}"
+    # Se puede ordenar y agrupar por grupo (main / side / custom).
+    sortable_fields: [name, order, group]
+    view_groups:
+      - { label: "Group (main / side / custom)", field: group }
     media_folder: /public/factions
     public_folder: /factions
     fields:
@@ -362,7 +373,16 @@ collections:
     format: json
     create: true
     identifier_field: name
-    summary: "{{fields.order}} · {{fields.name}}"
+    summary: "{{fields.order}} · {{fields.name}} — {{fields.category}}"
+    # Se puede ordenar, agrupar por mundo y filtrar.
+    sortable_fields: [name, order, category]
+    view_groups:
+      - { label: "Category (world)", field: category }
+    view_filters:
+      - { label: "Mobius", field: category, pattern: "^mobius$" }
+      - { label: "Moebius", field: category, pattern: "^moebius$" }
+      - { label: "Sol", field: category, pattern: "^sol$" }
+      - { label: "Other", field: category, pattern: "^other$" }
     media_folder: /public/gods
     public_folder: /gods
     fields:
@@ -510,7 +530,16 @@ collections:
     format: json
     create: true
     identifier_field: name
-    summary: "{{fields.order}} · {{fields.name}}"
+    summary: "{{fields.order}} · {{fields.name}} — {{fields.category}}"
+    # Se puede ordenar, agrupar por mundo y filtrar.
+    sortable_fields: [name, order, category]
+    view_groups:
+      - { label: "Category (world)", field: category }
+    view_filters:
+      - { label: "Mobius", field: category, pattern: "^mobius$" }
+      - { label: "Moebius", field: category, pattern: "^moebius$" }
+      - { label: "Sol", field: category, pattern: "^sol$" }
+      - { label: "Other", field: category, pattern: "^other$" }
     media_folder: /public/npcs
     public_folder: /npcs
     fields:
@@ -555,6 +584,12 @@ collections:
     create: true
     identifier_field: name
     summary: "{{fields.order}} · {{fields.name}}"
+    # Se puede ordenar y separar las oficiales de las custom (de jugadores).
+    sortable_fields: [name, order, custom]
+    view_groups:
+      - { label: "Official / custom", field: custom }
+    view_filters:
+      - { label: "Custom energies only", field: custom, pattern: true }
     media_folder: /public/energy
     public_folder: /energy
     fields:
@@ -582,6 +617,12 @@ collections:
     create: true
     identifier_field: name
     summary: "{{fields.order}} · {{fields.name}}"
+    # Se puede ordenar y separar las oficiales de las custom (de jugadores).
+    sortable_fields: [name, order, custom]
+    view_groups:
+      - { label: "Official / custom", field: custom }
+    view_filters:
+      - { label: "Custom powers only", field: custom, pattern: true }
     media_folder: /public/powers
     public_folder: /powers
     fields:
@@ -608,6 +649,12 @@ collections:
     create: true
     identifier_field: name
     summary: "{{fields.order}} · {{fields.name}}"
+    # Se puede ordenar y separar las oficiales de las custom (de jugadores).
+    sortable_fields: [name, order, custom]
+    view_groups:
+      - { label: "Official / custom", field: custom }
+    view_filters:
+      - { label: "Custom transformations only", field: custom, pattern: true }
     media_folder: /public/transformations
     public_folder: /transformations
     fields:
@@ -633,7 +680,17 @@ collections:
     format: json
     create: true
     identifier_field: name
-    summary: "{{fields.order}} · {{fields.name}}"
+    summary: "{{fields.order}} · {{fields.name}} — {{fields.category}}"
+    # Se puede ordenar, agrupar por categoría y filtrar.
+    sortable_fields: [name, order, category]
+    view_groups:
+      - { label: "Category", field: category }
+    view_filters:
+      - { label: "Legendary sets", field: category, pattern: "^legendary-sets$" }
+      - { label: "Gems", field: category, pattern: "^gems$" }
+      - { label: "Magical artifacts", field: category, pattern: "^magical-artifacts$" }
+      - { label: "Technology", field: category, pattern: "^technology$" }
+      - { label: "Custom items", field: category, pattern: "^custom$" }
     media_folder: /public/items
     public_folder: /items
     fields:
@@ -666,6 +723,7 @@ collections:
     create: true
     identifier_field: name
     summary: "{{fields.order}} · {{fields.name}}"
+    sortable_fields: [name, order]
     media_folder: /public/worlds
     public_folder: /worlds
     fields:
@@ -697,6 +755,21 @@ collections:
     create: true
     identifier_field: name
     summary: "{{fields.name}} — {{fields.world}} / {{fields.group}}"
+    # Se puede ordenar, agrupar por mundo o por grupo y filtrar.
+    sortable_fields: [name, order, world, group]
+    view_groups:
+      - { label: "World", field: world }
+      - { label: "Group", field: group }
+    view_filters:
+      - { label: "Mobius", field: world, pattern: "^mobius$" }
+      - { label: "Moebius", field: world, pattern: "^moebius$" }
+      - { label: "Sol", field: world, pattern: "^sol$" }
+      - { label: "Future 200", field: world, pattern: "^future-200$" }
+      - { label: "Main countries", field: group, pattern: "^main$" }
+      - { label: "Secondary countries", field: group, pattern: "^secondary$" }
+      - { label: "Territory countries", field: group, pattern: "^territory$" }
+      - { label: "Safe countries", field: group, pattern: "^safe$" }
+      - { label: "Missing countries", field: group, pattern: "^missing$" }
     media_folder: /public/worlds
     public_folder: /worlds
     fields:
@@ -1110,6 +1183,7 @@ collections:
     create: true
     identifier_field: name
     summary: "{{fields.order}} · {{fields.name}}"
+    sortable_fields: [name, order]
     media_folder: /public/worlds
     public_folder: /worlds
     fields:
@@ -1128,6 +1202,7 @@ collections:
     create: true
     identifier_field: title
     summary: "{{fields.order}} · {{fields.title}}"
+    sortable_fields: [title, order]
     media_folder: /public/lore
     public_folder: /lore
     fields:
@@ -1153,6 +1228,7 @@ collections:
     create: true
     identifier_field: name
     summary: "{{fields.order}} · {{fields.name}}"
+    sortable_fields: [name, order]
     media_folder: /public/rules
     public_folder: /rules
     fields:
@@ -1175,7 +1251,16 @@ collections:
     format: json
     create: true
     identifier_field: name
-    summary: "{{fields.order}} · {{fields.name}}"
+    summary: "{{fields.order}} · {{fields.name}} — {{fields.world}}"
+    # Se puede ordenar, agrupar por línea temporal (mundo) y filtrar.
+    sortable_fields: [name, order, world]
+    view_groups:
+      - { label: "Timeline (world)", field: world }
+    view_filters:
+      - { label: "Mobius", field: world, pattern: "^mobius$" }
+      - { label: "Moebius", field: world, pattern: "^moebius$" }
+      - { label: "Sol", field: world, pattern: "^sol$" }
+      - { label: "Future 200", field: world, pattern: "^future-200$" }
     media_folder: /public/timeline
     public_folder: /timeline
     fields:
@@ -1273,6 +1358,7 @@ collections:
     create: true
     identifier_field: name
     summary: "{{fields.order}} · {{fields.name}}"
+    sortable_fields: [name, order]
     media_folder: /public/chronicles
     public_folder: /chronicles
     fields:
