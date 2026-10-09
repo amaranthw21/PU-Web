@@ -876,6 +876,22 @@ collections:
     create: true
     identifier_field: name
     summary: "{{fields.name}} — {{fields.faction}} / {{fields.group}}"
+    # Con muchas facciones la lista plana se hace larga: se puede ordenar,
+    # agrupar por hub o por grupo y filtrar desde la barra de la lista.
+    sortable_fields: [name, order, faction, group]
+    view_groups:
+      - { label: "Hub", field: faction }
+      - { label: "Group (main / side / custom)", field: group }
+    view_filters:
+      - { label: "Mobius", field: faction, pattern: "^mobius$" }
+      - { label: "Moebius", field: faction, pattern: "^moebius$" }
+      - { label: "Sol", field: faction, pattern: "^sol$" }
+      - { label: "Future 200", field: faction, pattern: "^future-200$" }
+      - { label: "Twilight Cage", field: faction, pattern: "^twilight-cage$" }
+      - { label: "White Space", field: faction, pattern: "^white-space$" }
+      - { label: "Main factions", field: group, pattern: "^main$" }
+      - { label: "Side factions", field: group, pattern: "^side$" }
+      - { label: "Custom factions", field: group, pattern: "^custom$" }
     media_folder: /public/factions
     public_folder: /factions
     fields:
