@@ -52,32 +52,44 @@
                 {
                   "name": "Scourge the Hedgehog (Anti Sonic)",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38.webp",
-                  "description": "Scourge the Hedgehog is the ruthless, power-hungry ruler of the Acorn Empire in Moebius, an alternate-universe Sonic who seeks domination through violence, manipulation, and sheer force."
+                  "description": "Scourge the Hedgehog is the ruthless, power-hungry ruler of the Acorn Empire in Moebius, an alternate-universe Sonic who seeks domination through violence, manipulation, and sheer force.",
+                  "status": "taken",
+                  "player": "a_mean"
                 },
                 {
                   "name": "Fiona Fox",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38-1.webp",
-                  "description": "Fiona Fox is a cunning and ruthless fox originaly from Mobius that followed Scourge to Moebius. Known for her manipulative nature, survival instincts, and long-standing association with Scourge."
+                  "description": "Fiona Fox is a cunning and ruthless fox originaly from Mobius that followed Scourge to Moebius. Known for her manipulative nature, survival instincts, and long-standing association with Scourge.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "Alicia Acorn (Anti Sally)",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38-2.webp",
-                  "description": "Alicia Acorn, the ruthless and self-serving counterpart of Sally from Moebius, serving as one of Scourge’s allies in the Suppression Squad. She is also the ruler of the Acorn Empire on paper."
+                  "description": "Alicia Acorn, the ruthless and self-serving counterpart of Sally from Moebius, serving as one of Scourge’s allies in the Suppression Squad. She is also the ruler of the Acorn Empire on paper.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Patch D'Coolette (Anti Antoine)",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38-3.webp",
-                  "description": "Patch D'Coolette is the ruthless and murderous Moebian counterpart of Antoine D'Coolette, a skilled swordsman and assassin who serves as a member of Scourge’s Suppression Squad."
+                  "description": "Patch D'Coolette is the ruthless and murderous Moebian counterpart of Antoine D'Coolette, a skilled swordsman and assassin who serves as a member of Scourge’s Suppression Squad.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Boomer Walrus (Anti Rotor)",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38-4.webp",
-                  "description": "Boomer Walrus is the Moebian counterpart of Rotor Walrus, a skilled weapons inventor who willingly transformed himself into a cyborg to distinguish himself from his counterpart."
+                  "description": "Boomer Walrus is the Moebian counterpart of Rotor Walrus, a skilled weapons inventor who willingly transformed himself into a cyborg to distinguish himself from his counterpart.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Miles Prower (Anti Tails)",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38-21.webp",
-                  "description": "Miles Prower is the Moebian counterpart of Tails, possessing his twin-tailed flight abilities, genius intellect, and talent for invention, which he puts to use as a member of the Suppression Squad."
+                  "description": "Miles Prower is the Moebian counterpart of Tails, possessing his twin-tailed flight abilities, genius intellect, and talent for invention, which he puts to use as a member of the Suppression Squad.",
+                  "status": "taken",
+                  "player": "Arstasia"
                 }
               ]
             },
@@ -88,27 +100,37 @@
                 {
                   "name": "Drago Wolf",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38-5.webp",
-                  "description": "Drago Wolf is a Mobian wolf and former member of the Wolf Pack who later worked for the Eggman Empire. After being liberated from prison, he chose to follow Fiona and Scourge, eventually becoming a member of the Destructix."
+                  "description": "Drago Wolf is a Mobian wolf and former member of the Wolf Pack who later worked for the Eggman Empire. After being liberated from prison, he chose to follow Fiona and Scourge, eventually becoming a member of the Destructix.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Flying Frog",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38-6.webp",
-                  "description": "Flying Frog is a former associate of Mammoth Mogul who, after being liberated from prison, chose to follow Fiona and Scourge and join their ranks."
+                  "description": "Flying Frog is a former associate of Mammoth Mogul who, after being liberated from prison, chose to follow Fiona and Scourge and join their ranks.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Lightning Lynx",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38-7.webp",
-                  "description": "Lightning Lynx is a former member of the Raiju Clan of Chu-Nan and an associate of Mammoth Mogul who, after escaping from prison, followed Fiona and Scourge into the Destructix."
+                  "description": "Lightning Lynx is a former member of the Raiju Clan of Chu-Nan and an associate of Mammoth Mogul who, after escaping from prison, followed Fiona and Scourge into the Destructix.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Predator Hawk",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38-8.webp",
-                  "description": "Predator Hawk is a former member of the Babylon Rogues and the Battle Bird Armada who, after escaping from prison, followed Fiona and Scourge and joined the Destructix."
+                  "description": "Predator Hawk is a former member of the Babylon Rogues and the Battle Bird Armada who, after escaping from prison, followed Fiona and Scourge and joined the Destructix.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Sergeant Simian",
                   "image": "/factions/pasted-image-1791485012262.png",
-                  "description": "Sergeant Simian is a Moebian who worked under Mammoth Mogul and, after escaping from prison, followed Fiona and Scourge and joined the Destructix."
+                  "description": "Sergeant Simian is a Moebian who worked under Mammoth Mogul and, after escaping from prison, followed Fiona and Scourge and joined the Destructix.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             }
