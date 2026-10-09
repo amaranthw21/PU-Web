@@ -7,7 +7,7 @@
   "background": "/factions/pasted-image-1791562197888.png",
   "color": "",
   "quote": [],
-  "leader": "Dante Feu, Lilan Maharaja, and Goetia Kibrit",
+  "leader": "Dante Feu, Lilan Naharaja, and Goetia Kibrit",
   "headquarters": "Seven Circles HQ",
   "bases": [
     "Spagonia"
@@ -157,7 +157,7 @@
                 {
                   "name": "Asmodeus",
                   "image": "",
-                  "description": "",
+                  "description": "The leader of Desire; 35 year old human man of mysterious origins. Charming and flamboyant, although arrogant, he works as the owner of Azure Fashion by day, and as a lead spy for Seven Circles by night.",
                   "status": "taken",
                   "player": "arstasia"
                 }
@@ -194,7 +194,7 @@
         {
           "type": "text",
           "title": "",
-          "text": "Sloth/Diligence have two computer systems that they use to connect to the other divisions and daily use: **H.O.R.N.S and H.A.L.O. High Output Resource Networked** System is the offensive system that manages hacking, combative programing, security stress tests, etc. Meanwhile, **Harmonized Advanced Logical Operations** is the operative system, handling security, tech safety, logistics, etc. Both can be used as communication networks. Both have large databases and tracking systems for dispatch purposes."
+          "text": "Sloth/Diligence have two computer systems that they use to connect to the other divisions and daily use: **H.O.R.N.S and H.A.L.O. High Output Resource Networked System** is the offensive system that manages hacking, combative programing, security stress tests, etc. Meanwhile, **Harmonized Advanced Logical Operations** is the operative system, handling security, tech safety, logistics, etc. Both can be used as communication networks. Both have large databases and tracking systems for dispatch purposes."
         }
       ]
     }
