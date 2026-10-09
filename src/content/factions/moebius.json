@@ -3,6 +3,7 @@
   "group": "main",
   "name": "Moebius",
   "image": "/factions/moebius.png",
+  "presentation": "",
   "imageFolder": "moebius",
   "placeholderImage": "/factions/moebius/main-1.png",
   "factionGroups": [
@@ -10,7 +11,7 @@
       "id": "main",
       "label": "Main Factions",
       "placeholderLabel": "Faction",
-      "count": 3
+      "count": 5
     },
     {
       "id": "side",
