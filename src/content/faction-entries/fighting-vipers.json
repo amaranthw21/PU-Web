@@ -21,6 +21,26 @@
   ],
   "blocks": [
     {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Fighting Vipers is a fight club-like group created during a time of war that’s intent is to build self defense skills in those struggling to take on the ongoing threats of those like Doctor Eggman. It is led by fashion icon Honey the Cat, who inspired the Vipers to fight for what they believe in. It isn’t a Resistance group in exact nature, but they still hold the spirit of one with members that will fight when their home is under fire. \n\nWhen it comes to their activities, it’s usually treated like a for-fun boxing hangout space with upbeat activities to get some workout in to encourage fitness, routine training sessions mixed in here and there as well. \n\nThey don’t come with any personalized weaponry of their own, besides whatever is brought in as a form of creativity for self defense. (Bring in a skateboard, use it as a melee!) But they do come specialized with unique “Battle Armors” by Honey herself, appearing like standard clothing but designed with toughened materials that can lessen direct damage taken."
+        },
+        {
+          "type": "image",
+          "image": "/factions/pasted-image-1791554336809.png",
+          "caption": "Honey the Cat - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        }
+      ]
+    },
+    {
       "title": "Background",
       "icon": "",
       "parts": [
@@ -74,7 +94,7 @@
                 },
                 {
                   "name": "Candy the Cat",
-                  "image": "/factions/amy_and_honey_friendship.webp",
+                  "image": "/factions/pasted-image-1791554284057.png",
                   "description": "Honey’s twin sister, along with being the one to handle the Vipers when she’s focusing on her other business. It can be noted that Candy’s more into the fighting aspect than her sister would be, some even joking that it is like a boot camp whenever she’s left in charge of the group with how much she enforces the idea of getting stronger with every hour. Of course, those would be lighthearted, as it’s more like a party in those cases."
                 },
                 {
@@ -89,7 +109,7 @@
       ]
     },
     {
-      "title": "Rules",
+      "title": "Trivia/Misc",
       "icon": "",
       "parts": [
         {
