@@ -1,7 +1,9 @@
 {
   "order": 4,
   "title": "Important Items",
-  "image": "/energy/master-emerald.png",
+  "image": "/lore/pasted-image-1791582724694.png",
+  "imagePosition": "center 50%",
+  "imageZoom": null,
   "route": "/lore/items",
   "description": "The different items that exist in this world"
 }
