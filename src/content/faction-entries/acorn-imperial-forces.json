@@ -1,0 +1,32 @@
+{
+  "order": 1,
+  "faction": "moebius",
+  "group": "main",
+  "name": "Acorn Imperial Forces",
+  "image": "/factions/moebius/main-1.png",
+  "background": "/factions/pasted-image-1791567339934.png",
+  "color": "#6d2b5f",
+  "quote": [],
+  "leader": "???",
+  "headquarters": "???",
+  "bases": [
+    "???"
+  ],
+  "allies": [],
+  "enemies": [
+    "The Reformation"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": []
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
