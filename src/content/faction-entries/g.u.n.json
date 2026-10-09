@@ -107,17 +107,23 @@
                 {
                   "name": "Shadow the Hedgehog",
                   "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-1.png",
-                  "description": "The Ultimate Lifeform, a powerful and independent \"hero\" shaped by a tragic past and driven by a strong sense of duty."
+                  "description": "The Ultimate Lifeform, a powerful and independent \"hero\" shaped by a tragic past and driven by a strong sense of duty.",
+                  "status": "taken",
+                  "player": "Arstasia"
                 },
                 {
                   "name": "Rouge the Bat",
                   "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-2.png",
-                  "description": "A cunning and charismatic spy, treasure hunter, and G.U.N. agent who excels at infiltration, intelligence gathering, and covert operations."
+                  "description": "A cunning and charismatic spy, treasure hunter, and G.U.N. agent who excels at infiltration, intelligence gathering, and covert operations.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "E-123 Omega",
                   "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-3.png",
-                  "description": "a powerful combat robot and former Eggman creation who joined Team Shadow, driven by his hatred of Eggman's machines and equipped with overwhelming firepower."
+                  "description": "a powerful combat robot and former Eggman creation who joined Team Shadow, driven by his hatred of Eggman's machines and equipped with overwhelming firepower.",
+                  "status": "taken",
+                  "player": "nylaxia"
                 }
               ]
             },
@@ -128,22 +134,30 @@
                 {
                   "name": "Abraham Tower",
                   "image": "/factions/iyc0xe5uxsqix50ai6pzryo_fpi7wo5rjowwiw2wxjk7xf_fahg60cez1u06fskfykboygx8eh157yrajv6xqptpxxoxtyml3sigpzyrv0hdt6ni39_6cz8w_th_8umw-6eehcmwppowiyqa1ewj3jtxgltwvpkr31hq08seopa.webp",
-                  "description": "The long-serving Commander of G.U.N., a disciplined military leader who gradually pushed the organization toward a more defensive and accountable role while confronting its troubled past."
+                  "description": "The long-serving Commander of G.U.N., a disciplined military leader who gradually pushed the organization toward a more defensive and accountable role while confronting its troubled past.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Hope Kintobor",
                   "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-4.png",
-                  "description": "A brilliant and compassionate young G.U.N. engineer, descended from the Robotnik family."
+                  "description": "A brilliant and compassionate young G.U.N. engineer, descended from the Robotnik family.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "Agent Topaz",
                   "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-5.png",
-                  "description": "A skilled and dependable G.U.N. intelligence operative, known for her professionalism, resourcefulness, and close working relationship with Rouge during covert missions."
+                  "description": "A skilled and dependable G.U.N. intelligence operative, known for her professionalism, resourcefulness, and close working relationship with Rouge during covert missions.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Captain Andrews",
                   "image": "/factions/shadow_idw_render_2_by_doeyduey_djkw0km-pre-6.png",
-                  "description": "A seasoned G.U.N. officer and field commander, responsible for leading troops and coordinating military operations in the field."
+                  "description": "A seasoned G.U.N. officer and field commander, responsible for leading troops and coordinating military operations in the field.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             }
