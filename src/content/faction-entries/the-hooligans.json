@@ -1,0 +1,74 @@
+{
+  "order": 3,
+  "faction": "mobius",
+  "group": "side",
+  "name": "The Hooligans",
+  "image": "/factions/side-3.webp",
+  "background": "/factions/pasted-image-1791546639552.png",
+  "color": "#b77bba",
+  "quote": [],
+  "leader": "Nack the Weasel",
+  "headquarters": "N/A",
+  "bases": [
+    "N/A"
+  ],
+  "allies": [
+    "Anyone, for the right ammount"
+  ],
+  "enemies": [
+    "Anyone, for the right ammount"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Hooligans, are an independent group of mercenaries for hire who travel the world in search of anything they consider valuable. While they primarily accept contracts from paying clients, they also double as bounty hunters, treasure hunters, and opportunistic scavengers whenever they're between jobs.\n\nThe group has occasionally been employed by Dr. Eggman to carry out missions on his behalf, particularly when his Egg Army and Badnik Horde are occupied elsewhere. \n\nHowever, Eggman isn't their only potential employer. On occasion, even the \"heroes\" may approach the Hooligans when their particular skills prove useful.\n\nUltimately, the Hooligans answer to the money, not to a cause. They aren't loyal members of Eggman's forces, nor are they committed allies of Sonic and his friends. They're independent operators who go wherever the opportunities take them, provided the reward justifies the risk."
+        }
+      ]
+    },
+    {
+      "title": "Member",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "The Hooligans",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Fang the Hunter",
+                  "image": "/factions/main-1-2.webp",
+                  "description": "Fang is a cunning, mischievous, and greedy bounty hunter who tries to appear cool and confident but is ultimately a coward when his plans fail. He relies on gadgets, traps, and his popgun to gain an advantage, using aliases to evade authorities while hunting valuable treasures. Motivated by wealth rather than world domination, he is willing to cooperate with allies or enemies for the right price and share rewards with his teammates. Fang can also be lazy and enjoys giving nicknames to everyone he meets, including his teammates, Bark and Bean."
+                },
+                {
+                  "name": "Bark the Polar Bear",
+                  "image": "/factions/main-1-3.webp",
+                  "description": "Bark has an indifferent and expressionless face. He is taciturn and never speaks; instead, Fang and Bean speak on his behalf. Even when injured, he never makes a sound, communicating through facial expressions instead. In reality, Bark is very shy and dislikes showing his vulnerable side, especially when receiving compliments."
+                },
+                {
+                  "name": "Bean the Dynamite",
+                  "image": "/factions/main-1-4.webp",
+                  "description": "Bean is hyperactive, eccentric, and unpredictable, with a goofy, nonchalant demeanor and a love for sports and explosions. Despite his playful attitude, he can be vicious, violent, sarcastic, and cruel, rarely showing fear even in dangerous situations. However, he has a compassionate side and can occasionally act as the voice of reason, though he has a breaking point when pushed too far."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Aprox. +10 years ago"
+    }
+  ]
+}
