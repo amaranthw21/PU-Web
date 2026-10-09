@@ -43,7 +43,7 @@
                   "name": "Scourge",
                   "image": "/factions/screenshot-2026-10-08-at-20.13.38.webp",
                   "description": "Supreme Leader of the Acorn Empire (in spirit) & Nortica's Calamity\n[(For more information check Suppression Squad)](https://amaranthw21.github.io/PU-Web/factions/mobius/suppresion-squad)",
-                  "status": "available",
+                  "status": "taken",
                   "player": ""
                 },
                 {
@@ -57,7 +57,7 @@
                   "name": "Seraphine the Light (Anti-Mephiles)",
                   "image": "/factions/pasted-image-1791569657827.png",
                   "description": "Seraphine the Light (Anti-Mephiles) is the voice of Selune and the protector of Caeluna. Despite her gentle demeanor and detached personality, she has participated in numerous wars throughout her existence. Her devotion to protecting her people sometimes leads her to fight alongside A.R.M.S. in the defense of Hyperion.",
-                  "status": "available",
+                  "status": "",
                   "player": ""
                 },
                 {
