@@ -7,6 +7,20 @@ backend:
   branch: main
   # OAuth broker (Cloudflare Worker) that handles the "Sign In with GitHub" flow.
   base_url: https://pu-web-cms-auth.amaranthw21.workers.dev
+  # Quien entra sin permiso de escritura en el repo (los nuevos) no publica
+  # directamente: el CMS le crea un fork y sus cambios llegan como pull request,
+  # que uno de los mods con permiso de escritura revisa y publica desde la
+  # página "Editorial Workflow" del panel.
+  open_authoring: true
+  # El repo es público, así que a los nuevos solo se les pide acceso a repos
+  # públicos y no a todos los suyos, privados incluidos.
+  auth_scope: public_repo
+
+# Open Authoring lo exige a nivel global. Cada colección lo vuelve a poner en
+# `simple` (más abajo) para que los mods con permiso de escritura sigan
+# guardando directo en `main`, como hasta ahora; a los nuevos eso no les afecta,
+# lo suyo pasa siempre por revisión.
+publish_mode: editorial_workflow
 
 # Nota: `local_backend` y `locale` no existen en Sveltia CMS (los ignora y avisa
 # por consola), así que no se declaran aquí. Para editar en local se usa el botón
@@ -43,6 +57,7 @@ collections:
   # Un solo archivo, no una colección: la portada es una y no se crean más. De
   # ahí `files` en vez de `folder`.
   - name: pages
+    publish_mode: simple
     label: Pages
     files:
       - name: home
@@ -86,6 +101,7 @@ collections:
 
   # ───────────────────────── Species ─────────────────────────
   - name: species
+    publish_mode: simple
     label: Species
     label_singular: Species
     folder: src/content/species
@@ -301,6 +317,7 @@ collections:
   # El contenedor de las facciones, el equivalente de Worlds: un botón en la
   # página Factions y sus grupos. Las facciones en sí van en "Factions".
   - name: factions
+    publish_mode: simple
     label: Faction hubs
     label_singular: Faction hub
     folder: src/content/factions
@@ -337,6 +354,7 @@ collections:
 
   # ───────────────────────── Gods ─────────────────────────
   - name: gods
+    publish_mode: simple
     label: Gods
     label_singular: God
     folder: src/content/gods
@@ -484,6 +502,7 @@ collections:
   # Va detrás de Gods a propósito: reutiliza los bloques de contenido
   # (*blocks), que se definen allí.
   - name: npcs
+    publish_mode: simple
     label: NPCs
     label_singular: NPC
     folder: src/content/npcs
@@ -527,6 +546,7 @@ collections:
 
   # ───────────────────────── Energies ─────────────────────────
   - name: energy
+    publish_mode: simple
     label: Energies
     label_singular: Energy
     folder: src/content/energy
@@ -553,6 +573,7 @@ collections:
 
   # ───────────────────────── Powers ─────────────────────────
   - name: powers
+    publish_mode: simple
     label: Powers
     label_singular: Power
     folder: src/content/powers
@@ -578,6 +599,7 @@ collections:
 
   # ───────────────────────── Transformations ─────────────────────────
   - name: transformations
+    publish_mode: simple
     label: Transformations
     label_singular: Transformation
     folder: src/content/transformations
@@ -603,6 +625,7 @@ collections:
 
   # ───────────────────────── Items ─────────────────────────
   - name: items
+    publish_mode: simple
     label: Important Items
     label_singular: Item
     folder: src/content/items
@@ -634,6 +657,7 @@ collections:
 
   # ───────────────────────── Worlds ─────────────────────────
   - name: worlds
+    publish_mode: simple
     label: Worlds
     label_singular: World
     folder: src/content/worlds
@@ -664,6 +688,7 @@ collections:
 
   # ───────────────────────── Countries ─────────────────────────
   - name: countries
+    publish_mode: simple
     label: Countries
     label_singular: Country
     folder: src/content/countries
@@ -868,6 +893,7 @@ collections:
   # cita, Basic Information y bloques de contenido. La única diferencia es que su
   # último apartado lista personajes en lugar de lugares.
   - name: faction-entries
+    publish_mode: simple
     label: Factions
     label_singular: Faction
     folder: src/content/faction-entries
@@ -1075,6 +1101,7 @@ collections:
 
   # ───────────────────────── Side worlds ─────────────────────────
   - name: side-worlds
+    publish_mode: simple
     label: Side worlds
     label_singular: Side world
     folder: src/content/side-worlds
@@ -1092,6 +1119,7 @@ collections:
 
   # ───────────────────────── Lore (section index) ─────────────────────────
   - name: lore
+    publish_mode: simple
     label: Lore (sections)
     label_singular: Lore section
     folder: src/content/lore
@@ -1116,6 +1144,7 @@ collections:
   # en /rulesbook/<nombre-del-archivo>. Las reglas de dentro son los "Content
   # blocks", igual que las secciones de cualquier otra ficha.
   - name: rules
+    publish_mode: simple
     label: Rulesbook
     label_singular: Rule chapter
     folder: src/content/rules
@@ -1138,6 +1167,7 @@ collections:
   # Dentro, `items` es todo lo que va en ese tramo, en orden. El lado en el que
   # cae cada tarjeta no se elige: la página las alterna sola.
   - name: timeline
+    publish_mode: simple
     label: Timeline (eras)
     label_singular: Era
     folder: src/content/timeline
@@ -1234,6 +1264,7 @@ collections:
   # página. Reutiliza la cita, los bloques y las filas extra de las demás
   # fichas, y añade la fecha y las entradas relacionadas.
   - name: chronicles
+    publish_mode: simple
     label: Server Chronicles
     label_singular: Chronicle
     folder: src/content/chronicles
