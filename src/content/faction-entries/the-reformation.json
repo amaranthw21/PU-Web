@@ -1,0 +1,32 @@
+{
+  "order": 2,
+  "faction": "moebius",
+  "group": "main",
+  "name": "The Reformation",
+  "image": "/factions/moebius/main-2.png",
+  "background": "/factions/pasted-image-1791567814876.png",
+  "color": "#c8e8f7",
+  "quote": [],
+  "leader": "Dr Kintobor",
+  "headquarters": "???",
+  "bases": [
+    "???"
+  ],
+  "allies": [],
+  "enemies": [
+    "Acorn Imperial Forces"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": []
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
