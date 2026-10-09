@@ -49,17 +49,23 @@
                 {
                   "name": "Clutch the Opossum",
                   "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x.webp",
-                  "description": "The founder and owner of **Clean Sweep Inc.**, Clutch the Opossum is a shrewd and opportunistic mafia boss who built his company around recovering valuable goods and taking advantage of lucrative opportunities. He is not above bending the rules when it benefits him, making him a questionable but effective employer."
+                  "description": "The founder and owner of **Clean Sweep Inc.**, Clutch the Opossum is a shrewd and opportunistic mafia boss who built his company around recovering valuable goods and taking advantage of lucrative opportunities. He is not above bending the rules when it benefits him, making him a questionable but effective employer.",
+                  "status": "taken",
+                  "player": "v3lvetwr1tez_"
                 },
                 {
                   "name": "Rough the Skunk",
                   "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-1.png",
-                  "description": "A full-time member of **Clean Sweep Inc.**, Rough the Skunk is a tough and aggressive enforcer who relies on intimidation and brute force to get the job done. He is the brother of **Tumble the Skunk.**"
+                  "description": "A full-time member of **Clean Sweep Inc.**, Rough the Skunk is a tough and aggressive enforcer who relies on intimidation and brute force to get the job done. He is the brother of **Tumble the Skunk.**",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Tumbre the Skunk",
                   "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-1.webp",
-                  "description": "A full-time member of **Clean Sweep Inc.**, Tumble the Skunk is **Rough’s brother** and a tough, easygoing bruiser, often relying on his strength and enthusiasm when handling difficult jobs."
+                  "description": "A full-time member of **Clean Sweep Inc.**, Tumble the Skunk is **Rough’s brother** and a tough, easygoing bruiser, often relying on his strength and enthusiasm when handling difficult jobs.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             },
@@ -70,17 +76,23 @@
                 {
                   "name": "Mimic the Octopus",
                   "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-2.webp",
-                  "description": "A part-time member of **Clean Sweep Inc.**, Mimic the Octopus is a skilled infiltrator and shapeshifter whose services are brought in for jobs requiring deception or impersonation. His current whereabouts and status are unknown."
+                  "description": "A part-time member of **Clean Sweep Inc.**, Mimic the Octopus is a skilled infiltrator and shapeshifter whose services are brought in for jobs requiring deception or impersonation. His current whereabouts and status are unknown.",
+                  "status": "taken",
+                  "player": "agbv"
                 },
                 {
                   "name": "Surge the Tenrec",
                   "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-3.webp",
-                  "description": "Surge the Tenrec is a volatile and rebellious tenrec with a fierce hatred of Eggman and those who serve him. Her current relationship with the company is uncertain, particularly after her experiences as one of Starline’s creations."
+                  "description": "Surge the Tenrec is a volatile and rebellious tenrec with a fierce hatred of Eggman and those who serve him. Her current relationship with the company is uncertain, particularly after her experiences as one of Starline’s creations.",
+                  "status": "reserved",
+                  "player": ""
                 },
                 {
                   "name": "Kitsunami the Fennec",
                   "image": "/factions/clutch_the_opossum_render_4__by_psychovert_djm2nbs-414w-2x-4.webp",
-                  "description": "Kitsunami the Fennec is a quiet and anxious fennec who was often overshadowed by Surge. Despite his immense water-manipulation abilities, he is deeply insecure and struggles with the trauma and conditioning he endured under Starline."
+                  "description": "Kitsunami the Fennec is a quiet and anxious fennec who was often overshadowed by Surge. Despite his immense water-manipulation abilities, he is deeply insecure and struggles with the trauma and conditioning he endured under Starline.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             }
