@@ -33,9 +33,9 @@
           "caption": "Virtue Logo (Grey) // Vice Logo (Red)",
           "imagePositionX": 50,
           "imagePositionY": 50,
-          "fit": "fill",
+          "fit": "whole",
           "imageSide": "right",
-          "layout": "column"
+          "layout": "wrap"
         }
       ]
     },
