@@ -118,27 +118,37 @@
                 {
                   "name": "Regina Ferrum",
                   "image": "/factions/iron_queen_arrival.webp",
-                  "description": "**Regina Ferrum** is the ruthless and ambitious Iron Queen of the Iron Dominion, a powerful Magitek sorceress who seeks to expand her influence and forge an empire of her own."
+                  "description": "**Regina Ferrum** is the ruthless and ambitious Iron Queen of the Iron Dominion, a powerful Magitek sorceress who seeks to expand her influence and forge an empire of her own.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Endless Reach",
                   "image": "/factions/iron_queen_arrival-1.webp",
-                  "description": "A mysterious and powerful head who helped shape the Dominion and its clans through her gifts and guidance. She is the main reader of the Web of fate."
+                  "description": "A mysterious and powerful head who helped shape the Dominion and its clans through her gifts and guidance. She is the main reader of the Web of fate.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Constant Vigil",
                   "image": "/factions/iron_queen_arrival-2.webp",
-                  "description": "**Constant Vigil** is the leader of the Shinobi Clan and a skilled master of espionage, as well as Espio's mother. While loyal to the Iron Dominion she quietly supports those who choose to leave the clan."
+                  "description": "**Constant Vigil** is the leader of the Shinobi Clan and a skilled master of espionage, as well as Espio's mother. While loyal to the Iron Dominion she quietly supports those who choose to leave the clan.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Sango (OC)",
                   "image": "/factions/pasted-image-1790884049147.png",
-                  "description": "Sango, the daughter of previous Rich Nights. Currently the youngest Head in the clan at just 17 years old. She is a calm and compassionate girl with a deep love and respect for her clan, having to both follow in her mothers footsteps, and walk in Regina's shadow"
+                  "description": "Sango, the daughter of previous Rich Nights. Currently the youngest Head in the clan at just 17 years old. She is a calm and compassionate girl with a deep love and respect for her clan, having to both follow in her mothers footsteps, and walk in Regina's shadow",
+                  "status": "taken",
+                  "player": "dustytail_studios"
                 },
                 {
                   "name": "Vanquishing Tempest",
                   "image": "",
-                  "description": ""
+                  "description": "",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             }
