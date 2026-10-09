@@ -1,0 +1,206 @@
+{
+  "order": 2,
+  "faction": "mobius",
+  "group": "custom",
+  "name": "Seven Circles Mercenaries",
+  "image": "/factions/custom-2.png",
+  "background": "/factions/pasted-image-1791562197888.png",
+  "color": "",
+  "quote": [],
+  "leader": "Dante Feu, Lilan Maharaja, and Goetia Kibrit",
+  "headquarters": "Seven Circles HQ",
+  "bases": [
+    "Spagonia"
+  ],
+  "allies": [
+    "Clutch Mafia",
+    "Breezie Media",
+    "Freedom Fighters"
+  ],
+  "enemies": [
+    "N/A"
+  ],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "One of the largest mercenary organizations globally. Born during the War to Take Back the Planet, the organization are fighters at heart, but not for a sole noble cause. They have a very open door policy when it comes to their members, taking in those from all walks of life. By extension, Seven Circles is a place of second chances and giving their members a place to belong. \n\nThere are two factions in Seven Circles, Vice and Virtue. _Virtue_ is mostly made up of those from more polished and clean backgrounds; from a famous family of assassins, spies from a government, completely new mercs, etc. _Vice_, meanwhile, is more… rough around the edges; your ex crime groups members, prisoners, even past villains. These aren’t hard and fast rules, however, and who goes into these factions are mostly based on attitude and behavior. The goal is to have the divisions be perfectly balanced and encourage diverse teamwork. \n\nAcross the globe, new mercenaries are handpicked by the commanders of Vice and Virtue, Goetia and Lilan, often giving people a second lease on life. Everyone gets a callsign upon joining."
+        }
+      ]
+    },
+    {
+      "title": "Background",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Origin",
+          "text": "Before there were the Seven Circles mercenaries, there were the Infernal Mercenaries. A small group of skilled human mercenaries in Spagonia led by Dante Feu. Not much happened with the group until about a year ago in the War to Take Back the Planet, where both Eggman, those who opposed him, and those who could afford personal protection hired mercenaries left and right across the globe. \n\nIt was during this that Dante met Lilan, a human mercenary from Adabat who fled after his home was invaded and was looking for work. The two quickly became friends, but the Infernal Mercenaries were forced to flee as the war got more heated in Spagonia. The found sanctuary in Monopole, swiftly bumping into another mercenary group, The Eyed Crowns, made up of several other merc groups that wanted to take advantage of the grim situation as much as they wanted their own safety. Their leader, a volatile sheep named Goetia who was born and raised in Monopole, eventually agreed to protect the Infernal Mercenaries. \n\nAlthough the group was able to hold out for a while, the Egg Army had closed in on them. The Eyed Crowns along with the Infernal Mercenaries had to make a last ditch effort to the Resistance. Many were lost in the process. \n\nEventually, everything went back to the status quo and the war ended. But it was also the end of the Resistance. After the announcement that the Resistance was shifting to become a humanitarian group called the Restoration, it left the Eyed Crowns and the Infernal Mercenaries without a path forward, many displaced or had died during the war. But instead of despairing, Dante saw it as an opportunity to be inspired by the Resistance. When one door closes, another door opens."
+        },
+        {
+          "type": "text",
+          "title": "Past",
+          "text": "Together Dante, Lilan, and Goetia began to create a bigger and better mercenary group, sailing to Spagonia with the remaining members of the Infernal Mercenaries, Eyed Crowns, and some of old members of the Resistance that wanted a more fighting focused group that promised pay to make the first team of the newly formed Seven Circles Mercenaries. \n\nHowever, things were slow at the start from clashes in vision for the organisation. Goetia purely saw it as a business venture, just like with the Eyed Crowns. Meanwhile, Lilan wanted to use the organization to prevent threats like the Phantom War from ever happening again and help people. Dante became the mediator of the two opposite visions, having the organization be welcoming to all and absolutely will take honorable jobs, but ultimately an organization that needed to sustain itself. As the organization developed, Dante noticed that keeping the groups from the Infernal Mercenaries and the Eyed Crowns separate were creating tension and eroding teamwork, leading to the creation of the Vice and Virtue factions, and the mixing of the two in their divisions.\n\nRapidly, the organization grew more powerful. The group’s expertise and adaptability  proved to be invaluable as just about anyone who could afford them found some kind of indispensable use of their skills. From Freedom Fighter branches, GUN Outposts, to Egg Bosses, The Seven Circles have worked with just about every big name group."
+        }
+      ]
+    },
+    {
+      "title": "Divisions",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Division I: Pride/Humility",
+          "text": "The Veteran Division. Made up of members all the way back before Seven Circles was formed. The best of the best. Rather than one specialty, this unit relies on hard won experience and a versatile range of skills across its members. This elite team is only called for emergencies, extremely high risk missions, and situations where the morality of the situation could hinder other units."
+        },
+        {
+          "type": "text",
+          "title": "Division II: Wrath/Patience",
+          "text": "Assassin and bounty hunting division. The people you call when you want to eliminate someone specific or have them on your front line to mow down the opposition. By far the most combat focused of the units, with fighting styles that will have you spoiled for choice. Just be wary of the loose cannons. They’re tracking skills are unmatched; no matter how far their target goes or how long they run, these members will play the long game and find them."
+        },
+        {
+          "type": "text",
+          "title": "Division III: Desire/Chasity",
+          "text": "Spywork and sabotage division. If there is information you want or want to put your opposition at a disadvantage, this unit has you covered. Renowned for their stealth, manipulation, and precision, they are able to infiltrate enemy lines and even act as double agents. They can use genuine innocent and wholesome character to their advantage as well as pure deception."
+        },
+        {
+          "type": "text",
+          "title": "Division IV: Gluttony/Temperance",
+          "text": "Bodyguard and security division. No matter if it be an object, person, or place, this unit will guard it with their lives. While half of this unit are pure tanks meant to wall off whatever they are protecting, the other half are careful and evasive, taking their guarded target from point a to b or moving them around to keep them out of the wrong hands. Despite everything that might get thrown at them, they always seem to have an acute awareness of their surroundings and others, and when something is missing."
+        },
+        {
+          "type": "text",
+          "title": "Division V: Sloth/Diligence",
+          "text": "The tech and mechanics division. The backstage crew, so to speak, with people that fill in many roles. From R&D, repairs, hacking, logistics, dispatching, etc; the only throughline is that they are the unit that supports you from the safety of HQ. Though the members who can help you are a coin flip. You either get an overzealous workaholic that crashes once a month, or a slouch who only finds the motivation to get out of their comfort spot once a month. Everyone in this unit is very intelligent, but how they use this intelligence is wildly different."
+        },
+        {
+          "type": "text",
+          "title": "Division VI: Greed/Charity",
+          "text": "The medic division. The on-site support of Seven Circles, often paired with the Wrath/Patience division to keep them standing. While many are skilled nurses and healers, others have more… offensive use for their medical knowledge. It’s not uncommon to find a poison specialist in this unit who either protects their patients or compromises the opposition’s fighters. There are also thieves in the unit that steal the enemy’s supplies and weapons."
+        },
+        {
+          "type": "text",
+          "title": "Division VII: Envy/Kindness",
+          "text": "Last but certainly not least, the training division. Where every single newcomer of Seven Circles ends up to be ruthlessly put to the test as they either sink or swim. While the unit is undoubtedly cared for and are put on low stakes missions only, they get a lot of tough love and the teachers are often in a game of good cop and bad cop. Both every flaw and every perfection is brought to your attention as your training is put under extreme scrutiny. Ultimately, only the most willful are able to push through the pressure and the competition to prove themselves."
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Leaders",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Dante Feu",
+                  "image": "",
+                  "description": "A 45 year old human man agreed to be the head of the entire organization. From Spagonia, he came from a rich and prestigious spy family that was high ranking in the Spagonian army. He became a mercenary in his early 20s and went on to use his family’s fortune to keep Seven Circles stable during its beginning stages. Often the voice of reason.",
+                  "status": "",
+                  "player": ""
+                },
+                {
+                  "name": "Lilan Naharaja",
+                  "image": "",
+                  "description": "**Callsign Raguel;** A 27 year old human man from Adabat and the commander of Virtue. Came from a long line of mercenaries. For someone who has a bloody career, he is surprisingly bright eyed and idealistic. He’s kind of up tight, though.",
+                  "status": "",
+                  "player": ""
+                },
+                {
+                  "name": "Goetia Kibrit",
+                  "image": "",
+                  "description": "**Callsign Thanatos;** A 29 year old sheep mobian woman from Monpole and the commander of Vice. Aggressive, strict, and greedy, she’s not the type many would like from first impressions alone. Despite this, she’s a nice person once you get to know her and see how much she actually cares about the organization. She’s a formidable magic user with a fascination for dark magic.",
+                  "status": "",
+                  "player": ""
+                }
+              ]
+            },
+            {
+              "title": "Division I: Pride/Humility",
+              "description": "[Humility Leader: Possible callsign Raphael or Humilitas]",
+              "characters": [
+                {
+                  "name": "Supervia",
+                  "image": "",
+                  "description": "",
+                  "status": "reserved",
+                  "player": ""
+                }
+              ]
+            },
+            {
+              "title": "Division II: Wrath/Patience",
+              "description": "[Wrath Leader: Possible callsign Amon, Abbadon, Moloch, or Ira]\n\n[Patience Leader: Possible callsign Azrael or Patientia]",
+              "characters": []
+            },
+            {
+              "title": "Division III: Desire/Chasity",
+              "description": "[Chasity Leader: Possible callsign Uriel or Castitas]",
+              "characters": [
+                {
+                  "name": "Asmodeus",
+                  "image": "",
+                  "description": "",
+                  "status": "taken",
+                  "player": "arstasia"
+                }
+              ]
+            },
+            {
+              "title": "Division IV: Gluttony/Temperance",
+              "description": "Gluttony Leader: Possible callsign Beelzebub, Behemoth, or Gula]\n\n[Temperance Leader: Possible callsign Cassiel or Temperantia]",
+              "characters": []
+            },
+            {
+              "title": "Division V: Sloth/Diligence",
+              "description": "[Sloth Leader: Possible callsign Belphegor or Acedia]\n\n[Diligence Leader: Possible callsign Gabriel or Industria]",
+              "characters": []
+            },
+            {
+              "title": "Division VI: Greed/Charity",
+              "description": "[Greed Leader: Possible callsign Mammon and Avarice]\n\n[Charity Leader: Possible callsign Michael or Caritas]",
+              "characters": []
+            },
+            {
+              "title": "Division VII: Envy/Kindness",
+              "description": "[Envy Leader: Possible callsign Leviathan]\n\n[Kindness Leader: Possible callsign Ramiel or Humanitas]",
+              "characters": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Neutral",
+      "value": "Eggman Empire & Egg Bosses\nG.U.N\nRestoration\nGalileo"
+    },
+    {
+      "label": "Type",
+      "value": "Mercenary Organization"
+    },
+    {
+      "label": "Divisions",
+      "value": "Division 1: Pride/Humility\nDivision 2: Wrath/Patience\nDivision 3: Gluttony/Temperance\nDivision 4: Desire/Discipline  \nDivision 5: Sloth/Diligence \nDivision 6: Greed/Charity\nDivision 7: Envy/Kindness"
+    },
+    {
+      "label": "Common Weaponry",
+      "value": "A very wide variety, often technological in nature from Sloth/Diligence"
+    },
+    {
+      "label": "Vehicles",
+      "value": "Extreme Gear, automobiles, and planes"
+    }
+  ]
+}
