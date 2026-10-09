@@ -1,0 +1,82 @@
+{
+  "order": 25,
+  "faction": "mobius",
+  "group": "main",
+  "name": "Society of Dark Gaia",
+  "image": "/factions/main-25.png",
+  "background": "",
+  "color": "#17ff17",
+  "quote": [],
+  "leader": "Dark Gaia ?",
+  "headquarters": "N/A",
+  "bases": [
+    "East Labyrinth - Cardinal Archipelago",
+    "Rust Water Marshes - U.F.",
+    "Endless Mine - Acorn Kingdom",
+    "White Cave - Great Itzana",
+    "Hang Castle - Eggman Empire",
+    "Chrystal Deeps - Mazuri",
+    "Fissure Tunnels - Spagonia",
+    "Briar Keep Dungeons - Silvania",
+    "Forgotten Tombs - Shamar",
+    "Green Cave - Monopole",
+    "Gigan Device - Chu-Nan",
+    "The Great Crater - Trallius",
+    "Ice Cave - Holoska",
+    "Anostos Rift - Great Blue Realm",
+    "Abyssal Deeps - Kingdom of Northern Waters"
+  ],
+  "allies": [],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "rewrite \n\nThe Society of Dark Gaia is the counterpart cult to all the Light Gaia religious groups and Light Gaia temples around Mobius. Compared to their light counterparts, the Society is very organized yet varied. There are many, many cults within the organization where some are centuries old, while others are only a few years recent. The most consistent trait between them beside their shared god is that they regard places susceptible to Dark Gaia’s influence as holy sites. Some of the oldest cults are located around the labyrinths of the Cardinal Archipelago, the Fissure Tunnels in Spagonia’s Magma Rift, and Gigan Device deep in the mountains of Chun Nan. All of these individual cults do have names.\n\nIn the very beginnings of the religion, the worship of Dark Gaia was seen as self preservation. Perhaps if they appeased and helped the great god they would be spared from its wrath or even be granted a higher plane of existence. \n\nHowever, as these ancient cults developed, they began to believe that Dark Gaia destroying Mobius would have them be reincarnated into a better world, and that Light Gaia was preventing this better world. Thus, everything that exists in this current world is meaningless. If they worship and follow Dark Gaia, their souls will be brought into a new dawn while the others will be left behind. These beliefs are said to be the bedrock of the religion. \n\nFrom here, the beliefs of the cults branch out. Some see Dark Gaia as a loving figure, while others see it as someone whose wrath must be avoided. Some believe that Dark Gaia is bringing the next stage in evolution to his soldiers, or that it wants them to achieve ultimate freedom, etc."
+        }
+      ]
+    },
+    {
+      "title": "Known Cults",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "East Labyrinth Cult",
+          "text": "The Labyrinth Cult is one of the oldest, largest, and most secretive factions within the Society of Dark Gaia. Often regarded as the _purists_ of the religion, they adhere closely to its foundational beliefs and seek to spread the worship of Dark Gaia as widely as possible. To them, converting others is not merely a religious duty, but a necessary step toward bringing about the promised new world. They are willing to employ virtually **any means** to achieve this goal, making them one of the most relentless and potentially dangerous cults."
+        },
+        {
+          "type": "text",
+          "title": "Fissure Tunnels Cult",
+          "text": "The Fissure Tunnel Cult views Dark Gaia as an ultimately loving deity who values knowledge and freedom above all else. Rather than worshipping him out of fear or seeking to appease his wrath, its followers believe that he wishes for all beings to pursue understanding and free themselves from the limitations imposed upon them. To them, Dark Gaia's influence represents an opportunity for enlightenment and liberation, even if achieving such ideals requires abandoning the values and conventions of the current world."
+        },
+        {
+          "type": "text",
+          "title": "Gigan Device Cult",
+          "text": "The Gigan Device Cult views Dark Gaia's energy as a force to be harnessed, studied, and ultimately integrated into the future of Mobius. Its followers believe that this energy represents the next stage in the planet's evolution, capable of pushing life beyond its current limitations. Among the oldest cults within the Society of Dark Gaia, they are also the most technologically advanced, combining their religious convictions with scientific research and experimentation to unlock the potential of Dark Gaia's power."
+        }
+      ]
+    },
+    {
+      "title": "The Prophet",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Prophet occupies the highest position within a Dark Gaia cult and serves as its de facto leader. While there is no single Prophet recognized by the entire Society of Dark Gaia, each individual cult may have only one, as it is believed that only a select few are worthy of receiving Dark Gaia's blessing and interpreting his will.\n\nProphets are responsible for overseeing both the internal affairs of their cult and its relationships with the outside world. They make major decisions, guide their followers, and represent their cult in dealings with other Dark Gaia organizations. Their position carries considerable authority and rewards, but also immense responsibility. Should a cult suffer a major failure or fall into disarray, its members may interpret this as a sign that Dark Gaia has withdrawn his favor, potentially demanding the Prophet's removal.\n\nThe extent of a Prophet's knowledge varies. Some are genuine believers who know little of the truth behind their deity, while others are fully aware of Dark Gaia's true nature and the secrets hidden within the Society. Their reasons for remaining in power despite this knowledge differ from one individual to another."
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
