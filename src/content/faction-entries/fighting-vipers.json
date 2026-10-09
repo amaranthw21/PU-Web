@@ -90,17 +90,23 @@
                 {
                   "name": "Honey the Cat",
                   "image": "/factions/amy_and_honey_friendship.png",
-                  "description": "The CEO of Honey Brand Clothing and Accessories primarily, but with a history of fighting to her name as well! She’s the one who started the Fighting Vipers in the first place, along with supplying the main gear for the Vipers and acting as morale for the group. She does tend to balance the Vipers with her clothing business, but she does keep in consistent contact with them whenever she’s not active in person."
+                  "description": "The CEO of Honey Brand Clothing and Accessories primarily, but with a history of fighting to her name as well! She’s the one who started the Fighting Vipers in the first place, along with supplying the main gear for the Vipers and acting as morale for the group. She does tend to balance the Vipers with her clothing business, but she does keep in consistent contact with them whenever she’s not active in person.",
+                  "status": "taken",
+                  "player": "hydrotropicguy"
                 },
                 {
                   "name": "Candy the Cat",
                   "image": "/factions/pasted-image-1791554284057.png",
-                  "description": "Honey’s twin sister, along with being the one to handle the Vipers when she’s focusing on her other business. It can be noted that Candy’s more into the fighting aspect than her sister would be, some even joking that it is like a boot camp whenever she’s left in charge of the group with how much she enforces the idea of getting stronger with every hour. Of course, those would be lighthearted, as it’s more like a party in those cases."
+                  "description": "Honey’s twin sister, along with being the one to handle the Vipers when she’s focusing on her other business. It can be noted that Candy’s more into the fighting aspect than her sister would be, some even joking that it is like a boot camp whenever she’s left in charge of the group with how much she enforces the idea of getting stronger with every hour. Of course, those would be lighthearted, as it’s more like a party in those cases.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Pane the Boar",
                   "image": "/factions/amy_and_honey_friendship-1.webp",
-                  "description": ""
+                  "description": "",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             }
