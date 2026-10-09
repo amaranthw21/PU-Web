@@ -1,0 +1,65 @@
+{
+  "order": 1,
+  "faction": "mobius",
+  "group": "side",
+  "name": "Battle Bird Armada",
+  "image": "/factions/mobius/side-1-border.png",
+  "background": "/factions/pasted-image-1791541081324.png",
+  "color": "#399f68",
+  "quote": [],
+  "leader": "Battle Lord Kukku XV",
+  "headquarters": "Battle Fortress",
+  "bases": [
+    "N/A"
+  ],
+  "allies": [],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The Battle Bird Armada is an antagonistic military organization consisting entirely of Mobian birds, led by Battle Lord Kukku XV. Their primary objective is to conquer the skies of Mobius and establish their dominance through military strength and advanced weaponry. Like the Babylon Rogues, the Armada is descended from the ancient Babylonians, sharing a connection to the civilization's distant past. Despite their ambitions and considerable military power, they generally operate independently.\n\nAlthough the Battle Bird Armada typically pursues its own interests, it has occasionally collaborated with Dr. Eggman, undertaking missions that align with his plans. During the last Dark Gaia Crisis, the Armada worked alongside Eggman, carrying out operations against the Sky Patrol, kidnapping Chip, and targeting a G.U.N. flying carrier near Apotos. \n\nHowever, the organization also has a history of conflict with Miles \"Tails\" Prower. In the past, Tails single-handedly fought his way across one of their island bases, overcoming their soldiers and defeating their officers, bringing their operations to an end. Despite this defeat, the Battle Bird Armada remains a formidable military force."
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "Battle Bird Armada",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Battle Lord Kukku XV",
+                  "image": "/factions/main-1.webp",
+                  "description": "Battle Lord Kukku XV is extremely proud of his lineage and empire, viewing himself as the epitome of perfection. Arrogant and ambitious, he seeks to expand the Armada's power and influence. Despite having work with Dr. Eggman in the past, he despises serving under him, frequently insulting him behind his back."
+                },
+                {
+                  "name": "Speedy",
+                  "image": "/factions/main-1-1.webp",
+                  "description": "Speedy, also known as Battle Kukku XVI, is a Mobian bird who serves the Battle Bird Armada and is the son and heir of Battle Lord Kukku XV. Although loyal to his father, he fears him and once attempted to escape the Armada. He also holds a personal grudge against Jet the Hawk over a past rejection."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "Unknown"
+    }
+  ]
+}
