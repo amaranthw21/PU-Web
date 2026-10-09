@@ -1,0 +1,125 @@
+{
+  "order": 1,
+  "faction": "mobius",
+  "group": "custom",
+  "name": "Fighting Vipers",
+  "image": "/factions/custom-1.png",
+  "background": "/factions/pasted-image-1791551736568.png",
+  "color": "#cc4748",
+  "quote": [],
+  "leader": "Honey the Cat",
+  "headquarters": "Underground Base (Empire City)",
+  "bases": [
+    "U.F."
+  ],
+  "allies": [
+    "The Restoration",
+    "Freedom Fighters"
+  ],
+  "enemies": [
+    "Eggman Empire"
+  ],
+  "blocks": [
+    {
+      "title": "Background",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Origin",
+          "text": "It all started when Eggman took over the planet with the Phantom Ruby, once Empire City became overrun with Badniks and illusions. Being struck down from her rise to stardom, Honey saw those that had more unfortunate circumstances, those unable to fight back. Distraught at this, she looked to her own growth to become the person she was in the ring, inspired by her past to start a group dedicated to helping the people defend themselves from the evil that trampled the streets. \n\nWith the help of her sister and other affiliates from fighting in the ring, the Fighting Vipers were formed as an underground fight club in Empire City, named that way by Candy who felt it had a venomous touch to it.",
+          "image": "/factions/pasted-image-1791552196652.png",
+          "caption": "Honey the Cat - IDW",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        },
+        {
+          "type": "text",
+          "title": "Past",
+          "text": "When the Fighting Vipers were formed, their impact was localized entirely in Empire City. At first, nothing much came from them as it became more about training people up to have the abilities to fight for themselves, but after some time there would start to be groups of those appearing out during Badnik attacks to defend others, a force that acted when the Resistance couldn’t. With coordination and organization in groups, the Fighting Vipers became a known name to the average civilian, but also the Badnik forces of the city. \n\nTensions arose when a Viper Hunt was started in the city, the Eggman robots targeting known members of the Fighting Vipers, all the while trying to uncover their leader so that they could be taken out personally. Hearing this, Honey kept to the shadows even more than she already had, only striking whenever necessary. \n\nDuring the point in the war when the Resistance recovered Sonic and started taking down major facilities of the Eggman Empire, the Fighting Vipers chose to go all out with their attack with a burst of motivation to keep things going until the very end. It was around this point where Honey would begin to make herself more known, the group protecting Empire City to their near-ends, persevering until the war was won and their homes were no longer swarmed. \n\nWith peace restored to Mobius, the Fighting Vipers’ activities would depend on the situation. On the daily, it’d remain a club to help those who wanted to learn self defense against the still occasional forces that came by, but their influence would expand bit by bit. From securing an affiliation or two with the Restoration and Freedom Fighters, gritting their teeth in the wake of the Metal Virus, to the current day, the undying fury of freedom still unites strong within them."
+        }
+      ]
+    },
+    {
+      "title": "Divisions",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "The Vipers",
+          "text": "More commonly the title given to any member of the group, the Vipers typically are either those who have a history in fighting before such as the founding members which consisted of those that Honey fought in her past matches in the ring. Other than that, they come from varying backgrounds and fighting styles, the Vipers’ accepting all forms of combat to defend themselves."
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "The Vipers",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Honey the Cat",
+                  "image": "/factions/amy_and_honey_friendship.png",
+                  "description": "The CEO of Honey Brand Clothing and Accessories primarily, but with a history of fighting to her name as well! She’s the one who started the Fighting Vipers in the first place, along with supplying the main gear for the Vipers and acting as morale for the group. She does tend to balance the Vipers with her clothing business, but she does keep in consistent contact with them whenever she’s not active in person."
+                },
+                {
+                  "name": "Candy the Cat",
+                  "image": "/factions/amy_and_honey_friendship.webp",
+                  "description": "Honey’s twin sister, along with being the one to handle the Vipers when she’s focusing on her other business. It can be noted that Candy’s more into the fighting aspect than her sister would be, some even joking that it is like a boot camp whenever she’s left in charge of the group with how much she enforces the idea of getting stronger with every hour. Of course, those would be lighthearted, as it’s more like a party in those cases."
+                },
+                {
+                  "name": "Pane the Boar",
+                  "image": "/factions/amy_and_honey_friendship-1.webp",
+                  "description": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Rules",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Inspiration",
+          "text": "The group is loosely inspired by its namesake, [Fighting Vipers](https://en.wikipedia.org/wiki/Fighting_Vipers), though is also made to stand out as its own custom thing by itself and doesn’t require much knowledge on the series."
+        },
+        {
+          "type": "textImage",
+          "title": "Character Appereance",
+          "text": "OC members can be modeled after/inspired by the other fighters of FV adapted similarly to Honey, while not required for the group, will be encouraged if anyone shows interest, such as the example below with Pane (Jane) the Boar who cameoed in Archie.",
+          "image": "/factions/pasted-image-1791552919103.png",
+          "caption": "Fighting Freak Pane - Art by Nerfuffle",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Aligment",
+      "value": "Neutral Good"
+    },
+    {
+      "label": "Type:",
+      "value": "Fight Club/Self Defense"
+    }
+  ]
+}
