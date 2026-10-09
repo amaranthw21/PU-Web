@@ -1,7 +1,7 @@
 {
   "order": 2,
   "faction": "mobius",
-  "group": "main",
+  "group": "side",
   "name": "Witchcarters",
   "image": "/factions/mobius/Side-2-border.png",
   "background": "/factions/image-1-1.webp",
