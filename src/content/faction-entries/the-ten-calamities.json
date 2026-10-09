@@ -1,0 +1,125 @@
+{
+  "order": 3,
+  "faction": "moebius",
+  "group": "main",
+  "name": "The Ten Calamities",
+  "image": "/factions/moebius/main-3-border.png",
+  "background": "/factions/pasted-image-1791568565013.png",
+  "color": "#ac2e0a",
+  "quote": [],
+  "leader": "N/A",
+  "headquarters": "N/A",
+  "bases": [
+    "Moebius"
+  ],
+  "allies": [],
+  "enemies": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The **Ten Calamities** are a alliance (or more like a pact) in Moebius composed of individuals (or entities) whose existence, influence, or actions pose a significant threat to the planet and its inhabitants. The title is not reserved exclusively for the strongest beings, nor does it necessarily imply evil intentions. For example, Seraphiel, the Calamity of Hyperion, is currently regarded as the voice of their god by the inhabitants of Caeluna. Similarly, the leader of a powerful criminal organization could qualify as a Calamity if their influence poses a significant enough threat.\n\nEach Calamity is associated with one of Moebius's ten continents, where they maintain their own sphere of influence. However, being a continent's Calamity does not necessarily mean ruling over it, as their authority and relationship with its inhabitants vary from one member to another.\n\nTo maintain the balance of power, the Ten Calamities are bound by a **pact of non-interference** forced by the **Astral Leviathan**, which prohibits any member from intervening in another's territory without their consent. This agreement exists out of necessity, as a direct confrontation between Calamities could have devastating consequences. Although the pact does not eliminate rivalries or conflicts between members, it prevents them from openly imposing their will upon one another's domains.\n\nDespite this the Ten Calamities are not necessarily united by friendship or shared ideals. Each has their own ambitions, beliefs, and methods, and their cooperation relies primarily on mutual restraint and the understanding that a conflict between them would be disastrous. After all, when Calamities fight, it is a calamity in its own right."
+        }
+      ]
+    },
+    {
+      "title": "Members",
+      "icon": "",
+      "parts": [
+        {
+          "type": "characters",
+          "image": "",
+          "caption": "",
+          "groups": [
+            {
+              "title": "The Ten Calamities",
+              "description": "",
+              "characters": [
+                {
+                  "name": "Scourge",
+                  "image": "/factions/screenshot-2026-10-08-at-20.13.38.webp",
+                  "description": "Supreme Leader of the Acorn Empire (in spirit) & Nortica's Calamity\n[(For more information check Suppression Squad)](https://amaranthw21.github.io/PU-Web/factions/mobius/suppresion-squad)",
+                  "status": "available",
+                  "player": ""
+                },
+                {
+                  "name": "Calamity of Suramer",
+                  "image": "",
+                  "description": "",
+                  "status": "available",
+                  "player": ""
+                },
+                {
+                  "name": "Seraphine the Light (Anti-Mephiles)",
+                  "image": "/factions/pasted-image-1791569657827.png",
+                  "description": "Seraphine the Light (Anti-Mephiles) is the voice of Selune and the protector of Caeluna. Despite her gentle demeanor and detached personality, she has participated in numerous wars throughout her existence. Her devotion to protecting her people sometimes leads her to fight alongside A.R.M.S. in the defense of Hyperion.",
+                  "status": "available",
+                  "player": ""
+                },
+                {
+                  "name": "Calamity of Libera",
+                  "image": "",
+                  "description": "",
+                  "status": "available",
+                  "player": ""
+                },
+                {
+                  "name": "Calamity of Antarktos",
+                  "image": "",
+                  "description": "",
+                  "status": "available",
+                  "player": ""
+                },
+                {
+                  "name": "Calamity of Cathay",
+                  "image": "",
+                  "description": "",
+                  "status": "available",
+                  "player": ""
+                },
+                {
+                  "name": "Calamity of Erythia",
+                  "image": "",
+                  "description": "",
+                  "status": "available",
+                  "player": ""
+                },
+                {
+                  "name": "Calamity of Pacifica",
+                  "image": "",
+                  "description": "",
+                  "status": "available",
+                  "player": ""
+                },
+                {
+                  "name": "Calamity of East Ocean",
+                  "image": "",
+                  "description": "",
+                  "status": "available",
+                  "player": ""
+                },
+                {
+                  "name": "Calamity of West Ocean",
+                  "image": "",
+                  "description": "",
+                  "status": "reserved",
+                  "player": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Founded",
+      "value": "N/A"
+    }
+  ]
+}
