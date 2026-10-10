@@ -3,19 +3,42 @@
   "name": "War Times",
   "world": "mobius",
   "color": "#2f6f9e",
+  "background": "",
+  "artist": "",
+  "artistUrl": "",
   "items": [
     {
       "type": "event",
-      "date": "50 yrs ago",
-      "title": "The Ark is built as an underground colony"
+      "title": "H.A.V.E.N. is built as an underground colony",
+      "date": "",
+      "year": false,
+      "layer": "world",
+      "text": "",
+      "image": "",
+      "portraits": [],
+      "related": []
     },
     {
       "type": "event",
-      "title": "The Ark is launched into space"
+      "title": "The ARK is launched into space",
+      "date": "",
+      "year": false,
+      "layer": "world",
+      "text": "",
+      "image": "",
+      "portraits": [],
+      "related": []
     },
     {
       "type": "event",
-      "title": "The massacre of the Ark — Maria dies"
+      "title": "The massacre of the Ark — Maria dies",
+      "date": "50 years ago",
+      "year": false,
+      "layer": "world",
+      "text": "",
+      "image": "",
+      "portraits": [],
+      "related": []
     },
     {
       "type": "gap",
@@ -23,12 +46,24 @@
     },
     {
       "type": "event",
-      "title": "The Great War starts",
-      "text": "A world war: the nations against Eggman."
+      "title": "The Great War starts (World War)",
+      "date": "",
+      "year": false,
+      "layer": "world",
+      "text": "A world war: the nations against Eggman.",
+      "image": "",
+      "portraits": [],
+      "related": []
     },
     {
       "type": "event",
       "title": "Eggman conquers what will become the Eggpire",
+      "date": "",
+      "year": false,
+      "layer": "world",
+      "text": "",
+      "image": "",
+      "portraits": [],
       "related": [
         {
           "section": "worlds",
@@ -38,15 +73,25 @@
     },
     {
       "type": "event",
-      "title": "The Acorn Kingdom becomes a puppet state"
+      "title": "The Acorn Kingdom becomes a puppet state",
+      "date": "",
+      "year": false,
+      "layer": "world",
+      "text": "",
+      "image": "",
+      "portraits": [],
+      "related": []
     },
     {
       "type": "event",
-      "title": "The nations unite against Eggman"
-    },
-    {
-      "type": "event",
-      "title": "Eggman is defeated — the Great War ends"
+      "title": "The Great War ends",
+      "date": "",
+      "year": false,
+      "layer": "world",
+      "text": "",
+      "image": "",
+      "portraits": [],
+      "related": []
     }
   ]
 }
