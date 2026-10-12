@@ -1,10 +1,89 @@
 {
   "order": 1,
   "name": "Chaos Energy",
+  "custom": false,
   "icon": "/energy/master-emerald.png",
   "background": "/energy/bg/chaos.webp",
   "backgroundPosition": "center 30%",
   "backgroundZoom": null,
-  "summary": "The dimensional energy of Mobius.",
-  "description": "The dimensional energy of Mobius. Chaos energy is pure energy and very malleable in what it can do and is known to pull off otherwise impossible miracles. This energy is highly sensitive to the thoughts and emotions of the people who use it. This reactiveness causes two types of Chaos Energy application: Positive from positive emotions, and Negative from negative emotions. This split rooted in emotions causes Chaos Energy to function differently; Positive being superior to Negative. \n\nThose who are highly attuned to and skilled in Chaos Energy such as Sonic and Shadow can use Chaos Powers including Chaos Spear, Chaos Blast, and famously, Chaos Control. Chaos Control is the most notable due to being able to bend space and time. Extreme amounts of Chaos Energy from either all seven Chaos Emeralds or the Master Emerald grant god-like transformations called Super Forms. These forms can only be accessed for a short period of time, but can perform earth shattering acts during this time. After that time is up, the transformation leaves a slight boost in abilities. Recent theories believe that Chaos Energy in the planet is the cause for unusual natural structures."
+  "summary": "Resume of chaos energy here",
+  "description": "Resume of chaos energy here too",
+  "quote": [],
+  "blocks": [
+    {
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Write here a detailed description of chaos energy",
+          "image": "/energy/bg/chaos.webp",
+          "caption": "Chaos Control - IDW",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Details",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Write here an introduction if you want"
+        },
+        {
+          "type": "textImage",
+          "title": "Positive Chaos Energy",
+          "text": "Write here about the positive chaos energy",
+          "image": "/energy/pasted-image-1791823562598.png",
+          "caption": "Super Sonic - by SSBrawler01",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Negative Chaos energy",
+          "text": "Negative Chaos energy here",
+          "image": "/energy/pasted-image-1791823508057.png",
+          "caption": "Dark Sonic - by fentonxd",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Rules",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Rules here... \nLike in harmony you can write them with \n\\- There\n\\- Here\n\\- Mere\nLike a list or if you want to have several headings you can  go to Agregar Part and Add Text"
+        }
+      ]
+    },
+    {
+      "title": "Exceptions",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "The same as with the rules"
+        }
+      ]
+    }
+  ]
 }
