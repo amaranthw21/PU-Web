@@ -45,7 +45,7 @@
           "caption": "",
           "imagePositionX": 50,
           "imagePositionY": 50,
-          "fit": "fill",
+          "fit": "whole",
           "imageSide": "right",
           "layout": "wrap"
         },
