@@ -6,41 +6,115 @@
   "background": "/energy/bg/harmony.jpg",
   "backgroundPosition": "",
   "backgroundZoom": 1.05,
-  "summary": "The dimensional energy of Sol.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  "quote": [
-    {
-      "speaker": "Lorem",
-      "avatar": "",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit?\""
-    },
-    {
-      "speaker": "Ipsum",
-      "avatar": "",
-      "text": "\"Sed do eiusmod tempor incididunt ut labore.\""
-    },
-    {
-      "speaker": "Lorem",
-      "avatar": "",
-      "text": "\"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\""
-    }
-  ],
+  "summary": "This is the information that will appear in the colapsable. Is a small resume. I recommend you keep it small but understable",
+  "description": "This is the resume that would go above the actual information. You can re-huse the one you used for the colapsable or make a new one.",
+  "quote": [],
   "blocks": [
     {
-      "title": "Lorem Ipsum",
-      "icon": "/energy/harmony.png",
+      "title": "Overview",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "",
+          "text": "Here goes the overview. I have left Burning blaze for the picture... but you can put whatever you want there.",
+          "image": "/energy/image-removebg-preview-4.png",
+          "caption": "Burning Blaze Drawing - Art by SKCollabs",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        }
+      ]
+    },
+    {
+      "title": "Details",
+      "icon": "",
       "parts": [
         {
           "type": "text",
           "title": "",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "text": "Here you can write any extra details about the energies. Anything really. \n\nUnder this I will prepare different sections for the different Energies..."
         },
         {
           "type": "textImage",
-          "title": "",
-          "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
-          "image": "/energy/bg/harmony.jpg",
-          "caption": "Lorem ipsum dolor sit amet",
+          "title": "Fire Harmony Energy",
+          "text": "Write something here",
+          "image": "/energy/fire-emblem.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Earth Harmony Energy",
+          "text": "Earth Energy information",
+          "image": "/energy/earth-emblem.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Water Harmony Energy",
+          "text": "Add Infomation here",
+          "image": "/energy/water-embblen-infomation.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Lightning Harmony Energy",
+          "text": "Electric goes here",
+          "image": "/energy/electric-harmony-energy.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Wind Harmony Energy",
+          "text": "Wind here",
+          "image": "/energy/air-emblem.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Dark Harmony Energy",
+          "text": "Dark Harmony Energy goes here",
+          "image": "/energy/dark-emblem.png",
+          "caption": "",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Light Harmony Energy",
+          "text": "Light Harmony energy goes here....",
+          "image": "/energy/light-harmony-energy.png",
+          "caption": "",
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "fill",
@@ -50,40 +124,24 @@
       ]
     },
     {
-      "title": "Dolor Sit Amet",
+      "title": "Rules",
       "icon": "",
       "parts": [
         {
           "type": "text",
           "title": "",
-          "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.\n\nNeque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt."
-        },
-        {
-          "type": "image",
-          "image": "/energy/bg/harmony.jpg",
-          "caption": "Consectetur adipiscing elit",
-          "imagePositionX": 50,
-          "imagePositionY": 50,
-          "fit": "fill",
-          "size": "full"
+          "text": "To create the rules you can do it two ways...\n\nYou can use a list\n\\- Like this \n\\- And add \n\\- And add\n\nOr go to \n\\+ Agregar Part and add Text\n\nThis will agregate another block of text like you can see I did with the energies in the block above."
         }
       ]
     },
     {
-      "title": "Consectetur Adipiscing",
+      "title": "Exceptions",
       "icon": "",
       "parts": [
         {
-          "type": "textImage",
+          "type": "text",
           "title": "",
-          "text": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-          "image": "/energy/harmony.png",
-          "caption": "Sed do eiusmod tempor",
-          "imagePositionX": 50,
-          "imagePositionY": 50,
-          "fit": "fill",
-          "imageSide": "left",
-          "layout": "column"
+          "text": "The same as avobe"
         }
       ]
     }
