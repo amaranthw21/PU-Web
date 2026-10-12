@@ -1,10 +1,12 @@
 {
   "order": 2,
   "name": "Harmony Energy",
+  "custom": false,
   "icon": "/energy/harmony.png",
   "background": "/energy/bg/harmony.jpg",
+  "backgroundPosition": "",
   "backgroundZoom": 1.05,
-  "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "summary": "The dimensional energy of Sol.",
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   "quote": [
     {
@@ -30,14 +32,20 @@
       "parts": [
         {
           "type": "text",
+          "title": "",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           "type": "textImage",
+          "title": "",
           "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
           "image": "/energy/bg/harmony.jpg",
           "caption": "Lorem ipsum dolor sit amet",
-          "imageSide": "right"
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
         }
       ]
     },
@@ -47,12 +55,17 @@
       "parts": [
         {
           "type": "text",
+          "title": "",
           "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.\n\nNeque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt."
         },
         {
           "type": "image",
           "image": "/energy/bg/harmony.jpg",
-          "caption": "Consectetur adipiscing elit"
+          "caption": "Consectetur adipiscing elit",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "size": "full"
         }
       ]
     },
@@ -62,10 +75,15 @@
       "parts": [
         {
           "type": "textImage",
+          "title": "",
           "text": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
           "image": "/energy/harmony.png",
           "caption": "Sed do eiusmod tempor",
-          "imageSide": "left"
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left",
+          "layout": "column"
         }
       ]
     }
