@@ -232,23 +232,23 @@
     },
     {
       "type": "event",
-      "title": "Sonic Crossworlds",
-      "date": "",
-      "year": false,
-      "layer": "release",
-      "text": "",
-      "image": "/timeline/pasted-image-1791833310915.png",
-      "portraits": [],
-      "related": []
-    },
-    {
-      "type": "event",
       "title": "Sonic Lost World",
       "date": "",
       "year": false,
       "layer": "release",
       "text": "",
       "image": "/timeline/pasted-image-1791833326849.png",
+      "portraits": [],
+      "related": []
+    },
+    {
+      "type": "event",
+      "title": "Team Sonic Racing",
+      "date": "",
+      "year": false,
+      "layer": "release",
+      "text": "",
+      "image": "/timeline/pasted-image-1791920005113.png",
       "portraits": [],
       "related": []
     },
