@@ -41,9 +41,16 @@
       "icon": "",
       "parts": [
         {
-          "type": "text",
+          "type": "textImage",
           "title": "Past",
-          "text": "Long before the modern nations of the Sol Dimension came into existence, the Akkadians inhabited the lands that would eventually become known as the Vajra Tribal Lands. Renowned for their advanced civilization and their mastery of enormous forges, the Akkadians left behind a legacy that would endure long after their departure from the planet. Among their people was an individual whose life would take an unexpected and irreversible turn, eventually transforming them into the deity known today as Vajra.\n\nFor reasons that remain unknown (mainly cause Vahra doesn't want to admit they where being clumsy), this individual fell into one of the great forges for which the Akkadians were famous. Although they were rescued from the accident, the damage had already been done. What initially appeared to be a terrible injury gradually developed into a progressive mutation, one that neither the individual nor their people could reverse. Over time, their body underwent a complete transformation, becoming a colossal living inferno. Their former appearance was lost, replaced by a form of immense size and terrifying intensity.\n\nDespite this transformation, the Akkadians initially continued to regard them as one of their own. Their appearance may have changed beyond recognition, but they were not abandoned or treated as a monster. However, the Akkadians eventually reached a point when they had to leave the planet. Faced with the reality that they could not take Vajra with them, they made the difficult decision to depart, leaving behind a small group of Golems with the responsibility of protecting and caring for their transformed companion."
+          "text": "Long before the modern nations of the Sol Dimension came into existence, the Akkadians inhabited the lands that would eventually become known as the Vajra Tribal Lands. Renowned for their advanced civilization and their mastery of enormous forges, the Akkadians left behind a legacy that would endure long after their departure from the planet. Among their people was an individual whose life would take an unexpected and irreversible turn, eventually transforming them into the deity known today as Vajra.\n\nFor reasons that remain unknown (mainly cause Vahra doesn't want to admit they where being clumsy), this individual fell into one of the great forges for which the Akkadians were famous. Although they were rescued from the accident, the damage had already been done. What initially appeared to be a terrible injury gradually developed into a progressive mutation, one that neither the individual nor their people could reverse. Over time, their body underwent a complete transformation, becoming a colossal living inferno. Their former appearance was lost, replaced by a form of immense size and terrifying intensity.\n\nDespite this transformation, the Akkadians initially continued to regard them as one of their own. Their appearance may have changed beyond recognition, but they were not abandoned or treated as a monster. However, the Akkadians eventually reached a point when they had to leave the planet. Faced with the reality that they could not take Vajra with them, they made the difficult decision to depart, leaving behind a small group of Golems with the responsibility of protecting and caring for their transformed companion.",
+          "image": "/gods/vajra.png",
+          "caption": "Vajra - Artist @Lluis",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
         },
         {
           "type": "text",
@@ -76,7 +83,13 @@
     {
       "title": "Rules",
       "icon": "",
-      "parts": []
+      "parts": [
+        {
+          "type": "text",
+          "title": "General Rules",
+          "text": "Due to Vajra's unique nature and their long-standing isolation from the rest of the Sol Dimension, interacting with them follows a few specific rules.\n\n- **Physical Presence:** Characters must travel to the Vajra Tribal Lands to interact with Vajra directly. Unlike other deities, Vajra cannot be summoned, regardless of the circumstances.\n- **Communication:** Anyone can technically attempt to communicate with Vajra. However, Vajra speaks exclusively in the ancient Akkadian language, which is naturally understood only by the Golems. Consequently, most characters, even if they are from Sol, will be unable to understand what Vajra is saying without some form of translation. Usually a Golem NPC.\n- **Understanding Akkadian:** If a player wishes for their character to understand Vajra's language naturally, they must discuss it with a member of the mod team beforehand and establish a reasonable, lore-consistent explanation for how their character learned ancient Akkadian. This must be approved by the mod team."
+        }
+      ]
     }
   ]
 }
