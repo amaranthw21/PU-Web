@@ -67,7 +67,7 @@
           "imagePositionX": 50,
           "imagePositionY": 50,
           "fit": "fill",
-          "imageSide": "right",
+          "imageSide": "left",
           "layout": "column"
         },
         {
