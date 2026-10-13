@@ -10,87 +10,146 @@
   "color": "#5bc0ff",
   "harbingers": [
     {
-      "name": "Lorem",
-      "image": "/gods/null.png",
+      "name": "Chaos 0",
+      "image": "/gods/everywhere-people-are-talking-about-sonic-4s-main-selling-v0-7ur50jvug74d1-removebg-preview.png",
       "imagePosition": "center",
       "imageZoom": null
     },
     {
-      "name": "Ipsum",
-      "image": "/gods/vajra.png",
-      "imagePosition": "center 25%",
-      "imageZoom": 1.2
-    },
-    {
-      "name": "Dolor Sit",
-      "image": "/gods/mata.webp",
-      "imagePosition": "center",
-      "imageZoom": null
-    },
-    {
-      "name": "Amet",
-      "image": "/gods/selune.webp",
+      "name": "Tikal",
+      "image": "/gods/pasted-image-1791886066072.png",
       "imagePosition": "center",
       "imageZoom": null
     }
   ],
   "extraInfo": [
     {
-      "label": "Lorem",
-      "value": "Ipsum dolor sit amet"
+      "label": "Other names",
+      "value": "Guardian God of the Chao"
     },
     {
-      "label": "Consectetur",
-      "value": "Adipiscing elit"
+      "label": "Origin",
+      "value": "Mobius - Soumerca"
+    },
+    {
+      "label": "Aligment",
+      "value": "Leans Good"
+    },
+    {
+      "label": "Species",
+      "value": "Mutated Chao"
     }
   ],
-  "quote": [
-    {
-      "speaker": "Lorem",
-      "avatar": "",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit?\""
-    },
-    {
-      "speaker": "Ipsum",
-      "avatar": "",
-      "text": "\"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\""
-    },
-    {
-      "speaker": "Lorem",
-      "avatar": "",
-      "text": "\"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.\""
-    }
-  ],
+  "quote": [],
   "blocks": [
     {
-      "title": "Lorem Ipsum",
-      "icon": "/gods/null.png",
+      "title": "Backstory",
+      "icon": "",
       "parts": [
         {
-          "type": "text",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "type": "textImage",
+          "title": "3000 Years Ago",
+          "text": "Backstory\n\nLong before the events of Station Square, Chaos lived peacefully within the Master Emerald shrine, surrounded by the Chao, the small and gentle creatures with whom he shared a deep bond. As their guardian, Chaos existed in harmony with the natural world, and the shrine remained a place of tranquility. However, this peace would eventually be shattered by the ambitions of the ancient Echidna tribe.\n\nLed by Pachacamac, the Echidnas sought to harness the power of the Chaos Emeralds to strengthen their civilization and expand their influence. Ignoring the warnings of Pachacamac’s daughter, Tikal, the tribe invaded the shrine in an attempt to seize the Emeralds. Their attack brought devastation to the sanctuary, and the Chao, who had done nothing to provoke them, became victims of the Echidnas’ greed. Witnessing the suffering of the creatures he cared for, Chaos was overcome by anger and despair.\n\nIn his fury, Chaos absorbed the energy of the Chaos Emeralds, causing his body and power to grow beyond anything the Echidnas could control. He transformed into Perfect Chaos, unleashing his immense power against the tribe and flooding their civilization in an act of retaliation. What had once been a peaceful guardian had become a destructive force, driven by grief and rage over the cruelty inflicted upon the Chao.\n\nDesperate to stop the catastrophe, Tikal turned to the Master Emerald, using its power to seal Chaos within it. Through this act, she also bound her own spirit to the Emerald, entering a state of spiritual stasis alongside him. The seal brought an end to the destruction, but it also left Chaos imprisoned for thousands of years, his anger and sorrow preserved within the ancient relic.",
+          "image": "/gods/pasted-image-1791886653367.png",
+          "caption": "Tikal and Caos by @bongwater777",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
         },
         {
           "type": "textImage",
-          "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
-          "image": "/gods/perfect_chaos.jpg",
-          "caption": "Lorem ipsum dolor sit amet",
-          "imageSide": "right"
+          "title": "14 Years Ago (Sonic Adventure)",
+          "text": "Millennia later, Doctor Eggman discovered the Master Emerald and shattered it, unknowingly releasing both Chaos and Tikal from their long imprisonment. Recognizing Chaos’s immense potential, Eggman quickly sought to exploit him for his own ambitions. By gathering the scattered Chaos Emeralds and feeding their energy to Chaos, he encouraged his transformation into increasingly powerful forms. Eggman intended to use Chaos as a weapon to destroy Station Square and further his plans for world domination, without fully understanding the history of suffering and anger that lay behind the creature’s power.\n\nAs Chaos grew stronger, the danger he posed became increasingly apparent. Sonic and his friends eventually uncovered the truth behind his origins, learning that Chaos’s rampage was rooted in the tragedy of the ancient Echidna civilization rather than a simple desire for destruction. Sonic ultimately confronted Perfect Chaos in a final battle to protect Station Square, using the power of the Chaos Emeralds to transform into Super Sonic.\n\nAfter defeating Perfect Chaos, Sonic did not destroy him. Instead, the confrontation helped bring an end to the rage that had consumed him for thousands of years. With his anger finally subsiding, Chaos returned to his original, peaceful state.",
+          "image": "/gods/pasted-image-1791886846529.png",
+          "caption": "Super Sonic v Perfect Chaos by sammytighe",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left",
+          "layout": "column"
+        },
+        {
+          "type": "text",
+          "title": "Today",
+          "text": "Unlike many of the other gods, Chaos remains one of the most active presences in Mobius today. Although he generally prefers to remain undisturbed, he can manifest on his own whenever he senses a great threat to Mobius or to a Chaos Garden. He can also be summoned by Tikal when someone reaches out to her through the Master Chaos Emerald.\n\nIs known that hundreds of years ago, the people of the Grand Blue Realm summoned him, but the method has been lost with the passage of the time."
         }
       ]
     },
     {
-      "title": "Dolor Sit Amet",
+      "title": "Powers",
       "icon": "",
       "parts": [
         {
           "type": "text",
-          "text": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.\n\nNeque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+          "title": "",
+          "text": "Chaos is an immensely powerful being whose abilities have earned him reverence as a deity. As such his strength extends far beyond physical combat. He possesses extraordinary control over water, remarkable regenerative capabilities, and the ability to alter his own body at will. His power can increase dramatically by absorbing the energy of the Chaos Emeralds, allowing him to assume increasingly dangerous forms."
+        },
+        {
+          "type": "textImage",
+          "title": "Hydrokinesis (Global)",
+          "text": "Water is the fundamental element of Chaos's power. He possesses exceptional hydrokinetic abilities, allowing him to manipulate water for both offensive and defensive purposes. Depending on his current form, he can generate powerful water currents, create waves and energy-charged projectiles, and manipulate enormous quantities of water. At his highest levels of power, his control extends to devastating floods capable of engulfing entire cities.\n\nDuring the events of Sonic Unleashed, he was able to control the oceans of the shattered world to prevent the planet from drying away.",
+          "image": "/gods/pasted-image-1791888350713.png",
+          "caption": "Chaos 0 - Archie",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "right",
+          "layout": "wrap"
+        },
+        {
+          "type": "textImage",
+          "title": "Liquid Body and Shapeshifting",
+          "text": "Chaos's body is composed of a mysterious liquid-like substance infused with energy, granting him a degree of physical flexibility that ordinary living beings cannot achieve. He can stretch and elongate his limbs, reshape his body to suit different situations, and transform himself into a liquid mass and fuse himself with bodies of water.\n\nHis shapeshifting abilities become increasingly sophisticated as he absorbs Chaos Emeralds.",
+          "image": "/gods/pasted-image-1791888533900.png",
+          "caption": "Chaos 2 - Sonic X",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "imageSide": "left",
+          "layout": "wrap"
+        },
+        {
+          "type": "text",
+          "title": "Immortality and Regeneration",
+          "text": "As an ancient supernatural entity, Chaos possesses extraordinary longevity and is generally regarded as immortal. He has existed for thousands of years, surviving long periods of imprisonment within the Master Emerald without aging in any conventional sense.\n\nHowever attacks to his brain will cause Chaos' form to weaken and destabilize. While this will not kill him, it might make him retreat."
+        }
+      ]
+    },
+    {
+      "title": "Perfect Chaos",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Perfect Chaos is Chaos's ultimate transformation, achieved after absorbing all seven Chaos Emeralds. In this form, he becomes a colossal, serpentine creature with an enormous mouth, reptilian eyes, and a body that merges with the surrounding water. His immense size and monstrous appearance reflect the extraordinary concentration of energy he has accumulated.\n\nAs Perfect Chaos, his hydrokinetic abilities reach their most devastating level. He can generate enormous water currents, unleash towering waterspouts and destructive water tornadoes, and manipulate vast quantities of water to inundate entire urban areas. His control over the surrounding environment allows him to turn water itself into a weapon, threatening everything in his vicinity.\n\nPerfect Chaos also possesses tremendous physical strength and can unleash concentrated energy attacks, including powerful blasts from his body and beams fired from his mouth. His ability to merge with surrounding water further increases his effective scale and makes confronting him exceptionally difficult."
         },
         {
           "type": "image",
           "image": "/gods/perfect_chaos.jpg",
-          "caption": "Consectetur adipiscing elit"
+          "caption": "Perfect Chaos - by DciSon",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "whole",
+          "size": "large"
+        }
+      ]
+    },
+    {
+      "title": "Rules",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "General Rules",
+          "text": "Due to his status as a deity Chaos is not a character that players can freely summon or involve in everyday situations. His appearances should remain rare, meaningful, and consistent with his lore. The following rules apply whenever players wish to interact with him.\n\n- **Contacting Chaos:** As a general rule, players must first establish contact with Tikal through the Master Emerald before they can request Chaos's presence. If you need chaos to make an appereance on their own, please contact a mod first.\n- **A Valid Reason for His Appearance:** Players must have a compelling, lore-appropriate reason for requesting Chaos's intervention. His presence should be reserved for situations of genuine importance, such as threats to Mobius, the safety of a Chaos Garden, or other circumstances that justify the involvement of a deity. Chaos will not appear simply to provide extra assistance with ordinary tasks or fight in any battle.\n- **Default Form:** Whenever Chaos appears, he will manifest in his base form, **Chaos 0**. Other transformations will not be available by default.\n- **NPC Control and Permission:** Chaos will ordinarily be roleplayed by a member of the mod team. A trusted community member may also be permitted to NPC him, but only with explicit permission from the mod team beforehand. No player may independently control Chaos without authorization."
+        },
+        {
+          "type": "text",
+          "title": "Special Permission: Direct Invocation",
+          "text": "Technically, a character may be capable of invoking Chaos without first contacting Tikal through the Master Emerald. However, this is an exceptional circumstance and must be discussed with and approved by the mod team beforehand, either during character creation or while planning a story arc.\n\nInvoking Chaos is considered an event on the same level as accessing a **Super Form**. It is a rare and significant occurrence, not an ability that characters can use whenever they find themselves in a difficult situation. Its use must have a solid narrative justification and fit the character's story, the setting, and the overall direction of the roleplay.\n\nPermission to invoke Chaos does not guarantee that he will automatically appear. His involvement remains subject to the established rules governing his appearances, including the significance of the situation and the mod team's oversight.\n\nIn short, **direct invocation is possible, but never something a character can simply do on a whim.** It must be planned, justified, and approved in advance."
         }
       ]
     }
