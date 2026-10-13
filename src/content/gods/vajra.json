@@ -2,10 +2,81 @@
   "order": 5,
   "category": "sol",
   "name": "Vajra",
-  "domain": "Example Domain",
+  "domain": "God of Fire",
   "description": "God of fire",
   "image": "/gods/vajra.png",
   "imagePosition": "20% 25%",
   "imageZoom": 1.5,
-  "color": "#fa6d1c"
+  "color": "#fa6d1c",
+  "harbingers": [
+    {
+      "name": "Agneya",
+      "image": "/gods/pasted-image-1791900173163.png",
+      "imagePosition": "",
+      "imageZoom": null
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Other Names",
+      "value": "Guardian God of the Golems\nLast Akkadian"
+    },
+    {
+      "label": "Origin",
+      "value": "Sol - Vajra Tribal Lands"
+    },
+    {
+      "label": "Aligment",
+      "value": "Unknown (Leans good)"
+    },
+    {
+      "label": "Species",
+      "value": "Mutated Akkadian"
+    }
+  ],
+  "quote": [],
+  "blocks": [
+    {
+      "title": "Backstory",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Past",
+          "text": "Long before the modern nations of the Sol Dimension came into existence, the Akkadians inhabited the lands that would eventually become known as the Vajra Tribal Lands. Renowned for their advanced civilization and their mastery of enormous forges, the Akkadians left behind a legacy that would endure long after their departure from the planet. Among their people was an individual whose life would take an unexpected and irreversible turn, eventually transforming them into the deity known today as Vajra.\n\nFor reasons that remain unknown (mainly cause Vahra doesn't want to admit they where being clumsy), this individual fell into one of the great forges for which the Akkadians were famous. Although they were rescued from the accident, the damage had already been done. What initially appeared to be a terrible injury gradually developed into a progressive mutation, one that neither the individual nor their people could reverse. Over time, their body underwent a complete transformation, becoming a colossal living inferno. Their former appearance was lost, replaced by a form of immense size and terrifying intensity.\n\nDespite this transformation, the Akkadians initially continued to regard them as one of their own. Their appearance may have changed beyond recognition, but they were not abandoned or treated as a monster. However, the Akkadians eventually reached a point when they had to leave the planet. Faced with the reality that they could not take Vajra with them, they made the difficult decision to depart, leaving behind a small group of Golems with the responsibility of protecting and caring for their transformed companion."
+        },
+        {
+          "type": "text",
+          "title": "Present",
+          "text": "Today, Vajra is regarded as a god in Sol and is often considered the closest equivalent to Chaos within the Sol Dimension. Despite their immense size and frightening appereance, however, Vajra is an entirely peaceful being who is perfectly capable of communicating with others. Their reputation among the Solians tells a rather different story, one shaped less by their true nature than by a deeply unfortunate language barrier.\n\nBecause the Vajra Tribal Lands remained isolated from the outside world until only a few generations ago, Vajra never had the opportunity to learn the languages spoken by the modern inhabitants of Sol. They continue to speak exclusively in the ancient Akkadian tongue, which, after countless ages, is understood only by the Golems who remain by their side. As a result, communicating with anyone beyond this small circle is an exceptionally frustrating experience. When their attempts to make themselves understood fail, Vajra can become overwhelmed by frustration, causing their body to literally burst into flames. Having faced this problem repeatedly, Vajra has gradually become reluctant to interact with outsiders, preferring the company of the Golems who understand them.\n\nEven the name of the Vajra Tribal Lands can be traced back to this misunderstanding between cultures. When the first Solians arrived in the region, the Golems attempted to explain that the land belonged to Vajra, referring to it as **Vajra's lands**. The Solians, unfamiliar with the ancient Akkadian language and the context of the explanation, mistakenly interpreted the phrase as the proper name of the territory. Over time, the name became established, and the region came to be known as the Vajra Tribal Lands."
+        }
+      ]
+    },
+    {
+      "title": "Powers",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Pyrokinesis and Magma Manipulation",
+          "text": "Fire is the fundamental element of Vajra's power. They possess an exceptional degree of control over flames, allowing them to generate, manipulate, and extinguish fire at will. They can unleash powerful bursts of flame, create streams of fire to attack opponents, and surround themselves with blazing energy as a defensive measure.\n\nTheir control over fire extends beyond ordinary combustion, allowing them to manipulate the intensity, shape, and movement of their flames. Depending on the situation, Vajra can produce relatively small flames for practical purposes or unleash overwhelming waves of fire capable of engulfing large areas.\n\nIn addition to fire, Vajra can manipulate magma and molten rock, giving them control over some of the most destructive forces associated with the planet's interior. They can generate and direct streams of molten material, manipulate existing magma, and superheat their surroundings to create dangerous environmental conditions.\n\nTheir control over heat also allows them to raise temperatures considerably in their immediate vicinity. This makes approaching them potentially dangerous, particularly when they become emotionally distressed and struggle to contain the flames surrounding their body."
+        },
+        {
+          "type": "text",
+          "title": "Immortality",
+          "text": "As an ancient deity, Vajra possesses extraordinary longevity and has survived across countless ages. Their existence is not dependent on an ordinary biological lifespan, allowing them to endure long after the civilization that once cared for them has disappeared.\n\nDamage to their physical manifestation does not necessarily translate into lasting harm, as they can reform disrupted portions of their body. However attacks to their heart can injure them and make them retreat."
+        },
+        {
+          "type": "text",
+          "title": "Flame of live",
+          "text": "Unlike Chaos, Vajra cannot manipulate or reshape their fiery body at will. However, they possess the ability to temporarily inhabit ancient structures scattered throughout the Vajra Tribal Lands by infusing them with a small fragment of their divine flame.\n\nBy channeling their essence into these remnants of the Akkadian civilization, Vajra can bring them to life, transforming otherwise lifeless structures into temporary bodies resembling the Golems. Through these vessels, they can interact with the physical world in a more conventional manner, allowing them to move around without relying solely on their colossal, fiery form.\n\nHowever, this possession is only temporary. The structures serve as vessels for Vajra's presence rather than permanent transformations as they can only temporarely host his flames before they start burning."
+        }
+      ]
+    },
+    {
+      "title": "Rules",
+      "icon": "",
+      "parts": []
+    }
+  ]
 }
