@@ -2,10 +2,166 @@
   "order": 2,
   "category": "mobius",
   "name": "Solaris",
-  "domain": "The god of time and the sun",
+  "domain": "The God of the Sun",
   "description": "Description of the god.",
   "image": "/gods/solaris.png",
   "imagePosition": "",
   "imageZoom": null,
-  "color": "#a3e635"
+  "color": "#a3e635",
+  "harbingers": [
+    {
+      "name": "Mephiles the Dark",
+      "image": "/gods/image-removebg-preview-5.png",
+      "imagePosition": "",
+      "imageZoom": null
+    },
+    {
+      "name": "Iblis - Flame of Disaster",
+      "image": "/gods/iblis_ign-removebg-preview.png",
+      "imagePosition": "",
+      "imageZoom": null
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Other Titles",
+      "value": "Flame of Hope\nLiving Flame"
+    },
+    {
+      "label": "Origin",
+      "value": "Mobius - Soleanna"
+    },
+    {
+      "label": "Aligment",
+      "value": "Unknown / Leans Evil"
+    },
+    {
+      "label": "Species",
+      "value": "True Deity"
+    }
+  ],
+  "quote": [],
+  "blocks": [
+    {
+      "title": "Background",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Past",
+          "text": "The origins of Solaris remain shrouded in mystery, buried beneath centuries of Soleannan legends and religious traditions. One ancient tale speaks of a time when the land was threatened by a devastating fire, only for a gigantic eagle to appear and save the country from destruction. Some believe this creature was Solaris, while others question whether the deity was instead the source of the catastrophe. The truth behind this legend has been lost to time, leaving the deity's earliest history uncertain.\n\nAt some point, an entity bearing the name Solaris was entrusted to Soleanna's royal family as the sentient Flame of Hope. Revered as a sun god, Solaris came to symbolize both the warmth and prosperity that sustained life and the overwhelming destructive potential of fire. However, ancient prophecy warned that the deity's wrath, known as the Flames of Disaster, would one day manifest and threaten the world.\n\nFor generations, the people of Soleanna worshipped Solaris through religious traditions and ceremonies, most notably the Festival of the Sun. During this celebration, the royal family offered prayers of gratitude for the deity's mercy and asked for continued peace and protection. Over time, Solaris became an essential part of Soleanna's cultural identity, representing both the hope of a prosperous future and the fear of an impending catastrophe.",
+          "image": "/gods/solaris.png",
+          "caption": "Solaris - by Sony-Shock",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        },
+        {
+          "type": "textImage",
+          "title": "16 Years Ago (Sonic 2006)",
+          "text": "The truth behind \"Solaris's power\" came to light during the events of Sonic the Hedgehog (2006). Through the Solaris Project, the deity's power was awakened and became entangled with the fabric of time itself, threatening to bring about the destruction of the world. The entity's existence was divided into different aspects, and its immense power ultimately led to a temporal catastrophe that threatened past, present, and future alike.\n\nTo prevent this disaster, Sonic, Shadow, and Silver confronted Solaris, while Princess Elise faced the heartbreaking realization that the Flame of Hope itself was the source of the danger. In the end, Elise extinguished the small flame before \"Solaris\" could come into existence, with Sonic's help, erasing the events that had led to the catastrophe and restoring the timeline.\n\nAs a result, Solaris's physical existence and the events surrounding the crisis were erased from history. The world was restored to a state in which the disaster had never occurred, leaving the deity's place in history fundamentally changed.",
+          "image": "/gods/snapgram.io_uk9xppk75mkc.jpg",
+          "caption": "Final Battle against Solaris - thatartistwilldolan",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        },
+        {
+          "type": "text",
+          "title": "Today",
+          "text": "Following the restoration of the timeline, \"Solaris\" no longer exists as a tangible entity within recorded history. Nevertheless, the deity's name and symbolism remain deeply rooted in Soleanna's traditions. The Festival of the Sun continues to be celebrated, preserving the people's reverence for their sun god without the interference and tragedy that once surrounded the deity.\n\nThe true nature of Solaris remains unknown. It is unclear whether the entity once entrusted to the royal family was the same being described in ancient legends as the savior of Soleanna, or whether generations of worship gradually intertwined several different stories into a single myth. Today, Solaris exists primarily as a figure of faith, tradition and legend."
+        }
+      ]
+    },
+    {
+      "title": "Powers",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Solaris is one of the most powerful entities known to exist, possessing abilities that extend far beyond conventional physical strength or elemental manipulation. As a being associated with light and time itself, Solaris represents an extraordinary force capable of threatening the stability of reality. Their power is so immense that even three individuals in their respective Super States were required to confront them across different points in time, and even this combined effort was insufficient to destroy them completely."
+        },
+        {
+          "type": "textImage",
+          "title": "Light Manipulation",
+          "text": "Solaris's body is composed entirely of light, allowing them to generate and manipulate immense quantities of energy. They can unleash powerful beams capable of overwhelming even exceptionally durable opponents, as well as create barriers of concentrated light to protect themselves from incoming attacks.\n\nTheir light-based abilities are not limited to direct attacks. Solaris can also form hardened shells around their body, providing an additional layer of protection, and manifest enormous structures of light to defend themselves or restrict their opponents' movements.",
+          "image": "/gods/pasted-image-1791894498903.png",
+          "caption": "Fragile Ego (Solaris and The End) - Huge-Cake-8346",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        },
+        {
+          "type": "textImage",
+          "title": "Immortality",
+          "text": "Solaris possesses an extraordinary form of immortality, stemming from both their unusual physical composition and their existence across multiple points in time. Their body cannot be damaged through ordinary physical means, and destroying their manifestation at a single moment does not guarantee their defeat.\n\nAlthough their hardened light shells can be broken, exposing their more vulnerable core, this does not destroy Solaris outright. Their core represents the center of their consciousness and will, making it the most effective target when attempting to stop their rampage. Even when their will is overcome, however, Solaris's existence cannot simply be erased through conventional combat.",
+          "image": "/gods/pasted-image-1791897965333.png",
+          "caption": "Flame of Hope - Sonic 2006",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "left",
+          "layout": "column"
+        },
+        {
+          "type": "text",
+          "title": "Time-Space Manipulation",
+          "text": "Solaris can create distortions in the space-time continuum, generate temporal anomalies, and threaten the stability of entire timelines. At the height of their power, they are capable of consuming time and space on a scale that places the entirety of existence at risk."
+        }
+      ]
+    },
+    {
+      "title": "Other Powers (Harbingers)",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Mephiles the Dark",
+          "text": "Through his connection to Mephiles, Solaris also possesses abilities associated with shadows, darkness, and the manipulation of his own form. He can create shadowy manifestations, produce projectiles from dark energy, and manipulate his body to attack or defend himself in unconventional ways.\n\nHe can also take on the appereance of others, though in a uncanny and incomplete way.",
+          "image": "/gods/pasted-image-1791898227213.png",
+          "caption": "Mephiles the Dark - Sonic x Shadow Generations",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        },
+        {
+          "type": "textImage",
+          "title": "Iblis",
+          "text": "Through his connection to Iblis, Solaris possesses immense control over fire and destructive energy. He can generate intense flames, unleash devastating bursts of heat, and manipulate fire on a massive scale.",
+          "image": "/gods/pasted-image-1791898545477.png",
+          "caption": "Iblis - Sonic 2006",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        }
+      ]
+    },
+    {
+      "title": "Rules",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "General Rules",
+          "text": "Following the events of Sonic the Hedgehog (2006), the Flame of Hope was extinguished by Princess Elise before Solaris could come into existence. Consequently, \"Solaris\", Iblis, and Mephiles do not exist in the current timeline.\n\n- **Legends and History:** Although these entities no longer exist, the legends surrounding them remain part of the world's history and culture. Members may reference Solaris, the Flames of Disaster, and related Soleannan myths in their characters' stories and roleplay.\n- **No Direct Interaction:** Characters cannot encounter, summon, or interact with Solaris, Iblis, or Mephiles as existing entities. References to them must remain consistent with their status in the current timeline.\n- **Future Developments:** The possible return or reintroduction of these entities is reserved for future story developments and requires prior approval from the mod team."
+        },
+        {
+          "type": "text",
+          "title": "Special Permission: Princess Elise",
+          "text": "Due to her connection to Solaris as part as the Soleanna Royal Family and the time she spent carrying Iblis within her, Princess Elise may possess supernatural abilities related to fire. This is a special exception granted only to her.\n\nThe member is free to decide the origin of these abilities, whether they are blessing from Solaris or a small remnant of Iblis that remains within Elise. Either interpretation is acceptable, provided it remains consistent with the established lore and roleplay balance.\n\nHowever, **Princess Elise is the only character permitted to have this kind of connection.** No other character, whether canon or an original character (OC), may possess a direct connection to Solaris, Iblis, or Mephiles, or obtain powers directly from them. Any abilities given to Elise may be reviewed by the mod team to ensure they remain appropriate for the setting."
+        }
+      ]
+    }
+  ]
 }
