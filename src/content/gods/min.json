@@ -2,9 +2,88 @@
   "order": 10,
   "category": "moebius",
   "name": "Min",
-  "domain": "Example Domain",
+  "domain": "God of Sand",
   "description": "Description of the god.",
   "image": "/gods/min.webp",
   "imagePosition": "30% center",
-  "color": "#e8a54e"
+  "imageZoom": null,
+  "color": "#e8a54e",
+  "harbingers": [
+    {
+      "name": "Andras the Echidna",
+      "image": "",
+      "imagePosition": "",
+      "imageZoom": null
+    }
+  ],
+  "extraInfo": [
+    {
+      "label": "Other Names",
+      "value": "Calamity of the Sand"
+    },
+    {
+      "label": "Origin",
+      "value": "Moebius - West Ocean"
+    },
+    {
+      "label": "Aligment",
+      "value": "Evil"
+    },
+    {
+      "label": "Species",
+      "value": "Fragmented Deity"
+    }
+  ],
+  "quote": [],
+  "blocks": [
+    {
+      "title": "Backstory",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Past",
+          "text": "Min, the God of Sands, is one of the three counterparts of Chaos that exist within Moebius. Its existence began when Andras forcibly tore away one of the three heads that formed the body of the Ancient God of the Desert. This act resulted in the creation of a new entity, one that embodied the sands of the desert and possessed the ability to control them on a massive scale.\n\nFollowing its creation, Min became the weapon used by Andras in his attempt to destroy the continent of Suramer. Through its powers, vast quantities of sand could be moved across the land, burying settlements, destroying infrastructure, and transforming entire regions into uninhabitable deserts. Its control over sand also allowed it to generate powerful sandstorms capable of spreading destruction across large areas. The scale of its abilities made it one of the greatest threats Suramer had ever faced.\n\nDespite the destruction caused during this period, little is known about Min's own intentions. It remains unclear whether the deity willingly followed Andras and shared his objectives, acted according to its own interests, or was simply controlled and used as a weapon. There are no confirmed accounts that fully explain its relationship with Andras or establish how much independence it possessed during the catastrophe.\n\nEventually, both Min and Andras were defeated and sealed within the Green Tyrant Beryl, bringing their campaign against Suramer to an end. However, the events surrounding the sealing also affected the land of Lys and the tribe that shared its name. They were entrusted with the responsibility of guarding the Green Tyrant Beryl, and their land was subsequently submerged. This event became an important part of Min's history, as the deity's imprisonment and the fate of its guardians became closely connected.",
+          "image": "/gods/min.webp",
+          "caption": "Genshin Impact",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        },
+        {
+          "type": "text",
+          "title": "Present",
+          "text": "Min remains sealed within the Green Tyrant Beryl, where its powers are contained and its physical form is prevented from acting freely. Despite its imprisonment, it continues to be regarded as a dangerous entity due to the scale of destruction it caused in the past. Its current condition is unknown, and there is no definitive information regarding whether it remains conscious, is capable of influencing its surroundings, or is attempting to break free from its confinement."
+        }
+      ]
+    },
+    {
+      "title": "Powers",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "",
+          "text": "Min is an immensely powerful entity whose abilities have earned it recognition as the God of Sands. As one of the three counterparts of Chaos that exist within Moebius, its powers revolve around the manipulation of sand and the control of desert environments. Its strength extends beyond physical combat, granting it the ability to reshape terrain, generate powerful sandstorms, and overwhelm large areas with vast quantities of sand. Its body is composed almost entirely of sand, allowing it to alter its shape and recover from physical damage. However, this composition also leaves it vulnerable to water, which can weaken its structure and interfere with its control over sand."
+        },
+        {
+          "type": "text",
+          "title": "Sand Manipulation",
+          "text": "Min possesses exceptional control over its element, allowing it to manipulate vast quantities of sand for both offensive and defensive purposes. It can generate powerful currents, launch concentrated projectiles, create protective barriers, and bury opponents beneath shifting dunes. It can also reshape the surrounding terrain, making it difficult for enemies to maintain their footing or navigate the battlefield.\n\nAt its highest levels of power, Min can affect entire regions, transforming landscapes and burying settlements beneath enormous deserts. Its control over the environment allows it to attack from multiple directions while restricting the movements of those caught within its range.\n\nMin can generate and control powerful storms capable of spreading across extensive territories. These can obscure visibility, damage structures, and make travel nearly impossible for those caught within them.\n\nAt its full strength, this ability becomes one of its most destructive weapons, allowing it to devastate settlements and nearly bury an entire continend under the dunes."
+        },
+        {
+          "type": "text",
+          "title": "Immortality",
+          "text": "As an ancient supernatural entity, Min possesses extraordinary longevity and regenerative capabilities. Its existence does not depend on a conventional biological body, allowing it to endure damage that would be fatal to most living beings.\n\nWhen portions of its form are dispersed or destroyed, Min can restore them by reclaiming the scattered material. However, the effectiveness of this process may depend on the extent of the damage and the amount of material available to it.\n\nMin's imprisonment within the Green Tyrant Beryl has restricted its ability to act freely, although the extent to which the seal affects its regenerative capabilities remains unknown."
+        },
+        {
+          "type": "text",
+          "title": "Shapeshifting",
+          "text": "Min's body is composed almost entirely of sand, which it can control down to the individual particles. This allows it to freely alter the density, size, and shape of its physical form, adapting it to different situations. It can condense its body into smaller, compact forms, increasing its density and weight, or disperse itself across large areas, becoming a widespread sandstorm that is difficult to attack directly.\n\nBy controlling the distribution of its particles, Min can reshape its limbs, alter its proportions, and create different physical structures as needed. It can also disperse parts of its body to evade attacks before gathering them back together."
+        }
+      ]
+    }
+  ]
 }
