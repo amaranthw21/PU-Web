@@ -1,10 +1,39 @@
 {
   "order": 12,
   "category": "moebius",
-  "name": "Mawu",
-  "domain": "Example Domain",
+  "name": "Mata",
+  "domain": "God of Metal",
   "description": "Description of the god.",
   "image": "/gods/mawu.webp",
   "imagePosition": "30% center",
-  "color": "#9aa8bd"
+  "imageZoom": null,
+  "color": "#9aa8bd",
+  "harbingers": [],
+  "extraInfo": [],
+  "quote": [],
+  "blocks": [
+    {
+      "title": "Backstory",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Past",
+          "text": "Mata, the God of Metal, is one of the three counterparts of Chaos that exist within Moebius. Like Min and Mawu, Mata traces its origins to the God of the Desert, an ancient deity whose existence was gradually divided, leaving behind fragments that embodied distinct aspects of its former self.\n\nMata was the second fragment to come into existence after Min. Its birth came after the Matangaru tribe sought the aid of the wounded God of the Desert to stabilize the drifting islands that would one day become Maritana. At the time, the ancient deity had already lost one of its heads to Andras. In response to the tribe's plea and their subsequent negotiations, the God of the Desert divided itself once more, giving birth to Mata, a colossal being composed entirely of living metal.\n\nFollowing its creation, Mata crossed the sea and began the task that would forever shape the history of Maritana. Stretching its immense metallic body across the ocean, it connected island to island like a living chain, anchoring the drifting lands together and granting them the stability they had long lacked. For the first time, the islands remained connected long enough for civilizations to develop, trade to flourish, and Maritana to emerge as a unified nation.\n\nHowever, the solution carried an unforeseen consequence. Because Mata's body itself served as the chain holding the islands together, even its slightest unconscious movements caused the entire system to shift. Over time, the surrounding seas began to react violently to these constant adjustments. Earthquakes shattered coastlines, volcanoes emerged from beneath the ocean, and massive tsunamis swept across the islands, destroying settlements and threatening the very nation Mata had been created to save.\n\nEventually, the Matangaru realized that as long as Mata continued to move and live, Maritana would remain vulnerable to the instability caused by its immense body. Faced with the possibility of losing everything they had worked to preserve, the tribe reached a terrible conclusion: the God of Metal had to be put into an eternal slumber.",
+          "image": "/gods/mawu.webp",
+          "caption": "",
+          "imagePositionX": 20,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        },
+        {
+          "type": "text",
+          "title": "Present",
+          "text": "Mata remains dormant beneath the seas surrounding Maritana, its colossal metallic body still stretched across the ocean floor. Although the god no longer moves, its body continues to serve as the living chain that binds the islands together, preserving the stability of the nation it once helped create.\n\nUnlike Mawu, who remains awake and consumed by grief, or Min, who lies sealed within the Green Anarchy Beryl, Mata exists in a state of deep, uninterrupted slumber."
+        }
+      ]
+    }
+  ]
 }
