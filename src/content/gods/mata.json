@@ -1,10 +1,93 @@
 {
   "order": 11,
   "category": "moebius",
-  "name": "Mata",
-  "domain": "Example Domain",
+  "name": "Mawu",
+  "domain": "God of Winds",
   "description": "Description of the god.",
   "image": "/gods/mata.webp",
+  "imagePosition": "",
   "imageZoom": 1.2,
-  "color": "#bfb8a1"
+  "color": "#bfb8a1",
+  "harbingers": [],
+  "extraInfo": [
+    {
+      "label": "Other Names",
+      "value": "The Mourning God"
+    },
+    {
+      "label": "Origin",
+      "value": "Moebius - Savara"
+    },
+    {
+      "label": "Aligment",
+      "value": "Neutral"
+    },
+    {
+      "label": "Species",
+      "value": "Fragmented God"
+    }
+  ],
+  "quote": [],
+  "blocks": [
+    {
+      "title": "Backstory",
+      "icon": "",
+      "parts": [
+        {
+          "type": "textImage",
+          "title": "Past",
+          "text": "Mawu, the God of Wind, is one of the three counterparts of Chaos that exist within Moebius. Like Mata and Min, Mawu traces its origins to the God of the Desert, an ancient deity whose existence would eventually come to an end, leaving behind three fragments that embodied distinct aspects of its former self.\n\nMawu was the last fragment to come into existence. It was born when the God of the Desert separated the God of Metal, Mata, from its body. From what remained of the ancient deity, Mawu emerged as a living entity of wind, becoming the final active fragment and the only one still residing in Savara.\n\nAs time passed, the fates of Mawu, Min, and Mata diverged. Min would eventually become sealed within the Green Anarchy Beryl beneath the sea, while Mata would fall into a deep slumber beneath the islands of Maritana. Mawu, in contrast, remained awake, left behind in Savara as its counterparts succumbed to their respective fates.\n\nThe fate of its counterparts would weigh heavily upon the God of Wind. Whatever bond once connected these fragments of the ancient deity, the loss of Min and Mata would leave Mawu in a state of profound grief. Over time, this sorrow would become inseparable from its existence, shaping its behavior and giving rise to the winds that would come to define its presence across Savara.",
+          "image": "/gods/mata.webp",
+          "caption": "Draco Gaming Inc.",
+          "imagePositionX": 50,
+          "imagePositionY": 50,
+          "fit": "fill",
+          "imageSide": "right",
+          "layout": "column"
+        },
+        {
+          "type": "text",
+          "title": "Present",
+          "text": "Despite its continued existence and freedom, at least compared to its \"siblings\", the God of Wind appears to have lost all ability to communicate, leaving it isolated from the world around it.\n\nMawu now spends its existence grieving alone within its nest high above the skies of Savara, mourning the fates of its lost counterparts. Its sorrow manifests through the winds that sweep endlessly across the desert. On calmer days, gentle currents pass through the dunes and cities of Savara. When its grief intensifies, however, violent winds and storms descend upon the land, bringing destruction to those caught in their path.\n\nThe Stargazers, the sacred tribe entrusted with watching over the God of Wind, are the only people who continue to observe it closely. But even they rarely dare to approach the grieving deity directly. Instead, they study its movements from afar, interpreting the patterns of the winds and the severity of its storms to deliver warnings and prophecies to the people of Savara.\n\nTo the people of the desert, the winds are not merely part of nature. They are the voice of their mourning god that has never recovered from being torn apart for kindness and rage."
+        }
+      ]
+    },
+    {
+      "title": "Powers",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "Aerokinesis",
+          "text": "Wind is the fundamental element of Mawu's power. It possesses exceptional control over atmospheric currents, allowing it to manipulate the movement, intensity, and direction of the wind for both offensive and defensive purposes. It can generate powerful gusts, create concentrated bursts of air, and unleash currents strong enough to sweep away obstacles and devastate anything caught in their path.\n\nThrough its control over wind, Mawu can also generate larger weather phenomena, including powerful storms and devastating sandstorms. However, these phenomena are not the result of direct control over the materials they contain. Rather, Mawu manipulates the winds themselves, which interact with the surrounding environment to produce different effects. In the deserts of Savara, for example, powerful winds can lift and carry enormous quantities of sand, creating sandstorms capable of engulfing entire settlements.\n\nAlthough Mawu can manipulate the winds regardless of their surroundings, controlling them becomes considerably more difficult when they carry substances other than air. The presence of sand, dust, rain, or other materials introduces additional complexity, making it harder to maintain precise control over the resulting currents and their effects."
+        },
+        {
+          "type": "text",
+          "title": "",
+          "text": "As an ancient supernatural entity, Mawu possesses extraordinary longevity and is generally regarded as immortal. Its existence is not bound by conventional biological processes, allowing it to persist for thousands of years without suffering from aging in the same manner as ordinary living beings.\n\nAs a being composed of wind, Mawu does not possess conventional organs or a biological anatomy that can be targeted to inflict lasting damage. However, this does not make it entirely invulnerable. Its greatest weakness lies in its ability to maintain control over its own form.\n\nForeign particles, particularly solid materials such as metal, water, etc; can interfere with Mawu's ability to manipulate its own body. When such substances become embedded within its form, they disrupt its control over its physical structure, progressively restricting its movements and ability to maintain its shape. If enough foreign material accumulates within its body, Mawu can eventually become completely immobilized."
+        },
+        {
+          "type": "text",
+          "title": "Shapeshifting",
+          "text": "Mawu is composed entirely of wind and possesses complete control over its own form. It can freely reshape its body, disperse into the surrounding atmosphere, and become invisible by blending with the air. \n\nHowever, he lacks a truly solid form which limits its ability to interact with physical world."
+        }
+      ]
+    },
+    {
+      "title": "Rules",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "General Rules",
+          "text": "To contact Mawu, the following requirements must be met:\n\n- **Location:** Characters must be physically present in Savara, Moebius.\n- **Yellow Anarchy Beryl:** Characters must possess a fragment of a Yellow Anarchy Beryl.\n- **Moderator Approval:** Mawu is a Mod NPC and can only be roleplayed by trusted members of the moderation team. Players must contact a moderator before attempting to interact with the God of Wind.\n- **Communication:** Even when contact is established, no character can truly understand Mawu, as the deity has lost its ability to communicate.\n\nHowever people can reference Mata for their backstories as they are a well known active deity, specially in Savara"
+        },
+        {
+          "type": "text",
+          "title": "Special Permission: The Stargazers",
+          "text": "Members of the Stargazers are permitted to understand Mawu, reflecting their sacred role as the tribe entrusted with watching over the God of Wind.\n\nThey can even make profecies by interpreting Mawu's signals, as long as they contact the Mod team beforehand."
+        }
+      ]
+    }
+  ]
 }
