@@ -46,7 +46,7 @@
           "text": "Min, the God of Sands, is one of the three counterparts of Chaos that exist within Moebius. Its existence began when Andras forcibly tore away one of the three heads that formed the body of the Ancient God of the Desert. This act resulted in the creation of a new entity, one that embodied the sands of the desert and possessed the ability to control them on a massive scale.\n\nFollowing its creation, Min became the weapon used by Andras in his attempt to destroy the continent of Suramer. Through its powers, vast quantities of sand could be moved across the land, burying settlements, destroying infrastructure, and transforming entire regions into uninhabitable deserts. Its control over sand also allowed it to generate powerful sandstorms capable of spreading destruction across large areas. The scale of its abilities made it one of the greatest threats Suramer had ever faced.\n\nDespite the destruction caused during this period, little is known about Min's own intentions. It remains unclear whether the deity willingly followed Andras and shared his objectives, acted according to its own interests, or was simply controlled and used as a weapon. There are no confirmed accounts that fully explain its relationship with Andras or establish how much independence it possessed during the catastrophe.\n\nEventually, both Min and Andras were defeated and sealed within the Green Tyrant Beryl, bringing their campaign against Suramer to an end. However, the events surrounding the sealing also affected the land of Lys and the tribe that shared its name. They were entrusted with the responsibility of guarding the Green Tyrant Beryl, and their land was subsequently submerged. This event became an important part of Min's history, as the deity's imprisonment and the fate of its guardians became closely connected.",
           "image": "/gods/min.webp",
           "caption": "Genshin Impact",
-          "imagePositionX": 50,
+          "imagePositionX": 20,
           "imagePositionY": 50,
           "fit": "fill",
           "imageSide": "right",
@@ -82,6 +82,17 @@
           "type": "text",
           "title": "Shapeshifting",
           "text": "Min's body is composed almost entirely of sand, which it can control down to the individual particles. This allows it to freely alter the density, size, and shape of its physical form, adapting it to different situations. It can condense its body into smaller, compact forms, increasing its density and weight, or disperse itself across large areas, becoming a widespread sandstorm that is difficult to attack directly.\n\nBy controlling the distribution of its particles, Min can reshape its limbs, alter its proportions, and create different physical structures as needed. It can also disperse parts of its body to evade attacks before gathering them back together."
+        }
+      ]
+    },
+    {
+      "title": "Rules",
+      "icon": "",
+      "parts": [
+        {
+          "type": "text",
+          "title": "General Rules",
+          "text": "Min is essentially sealed within the Green Anarchy Beryl, located on Demon Island in the Kingdom of Lys. As such, no character can contact or interact with him directly.\n\nHowever, legends, Myths and historical accounts of Min may be referenced. This is especially relevant for characters from the Kingdom of Lys, the Viracora Empire, or the South Federation, as these three nations once formed the continent of Suramer, the land that Andras and Min attacked and nearly destroyed."
         }
       ]
     }
