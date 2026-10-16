@@ -51,17 +51,23 @@
                 {
                   "name": "Proferson Pickle",
                   "image": "/factions/professor_tori-1.webp",
-                  "description": "Professor Pickle is a renowned historian and archaeologist specializing in ancient civilizations, literature, and mythology. As the head of the Spagonia Historical Society, he dedicates his life to uncovering and preserving the forgotten history of the world."
+                  "description": "Professor Pickle is a renowned historian and archaeologist specializing in ancient civilizations, literature, and mythology. As the head of the Spagonia Historical Society, he dedicates his life to uncovering and preserving the forgotten history of the world.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Profesor Victoria",
                   "image": "/factions/professor_tori-2.webp",
-                  "description": "Professor Victoria, or “Torii,” is an energetic and passionate archaeologist from Spagonia University. Specializing in ancient artifacts and the Four Great Civilizations, she works closely with G.U.N. to recover and preserve historically significant relics."
+                  "description": "Professor Victoria, or “Torii,” is an energetic and passionate archaeologist from Spagonia University. Specializing in ancient artifacts and the Four Great Civilizations, she works closely with G.U.N. to recover and preserve historically significant relics.",
+                  "status": "available",
+                  "player": ""
                 },
                 {
                   "name": "Relic & Fixit",
                   "image": "/factions/professor_tori-2-1.webp",
-                  "description": "Relic the Pika and his companion Fixit are a pair of researchers from the S.H.S. dedicated to uncovering the secrets of Angel Island. They help the Freedom Fighters from time to time."
+                  "description": "Relic the Pika and her companion Fixit are a pair of researchers from the S.H.S. dedicated to uncovering the secrets of Angel Island. They help the Freedom Fighters from time to time.",
+                  "status": "available",
+                  "player": ""
                 }
               ]
             }
